@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京夏日冒險 ‧ 旅遊互動手冊 (7/5-7/8)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+        }
+        .tab-active {
+            border-bottom-color: #3182ce;
+            color: #3182ce;
+            background-color: rgba(239, 246, 255, 0.5);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header Navbar -->
+    <header class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <div class="bg-white/20 p-2 rounded-xl backdrop-blur-sm">
+                    <i class="fa-solid fa-plane-departure text-xl text-yellow-300"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-wider">東京親子冒險 ‧ 旅遊手冊</h1>
+                    <p class="text-xs text-blue-100 font-medium">2026/07/05 ~ 07/08 (4天3夜)</p>
+                </div>
+            </div>
+            <!-- Countdown Timer -->
+            <div class="bg-black/20 px-3 py-1.5 rounded-full text-xs font-semibold backdrop-blur-sm flex items-center gap-1.5">
+                <i class="fa-regular fa-clock text-yellow-300"></i>
+                <span id="countdown">載入倒數中...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dynamic Toast Notification Container -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 max-w-sm text-xs sm:text-sm">
+        <span id="toast-icon" class="text-emerald-400"><i class="fa-solid fa-circle-check"></i></span>
+        <span id="toast-message">提示訊息</span>
+    </div>
+
+    <main class="max-w-4xl w-full mx-auto px-3 py-4 flex-grow flex flex-col gap-4">
+        
+        <!-- Quick Info Banner (Flights & Ostay Hotel Summary) -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
+            <div class="flex justify-between items-center mb-3">
+                <h2 class="font-bold text-slate-800 flex items-center gap-2 text-sm sm:text-base">
+                    <i class="fa-solid fa-circle-info text-blue-500"></i> 行程重要基本資訊
+                </h2>
+                <button onclick="toggleDetails('hotel-flight-details')" class="text-xs text-blue-600 hover:underline flex items-center gap-1">
+                    <span id="toggle-text">展開詳細</span> <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </button>
+            </div>
+            
+            <!-- Summary Badges -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                <div class="bg-blue-50 p-2.5 rounded-xl flex items-center gap-2.5 border border-blue-100/50">
+                    <i class="fa-solid fa-plane text-blue-600 text-base"></i>
+                    <div>
+                        <p class="text-slate-500 font-medium">去程 FD234</p>
+                        <p class="font-bold text-slate-700">7/5 08:05 KHH ➔ 12:55 NRT</p>
+                    </div>
+                </div>
+                <div class="bg-indigo-50 p-2.5 rounded-xl flex items-center gap-2.5 border border-indigo-100/50">
+                    <i class="fa-solid fa-hotel text-indigo-600 text-base"></i>
+                    <div>
+                        <p class="text-slate-500 font-medium">住宿 Ostay Ueno</p>
+                        <p class="font-bold text-slate-700">上野御徒町/稻荷町旁</p>
+                    </div>
+                </div>
+                <div class="bg-purple-50 p-2.5 rounded-xl flex items-center gap-2.5 border border-purple-100/50">
+                    <i class="fa-solid fa-users text-purple-600 text-base"></i>
+                    <div>
+                        <p class="text-slate-500 font-medium">成員同行</p>
+                        <p class="font-bold text-slate-700">3位大人 + 2位小孩 (11,13歲)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Details Section -->
+            <div id="hotel-flight-details" class="hidden mt-4 pt-4 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+                <!-- Flight details -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-slate-700 border-l-4 border-blue-500 pl-2">✈️ 航班詳細資訊</h3>
+                    <div class="bg-slate-50 p-3 rounded-xl space-y-2">
+                        <div class="pb-2 border-b border-dashed border-slate-200">
+                            <span class="bg-blue-600 text-white text-[10px] px-1.5 py-0.5 rounded font-bold mr-1">去程</span>
+                            <span class="font-bold text-slate-700">泰國亞洲航空 FD234</span> (經濟艙)
+                            <p class="text-slate-500 mt-1">高雄小港 (KHH) ➔ 東京成田 (NRT)</p>
+                            <p class="font-semibold text-slate-600">07/05 08:05 起飛 ➔ 12:55 抵達 (狀態: OK)</p>
+                        </div>
+                        <div>
+                            <span class="bg-purple-600 text-white text-[10px] px-1.5 py-0.5 rounded font-bold mr-1">回程</span>
+                            <span class="font-bold text-slate-700">泰國亞洲航空 FD235</span> (經濟艙E)
+                            <p class="text-slate-500 mt-1">東京成田 (NRT) ➔ 高雄小港 (KHH)</p>
+                            <p class="font-semibold text-slate-600">07/08 13:55 起飛 ➔ 17:05 抵達 (狀態: OK)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accommodation details -->
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-slate-700 border-l-4 border-indigo-500 pl-2">🏨 住宿資訊</h3>
+                        <span class="text-xs bg-amber-100 text-amber-800 py-0.5 px-2 rounded-full font-semibold">附圖：LINE_ALBUM_東京想去_260621_1.jpg</span>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-xl space-y-2">
+                        <div class="font-bold text-slate-800 text-sm">Ostay Ueno (豪華家庭房)</div>
+                        <p class="text-slate-600 text-xs">地址: Taito-ku Higashiueno 5-22-4, Taito Ward, Tokyo</p>
+                        <p class="text-slate-500 text-xs">電話: +81 3 4588 3364</p>
+                        <p class="text-slate-500 text-[11px] bg-slate-200/50 p-1 rounded font-mono">GPS: N 035° 42.873', E 139° 46.945' (近稻荷町站/上野站)</p>
+                        <div class="pt-1.5 border-t border-dashed border-slate-200 flex justify-between text-xs text-slate-600">
+                            <span>入住: 7/5 (16:00~22:00)</span>
+                            <span>退房: 7/8 (10:00前)</span>
+                        </div>
+                        <div class="text-[11px] text-slate-500 space-y-0.5 bg-yellow-50 p-2 rounded-lg border border-yellow-100">
+                            <p class="font-semibold text-yellow-800"><i class="fa-solid fa-circle-exclamation"></i> 房型配置與備忘：</p>
+                            <p>• 4張加大雙人床（寬151-180cm），完美容納3大2小。</p>
+                            <p>• 房內附設：廚房、洗衣服/烘衣機、冰箱、微波爐、私人衛浴。</p>
+                            <p>• 房價：約 TWD 33,805 (¥172,700)，已全額付清。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Navigation Tabs -->
+        <div class="flex bg-white p-1 rounded-xl shadow-sm border border-slate-100 overflow-x-auto hide-scrollbar scroll-smooth">
+            <button onclick="switchTab('tab-overview')" id="btn-tab-overview" class="flex-1 min-w-[80px] py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all flex flex-col items-center gap-1 shrink-0 tab-active">
+                <i class="fa-solid fa-compass text-base"></i>
+                <span>總覽行前</span>
+            </button>
+            <button onclick="switchTab('tab-day1')" id="btn-tab-day1" class="flex-1 min-w-[80px] py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all flex flex-col items-center gap-1 shrink-0">
+                <i class="fa-solid fa-calendar-day text-base"></i>
+                <span>7/5 Day1</span>
+            </button>
+            <button onclick="switchTab('tab-day2')" id="btn-tab-day2" class="flex-1 min-w-[80px] py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all flex flex-col items-center gap-1 shrink-0">
+                <i class="fa-solid fa-calendar-day text-base"></i>
+                <span>7/6 Day2</span>
+            </button>
+            <button onclick="switchTab('tab-day3')" id="btn-tab-day3" class="flex-1 min-w-[80px] py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all flex flex-col items-center gap-1 shrink-0">
+                <i class="fa-solid fa-calendar-day text-base"></i>
+                <span>7/7 Day3</span>
+            </button>
+            <button onclick="switchTab('tab-day4')" id="btn-tab-day4" class="flex-1 min-w-[80px] py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all flex flex-col items-center gap-1 shrink-0">
+                <i class="fa-solid fa-calendar-check text-base"></i>
+                <span>7/8 Day4</span>
+            </button>
+            <button onclick="switchTab('tab-tools')" id="btn-tab-tools" class="flex-1 min-w-[80px] py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-all flex flex-col items-center gap-1 shrink-0">
+                <i class="fa-solid fa-wallet text-base"></i>
+                <span>記帳工具</span>
+            </button>
+        </div>
+
+        <!-- Tab 1: Overview & Packing -->
+        <section id="tab-overview" class="tab-content space-y-4">
+            <!-- Travel Tips Card -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-4 border border-amber-100/60 shadow-sm space-y-3">
+                <h3 class="font-bold text-amber-800 flex items-center gap-2"><i class="fa-solid fa-sun text-lg"></i> 2026年7月東京親子行前提醒</h3>
+                <ul class="text-xs sm:text-sm text-amber-900/90 space-y-2 list-disc pl-4">
+                    <li><strong>防暑防曬：</strong>7月的東京十分炎熱。隨行有兩位青少年(11歲與13歲)，請備妥防曬乳、遮陽帽、手持風扇及充足飲水。</li>
+                    <li><strong>交通卡準備：</strong>建議在小港出發前或抵達機場時，幫每人手機綁定 <strong>Mobile Suica/Pasmo</strong>，或購買實體 Welcome Suica，方便搭乘地鐵與路面電車。</li>
+                    <li><strong>上網與備份：</strong>請確認預付卡或 eSIM 已安裝。本互動小冊子的勾選與記帳數據皆會儲存在您的手機瀏覽器中，離線時也能看喔！</li>
+                </ul>
+            </div>
+
+            <!-- Packing Checklist -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 space-y-3">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-blue-500"></i> 夏日東京行李打包清單 (親子優化版)</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                    <div class="space-y-2 bg-slate-50/50 p-3 rounded-xl">
+                        <p class="font-bold text-slate-700 border-b pb-1">📄 證件與重要物品</p>
+                        <div class="space-y-1.5" id="checklist-docs">
+                            <!-- Items managed via javascript initialization -->
+                        </div>
+                    </div>
+                    <div class="space-y-2 bg-slate-50/50 p-3 rounded-xl">
+                        <p class="font-bold text-slate-700 border-b pb-1">👕 穿戴與夏日防暑</p>
+                        <div class="space-y-1.5" id="checklist-clothes">
+                            <!-- Items managed via javascript initialization -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 2: Day 1 (7/5) -->
+        <section id="tab-day1" class="tab-content space-y-4 hidden">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-2xl p-4 shadow-sm flex justify-between items-center">
+                <div>
+                    <span class="text-xs bg-white/20 px-2 py-0.5 rounded-full font-bold">第一天 7/5 (星期日)</span>
+                    <h3 class="text-xl font-bold mt-1">啟航東京 ‧ 下町與台場復古之夜</h3>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs text-blue-100">今日步行預估</p>
+                    <p class="text-lg font-bold">~10,000 步</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-blue-200 ml-4 pl-6 space-y-6">
+                <!-- Node 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-blue-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">05:30 ~ 08:05</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">高雄小港國際機場 ➔ 出發辦理登機</h4>
+                    <p class="text-xs text-slate-500 mt-1">搭乘泰國亞洲航空 FD234，請提前2.5小時抵達機場。3位大人與2位小孩請先準備好護照與機票條碼。</p>
+                </div>
+
+                <!-- Node 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-cyan-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded">12:55 ~ 14:15</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">降落東京成田機場 (T2/T3) ➔ 辦理入境</h4>
+                    <p class="text-xs text-slate-500 mt-1">入境後，前往京成電鐵售票處購買「Skyliner」車票前往上野。推薦購買 Skyliner 單程/來回票，速度最快最舒適！</p>
+                </div>
+
+                <!-- Node 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-indigo-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">14:30 ~ 15:45</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">搭乘 Skyliner ➔ 京成上野站 ➔ 飯店 Check-in</h4>
+                    <div class="bg-indigo-50/50 p-2.5 rounded-lg border border-indigo-100/50 text-xs mt-1 space-y-1">
+                        <span class="bg-amber-100 text-amber-800 text-[10px] px-1.5 py-0.5 rounded-full font-semibold">對照住宿單：LINE_ALBUM_東京想去_260621_1.jpg</span>
+                        <p class="text-slate-600 font-medium">交通指引：</p>
+                        <p class="text-slate-500">抵達京成上野站後，轉搭「東京地鐵銀座線」從上野站搭 1 站至<strong>「稻荷町站」</strong>，步行約3-5分鐘即可抵達 Ostay Ueno 飯店辦理入住，放下沉重行李！</p>
+                    </div>
+                </div>
+
+                <!-- Node 4: Major Spot -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-purple-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-0.5 rounded">16:30 ~ 19:30</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">台場一丁目商店街 ‧ 昭和時代復古之夜</h4>
+                        </div>
+                        <span class="bg-rose-100 text-rose-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            景點 ①
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        位於 DECKS Tokyo Beach 購物中心內。重現了日本昭和30年代（1950年代）的街道、古早味零食店、懷舊遊戲機台，非常適合大人回味、小朋友體驗！<strong>【💡 營業時間小提醒】</strong>當天 7/5 為週日，商店街通常延長營業至晚上 21:00（平日為 20:00）。但為避免部分店家提早收拾，建議於 19:30 前完成逛街與晚餐，時間最為充裕！
+                    </p>
+                    
+                    <div class="bg-slate-50 p-2.5 rounded-lg text-xs mt-3 space-y-2">
+                        <div class="flex items-center gap-2 text-slate-600">
+                            <i class="fa-solid fa-route text-blue-500"></i>
+                            <span><strong>建議交通路線：</strong></span>
+                        </div>
+                        <p class="text-slate-500 pl-6">
+                            從稻荷町站搭乘「銀座線」至「新橋站」，轉搭高架無人駕駛電車<strong>「百合鷗號 (Yurikamome)」</strong>至「台場海濱公園站」，下車步行2分鐘即達。
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1.5 border-t border-slate-200">
+                            <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded-full font-semibold">對照圖檔：LINE_ALBUM_東京想去_260621_5.jpg</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 1 Food Recommendation -->
+                    <div class="mt-3 bg-rose-50/50 p-3 rounded-xl border border-rose-100 space-y-2">
+                        <p class="font-bold text-xs text-rose-700 flex items-center gap-1.5">
+                            <i class="fa-solid fa-utensils"></i> 🌟 台場美食地圖 & 文字燒初體驗！
+                        </p>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p><strong>🍜 台場章魚燒博物館 (DECKS 4F)：</strong> 集合大阪排隊名店，適合當小點心，現做熱騰騰，小孩一定喜歡！</p>
+                            <p><strong>🔥 鶴橋風月大阪燒/文字燒 (Decks 5F)：</strong> 就在商場內，帶小孩不用吹風！桌邊親自為您拌燒煎製，香氣四溢、互動感十足，青少年會覺得非常新奇有趣！</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-odaiba" class="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500" onchange="toggleSpot('odaiba')">
+                            <span>我已完成此行程點！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-odaiba"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 5 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-slate-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">19:30 ~ 20:30</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">台場海濱公園 ➔ 欣賞彩虹大橋夜景 ➔ 搭車返回上野</h4>
+                    <p class="text-xs text-slate-500 mt-1">此時天色已黑，涼風徐徐，是拍「自由女神與彩虹大橋點燈」最迷人的黃金時間。拍完照後，循原路返回稻荷町 Ostay Ueno，在附近的便利商店補給消夜與隔日早餐，讓家人早點休息儲備體力！</p>
+                </div>
+            </div>
+
+            <!-- Day Note -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 space-y-2">
+                <label for="note-day1" class="font-bold text-slate-700 text-xs sm:text-sm block">📝 第一天隨手筆記 (會自動儲存)：</label>
+                <textarea id="note-day1" rows="3" class="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="記下今天的驚喜、花費或行程調整吧..." oninput="saveDayNote('day1')"></textarea>
+            </div>
+        </section>
+
+        <!-- Tab 3: Day 2 (7/6) -->
+        <section id="tab-day2" class="tab-content space-y-4 hidden">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl p-4 shadow-sm flex justify-between items-center">
+                <div>
+                    <span class="text-xs bg-white/20 px-2 py-0.5 rounded-full font-bold">第二天 7/6 (星期一)</span>
+                    <h3 class="text-xl font-bold mt-1">東京櫻花路面電車 ‧ 池袋動漫與懷舊冒險</h3>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs text-emerald-100">今日步行預估</p>
+                    <p class="text-lg font-bold">~14,000 步</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-emerald-200 ml-4 pl-6 space-y-6">
+                <!-- Node 1: Major Spot (Arakawa Tram) -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-emerald-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">09:00 ~ 11:30</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">都電荒川線「東京櫻花路面電車」體驗</h4>
+                        </div>
+                        <span class="bg-rose-100 text-rose-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            景點 ②
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        這是東京僅存的公營路面電車之一，步調緩慢悠閒。車廂帶有極具風味的復古塗裝，沿途經過許多懷舊的東京下町住宅區。
+                    </p>
+                    
+                    <div class="bg-slate-50 p-2.5 rounded-lg text-xs mt-3 space-y-2">
+                        <div class="flex items-center gap-2 text-slate-600">
+                            <i class="fa-solid fa-route text-blue-500"></i>
+                            <span><strong>建議路線與乘車方式：</strong></span>
+                        </div>
+                        <p class="text-slate-500 pl-6">
+                            從飯店出發步行或搭車至「三之輪橋站」（都電荒川線起點站），上車刷 IC 卡（大人170日圓，小孩90日圓）。建議坐到<strong>「飛鳥山站」</strong>，可在人行天橋上拍攝電車與馬路汽車並行的有趣經典畫面！
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1.5 border-t border-slate-200">
+                            <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded-full font-semibold">對照圖檔：LINE_ALBUM_東京想去_260621_2.jpg</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-arakawa" class="w-4 h-4 text-emerald-600 border-slate-300 rounded focus:ring-emerald-500" onchange="toggleSpot('arakawa')">
+                            <span>我已完成此行程點！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-arakawa"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 2: Major Spot (Sunshine Candy Shop) -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-teal-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded">12:00 ~ 14:30</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">池袋 Sunshine City ➔ 「池袋1丁目1番地」懷舊糖果店</h4>
+                        </div>
+                        <span class="bg-rose-100 text-rose-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            景點 ③
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        搭路面電車至「東池袋四丁目站」下車，步行約5分鐘直通 Sunshine City 太陽城。隨後前往 <strong>ALTA B1 的「池袋1丁目1番地」</strong>。
+                    </p>
+                    <p class="text-xs text-teal-700 font-semibold mt-1">★ 這裡是一家非常厲害的古早味「駄菓子屋」（懷舊小屋店），滿滿的日本童玩與糖果，小孩子絕對會逛到瘋狂！</p>
+                    
+                    <div class="bg-slate-50 p-2.5 rounded-lg text-xs mt-3 space-y-1">
+                        <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded-full font-semibold inline-block">對照圖檔：LINE_ALBUM_東京想去_260621_6.jpg</span>
+                    </div>
+
+                    <!-- Day 2 Lunch Recommendation -->
+                    <div class="mt-3 bg-rose-50/50 p-3 rounded-xl border border-rose-100 space-y-2">
+                        <p class="font-bold text-xs text-rose-700 flex items-center gap-1.5">
+                            <i class="fa-solid fa-utensils"></i> 🍔 太陽城/池袋美食推薦
+                        </p>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p><strong>🍦 Milky Way 星座主題咖啡廳 (池袋站東口旁)：</strong> 滿滿藍白色星空主題，甜點都是 12 星座巨大冰淇淋聖代！極受年輕人及青少年喜愛，是池袋數十年的經典地標。</p>
+                            <p><strong>🥩 牛かつ もとむら 炸牛元村 (池袋店)：</strong> 酥脆炸外皮包裹著多汁鮮牛肉，大人小孩可以用自己面前的小石板自行調整熟度，好吃又好玩！</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-sunshine" class="w-4 h-4 text-teal-600 border-slate-300 rounded focus:ring-teal-500" onchange="toggleSpot('sunshine')">
+                            <span>我已完成此行程點！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-sunshine"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 3: Major Spot (Otome Road) -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-indigo-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">14:30 ~ 18:00</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">池袋「乙女路」漫步與 Animate 旗艦店</h4>
+                        </div>
+                        <span class="bg-rose-100 text-rose-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            景點 ④
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        緊鄰太陽城西側的「乙女路」（乙女ロード）是動漫愛好者的聖地，有極具代表性的 Animate、K-BOOKS、駿河屋等店鋪。適合全家一起尋找喜愛的動漫周邊！
+                    </p>
+                    
+                    <div class="bg-slate-50 p-2.5 rounded-lg text-xs mt-3 space-y-1">
+                        <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded-full font-semibold inline-block">對照圖檔：LINE_ALBUM_東京想去_260621_3.jpg</span>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-ikebukuro" class="w-4 h-4 text-indigo-600 border-slate-300 rounded focus:ring-indigo-500" onchange="toggleSpot('ikebukuro')">
+                            <span>我已完成此行程點！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-ikebukuro"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-slate-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">18:00 ~ 20:30</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">池袋東口美味晚餐 ➔ 返回上野飯店休息</h4>
+                    <p class="text-xs text-slate-500 mt-1">
+                        推薦在池袋站東口享用豐富晚餐。<strong>「池袋 麵創房無敵家」</strong>是全東京最富盛名的濃郁豚骨拉麵（排隊長，但非常值得！），或是前往
+                        <strong>「敘敘苑 (池袋東口店)」</strong>享用一頓精緻燒肉。隨後搭乘「JR山手線」直接回到上野站，步行回 Ostay Ueno。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Day Note -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 space-y-2">
+                <label for="note-day2" class="font-bold text-slate-700 text-xs sm:text-sm block">📝 第二天隨手筆記 (會自動儲存)：</label>
+                <textarea id="note-day2" rows="3" class="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="記下今天的驚喜、花費或行程調整吧..." oninput="saveDayNote('day2')"></textarea>
+            </div>
+        </section>
+
+        <!-- Tab 4: Day 3 (7/7) -->
+        <section id="tab-day3" class="tab-content space-y-4 hidden">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-2xl p-4 shadow-sm flex justify-between items-center">
+                <div>
+                    <span class="text-xs bg-white/20 px-2 py-0.5 rounded-full font-bold">第三天 7/7 (星期二)</span>
+                    <h3 class="text-xl font-bold mt-1">高圓寺文青散策 ‧ 原宿夢奇奇 ‧ 澀谷經典與老東京車站夜拍</h3>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs text-purple-100">今日步行預估</p>
+                    <p class="text-lg font-bold">~15,500 步</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-purple-200 ml-4 pl-6 space-y-6">
+                <!-- Node 1: Major Spot (Koenji) -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-purple-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2 py-0.5 rounded">09:30 ~ 13:00</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">高圓寺散策（純情商店街、古著與咖啡）</h4>
+                        </div>
+                        <span class="bg-rose-100 text-rose-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            景點 ⑤
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        高圓寺是平價古著店與日劇場景的重鎮。中午可以在這裡解決午餐。
+                    </p>
+                    
+                    <div class="bg-slate-50 p-2.5 rounded-lg text-xs mt-3 space-y-2">
+                        <div class="flex items-center gap-2 text-slate-600">
+                            <i class="fa-solid fa-route text-blue-500"></i>
+                            <span><strong>建議交通路線：</strong></span>
+                        </div>
+                        <p class="text-slate-500 pl-6">
+                            從飯店出發，從上野站搭乘「JR中央快速線」直達高圓寺站（北口出站即是「純情商店街」大拱門）。
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1.5 border-t border-slate-200">
+                            <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded-full font-semibold">對照圖檔：LINE_ALBUM_東京想去_260621_4.jpg</span>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 Lunch Recommendation -->
+                    <div class="mt-3 bg-rose-50/50 p-3 rounded-xl border border-rose-100 space-y-2">
+                        <p class="font-bold text-xs text-rose-700 flex items-center gap-1.5">
+                            <i class="fa-solid fa-utensils"></i> 🍳 高圓寺必吃奇觀美食！
+                        </p>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p><strong>🍳 天すけ 天婦羅 (高圓寺站北口步行1分)：</strong> 這家店最有名的是「炸半熟蛋天婦羅蓋飯」。主廚在炸蛋時會有誇張、風趣的「拋擲蛋殼」表演秀，對大人小孩來說都超級吸睛、好玩又好吃，非常推推薦親子造訪！</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-koenji" class="w-4 h-4 text-purple-600 border-slate-300 rounded focus:ring-purple-500" onchange="toggleSpot('koenji')">
+                            <span>我已完成此行程點！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-koenji"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 2: Major Spot (Kiddy Land Harajuku) -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-pink-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded">13:30 ~ 16:30</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">原宿 Kiddy Land ➔ 尋找超萌「蒙奇奇」玩偶</h4>
+                        </div>
+                        <span class="bg-rose-100 text-rose-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            景點 ⑥
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        搭乘「JR山手線」至原宿站，步行前往表參道的玩具王國 <strong>Kiddy Land 原宿店</strong>。
+                    </p>
+                    <p class="text-xs text-pink-700 font-semibold mt-1">
+                        🎯 精準導航備忘：蒙奇奇（Monchhichi / 夢奇奇）專櫃就在 Kiddy Land，趕快幫家人挑選超級可愛的草莓頭款或其他特別款吧！
+                    </p>
+                    
+                    <div class="bg-slate-50 p-2.5 rounded-lg text-xs mt-3 space-y-2">
+                        <p class="text-slate-600 font-semibold">📍 尋寶地址與圖檔提示：</p>
+                        <p class="text-slate-500">東京都渋谷区神宮前6丁目1-9</p>
+                        <div class="flex flex-wrap gap-1.5 pt-1.5 border-t border-slate-200">
+                            <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded-full font-semibold">對照圖檔：LINE_ALBUM_東京想去_260621_7.jpg</span>
+                        </div>
+                    </div>
+
+                    <!-- Harajuku Snacks -->
+                    <div class="mt-3 bg-rose-50/50 p-3 rounded-xl border border-rose-100 space-y-1">
+                        <p class="font-bold text-xs text-rose-700 flex items-center gap-1.5">
+                            <i class="fa-solid fa-cookie-bite"></i> 🍭 原宿竹下通甜點推薦
+                        </p>
+                        <p class="text-xs text-slate-600"><strong>🍓 Marion Crepes 可麗餅：</strong> 日本最經典的竹下通日式軟可麗餅，香濃的鮮奶油包裹大量草莓和巧克力，一邊拿著一邊散步超級享受！</p>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-kiddyland" class="w-4 h-4 text-pink-600 border-slate-300 rounded focus:ring-pink-500" onchange="toggleSpot('kiddyland')">
+                            <span>我已完成此行程點！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-kiddyland"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 3: Shibuya Crossing & Monjayaki Dinner -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-amber-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">16:45 ~ 19:15</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">澀谷十字路口 ➔ 重頭戲：月島文字燒名店晚宴</h4>
+                        </div>
+                        <span class="bg-amber-100 text-amber-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            美食重頭戲
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        步行或搭JR一站到澀谷站。在澀谷站前觀看世界最大的十字路口。隨後前往澀谷最紅的地標 <strong>Shibuya Scramble Square 12F</strong> 享用晚餐！
+                    </p>
+
+                    <!-- Monjayaki highlight! -->
+                    <div class="mt-3 bg-amber-50 p-3 rounded-xl border border-amber-200 space-y-2">
+                        <p class="font-bold text-xs text-amber-800 flex items-center gap-1.5">
+                            <i class="fa-solid fa-fire-burner"></i> 🔥 月島文字燒排隊名店 ➔【月島もんじゃ もへじ】
+                        </p>
+                        <div class="text-xs text-slate-700 space-y-1">
+                            <p><strong>📍 位置：</strong> 澀谷 Scramble Square 12 樓（出站直通大樓，超方便！）</p>
+                            <p><strong>✨ 特色：</strong> 傳承自明治時期的百年文字燒高湯配方。招牌「明太子年糕起司文字燒」是小孩子與大人的最愛，店員會現場用小鐵鏟熟練地在煎板上翻炒、壓出微焦酥脆的香噴噴鍋粑。在 12 樓還能一邊吃飯一邊俯瞰澀谷迷人繁華的夜景！</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-monjayaki" class="w-4 h-4 text-amber-600 border-slate-300 rounded focus:ring-amber-500" onchange="toggleSpot('monjayaki')">
+                            <span>我已吃到超香文字燒了！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-monjayaki"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 4: Inserted Tokyo Station Spot -->
+                <div class="relative bg-white p-4 rounded-xl border border-indigo-100 shadow-sm ring-2 ring-indigo-500/10">
+                    <div class="absolute -left-[31px] top-4 bg-indigo-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">19:30 ~ 20:15</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">經典百年東京車站 ‧ 站前廣場華麗夜拍</h4>
+                        </div>
+                        <span class="bg-indigo-100 text-indigo-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            新增行程
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        在澀谷站搭乘「JR山手線」或「東京地鐵半藏門線」前往<strong>東京車站</strong>。這座經典的古典紅磚巴洛克式大樓在黑夜中亮起暖黃燈光，是到訪東京絕對不能錯過的明信片級大景！
+                    </p>
+                    
+                    <div class="bg-indigo-50/70 p-3 rounded-lg text-xs mt-3 space-y-2">
+                        <div class="flex items-center gap-1.5 text-indigo-800 font-bold">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>📷 完美攝影點 & 出口導航：</span>
+                        </div>
+                        <p class="text-slate-600 pl-4">
+                            抵達東京車站後，跟著站內指標前往<strong>【丸之內中央口】(Marunouchi Central Exit)</strong> 出站。一出站便是極為寬敞的「丸之內站前廣場」。
+                        </p>
+                        <p class="text-slate-600 pl-4 font-semibold text-indigo-700">
+                            💡 拍照攻略：站在寬闊的行人廣場中央，以紅磚老車站的中央圓頂為背景，可以拍出極具震撼感的全家福大合照！
+                        </p>
+                        <div class="pt-1.5 border-t border-indigo-100/50 flex justify-between text-[11px] text-slate-500">
+                            <span>💡 從東京車站回飯店：</span>
+                            <span class="font-bold text-indigo-700">搭JR山手線4站 (約8分鐘) 直達上野，順暢無比！</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-tokyostation" class="w-4 h-4 text-indigo-600 border-slate-300 rounded focus:ring-indigo-500" onchange="toggleSpot('tokyostation')">
+                            <span>我已在丸之內老車站前成功拍下帥照！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-tokyostation"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day Note -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 space-y-2">
+                <label for="note-day3" class="font-bold text-slate-700 text-xs sm:text-sm block">📝 第三天隨手筆記 (會自動儲存)：</label>
+                <textarea id="note-day3" rows="3" class="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="記下今天的驚喜、花費或行程調整吧..." oninput="saveDayNote('day3')"></textarea>
+            </div>
+        </section>
+
+        <!-- Tab 5: Day 4 (7/8) -->
+        <section id="tab-day4" class="tab-content space-y-4 hidden">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-amber-500 to-yellow-500 text-white rounded-2xl p-4 shadow-sm flex justify-between items-center">
+                <div>
+                    <span class="text-xs bg-white/20 px-2 py-0.5 rounded-full font-bold">第四天 7/8 (星期三)</span>
+                    <h3 class="text-xl font-bold mt-1">上野市場最後採購 ➔ 安全溫暖返家</h3>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs text-amber-100">今日步行預估</p>
+                    <p class="text-lg font-bold">~6,500 步</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-amber-200 ml-4 pl-6 space-y-6">
+                <!-- Node 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-amber-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">08:00 ~ 09:30</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">整理行李 ➔ 辦理飯店退房 (Check-out)</h4>
+                    <p class="text-xs text-slate-500 mt-1">配合 11:00 前往機場的 Skyliner，提早於 09:30 前完成退房。退房後可將行李寄存在飯店（請事先詢問），或直接拉到京成上野站的大型寄物櫃寄存，方便待會輕鬆逛街後直接上車。</p>
+                </div>
+
+                <!-- Node 2: Major Spot (Ueno Market / Ameyoko) -->
+                <div class="relative bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
+                    <div class="absolute -left-[31px] top-4 bg-yellow-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded">09:30 ~ 11:00</span>
+                            <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">上野阿美橫町（アメ橫）最後衝刺與早鳥採購</h4>
+                        </div>
+                        <span class="bg-rose-100 text-rose-800 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold shrink-0">
+                            景點 ⑦
+                        </span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">
+                        阿美橫町是東京最具活力的平民市集。雖然部分店家 10:00 才陸續全開，但大型藥妝店及土產店（如二木的菓子）通常提早营业，非常適合做回台前的最後一波「爆買伴手禮」！
+                    </p>
+
+                    <!-- Day 4 Lunch Recommendation -->
+                    <div class="mt-3 bg-rose-50/50 p-3 rounded-xl border border-rose-100 space-y-2">
+                        <p class="font-bold text-xs text-rose-700 flex items-center gap-1.5">
+                            <i class="fa-solid fa-utensils"></i> 🍱 上野最後巡禮美食推薦
+                        </p>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p><strong>🍦 みはし Mihashi 上野本店 (上野公園旁)：</strong> 創業70餘年的傳統日式甜點老鋪。軟綿紅豆沙配上Q彈白玉（小湯圓）和香濃香草冰淇淋，是經典美味！</p>
+                            <p><strong>🍢 肉の大山 (阿美橫町內)：</strong> 超受歡迎的肉舖直營小吃。櫥窗直接現炸的可樂餅與「特製炸肉餅 (¥150)」，外皮香脆，咬下去滿口肉汁，買幾個在 Skyliner 車上吃，小孩一定秒殺！</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Checklist Checkbox -->
+                    <div class="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-700">
+                            <input type="checkbox" id="chk-spot-ameyoko" class="w-4 h-4 text-yellow-600 border-slate-300 rounded focus:ring-yellow-500" onchange="toggleSpot('ameyoko')">
+                            <span>我已完成此行程點！</span>
+                        </label>
+                        <span class="text-emerald-600 font-bold hidden" id="done-spot-ameyoko"><i class="fa-solid fa-circle-check"></i> 已解鎖</span>
+                    </div>
+                </div>
+
+                <!-- Node 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-orange-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded">11:00 ~ 11:45</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">京成上野站 ➔ 搭乘 Skyliner 快速直達機場</h4>
+                    <p class="text-xs text-slate-500 mt-1">帶上剛買的點心和飲料，搭乘 <strong>11:00 左右</strong>的 Skyliner（車程約 41 分鐘），於 11:41 抵達「機場第二航廈站」。在最舒適的對號座車廂裡休息、看窗外風景，大人省心、小孩開心！</p>
+                </div>
+
+                <!-- Node 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-red-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">11:45 ~ 13:55</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">成田機場提早辦理登機 (2小時前安全抵達)</h4>
+                    <p class="text-xs text-slate-500 mt-1">泰國亞洲航空 FD235 班機於 13:55 起飛。我們於 11:45 左右抵達櫃台，留有整整 2 小時又 10 分鐘的充裕時間辦理托運、安全檢查與出境手續，還可以安心悠閒地在成田機場免稅店做最後補貨！</p>
+                </div>
+
+                <!-- Node 5 -->
+                <div class="relative">
+                    <div class="absolute -left-[31px] top-1 bg-green-600 text-white rounded-full w-4 h-4 border-2 border-white"></div>
+                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded">17:05</span>
+                    <h4 class="font-bold text-slate-800 text-sm sm:text-base mt-1">抵達高雄小港國際機場 ➔ 家的溫暖</h4>
+                    <p class="text-xs text-slate-500 mt-1">順利安全返台！這次的 4 天 3 夜東京親子復古懷舊與動漫冒險圓滿落幕！期待下一次的出發！</p>
+                </div>
+            </div>
+
+            <!-- Day Note -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 space-y-2">
+                <label for="note-day4" class="font-bold text-slate-700 text-xs sm:text-sm block">📝 第四天隨手筆記 (會自動儲存)：</label>
+                <textarea id="note-day4" rows="3" class="w-full text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="記下今天的驚喜、花費或行程調整吧..." oninput="saveDayNote('day4')"></textarea>
+            </div>
+        </section>
+
+        <!-- Tab 6: Interactive Travel Budget & JPY Converter Tool -->
+        <section id="tab-tools" class="tab-content space-y-4 hidden">
+            <!-- JPY to TWD Converter -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 space-y-3">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-calculator text-blue-500"></i> 日幣 ➔ 台幣 即時小工具</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                    <div>
+                        <label class="block font-semibold text-slate-600 mb-1">輸入日幣金額 (¥)</label>
+                        <input type="number" id="input-jpy" value="1000" class="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 font-bold" oninput="convertCurrency()">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-600 mb-1">台幣折合金額 (TWD)</label>
+                        <div class="w-full p-2 bg-blue-50 border border-blue-100 text-blue-700 rounded-lg font-bold text-base flex justify-between items-center">
+                            <span>$ <span id="output-twd">210</span></span>
+                            <span class="text-[10px] text-blue-500 bg-white px-2 py-0.5 rounded">匯率預設 0.21</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Budget List -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-4 space-y-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-coins text-amber-500"></i> 簡易行程預算隨手記</h3>
+                    <button onclick="confirmClearAll()" class="text-xs text-red-500 hover:underline">清空所有費用</button>
+                </div>
+                
+                <!-- Quick add form -->
+                <div class="bg-slate-50 p-3 rounded-xl grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+                    <input type="text" id="expense-name" placeholder="項目名稱 (例如：晚餐、扭蛋...)" class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <div class="flex">
+                        <input type="number" id="expense-amount" placeholder="金額" class="p-2 border rounded-l w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <select id="expense-currency" class="border-y border-r p-2 rounded-r bg-white font-bold">
+                            <option value="JPY">¥ 日幣</option>
+                            <option value="TWD">NT$ 台幣</option>
+                        </select>
+                    </div>
+                    <button onclick="addNewExpense()" class="bg-blue-600 text-white rounded py-2 px-4 hover:bg-blue-700 font-bold transition">新增花費</button>
+                </div>
+
+                <!-- Expenses Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs">
+                        <thead>
+                            <tr class="border-b text-slate-500 uppercase">
+                                <th class="py-2">項目名稱</th>
+                                <th class="py-2 text-right">原始金額</th>
+                                <th class="py-2 text-right">折合台幣 (TWD)</th>
+                                <th class="py-2 text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expense-list-body" class="divide-y divide-slate-100">
+                            <!-- Items populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Total Budget Sum -->
+                <div class="bg-slate-100 p-3 rounded-xl flex justify-between items-center text-sm font-bold text-slate-700">
+                    <span>總支出預估 (台幣合計)</span>
+                    <span class="text-blue-600 text-base" id="total-twd">$ 33,805</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Dialog Modal (to avoid alert/confirm blocking) -->
+    <div id="custom-confirm-modal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-2xl">
+            <h3 class="font-bold text-lg text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> 確認執行此操作嗎？
+            </h3>
+            <p id="confirm-modal-message" class="text-xs sm:text-sm text-slate-600">
+                此動作將無法復原，是否確定？
+            </p>
+            <div class="flex justify-end gap-2 text-xs font-bold pt-2 border-t border-slate-100">
+                <button onclick="closeConfirmModal(false)" class="px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200">取消</button>
+                <button onclick="closeConfirmModal(true)" class="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">確定清空</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-8 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 space-y-2">
+            <p class="font-bold text-slate-300">✈️ 祝 CHANG CHENG CHIEH 一家人東京暑期自由行玩得愉快！</p>
+            <p>本互動手冊採用本機儲存機制，刷新頁面後所有勾選與記帳數據仍會保留在您的瀏覽器中。</p>
+            <p class="text-slate-500">© 2026 東京夏日冒險親子旅行小秘書專屬生成 ‧ 祝您旅途平安</p>
+        </div>
+    </footer>
+
+    <script>
+        // Default Constants
+        const JPY_RATE = 0.21; // Mock exchange rate
+
+        // Default initial items
+        const defaultPackingDocs = [
+            { id: "p1", text: "中華民國護照 (確認效期>6個月)", checked: false },
+            { id: "p2", text: "機票條碼與航班確認單", checked: false },
+            { id: "p3", text: "日幣現金 & 行動支付設定 (Suica卡)", checked: false },
+            { id: "p4", text: "飯店訂房單確認 (Ostay Ueno)", checked: false }
+        ];
+
+        const defaultPackingClothes = [
+            { id: "c1", text: "防曬乳/手持風扇/冰涼貼", checked: false },
+            { id: "c2", text: "輕便雨傘/雨衣 (預防突發雷雨)", checked: false },
+            { id: "c3", text: "排汗排汗短袖衣物 (4天份)", checked: false },
+            { id: "c4", text: "舒適好走的休閒鞋/運動鞋", checked: false }
+        ];
+
+        // Travel Spot IDs (Including new Monjayaki and Tokyo Station)
+        const spotIds = ['odaiba', 'arakawa', 'sunshine', 'ikebukuro', 'koenji', 'kiddyland', 'monjayaki', 'tokyostation', 'ameyoko'];
+
+        // Initial Expenses State
+        let expenses = [
+            { id: "e-hotel", name: "Ostay Ueno 住宿費 (豪華家庭房)", amount: 33805, currency: "TWD" }
+        ];
+
+        // On Window Load Initializer
+        window.onload = function() {
+            // Calculate CountDown
+            initCountdown();
+            setInterval(initCountdown, 60000);
+
+            // Load Data from LocalStorage
+            loadState();
+
+            // Render Packing Checklists
+            renderChecklists();
+
+            // Render Spot Checks
+            updateSpotCheckUI();
+
+            // Render Expenses list
+            renderExpenses();
+        };
+
+        // Custom Toast Function
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            const toastIcon = document.getElementById('toast-icon');
+
+            if (type === 'error') {
+                toastIcon.innerHTML = `<i class="fa-solid fa-circle-exclamation text-rose-500"></i>`;
+            } else {
+                toastIcon.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400"></i>`;
+            }
+
+            toastMsg.innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Tab Switcher Logic
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            // Show selected tab content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Reset navigation tab button styles
+            document.querySelectorAll('[id^="btn-tab-"]').forEach(btn => {
+                btn.classList.remove('tab-active', 'bg-blue-50/50', 'text-blue-600');
+                btn.classList.add('text-slate-500');
+            });
+            // Highlight current button
+            const activeBtn = document.getElementById(`btn-btn-${tabId}`) || document.getElementById(`btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.add('tab-active');
+                activeBtn.classList.remove('text-slate-500');
+            }
+        }
+
+        // Toggle Details Box
+        function toggleDetails(elementId) {
+            const details = document.getElementById(elementId);
+            const toggleText = document.getElementById('toggle-text');
+            if (details.classList.contains('hidden')) {
+                details.classList.remove('hidden');
+                toggleText.innerText = "收合詳細";
+            } else {
+                details.classList.add('hidden');
+                toggleText.innerText = "展開詳細";
+            }
+        }
+
+        // Countdown calculations
+        function initCountdown() {
+            const targetDate = new Date('2026/07/05 08:05:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const el = document.getElementById('countdown');
+            if (difference < 0) {
+                el.innerText = "🎉 順利抵達東京，旅途中！";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+            el.innerHTML = `出航倒數 <span class="text-yellow-300 font-bold">${days}</span> 天 <span class="text-yellow-300 font-bold">${hours}</span> 時 <span class="text-yellow-300 font-bold">${minutes}</span> 分`;
+        }
+
+        // Checkbox Packing lists rendering
+        let currentDocs = [...defaultPackingDocs];
+        let currentClothes = [...defaultPackingClothes];
+
+        function renderChecklists() {
+            const docsContainer = document.getElementById('checklist-docs');
+            docsContainer.innerHTML = currentDocs.map(item => `
+                <label class="flex items-start gap-2.5 cursor-pointer">
+                    <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="togglePackingItem('doc', '${item.id}')" class="w-4 h-4 text-blue-600 border-slate-300 rounded mt-0.5 focus:ring-blue-500">
+                    <span class="${item.checked ? 'line-through text-slate-400' : 'text-slate-600'}">${item.text}</span>
+                </label>
+            `).join('');
+
+            const clothesContainer = document.getElementById('checklist-clothes');
+            clothesContainer.innerHTML = currentClothes.map(item => `
+                <label class="flex items-start gap-2.5 cursor-pointer">
+                    <input type="checkbox" ${item.checked ? 'checked' : ''} onchange="togglePackingItem('clothes', '${item.id}')" class="w-4 h-4 text-blue-600 border-slate-300 rounded mt-0.5 focus:ring-blue-500">
+                    <span class="${item.checked ? 'line-through text-slate-400' : 'text-slate-600'}">${item.text}</span>
+                </label>
+            `).join('');
+        }
+
+        function togglePackingItem(type, id) {
+            if (type === 'doc') {
+                const item = currentDocs.find(x => x.id === id);
+                if (item) item.checked = !item.checked;
+            } else {
+                const item = currentClothes.find(x => x.id === id);
+                if (item) item.checked = !item.checked;
+            }
+            saveState();
+            renderChecklists();
+            showToast("清單變更已儲存！");
+        }
+
+        // LocalStorage save & load
+        function saveState() {
+            localStorage.setItem('tokyo_packing_docs', JSON.stringify(currentDocs));
+            localStorage.setItem('tokyo_packing_clothes', JSON.stringify(currentClothes));
+            localStorage.setItem('tokyo_expenses', JSON.stringify(expenses));
+            
+            // Save spot check statuses
+            const spotStatuses = {};
+            spotIds.forEach(id => {
+                const el = document.getElementById(`chk-spot-${id}`);
+                if (el) spotStatuses[id] = el.checked;
+            });
+            localStorage.setItem('tokyo_spots_checked', JSON.stringify(spotStatuses));
+        }
+
+        function loadState() {
+            const savedDocs = localStorage.getItem('tokyo_packing_docs');
+            if (savedDocs) currentDocs = JSON.parse(savedDocs);
+
+            const savedClothes = localStorage.getItem('tokyo_packing_clothes');
+            if (savedClothes) currentClothes = JSON.parse(savedClothes);
+
+            const savedExpenses = localStorage.getItem('tokyo_expenses');
+            if (savedExpenses) expenses = JSON.parse(savedExpenses);
+
+            // Load Notes
+            for (let i = 1; i <= 4; i++) {
+                const savedNote = localStorage.getItem(`tokyo_note_day${i}`);
+                if (savedNote) {
+                    const txt = document.getElementById(`note-day${i}`);
+                    if (txt) txt.value = savedNote;
+                }
+            }
+        }
+
+        // Handle spot checklist actions
+        function toggleSpot(spotId) {
+            const chk = document.getElementById(`chk-spot-${spotId}`);
+            const doneBadge = document.getElementById(`done-spot-${spotId}`);
+            if (chk.checked) {
+                if (doneBadge) doneBadge.classList.remove('hidden');
+                showToast("恭喜解鎖一個新行程景點！🎉");
+            } else {
+                if (doneBadge) doneBadge.classList.add('hidden');
+            }
+            saveState();
+        }
+
+        function updateSpotCheckUI() {
+            const savedSpots = localStorage.getItem('tokyo_spots_checked');
+            if (savedSpots) {
+                const spotStatuses = JSON.parse(savedSpots);
+                spotIds.forEach(id => {
+                    const chk = document.getElementById(`chk-spot-${id}`);
+                    const doneBadge = document.getElementById(`done-spot-${id}`);
+                    if (chk && spotStatuses[id] !== undefined) {
+                        chk.checked = spotStatuses[id];
+                        if (spotStatuses[id]) {
+                            if (doneBadge) doneBadge.classList.remove('hidden');
+                        } else {
+                            if (doneBadge) doneBadge.classList.add('hidden');
+                        }
+                    }
+                });
+            }
+        }
+
+        // Daily note triggers
+        function saveDayNote(dayKey) {
+            const noteVal = document.getElementById(`note-${dayKey}`).value;
+            localStorage.setItem(`tokyo_note_${dayKey}`, noteVal);
+        }
+
+        // Currency tools
+        function convertCurrency() {
+            const jpyVal = parseFloat(document.getElementById('input-jpy').value) || 0;
+            const twdResult = Math.round(jpyVal * JPY_RATE);
+            document.getElementById('output-twd').innerText = twdResult.toLocaleString('zh-TW');
+        }
+
+        // Expenses Operations
+        function renderExpenses() {
+            const tbody = document.getElementById('expense-list-body');
+            tbody.innerHTML = '';
+
+            let totalTwd = 0;
+
+            expenses.forEach((item, index) => {
+                let convertedTwd = item.currency === 'TWD' ? item.amount : Math.round(item.amount * JPY_RATE);
+                totalTwd += convertedTwd;
+
+                tbody.innerHTML += `
+                    <tr class="hover:bg-slate-50">
+                        <td class="py-2.5 font-medium text-slate-800">${item.name}</td>
+                        <td class="py-2.5 text-right text-slate-600 font-mono">
+                            ${item.currency === 'JPY' ? '¥' : '$'} ${item.amount.toLocaleString()}
+                        </td>
+                        <td class="py-2.5 text-right text-blue-600 font-mono font-bold">
+                            $ ${convertedTwd.toLocaleString()}
+                        </td>
+                        <td class="py-2.5 text-center">
+                            ${item.id === 'e-hotel' ? '<span class="text-slate-400 font-bold">-</span>' : `
+                                <button onclick="deleteExpense('${item.id}')" class="text-red-500 hover:text-red-700 transition">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </button>
+                            `}
+                        </td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById('total-twd').innerText = `$ ${totalTwd.toLocaleString('zh-TW')}`;
+        }
+
+        function addNewExpense() {
+            const nameInput = document.getElementById('expense-name');
+            const amtInput = document.getElementById('expense-amount');
+            const currSelect = document.getElementById('expense-currency');
+
+            const name = nameInput.value.trim();
+            const amount = parseFloat(amtInput.value) || 0;
+            const currency = currSelect.value;
+
+            if (!name || amount <= 0) {
+                showToast("請填寫有效的項目名稱與大於 0 的金額！", "error");
+                return;
+            }
+
+            const newId = 'e-' + Date.now();
+            expenses.push({ id: newId, name, amount, currency });
+
+            // Reset Form fields
+            nameInput.value = '';
+            amtInput.value = '';
+
+            // Update UI & save
+            saveState();
+            renderExpenses();
+            showToast("成功新增一筆支出記錄！💵");
+        }
+
+        function deleteExpense(id) {
+            expenses = expenses.filter(x => x.id !== id);
+            saveState();
+            renderExpenses();
+            showToast("成功刪除支出。");
+        }
+
+        // Custom Confirm Handling (Replaces standard confirm)
+        let onConfirmAction = null;
+
+        function openConfirmModal(msg, action) {
+            document.getElementById('confirm-modal-message').innerText = msg;
+            document.getElementById('custom-confirm-modal').classList.remove('hidden');
+            onConfirmAction = action;
+        }
+
+        function closeConfirmModal(agree) {
+            document.getElementById('custom-confirm-modal').classList.add('hidden');
+            if (agree && onConfirmAction) {
+                onConfirmAction();
+            }
+            onConfirmAction = null;
+        }
+
+        function confirmClearAll() {
+            openConfirmModal("確定要重設預算清單嗎？（除預設的飯店與住宿費之外的所有記錄皆會被清空）", () => {
+                expenses = [
+                    { id: "e-hotel", name: "Ostay Ueno 住宿費 (豪華家庭房)", amount: 33805, currency: "TWD" }
+                ];
+                saveState();
+                renderExpenses();
+                showToast("已成功重設支出清單！");
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 日本親子旅行入口</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --ink: #172033;
+            --muted: #647084;
+            --paper: #fffaf2;
+            --line: rgba(23, 32, 51, 0.12);
+            --tokyo: #2563eb;
+            --shikoku: #b42318;
+            --green: #166534;
+            --gold: #c7831f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: 100%;
+            background: #f6f1e8;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: var(--ink);
+            background:
+                linear-gradient(180deg, rgba(255, 250, 242, 0.7), rgba(245, 247, 250, 0.96) 62%),
+                url("https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=2200&q=80") center top / cover fixed;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page-shell {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        .topbar {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 18px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 900;
+            letter-spacing: 0;
+            color: #ffffff;
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .topbar-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.42);
+        }
+
+        .hero {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: clamp(28px, 6vh, 72px) 0 32px;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+            gap: clamp(28px, 5vw, 64px);
+            align-items: end;
+        }
+
+        .headline {
+            max-width: 680px;
+            color: #ffffff;
+            text-shadow: 0 4px 28px rgba(0, 0, 0, 0.42);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: #fff7da;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.6rem, 7vw, 6.6rem);
+            line-height: 0.95;
+            letter-spacing: 0;
+            font-weight: 900;
+        }
+
+        .hero-copy {
+            width: min(620px, 100%);
+            margin: 22px 0 0;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: clamp(1rem, 1.8vw, 1.22rem);
+            line-height: 1.85;
+            font-weight: 600;
+        }
+
+        .trip-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .trip-card {
+            min-height: 232px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            background: #ffffff;
+            box-shadow: 0 24px 60px rgba(13, 22, 39, 0.28);
+            isolation: isolate;
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+
+        .trip-card:focus-visible {
+            outline: 4px solid rgba(255, 255, 255, 0.8);
+            outline-offset: 4px;
+        }
+
+        .trip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 70px rgba(13, 22, 39, 0.34);
+            border-color: rgba(255, 255, 255, 0.72);
+        }
+
+        .trip-media {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background-position: center;
+            background-size: cover;
+            transform: scale(1.02);
+            transition: transform 240ms ease;
+        }
+
+        .trip-card:hover .trip-media {
+            transform: scale(1.06);
+        }
+
+        .trip-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                linear-gradient(90deg, rgba(12, 18, 31, 0.86), rgba(12, 18, 31, 0.42) 62%, rgba(12, 18, 31, 0.18)),
+                linear-gradient(0deg, rgba(12, 18, 31, 0.52), rgba(12, 18, 31, 0.05));
+        }
+
+        .trip-content {
+            min-height: 232px;
+            padding: clamp(20px, 4vw, 30px);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 26px;
+        }
+
+        .trip-kicker {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.86);
+            font-size: 0.86rem;
+            font-weight: 800;
+        }
+
+        .trip-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            white-space: nowrap;
+        }
+
+        .trip-title {
+            margin: 0 0 10px;
+            font-size: clamp(1.45rem, 3vw, 2.35rem);
+            line-height: 1.18;
+            letter-spacing: 0;
+            font-weight: 900;
+        }
+
+        .trip-detail {
+            margin: 0;
+            max-width: 600px;
+            color: rgba(255, 255, 255, 0.84);
+            line-height: 1.75;
+            font-size: 0.96rem;
+            font-weight: 600;
+        }
+
+        .trip-action {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .mini-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .mini-stat {
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.14);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.78rem;
+            font-weight: 800;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .open-icon {
+            width: 44px;
+            height: 44px;
+            flex: 0 0 44px;
+            border-radius: 999px;
+            display: grid;
+            place-items: center;
+            color: #142033;
+            background: #ffffff;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+        }
+
+        .tokyo .trip-media {
+            background-image: url("https://images.unsplash.com/photo-1542931287-023b922fa89b?auto=format&fit=crop&w=1400&q=80");
+        }
+
+        .shikoku .trip-media {
+            background-image: url("https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=1400&q=80");
+        }
+
+        .quick-row {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto 34px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .quick-item {
+            min-height: 92px;
+            padding: 18px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid var(--line);
+            box-shadow: 0 14px 34px rgba(23, 32, 51, 0.08);
+            backdrop-filter: blur(12px);
+        }
+
+        .quick-item i {
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .quick-label {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .quick-value {
+            margin: 4px 0 0;
+            color: var(--ink);
+            font-size: 0.96rem;
+            font-weight: 900;
+        }
+
+        footer {
+            width: min(1120px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 0 0 24px;
+            color: rgba(23, 32, 51, 0.62);
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        @media (max-width: 900px) {
+            body {
+                background-attachment: scroll;
+            }
+
+            .hero-layout {
+                grid-template-columns: 1fr;
+                align-items: start;
+            }
+
+            .headline {
+                padding-top: 18px;
+            }
+
+            .trip-grid {
+                margin-top: 4px;
+            }
+
+            .quick-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 620px) {
+            .topbar {
+                width: min(100% - 24px, 1120px);
+                padding: 14px 0 6px;
+                align-items: flex-start;
+            }
+
+            .brand {
+                font-size: 0.96rem;
+            }
+
+            .brand-mark {
+                width: 38px;
+                height: 38px;
+                border-radius: 12px;
+            }
+
+            .topbar-meta {
+                display: none;
+            }
+
+            .hero {
+                width: min(100% - 24px, 1120px);
+                padding: 22px 0 24px;
+            }
+
+            .eyebrow {
+                font-size: 0.8rem;
+            }
+
+            .hero-copy {
+                margin-top: 16px;
+                line-height: 1.7;
+            }
+
+            .trip-card,
+            .trip-content {
+                min-height: 246px;
+            }
+
+            .trip-kicker {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .trip-action {
+                align-items: flex-end;
+            }
+
+            .mini-stats {
+                gap: 6px;
+            }
+
+            .mini-stat {
+                font-size: 0.74rem;
+            }
+
+            .quick-row {
+                width: min(100% - 24px, 1120px);
+                grid-template-columns: 1fr;
+                margin-bottom: 22px;
+            }
+
+            .quick-item {
+                min-height: 76px;
+                padding: 14px 16px;
+            }
+
+            footer {
+                width: min(100% - 24px, 1120px);
+                flex-direction: column;
+                padding-bottom: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar" aria-label="網站頂部">
+            <a class="brand" href="./index.html" aria-label="回到旅行入口">
+                <span class="brand-mark"><i class="fa-solid fa-route"></i></span>
+                <span>Chang Family Travel</span>
+            </a>
+            <div class="topbar-meta">
+                <i class="fa-regular fa-calendar"></i>
+                <span>2026 Summer Japan</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero" aria-labelledby="page-title">
+                <div class="hero-layout">
+                    <div class="headline">
+                        <div class="eyebrow">
+                            <i class="fa-solid fa-plane-departure"></i>
+                            <span>兩段旅程，一頁出發</span>
+                        </div>
+                        <h1 id="page-title">2026 日本親子旅行入口</h1>
+                        <p class="hero-copy">東京快閃的城市冒險，接上四國自駕的城郭、祭典與山海路線。選一張行程卡，直接進入互動手冊。</p>
+                    </div>
+
+                    <div class="trip-grid" aria-label="行程入口">
+                        <a class="trip-card tokyo" href="./2026_0705__0708東京快閃.html" aria-label="開啟東京親子冒險旅遊手冊">
+                            <span class="trip-media" aria-hidden="true"></span>
+                            <div class="trip-content">
+                                <div>
+                                    <div class="trip-kicker">
+                                        <span class="trip-badge"><i class="fa-solid fa-train-subway"></i> Tokyo City Sprint</span>
+                                        <span>07/05 - 07/08</span>
+                                    </div>
+                                    <h2 class="trip-title">東京親子冒險</h2>
+                                    <p class="trip-detail">上野住宿、台場夜景、行前清單與每日分頁，適合出發前快速確認重點。</p>
+                                </div>
+                                <div class="trip-action">
+                                    <div class="mini-stats">
+                                        <span class="mini-stat">4天3夜</span>
+                                        <span class="mini-stat">成田進出</span>
+                                        <span class="mini-stat">互動記帳</span>
+                                    </div>
+                                    <span class="open-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="trip-card shikoku" href="./2026_0806__0813四國遊.html" aria-label="開啟四國自駕停車特化手冊">
+                            <span class="trip-media" aria-hidden="true"></span>
+                            <div class="trip-content">
+                                <div>
+                                    <div class="trip-kicker">
+                                        <span class="trip-badge"><i class="fa-solid fa-car-side"></i> Shikoku Road Trip</span>
+                                        <span>08/06 - 08/13</span>
+                                    </div>
+                                    <h2 class="trip-title">四國夏祭典自駕</h2>
+                                    <p class="trip-detail">現存天守、MAPCODE、停車死線與祭典管制提醒，為八天自駕路線整理成一頁掌握。</p>
+                                </div>
+                                <div class="trip-action">
+                                    <div class="mini-stats">
+                                        <span class="mini-stat">8天7夜</span>
+                                        <span class="mini-stat">高松進出</span>
+                                        <span class="mini-stat">停車特化</span>
+                                    </div>
+                                    <span class="open-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quick-row" aria-label="旅行摘要">
+                <div class="quick-item">
+                    <i class="fa-solid fa-users"></i>
+                    <p class="quick-label">同行成員</p>
+                    <p class="quick-value">Chang 家族 5 人</p>
+                </div>
+                <div class="quick-item">
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+                    <p class="quick-label">旅行月份</p>
+                    <p class="quick-value">2026 年 7-8 月</p>
+                </div>
+                <div class="quick-item">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <p class="quick-label">頁面數量</p>
+                    <p class="quick-value">2 份互動手冊</p>
+                </div>
+                <div class="quick-item">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p class="quick-label">使用方式</p>
+                    <p class="quick-value">手機也可直接開啟</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>入口頁：index.html</span>
+            <span>祝旅途一路順風，該買的周邊都買得到。</span>
+        </footer>
+    </div>
+</body>
+</html>
