@@ -697,7 +697,7 @@
             </a>
             <div class="topbar-meta">
                 <i class="fa-regular fa-calendar"></i>
-                <span>2026 Summer Japan</span>
+                <span id="topbar-year-label">Summer Japan</span>
             </div>
         </header>
 
@@ -709,71 +709,21 @@
                             <i class="fa-solid fa-plane-departure"></i>
                             <span>兩段旅程，一頁出發</span>
                         </div>
-                        <h1 id="page-title">2026 日本親子旅行入口</h1>
-                        <p class="hero-copy">東京快閃的城市冒險，接上四國自駕的城郭、祭典與山海路線。選一張行程卡，直接進入互動手冊。</p>
+                        <h1 id="page-title">旅行入口</h1>
+                        <p id="hero-description" class="hero-copy"></p>
                     </div>
 
-                    <div class="trip-grid" aria-label="行程入口">
-                        <a class="trip-card tokyo" href="./2026_0705__0708東京快閃.html" aria-label="開啟東京親子冒險旅遊手冊">
-                            <span class="trip-media" aria-hidden="true"></span>
-                            <div class="trip-content">
-                                <div>
-                                    <div class="trip-kicker">
-                                        <span class="trip-badge"><i class="fa-solid fa-train-subway"></i> Tokyo City Sprint</span>
-                                        <span>07/05 - 07/08</span>
-                                    </div>
-                                    <h2 class="trip-title">東京親子冒險</h2>
-                                    <p class="trip-detail">上野住宿、台場夜景、行前清單與每日分頁，適合出發前快速確認重點。</p>
-                                </div>
-                                <div class="trip-action">
-                                    <div class="mini-stats">
-                                        <span class="mini-stat">4天3夜</span>
-                                        <span class="mini-stat">成田進出</span>
-                                        <span class="mini-stat">互動記帳</span>
-                                    </div>
-                                    <span class="open-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a class="trip-card shikoku" href="./2026_0806__0813四國遊.html" aria-label="開啟四國自駕停車特化手冊">
-                            <span class="trip-media" aria-hidden="true"></span>
-                            <div class="trip-content">
-                                <div>
-                                    <div class="trip-kicker">
-                                        <span class="trip-badge"><i class="fa-solid fa-car-side"></i> Shikoku Road Trip</span>
-                                        <span>08/06 - 08/13</span>
-                                    </div>
-                                    <h2 class="trip-title">四國夏祭典自駕</h2>
-                                    <p class="trip-detail">現存天守、MAPCODE、停車死線與祭典管制提醒，為八天自駕路線整理成一頁掌握。</p>
-                                </div>
-                                <div class="trip-action">
-                                    <div class="mini-stats">
-                                        <span class="mini-stat">8天7夜</span>
-                                        <span class="mini-stat">高松進出</span>
-                                        <span class="mini-stat">停車特化</span>
-                                    </div>
-                                    <span class="open-icon" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="trip-grid" aria-label="行程入口" id="trip-grid">
                     </div>
                 </div>
             </section>
 
-            <section class="archive-section" aria-label="歷年足跡回顧">
+            <section class="archive-section" aria-label="歷年足跡回顧" id="archive-section">
                 <h3 class="archive-title">
                     <i class="fa-solid fa-box-archive"></i>
                     <span>歷年足跡回顧</span>
                 </h3>
-                <div class="archive-grid">
-                    <div class="archive-card" onclick="location.href='#'" aria-label="讀取歷史回顧行程">
-                        <div class="archive-meta">
-                            <span class="archive-year">2025</span>
-                            <span class="archive-name">回顧範本行程 (預留位置)</span>
-                        </div>
-                        <span class="archive-days">5天4夜 ➔</span>
-                    </div>
+                <div class="archive-grid" id="archive-grid">
                 </div>
             </section>
 
@@ -1256,12 +1206,12 @@
                 <div class="quick-item">
                     <i class="fa-solid fa-suitcase-rolling"></i>
                     <p class="quick-label">旅行月份</p>
-                    <p class="quick-value">2026 年 7-8 月</p>
+                    <p class="quick-value" id="stat-months">計算中...</p>
                 </div>
                 <div class="quick-item">
                     <i class="fa-solid fa-map-location-dot"></i>
-                    <p class="quick-label">頁面數量</p>
-                    <p class="quick-value">2 份互動手冊</p>
+                    <p class="quick-label">行程數量</p>
+                    <p class="quick-value" id="stat-count">計算中...</p>
                 </div>
                 <div class="quick-item">
                     <i class="fa-solid fa-mobile-screen-button"></i>
@@ -1278,8 +1228,152 @@
     </div>
 
     <script>
-        const PLANNED_CODES = ['12', '13', '36', '37', '38', '39']; // 千葉, 東京, 德島, 香川, 愛媛, 高知
+        // ==========================================
+        // 1. Load trips from JSON and render
+        // ==========================================
+        let allTrips = [];
+
+        async function loadTrips() {
+            try {
+                const res = await fetch('trips/manifest.json');
+                if (!res.ok) throw new Error('manifest not found');
+                const ids = await res.json();
+                const tripPromises = ids.map(id =>
+                    fetch(`trips/${id}.json`).then(r => r.json())
+                );
+                allTrips = await Promise.all(tripPromises);
+            } catch (e) {
+                console.warn('No trip data yet:', e.message);
+                renderTrips();
+                updateStats();
+                return;
+            }
+            renderTrips();
+            updateStats();
+            updateMapPlanned();
+            loadMapStates();
+        }
+
+        function renderTrips() {
+            const now = new Date();
+            const activeTrips = allTrips.filter(t => new Date(t.dateEnd) >= now);
+            const archiveTrips = allTrips.filter(t => new Date(t.dateEnd) < now);
+
+            const grid = document.getElementById('trip-grid');
+            const archiveGrid = document.getElementById('archive-grid');
+            grid.innerHTML = '';
+            archiveGrid.innerHTML = '';
+
+            // Update title & description
+            if (activeTrips.length > 0) {
+                const years = [...new Set(activeTrips.map(t => t.dateStart.slice(0,4)))];
+                document.getElementById('page-title').textContent = `${years.join('/')} 日本親子旅行入口`;
+                document.getElementById('hero-description').textContent =
+                    activeTrips.map(t => t.description).join(' ');
+                document.getElementById('topbar-year-label').textContent =
+                    `${years.join('/')} Summer Japan`;
+            }
+
+            // Render active trips as big cards
+            activeTrips.forEach(t => {
+                const card = document.createElement('a');
+                card.className = `trip-card ${t.image}`;
+                card.href = `viewer.html?trip=${t.id}`;
+                card.innerHTML = `
+                    <span class="trip-media" aria-hidden="true"></span>
+                    <div class="trip-content">
+                        <div>
+                            <div class="trip-kicker">
+                                <span class="trip-badge"><i class="fa-solid ${t.badgeIcon}"></i> ${t.badge}</span>
+                                <span>${t.dateStart.slice(5)} - ${t.dateEnd.slice(5)}</span>
+                            </div>
+                            <h2 class="trip-title">${t.title}</h2>
+                            <p class="trip-detail">${t.description}</p>
+                        </div>
+                        <div class="trip-action">
+                            <div class="mini-stats">
+                                ${t.stats.map(s => `<span class="mini-stat">${s}</span>`).join('')}
+                            </div>
+                            <span class="open-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            // Fallback placeholder if no active trips
+            if (activeTrips.length === 0) {
+                const nextYear = String(new Date().getFullYear() + 1);
+                const placeholder = document.createElement('div');
+                placeholder.className = 'trip-card';
+                placeholder.innerHTML = `
+                    <div class="trip-content" style="justify-content:center;align-items:center;text-align:center;min-height:232px;">
+                        <div>
+                            <div style="font-size:2.5rem;margin-bottom:12px;">✨</div>
+                            <h2 class="trip-title">${nextYear} 年旅行規劃中</h2>
+                            <p class="trip-detail">下一趟家族冒險正在醞釀中，敬請期待！</p>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(placeholder);
+            }
+
+            // Render archive trips as compact cards
+            archiveTrips.forEach(t => {
+                const card = document.createElement('div');
+                card.className = 'archive-card';
+                card.onclick = () => location.href = `viewer.html?trip=${t.id}`;
+                const year = t.dateStart.slice(0,4);
+                card.innerHTML = `
+                    <div class="archive-meta">
+                        <span class="archive-year">${year}</span>
+                        <span class="archive-name">${t.title}</span>
+                    </div>
+                    <span class="archive-days">${t.stats[0] || ''} ➔</span>
+                `;
+                archiveGrid.appendChild(card);
+            });
+
+            // Hide archive section if empty
+            document.getElementById('archive-section').style.display =
+                archiveTrips.length > 0 ? '' : 'none';
+        }
+
+        function updateStats() {
+            const now = new Date();
+            const active = allTrips.filter(t => new Date(t.dateEnd) >= now);
+            if (active.length > 0) {
+                const months = [...new Set(active.map(t => {
+                    const d = new Date(t.dateStart);
+                    return d.getMonth() + 1;
+                }))].sort((a,b) => a-b);
+                const year = active[0].dateStart.slice(0,4);
+                document.getElementById('stat-months').textContent =
+                    `${year} 年 ${months.join('-')} 月`;
+            }
+            document.getElementById('stat-count').textContent =
+                `${allTrips.filter(t => new Date(t.dateEnd) >= new Date()).length} 趟規劃中`;
+        }
+
+        function updateMapPlanned() {
+            const now = new Date();
+            const active = allTrips.filter(t => new Date(t.dateEnd) >= now);
+            const codes = [...new Set(active.flatMap(t => t.prefectures || []))];
+            const airports = [...new Set(active.flatMap(t => t.airports || []))];
+            // Update the global constants used by map logic
+            window.PLANNED_CODES.length = 0;
+            window.PLANNED_CODES.push(...codes);
+            window.PLANNED_AIRPORTS.length = 0;
+            window.PLANNED_AIRPORTS.push(...airports);
+        }
+
+        // ==========================================
+        // 2. Map constants (overridden by trip data)
+        // ==========================================
+        var PLANNED_CODES = [];
+        var PLANNED_AIRPORTS = [];
         const STORAGE_KEY = 'japan-conquest-map-states';
+        const AIRPORT_STORAGE_KEY = 'japan-conquest-airports';
 
         const AIRPORTS = [
             { code: 'CTS', name: '新千歲機場' },
@@ -1318,132 +1412,135 @@
             { code: 'ISG', name: '石垣機場' },
             { code: 'MMY', name: '宮古機場' }
         ];
-        const PLANNED_AIRPORTS = ['NRT', 'TAK'];
-    const AIRPORT_STORAGE_KEY = 'japan-conquest-airports';
 
-    function loadMapStates() {
-        let customStates = {};
-        try {
-            const saved = localStorage.getItem(STORAGE_KEY);
-            if (saved) customStates = JSON.parse(saved);
-        } catch (e) {
-            console.error('Failed to load map states:', e);
-        }
-
-        document.querySelectorAll('.prefecture').forEach(el => {
-            const code = el.getAttribute('data-code');
-            const customState = customStates[code];
-
-            if (customState) {
-                el.setAttribute('data-state', customState);
-            } else if (PLANNED_CODES.includes(code)) {
-                el.setAttribute('data-state', 'planning');
-            } else {
-                el.setAttribute('data-state', 'unvisited');
+        function loadMapStates() {
+            let customStates = {};
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) customStates = JSON.parse(saved);
+            } catch (e) {
+                console.error('Failed to load map states:', e);
             }
 
-            el.replaceWith(el.cloneNode(true));
-        });
+            document.querySelectorAll('.prefecture').forEach(el => {
+                const code = el.getAttribute('data-code');
+                const customState = customStates[code];
+                const planned = window.PLANNED_CODES && window.PLANNED_CODES.length > 0
+                    ? window.PLANNED_CODES : ['12', '13', '36', '37', '38', '39'];
 
-        document.querySelectorAll('.prefecture').forEach(el => {
-            const code = el.getAttribute('data-code');
-            el.addEventListener('click', () => {
-                cyclePrefState(el, code);
+                if (customState) {
+                    el.setAttribute('data-state', customState);
+                } else if (planned.includes(code)) {
+                    el.setAttribute('data-state', 'planning');
+                } else {
+                    el.setAttribute('data-state', 'unvisited');
+                }
+
+                el.replaceWith(el.cloneNode(true));
             });
-        });
 
-        loadAirportMarkers();
-    }
+            document.querySelectorAll('.prefecture').forEach(el => {
+                const code = el.getAttribute('data-code');
+                el.addEventListener('click', () => {
+                    cyclePrefState(el, code);
+                });
+            });
 
-    function cyclePrefState(el, code) {
-        const currentState = el.getAttribute('data-state');
-        let nextState = 'unvisited';
-
-        if (PLANNED_CODES.includes(code)) {
-            if (currentState === 'planning') nextState = 'visited';
-            else if (currentState === 'visited') nextState = 'want';
-            else nextState = 'planning';
-        } else {
-            if (currentState === 'unvisited') nextState = 'visited';
-            else if (currentState === 'visited') nextState = 'want';
-            else nextState = 'unvisited';
+            loadAirportMarkers();
         }
 
-        el.setAttribute('data-state', nextState);
+        function cyclePrefState(el, code) {
+            const currentState = el.getAttribute('data-state');
+            let nextState = 'unvisited';
 
-        let customStates = {};
-        try {
-            const saved = localStorage.getItem(STORAGE_KEY);
-            if (saved) customStates = JSON.parse(saved);
-        } catch (e) {}
-
-        customStates[code] = nextState;
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(customStates));
-    }
-
-    function loadAirportMarkers() {
-        let customAirports = {};
-        try {
-            const saved = localStorage.getItem(AIRPORT_STORAGE_KEY);
-            if (saved) customAirports = JSON.parse(saved);
-        } catch (e) {}
-
-        document.querySelectorAll('.airport-marker').forEach(el => {
-            const code = el.getAttribute('data-code');
-            const customState = customAirports[code];
-
-            if (customState) {
-                el.setAttribute('data-state', customState);
-            } else if (PLANNED_AIRPORTS.includes(code)) {
-                el.setAttribute('data-state', 'planned');
+            if (window.PLANNED_CODES && window.PLANNED_CODES.includes(code)) {
+                if (currentState === 'planning') nextState = 'visited';
+                else if (currentState === 'visited') nextState = 'want';
+                else nextState = 'planning';
             } else {
-                el.setAttribute('data-state', 'unvisited');
+                if (currentState === 'unvisited') nextState = 'visited';
+                else if (currentState === 'visited') nextState = 'want';
+                else nextState = 'unvisited';
             }
 
-            el.replaceWith(el.cloneNode(true));
-        });
+            el.setAttribute('data-state', nextState);
 
-        document.querySelectorAll('.airport-marker').forEach(el => {
-            const code = el.getAttribute('data-code');
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleAirportMarker(el, code);
-            });
-        });
-    }
+            let customStates = {};
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) customStates = JSON.parse(saved);
+            } catch (e) {}
 
-    function toggleAirportMarker(el, code) {
-        const currentState = el.getAttribute('data-state');
-        let nextState = 'unvisited';
-
-        if (PLANNED_AIRPORTS.includes(code)) {
-            nextState = (currentState === 'planned') ? 'active' : 'planned';
-        } else {
-            nextState = (currentState === 'unvisited') ? 'active' : 'unvisited';
+            customStates[code] = nextState;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(customStates));
         }
 
-        el.setAttribute('data-state', nextState);
+        function loadAirportMarkers() {
+            let customAirports = {};
+            try {
+                const saved = localStorage.getItem(AIRPORT_STORAGE_KEY);
+                if (saved) customAirports = JSON.parse(saved);
+            } catch (e) {}
 
-        let customAirports = {};
-        try {
-            const saved = localStorage.getItem(AIRPORT_STORAGE_KEY);
-            if (saved) customAirports = JSON.parse(saved);
-        } catch (e) {}
+            document.querySelectorAll('.airport-marker').forEach(el => {
+                const code = el.getAttribute('data-code');
+                const customState = customAirports[code];
+                const plannedA = window.PLANNED_AIRPORTS && window.PLANNED_AIRPORTS.length > 0
+                    ? window.PLANNED_AIRPORTS : ['NRT', 'TAK'];
 
-        customAirports[code] = nextState;
-        localStorage.setItem(AIRPORT_STORAGE_KEY, JSON.stringify(customAirports));
-    }
+                if (customState) {
+                    el.setAttribute('data-state', customState);
+                } else if (plannedA.includes(code)) {
+                    el.setAttribute('data-state', 'planned');
+                } else {
+                    el.setAttribute('data-state', 'unvisited');
+                }
 
-    function resetMap() {
-        localStorage.removeItem(STORAGE_KEY);
-        localStorage.removeItem(AIRPORT_STORAGE_KEY);
-        loadMapStates();
-    }
+                el.replaceWith(el.cloneNode(true));
+            });
 
-        document.addEventListener('DOMContentLoaded', loadMapStates);
-        // Fallback for initial load
-        if (document.readyState === 'interactive' || document.readyState === 'complete') {
+            document.querySelectorAll('.airport-marker').forEach(el => {
+                const code = el.getAttribute('data-code');
+                el.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleAirportMarker(el, code);
+                });
+            });
+        }
+
+        function toggleAirportMarker(el, code) {
+            const currentState = el.getAttribute('data-state');
+            let nextState = 'unvisited';
+
+            if (window.PLANNED_AIRPORTS && window.PLANNED_AIRPORTS.includes(code)) {
+                nextState = (currentState === 'planned') ? 'active' : 'planned';
+            } else {
+                nextState = (currentState === 'unvisited') ? 'active' : 'unvisited';
+            }
+
+            el.setAttribute('data-state', nextState);
+
+            let customAirports = {};
+            try {
+                const saved = localStorage.getItem(AIRPORT_STORAGE_KEY);
+                if (saved) customAirports = JSON.parse(saved);
+            } catch (e) {}
+
+            customAirports[code] = nextState;
+            localStorage.setItem(AIRPORT_STORAGE_KEY, JSON.stringify(customAirports));
+        }
+
+        function resetMap() {
+            localStorage.removeItem(STORAGE_KEY);
+            localStorage.removeItem(AIRPORT_STORAGE_KEY);
             loadMapStates();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTrips();
+        });
+        if (document.readyState === 'interactive' || document.readyState === 'complete') {
+            loadTrips();
         }
     </script>
 </body>
