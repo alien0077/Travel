@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>行程 JSON 產生範本 — 請依此格式在 trips/ 下建立新檔案</title>
+<style>
+body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f8fafc; color: #1e293b; }
+pre { background: #1e293b; color: #e2e8f0; padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.6; }
+.comment { color: #94a3b8; }
+.key { color: #60a5fa; }
+.string { color: #34d399; }
+.number { color: #f59e0b; }
+h2 { margin-top: 28px; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; }
+.step { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+.step-num { display: inline-block; background: #3b82f6; color: white; font-weight: bold; border-radius: 999px; width: 24px; height: 24px; text-align: center; line-height: 24px; font-size: 13px; margin-right: 8px; }
+</style>
+</head>
+<body>
+<h1>📋 旅遊行程 JSON 產生範本</h1>
+<p>將此頁內容作為參考，在 <code>trips/</code> 目錄下建立新的 <code>{id}.json</code> 檔案。</p>
+
+<div class="step">
+  <span class="step-num">1</span>
+  <strong>確認基本資料</strong> — 行程名稱、日期、類型（city/drive）、涵蓋縣市與機場
+</div>
+<div class="step">
+  <span class="step-num">2</span>
+  <strong>逐日填入行程</strong> — 每天的時間軸、美食、住宿、停車場
+</div>
+<div class="step">
+  <span class="step-num">3</span>
+  <strong>補充地圖連結</strong> — 每個景點/餐廳/飯店附上 mapUrl，自駕再加 mapcode
+</div>
+<div class="step">
+  <span class="step-num">4</span>
+  <strong>加入 manifest</strong> — 將新的 id 加入 <code>trips/manifest.json</code>
+</div>
+
+<h2>完整 JSON Schema</h2>
+<pre>{
+  <span class="comment">// === 中繼資料（首頁與地圖用） ===</span>
+  "<span class="key">id</span>": "<span class="string">2028-hokkaido</span>",        <span class="comment">// 唯一識別碼，也是檔名</span>
+  "<span class="key">type</span>": "<span class="string">drive</span>",                <span class="comment">// "city"（市區）或 "drive"（自駕）</span>
+  "<span class="key">title</span>": "<span class="string">北海道親子自駕</span>",
+  "<span class="key">subtitle</span>": "<span class="string">7/10 - 7/15 富良野花田・美瑛拼布</span>",
+  "<span class="key">badge</span>": "<span class="string">Hokkaido Road Trip</span>",
+  "<span class="key">badgeIcon</span>": "<span class="string">fa-car-side</span>",    <span class="comment">// FontAwesome 圖示</span>
+  "<span class="key">description</span>": "<span class="string">六天自駕穿越道央與道南。</span>",
+  "<span class="key">stats</span>": [<span class="string">"6天5夜"</span>, <span class="string">"新千歲進出"</span>, <span class="string">"親子景點"</span>],
+  "<span class="key">image</span>": "<span class="string">hokkaido</span>",              <span class="comment">// CSS class，控制卡片背景圖</span>
+  "<span class="key">prefectures</span>": [<span class="string">"01"</span>],         <span class="comment">// 都道府縣代碼（地圖自動標記）</span>
+  "<span class="key">airports</span>": [<span class="string">"CTS"</span>],              <span class="comment">// IATA 代碼（地圖自動標記）</span>
+  "<span class="key">dateStart</span>": "<span class="string">2028-07-10</span>",        <span class="comment">// ISO 日期，供首頁判斷進行中/已結束</span>
+  "<span class="key">dateEnd</span>": "<span class="string">2028-07-15</span>",
+
+  <span class="comment">// === 行程功能設定 ===</span>
+  "<span class="key">countdownDate</span>": "<span class="string">2028/07/10 08:00:00</span>",
+  "<span class="key">jpyToTwdRate</span>": 0.22,              <span class="comment">// city 模式記帳用</span>
+  "<span class="key">actionText</span>": "<span class="string">實用工具</span>",          <span class="comment">// 頂部按鈕文字</span>
+
+  <span class="comment">// === 航班資訊 ===</span>
+  "<span class="key">flights</span>": {
+    "<span class="key">outbound</span>": "<span class="string">去程：CI130 | 桃園 08:30 ➔ 13:00 新千歲</span>",
+    "<span class="key">inbound</span>": "<span class="string">回程：CI131 | 新千歲 14:30 ➔ 17:30 桃園</span>"
+  },
+
+  <span class="comment">// === Visit Japan Web ===</span>
+  "<span class="key">vjw</span>": {
+    "<span class="key">zip</span>": "<span class="string">060-0001</span>",
+    "<span class="key">address</span>": "<span class="string">北海道札幌市中央区北X条西Y丁目</span>",
+    "<span class="key">name</span>": "<span class="string">札幌某某飯店</span>"
+  },
+
+  <span class="comment">// === 景點解鎖清單（僅 city 模式） ===</span>
+  "<span class="key">sightsList</span>": [
+    { "<span class="key">id</span>": "<span class="string">sight1</span>", "<span class="key">name</span>": "<span class="string">🎡 Day 1: 札幌摩天輪</span>", "<span class="key">day</span>": "<span class="string">day1</span>" }
+  ],
+
+  <span class="comment">// === 預設記帳（僅 city 模式） ===</span>
+  "<span class="key">defaultExpenses</span>": [
+    { "<span class="key">id</span>": 1, "<span class="key">name</span>": "<span class="string">🏩 五晚住宿預算</span>", "<span class="key">amount</span>": 120000 }
+  ],
+
+  <span class="comment">// === 每日行程 ===</span>
+  "<span class="key">days</span>": {
+    "<span class="key">day1</span>": {
+      "<span class="key">date</span>": "<span class="string">7/10 (一)</span>",
+      "<span class="key">title</span>": "<span class="string">抵達札幌 ➔ 市區觀光</span>",
+      "<span class="key">timeRange</span>": "<span class="string">13:00pm - 08:00pm</span>",
+      "<span class="key">route</span>": [[347,239],[360,250],[370,260],[375,265],[380,270]],  <span class="comment">// 自駕路線點（選填）</span>
+      "<span class="key">timeline</span>": [
+        {
+          "<span class="key">type</span>": "<span class="string">transport</span>",           <span class="comment">// "transport"（大眾交通）或 "drive"（自駕）或 "act"（活動）</span>
+          "<span class="key">time</span>": "<span class="string">13:00pm - 14:00pm</span>",
+          "<span class="key">title</span>": "<span class="string">新千歲機場 ➔ 札幌車站</span>",
+          "<span class="key">detail</span>": "<span class="string">搭乘 JR 快速 airport 約 40 分鐘。</span>",
+          "<span class="key">mapUrl</span>": "<span class="string">https://maps.app.goo.gl/...</span>",  <span class="comment">// Google Maps 連結（選填但建議）</span>
+          "<span class="key">mapcode</span>": "<span class="string">12 345 678*90</span>"               <span class="comment">// 自駕模式選填</span>
+        }
+      ],
+      "<span class="key">food</span>": [
+        {
+          "<span class="key">meal</span>": "<span class="string">晚餐 (18:00)</span>",
+          "<span class="key">name</span>": "<span class="string">札幌拉麵共和國</span>",
+          "<span class="key">detail</span>": "<span class="string">品嚐札幌味噌拉麵。</span>",
+          "<span class="key">mapUrl</span>": "<span class="string">https://maps.app.goo.gl/...</span>",
+          "<span class="key">mapcode</span>": "<span class="string">12 345 678*90</span>"
+        }
+      ],
+      "<span class="key">parking</span>": [                      <span class="comment">// 自駕模式選填</span>
+        {
+          "<span class="key">name</span>": "<span class="string">札幌站前停車場</span>",
+          "<span class="key">detail</span>": "<span class="string">24 小時營業。</span>",
+          "<span class="key">mapUrl</span>": "<span class="string">https://maps.app.goo.gl/...</span>",
+          "<span class="key">mapcode</span>": "<span class="string">12 345 678*90</span>"
+        }
+      ],
+      "<span class="key">hotel</span>": {
+        "<span class="key">name</span>": "<span class="string">札幌某某飯店</span>",
+        "<span class="key">detail</span>": "<span class="string">靠近札幌站，出入方便。</span>",
+        "<span class="key">mapUrl</span>": "<span class="string">https://maps.app.goo.gl/...</span>",
+        "<span class="key">mapcode</span>": "<span class="string">12 345 678*90</span>"
+      },
+      "<span class="key">details</span>": "<span class="string">今日提醒：先在車站購買 Kittya 等伴手禮。</span>"
+    }
+    <span class="comment">// day2, day3 ... 依此類推</span>
+  }
+}</pre>
+
+<h2>使用流程</h2>
+<ol>
+  <li><strong>複製</strong>上方 JSON 結構到 <code>trips/{id}.json</code></li>
+  <li><strong>逐項填入</strong>實際行程資料，刪除不需要的欄位（如 city 模式可刪 parking）</li>
+  <li>所有 <strong>mapUrl</strong> 盡量填寫 Google Maps 短連結</li>
+  <li>自駕行程務必填寫 <strong>mapcode</strong></li>
+  <li>將 <strong>id</strong> 加入 <code>trips/manifest.json</code></li>
+  <li>開啟 <code>index.html</code> 確認卡片正確出現</li>
+  <li>開啟 <code>viewer.html?trip={id}</code> 確認行程內容正確</li>
+</ol>
+</body>
+</html>

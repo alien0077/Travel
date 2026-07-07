@@ -1,0 +1,133 @@
+{
+  "id": "2026-tokyo",
+  "type": "city",
+  "title": "東京親子冒險",
+  "subtitle": "7/5 - 7/8 親子交通導航・專屬手冊",
+  "badge": "Tokyo City Sprint",
+  "badgeIcon": "fa-train-subway",
+  "description": "上野住宿、台場夜景、行前清單與每日分頁，適合出發前快速確認重點。",
+  "stats": ["4天3夜", "成田進出", "互動記帳"],
+  "image": "tokyo",
+  "prefectures": ["12", "13"],
+  "airports": ["NRT"],
+  "dateStart": "2026-07-05",
+  "dateEnd": "2026-07-08",
+  "countdownDate": "2026/07/05 08:05:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "VJW / 工具",
+  "flights": {
+    "outbound": "去程：FD234 | 高雄 08:05 ➔ 12:55 成田",
+    "inbound": "回程：FD235 | 成田 13:55 ➔ 17:05 高雄"
+  },
+  "vjw": {
+    "zip": "110-0015",
+    "address": "東京都台東区東上野 X-XX-X",
+    "name": "Ostay Ueno Hotel"
+  },
+  "sightsList": [
+    { "id": "sight1", "name": "🎮 Day 1: 台場一丁目商店街", "day": "day1" },
+    { "id": "sight2", "name": "🏢 Day 2: 池袋太陽城 ＆ 寶可夢旗艦店", "day": "day2" },
+    { "id": "sight3", "name": "🧸 Day 2: 乙女路散策", "day": "day2" },
+    { "id": "sight4", "name": "🦖 Day 2: 池袋懷舊玩具店", "day": "day2" },
+    { "id": "sight5", "name": "🔥 Day 2: 池袋 Animate 旗艦店 (週一)", "day": "day2" },
+    { "id": "sight6", "name": "🏮 Day 3: 柴又老街散策 & 柴又玩具橫丁", "day": "day3" },
+    { "id": "sight7", "name": "🐒 Day 3: 原宿 KIDDY LAND 尋找夢奇奇", "day": "day3" },
+    { "id": "sight8", "name": "🏛️ Day 3: 夜拍古典東京車站（丸之內中央口）", "day": "day3" },
+    { "id": "sight9", "name": "🛍️ Day 4: 上野阿美橫町大採購", "day": "day4" }
+  ],
+  "defaultExpenses": [
+    { "id": 1, "name": "🏩 Ostay Ueno 四晚住宿預算", "amount": 98000 }
+  ],
+  "days": {
+    "day1": {
+      "date": "7/5 (日)",
+      "title": "抵達東京與台場夜景",
+      "timeRange": "12:55pm - 09:30pm",
+      "timeline": [
+        { "type": "transport", "time": "12:55pm - 14:30pm", "title": "成田機場 ➔ 上野京成電鐵 (大眾交通)", "detail": "搭乘 Skyliner 42 號直達日暮里/上野。請先在櫃檯購票或兌換實體票。" },
+        { "type": "act", "time": "15:00pm - 15:30pm", "title": "Ostay Ueno Hotel Check-in", "detail": "入住 Ostay Ueno Hotel 放置行李。" },
+        { "type": "act", "time": "15:30pm - 16:00pm", "title": "上野站周邊熟悉環境", "detail": "熟悉週圍便利商店、藥妝店位置。" },
+        { "type": "transport", "time": "16:00pm - 17:00pm", "title": "上野 ➔ 台場 (大眾交通)", "detail": "搭乘山手線至新橋站，轉乘百合海鷗號前往台場。" },
+        { "type": "act", "time": "17:00pm - 19:30pm", "title": "台場一丁目商店街 & 夜景", "detail": "台場一丁目商店街逛復古商店，展望台欣賞彩虹大橋夜景。" },
+        { "type": "transport", "time": "19:30pm - 20:30pm", "title": "台場 ➔ 上野 (大眾交通)", "detail": "原路返回上野站。" },
+        { "type": "act", "time": "20:30pm - 21:30pm", "title": "上野站前宵夜探索", "detail": "周邊居酒屋或便利店採買明早早餐。" }
+      ],
+      "food": [
+        { "meal": "晚餐 (18:00)", "name": "台場美食街自由選擇", "detail": "台場 Aqua City 或 DiverCity 美食街，種類豐富適合全家。" }
+      ],
+      "hotel": {
+        "name": "Ostay Ueno Hotel",
+        "detail": "靠近上野站，出入非常方便。"
+      },
+      "details": "首日抵達請先在京成電鐵櫃檯加值 Suica 卡，並確認孩子身上的防丟吊牌與手錶狀態。"
+    },
+    "day2": {
+      "date": "7/6 (一)",
+      "title": "池袋動漫朝聖日",
+      "timeRange": "09:00am - 08:00pm",
+      "timeline": [
+        { "type": "act", "time": "09:00am - 10:00am", "title": "飯店早餐與出門準備", "detail": "從容吃完早餐後出發。" },
+        { "type": "transport", "time": "10:00am - 10:30am", "title": "上野 ➔ 池袋 (大眾交通)", "detail": "搭乘 JR 山手線至上野站到池袋站。" },
+        { "type": "act", "time": "10:30am - 13:00pm", "title": "池袋太陽城 & 寶可夢中心旗艦店", "detail": "朝聖日本最大寶可夢旗艦店，長輩可在太陽城咖啡廳休息。" },
+        { "type": "act", "time": "13:00pm - 14:30pm", "title": "乙女路散策 & 懷舊玩具店", "detail": "走訪乙女路周邊動漫商店與隱藏版懷舊玩具店。" },
+        { "type": "act", "time": "14:30pm - 16:30pm", "title": "池袋 Animate 旗艦店", "detail": "週一人潮較少，可悠閒逛整棟 Animate。" },
+        { "type": "act", "time": "16:30pm - 17:30pm", "title": "池袋周邊自由活動", "detail": "各自補貨或至太陽城展望台看風景。" },
+        { "type": "transport", "time": "17:30pm - 18:00pm", "title": "池袋 ➔ 上野 (大眾交通)", "detail": "山手線返回上野。" }
+      ],
+      "food": [
+        { "meal": "午餐 (13:00)", "name": "無敵家拉麵", "detail": "池袋超人氣厚切叉燒拉麵，需現場排隊約 20-30 分鐘。" },
+        { "meal": "晚餐 (18:30)", "name": "上野居酒屋或燒肉", "detail": "返回上野後隨機挑選，推薦車站周邊的平價燒肉店。" }
+      ],
+      "hotel": {
+        "name": "Ostay Ueno Hotel",
+        "detail": "續住同地點。"
+      },
+      "details": "池袋人潮極多，請牽好小孩防走失。週一 Animate 人最少，是最佳逛店時機。"
+    },
+    "day3": {
+      "date": "7/7 (二)",
+      "title": "柴又老街 & 原宿潮流文化",
+      "timeRange": "08:00am - 08:30pm",
+      "timeline": [
+        { "type": "act", "time": "08:00am - 08:30am", "title": "飯店出發", "detail": "輕裝出發，準備一整天走跳。" },
+        { "type": "transport", "time": "08:30am - 09:30am", "title": "上野 ➔ 柴又 (大眾交通)", "detail": "搭乘京成線至柴又站，體驗下町風情。" },
+        { "type": "act", "time": "09:30am - 12:00pm", "title": "柴又老街散策", "detail": "走訪柴又帝釋天參道、柴又玩具橫丁，感受昭和懷舊氛圍。" },
+        { "type": "transport", "time": "12:00pm - 13:00pm", "title": "柴又 ➔ 原宿 (大眾交通)", "detail": "京成線返回上野轉山手線至原宿。" },
+        { "type": "act", "time": "13:00pm - 16:00pm", "title": "原宿 KIDDY LAND & 竹下通", "detail": "KIDDY LAND 尋找夢奇奇周邊，散步竹下通吃可麗餅。" },
+        { "type": "transport", "time": "16:00pm - 16:30pm", "title": "原宿 ➔ 東京車站 (大眾交通)", "detail": "山手線至東京車站。" },
+        { "type": "act", "time": "16:30pm - 17:30pm", "title": "東京車站丸之內夜景", "detail": "欣賞古典東京車站建築，丸之內中央口拍照。" },
+        { "type": "transport", "time": "17:30pm - 18:00pm", "title": "東京車站 ➔ 上野 (大眾交通)", "detail": "山手線返回上野。" }
+      ],
+      "food": [
+        { "meal": "午餐 (12:00)", "name": "原宿周邊輕食", "detail": "竹下通可麗餅或附近拉麵店自由選擇。" },
+        { "meal": "晚餐 (18:30)", "name": "上野アメ橫丁美食", "detail": "阿美橫町周邊的章魚燒、串燒或海鮮丼。" }
+      ],
+      "hotel": {
+        "name": "Ostay Ueno Hotel",
+        "detail": "續住同地點。"
+      },
+      "details": "柴又週二遊客較少，老街散步品質最佳。原宿竹下通週末人潮多，週二相對舒適。"
+    },
+    "day4": {
+      "date": "7/8 (三)",
+      "title": "阿美橫町採購 & 成田返台",
+      "timeRange": "08:00am - 05:05pm",
+      "timeline": [
+        { "type": "act", "time": "08:00am - 09:30am", "title": "退房與行李整理", "detail": "收拾行李並辦理退房，行李可寄放飯店櫃檯。" },
+        { "type": "act", "time": "09:30am - 11:00am", "title": "上野阿美橫町大採購", "detail": "最後衝刺！藥妝、零食、伴手禮一次買齊。" },
+        { "type": "act", "time": "11:00am - 11:30am", "title": "回飯店取行李前往機場", "detail": "領回行李後步行至京成上野站。" },
+        { "type": "transport", "time": "11:30am - 12:55pm", "title": "上野 ➔ 成田機場 (大眾交通)", "detail": "搭乘 Skyliner 至成田機場第二航廈，約 45 分鐘。" },
+        { "type": "act", "time": "12:55pm - 13:55pm", "title": "機場報到與免稅店", "detail": "辦理登機後逛免稅店。" },
+        { "type": "act", "time": "13:55pm", "title": "搭乘 FD235 返回高雄", "detail": "起飛！結束愉快的東京親子冒險。" }
+      ],
+      "food": [
+        { "meal": "早餐", "name": "上野站周邊咖啡廳", "detail": "最後一天簡單用早餐。" },
+        { "meal": "午餐 (12:00)", "name": "成田機場美食", "detail": "Check-in 後在機場內用餐。" }
+      ],
+      "hotel": {
+        "name": "溫暖的家"
+      },
+      "details": "最後一天一定要提早 2 小時（11:55 前）到機場！Skyliner 每 20 分鐘一班，建議搭 11:30 左右的班次。"
+    }
+  }
+}

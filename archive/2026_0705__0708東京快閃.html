@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>東京夏日親子冒險・交通導航互動手冊</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tab-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .pulse-active {
+            box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+        }
+        /* Custom scrollbar hiding */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-24 min-h-screen">
+
+    <!-- Premium Sticky Header -->
+    <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-xl sticky top-0 z-40">
+        <div class="max-w-md mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-indigo-600 p-2 rounded-xl shadow-inner animate-pulse">
+                    <i class="fa-solid fa-map-location-dot text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-black text-base tracking-wider">TOKYO NAVI 2026</h1>
+                    <p class="text-[10px] text-indigo-200">7/5 - 7/8 親子交通導航・專屬手冊</p>
+                </div>
+            </div>
+            <!-- VJW Instant Badge -->
+            <button onclick="scrollToVJW()" class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold py-1.5 px-3 rounded-full flex items-center gap-1.5 transition-all shadow-md active:scale-95">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
+                VJW 填寫資訊
+            </button>
+        </div>
+    </header>
+
+    <!-- Top Countdown & Flight Widget -->
+    <div class="max-w-md mx-auto px-4 pt-4">
+        <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 mb-4">
+            <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-bold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full"><i class="fa-solid fa-plane mr-1.5"></i>航班與倒數</span>
+                <span id="countdown" class="text-xs font-semibold text-slate-500">計算中...</span>
+            </div>
+            <div class="grid grid-cols-2 gap-4 divide-x divide-slate-100">
+                <div>
+                    <p class="text-[9px] text-slate-400 font-bold uppercase">去程 FD234 | 7/05 (日)</p>
+                    <p class="text-xs font-bold text-slate-700 mt-0.5">高雄小港 08:05 ➔ 12:55 成田</p>
+                </div>
+                <div class="pl-4">
+                    <p class="text-[9px] text-slate-400 font-bold uppercase">回程 FD235 | 7/08 (三)</p>
+                    <p class="text-xs font-bold text-slate-700 mt-0.5">成田二航 13:55 ➔ 17:05 高雄</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN INTERACTIVE CONTAINER -->
+    <main class="max-w-md mx-auto px-4">
+
+        <!-- Navigation Tabs -->
+        <div class="flex gap-1 overflow-x-auto pb-3 mb-4 scrollbar-none sticky top-[68px] bg-slate-50 py-1.5 z-30">
+            <button onclick="switchTab('day1')" id="btn-day1" class="tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100">
+                <div class="text-[9px] opacity-75">7/5 (日)</div> Day 1
+            </button>
+            <button onclick="switchTab('day2')" id="btn-day2" class="tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100">
+                <div class="text-[9px] opacity-75">7/6 (一)</div> Day 2
+            </button>
+            <button onclick="switchTab('day3')" id="btn-day3" class="tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100">
+                <div class="text-[9px] opacity-75">7/7 (二)</div> Day 3
+            </button>
+            <button onclick="switchTab('day4')" id="btn-day4" class="tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100">
+                <div class="text-[9px] opacity-75">7/8 (三)</div> Day 4
+            </button>
+            <button onclick="switchTab('tools')" id="btn-tools" class="tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100">
+                <div class="text-[9px] text-emerald-600"><i class="fa-solid fa-copy"></i></div> VJW / 工具
+            </button>
+        </div>
+
+        <!-- ================= TAB: DAY 1 ================= -->
+        <div id="tab-day1" class="tab-content space-y-4">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-4 text-white shadow-md">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-base font-extrabold">Day 1 啟程！台場海灣漫步</h2>
+                        <p class="text-xs text-blue-100 mt-0.5">高雄 ➔ 成田 ➔ 上野 Check-In ➔ 台場一丁目</p>
+                    </div>
+                    <span class="text-2xl">🇯🇵</span>
+                </div>
+            </div>
+
+            <!-- Schedule Timeline -->
+            <div class="space-y-4 relative border-l-2 border-indigo-200 ml-3 pl-4 py-2">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-indigo-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">1</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-indigo-600"><i class="fa-solid fa-plane-departure mr-1"></i>08:05 ~ 12:55</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🛫 泰國亞洲航空 FD234 啟航</h3>
+                        <p class="text-xs text-slate-500 mt-1">抵達成田機場第二航廈（T2）。出關後請沿著「鐵道 / Railways」指標前往地下一樓（B1）。</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 (Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-indigo-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">2</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-indigo-600"><i class="fa-solid fa-train mr-1"></i>13:30 ~ 15:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🚄 交通：成田機場 ➔ 上野飯店</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-700 font-bold"><i class="fa-solid fa-route text-indigo-500 mr-1"></i>【乘車路線指示】</p>
+                            <div class="flex items-center gap-1 flex-wrap mt-1">
+                                <span class="bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">成田機場B1</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-sky-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-bolt mr-0.5"></i>京成電鐵 Skyliner</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">京成上野站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-emerald-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-person-walking mr-0.5"></i>步行 10 分鐘</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-slate-700 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">Ostay Ueno 飯店</span>
+                            </div>
+                            <p class="text-slate-500 mt-1.5 text-[11px] leading-relaxed"><i class="fa-solid fa-circle-info text-blue-500 mr-1"></i>出關後，在京成電鐵櫃檯兌換 Skyliner 車票，搭乘直達「京成上野站」（約41分鐘）。出站後，從「正面口」出來，沿著昭和通步行約 850 公尺（約 10 分鐘）即可抵達 Ostay Ueno 飯店進房寄物。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 (Sight + Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-pink-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">3</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-pink-100">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-bold text-pink-600"><i class="fa-solid fa-heart mr-1"></i>16:30 ~ 19:30</span>
+                            <span class="text-[9px] bg-pink-50 text-pink-700 px-2 py-0.5 rounded font-bold">景點 1</span>
+                        </div>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🎮 台場一丁目商店街 & 章魚燒博物館</h3>
+                        <div class="text-[10px] text-slate-400 mt-0.5 mb-2 font-mono"><i class="fa-solid fa-image mr-1"></i>對照：LINE_ALBUM_東京想去_260621_4.jpg</div>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-pink-50/50 border border-pink-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-pink-900 font-bold"><i class="fa-solid fa-route text-pink-600 mr-1"></i>【上野 ➔ 台場 乘車導航】</p>
+                            <div class="flex items-center gap-1 flex-wrap mt-1">
+                                <span class="bg-orange-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">銀座線 上野站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-orange-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">新橋站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-sky-400 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-train mr-0.5"></i>百合海鷗號</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-sky-400 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">台場海濱公園站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-slate-700 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-person-walking mr-0.5"></i>步行 2 分</span>
+                            </div>
+                            <p class="text-slate-600 mt-1.5 text-[11px] leading-relaxed">
+                                <strong>轉乘指引：</strong>從上野站搭乘 <strong>東京地鐵銀座線</strong> (往澀谷方向) 至「新橋站」（約12分鐘）。<br>
+                                抵達新橋站後，跟隨指標出站並轉乘 <strong>百合海鷗號 (Yurikamome)</strong>，坐到「台場海濱公園站」下車（約13分鐘）。出站步行 2 分鐘即達 DECKS Tokyo Beach 商場 4 樓。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-indigo-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">4</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-indigo-600"><i class="fa-solid fa-moon mr-1"></i>19:30 ~ 20:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🌉 漫步台場海濱公園拍夜景</h3>
+                        <p class="text-xs text-slate-500 mt-1">
+                            從 DECKS 商場直接走到戶外海灘步道。此處是拍攝<strong>彩虹大橋與自由女神像</strong>點燈的最佳取景點。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 5 (Return Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-slate-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">5</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-slate-500"><i class="fa-solid fa-house-chimney mr-1"></i>20:30 ~ 21:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🚉 交通：台場 ➔ 返回上野飯店</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-700 font-bold"><i class="fa-solid fa-route text-indigo-500 mr-1"></i>【回程原路直達導航】</p>
+                            <p class="text-slate-500 text-[11px] leading-relaxed">
+                                從「台場海濱公園站」搭乘 <strong>百合海鷗號</strong> 返回「新橋站」，再從新橋站轉乘 <strong>東京地鐵銀座線</strong> (往淺草方向) 或 <strong>JR山手線</strong> 回到「上野站」。步行回 Ostay Ueno 飯店休息，洗去旅途疲憊！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB: DAY 2 ================= -->
+        <div id="tab-day2" class="tab-content hidden space-y-4">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-orange-400 to-amber-500 rounded-2xl p-4 text-white shadow-md">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-base font-extrabold">Day 2 池袋動漫與懷舊尋寶</h2>
+                        <p class="text-xs text-amber-100 mt-0.5">上野 ➔ 池袋太陽城 ➔ 乙女路 ➔ Animate 旗艦店 ➔ 文字燒</p>
+                    </div>
+                    <span class="text-2xl">🧸</span>
+                </div>
+            </div>
+
+            <!-- Schedule Timeline -->
+            <div class="space-y-4 relative border-l-2 border-amber-200 ml-3 pl-4 py-2">
+                <!-- Step 1 (Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-amber-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">1</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-amber-600"><i class="fa-solid fa-train mr-1"></i>09:00 ~ 09:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🚄 交通：上野 ➔ 池袋太陽城</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-700 font-bold"><i class="fa-solid fa-route text-amber-600 mr-1"></i>【最輕鬆山手線直達導航】</p>
+                            <div class="flex items-center gap-1 flex-wrap mt-1">
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">JR上野站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-train mr-0.5"></i>JR山手線 (外環)</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">JR池袋站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-slate-700 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-person-walking mr-0.5"></i>東口步行 8 分鐘</span>
+                            </div>
+                            <p class="text-slate-500 mt-1.5 text-[11px] leading-relaxed"><i class="fa-solid fa-circle-info text-amber-500 mr-1"></i>從「JR上野站」搭乘 <strong>JR山手線 (外環/池袋・新宿方向)</strong> 直達「JR池袋站」（約16分鐘，免轉車）。從 <strong>東口 (35號出口方向)</strong> 出站，步行經東口五差路往太陽城方向（步行約8分鐘）。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 (Sight) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-amber-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">2</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-amber-600"><i class="fa-solid fa-building mr-1"></i>09:30 ~ 13:00</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🏢 池袋太陽城 (Sunshine City) ＆ 寶可夢中心</h3>
+                        <div class="text-[10px] text-slate-400 mt-0.5 mb-2 font-mono"><i class="fa-solid fa-image mr-1"></i>對照：LINE_ALBUM_東京想去_260621_3.jpg</div>
+                        <p class="text-xs text-slate-500">位於商場 2 樓。擁有全球最大「Pokémon Center Mega Tokyo」、Sanrio、蠟筆小新店，小孩的採購天堂！</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 (Sight) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-pink-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">3</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-pink-100">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-bold text-pink-600"><i class="fa-solid fa-person-walking mr-1"></i>13:00 ~ 14:30</span>
+                            <span class="text-[9px] bg-pink-50 text-pink-700 px-2 py-0.5 rounded font-bold">景點 3 & 4</span>
+                        </div>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🧸 乙女路散策 ➔ 池袋懷舊玩具店</h3>
+                        <div class="text-[10px] text-slate-400 mt-0.5 mb-2 font-mono">
+                            <p><i class="fa-solid fa-image mr-1"></i>玩具店：LINE_ALBUM_東京想去_260621_2.jpg</p>
+                            <p class="mt-0.5"><i class="fa-solid fa-image mr-1"></i>乙女路：LINE_ALBUM_東京想去_260621_5.jpg</p>
+                        </div>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-700 font-bold"><i class="fa-solid fa-route text-amber-600 mr-1"></i>【池袋地區漫步指引】</p>
+                            <p class="text-slate-500 text-[11px] leading-relaxed">
+                                <strong>交通指示</strong>：乙女路（Otome Road）就緊鄰池袋太陽城商場西側的戶外街道，出商場大門即可步行抵達。周邊佈滿駿河屋、K-BOOKS等二手玩具店與老玩具尋寶名店。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 (Sight) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-amber-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">4</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-amber-600"><i class="fa-solid fa-store mr-1"></i>14:30 ~ 18:00</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🔥 池袋 Animate 旗艦店（週一 11:00 ~ 21:00）</h3>
+                        <div class="text-[10px] text-slate-400 mt-0.5 mb-2 font-mono"><i class="fa-solid fa-image mr-1"></i>對照：LINE_ALBUM_東京想去_260621_6.jpg</div>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-700 font-bold"><i class="fa-solid fa-route text-amber-600 mr-1"></i>【步行導航】</p>
+                            <p class="text-slate-500 text-[11px] leading-relaxed">
+                                <strong>交通指示</strong>：從太陽城/乙女路步行約 5 分鐘即可抵達。Animate 旗艦店位於池袋東口 WACCA 百貨正對面，非常容易辨識。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 (Dinner) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-indigo-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">5</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-indigo-50">
+                        <span class="text-[10px] font-bold text-indigo-600"><i class="fa-solid fa-utensils mr-1"></i>18:00 ~ 20:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🍽️ 池袋月島文字燒名店</h3>
+                        <p class="text-xs text-slate-500 mt-1">
+                            推薦前往<strong>「月島文字燒 若葉 (池袋店)」</strong>，體驗動手製作與鏟文字燒的無限樂趣！
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 6 (Return Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-slate-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">6</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-slate-500"><i class="fa-solid fa-house-chimney mr-1"></i>20:30 ~ 21:00</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🚉 交通：池袋 ➔ 返回上野飯店</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-500 text-[11px] leading-relaxed">
+                                <strong>回程指引</strong>：步行回到「JR池袋站」，搭乘 <strong>JR山手線 (內環/上野・東京方向)</strong> 直達「JR上野站」（約16分鐘），步行回飯店。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB: DAY 3 ================= -->
+        <div id="tab-day3" class="tab-content hidden space-y-4">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-2xl p-4 text-white shadow-md">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-base font-extrabold">Day 3 柴又老街與現代原宿、東京車站</h2>
+                        <p class="text-xs text-emerald-100 mt-0.5">上野 ➔ 柴又老街 ➔ 原宿 Kiddy Land ➔ 夜拍東京車站丸之內</p>
+                    </div>
+                    <span class="text-2xl">🏮</span>
+                </div>
+            </div>
+
+            <!-- Schedule Timeline -->
+            <div class="space-y-4 relative border-l-2 border-emerald-200 ml-3 pl-4 py-2">
+                <!-- Step 1 (Transit + Sight) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-emerald-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">1</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-bold text-emerald-600"><i class="fa-solid fa-train mr-1"></i>09:30 ~ 13:30</span>
+                            <span class="text-[9px] bg-red-50 text-red-700 px-2 py-0.5 rounded font-bold">全新安插</span>
+                        </div>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🏮 柴又老街散策 & 柴又玩具橫丁</h3>
+                        <p class="text-xs text-slate-500 mt-1">體驗古色古香的江戶與昭和風味商店街，參觀滿載復古玩具與彈珠機的「柴又海卡拉橫丁」！</p>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-emerald-50 border border-emerald-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-emerald-900 font-bold"><i class="fa-solid fa-route text-emerald-600 mr-1"></i>【上野 ➔ 柴又 精準地鐵導航】</p>
+                            <div class="flex items-center gap-1 flex-wrap mt-1">
+                                <span class="bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">京成上野站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-train mr-0.5"></i>京成本線 (特急/快速)</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">京成高砂站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-train mr-0.5"></i>京成金町線</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">柴又站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-slate-700 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-person-walking mr-0.5"></i>步行 1 分鐘</span>
+                            </div>
+                            <p class="text-slate-600 mt-1.5 text-[11px] leading-relaxed">
+                                <strong>轉乘指示：</strong>自「京成上野站」搭乘 <strong>京成本線</strong>（特急/快速/通勤特急等往成田方向均可，車程約18分鐘）至「京成高砂站」。<br>
+                                <strong>免出站直接轉車：</strong>同站轉乘 <strong>京成金町線</strong>（月台在一樓，坐 1 站，車程 2 分鐘）至「柴又站」下車。出站即是柴又老街參道。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 (Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-emerald-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">2</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-emerald-600"><i class="fa-solid fa-train mr-1"></i>13:30 ~ 14:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🚄 交通：柴又 ➔ 原宿（橫跨東京市區）</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-700 font-bold"><i class="fa-solid fa-route text-emerald-600 mr-1"></i>【省力大客車轉乘導航】</p>
+                            <div class="flex items-center gap-1 flex-wrap mt-1">
+                                <span class="bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">柴又站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">日暮里站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-train mr-0.5"></i>JR山手線 (外環)</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">JR原宿站</span>
+                            </div>
+                            <p class="text-slate-500 mt-1.5 text-[11px] leading-relaxed">
+                                <strong>轉乘指示：</strong>從「柴又站」搭金町線回到「京成高砂站」，轉乘 <strong>京成本線</strong> 到「日暮里站」（約15分鐘）。<br>
+                                到達日暮里站後，直接轉乘 <strong>JR山手線 (外環/往新宿・池袋方向)</strong> 直達「JR原宿站」（約29分鐘，車上可讓全家人睡午覺補眠）。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 (Sight) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-emerald-500 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">3</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-emerald-600"><i class="fa-solid fa-store mr-1"></i>14:30 ~ 17:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🐒 原宿竹下通 ➔ KIDDY LAND（尋找夢奇奇）</h3>
+                        <p class="text-xs text-slate-500 mt-1">位於表參道上。一整棟玩具王國，極為齊全的 Monchhichi 夢奇奇專區，適合尋寶！</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 (Transit + Sight) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-rose-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">4</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-rose-100">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-bold text-rose-600"><i class="fa-solid fa-camera mr-1"></i>18:00 ~ 20:30</span>
+                            <span class="text-[9px] bg-rose-50 text-rose-700 px-2 py-0.5 rounded font-bold">必拍追加</span>
+                        </div>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🏛️ 東京車站（丸之內紅磚老車站經典夜拍）</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-700 font-bold"><i class="fa-solid fa-route text-rose-600 mr-1"></i>【原宿 ➔ 東京車站 乘車導航】</p>
+                            <div class="flex items-center gap-1 flex-wrap mt-1">
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">JR原宿站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-train mr-0.5"></i>JR山手線 (內環)</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-green-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">JR東京站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-slate-700 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">丸之內中央口 出站</span>
+                            </div>
+                            <p class="text-slate-500 mt-1.5 text-[11px] leading-relaxed">
+                                <strong>乘車指示</strong>：從「JR原宿站」搭乘 <strong>JR山手線 (內環/品川・東京方向)</strong> 直達「JR東京站」（約26分鐘，直達免轉車）。<br>
+                                <strong>出站指南（重要！）</strong>：到站後，請跟隨站內黃色指標朝<strong>「丸之內中央口」</strong>出站，出來即是寬廣的丸之內廣場，老車站全景夜色璀璨點燈在眼前展開！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 (Return Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-slate-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">5</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-slate-500"><i class="fa-solid fa-house-chimney mr-1"></i>20:30 ~ 21:00</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🚉 交通：東京車站 ➔ 返回上野飯店</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <p class="text-slate-500 text-[11px] leading-relaxed">
+                                <strong>回程指引（極速）</strong>：從「JR東京站」搭乘 <strong>JR京濱東北線</strong> 或 <strong>JR山手線</strong> (往上野・日暮里方向) 直達「JR上野站」（僅需8分鐘！），出站漫步回飯店。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB: DAY 4 ================= -->
+        <div id="tab-day4" class="tab-content hidden space-y-4">
+            <!-- Day Banner -->
+            <div class="bg-gradient-to-r from-red-500 to-rose-600 rounded-2xl p-4 text-white shadow-md">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-base font-extrabold">Day 4 最後採購與從容返航</h2>
+                        <p class="text-xs text-red-100 mt-0.5">上野退房 ➔ 阿美橫町採購 ➔ Skyliner ➔ 機場安檢</p>
+                    </div>
+                    <span class="text-2xl">✈️</span>
+                </div>
+            </div>
+
+            <!-- Schedule Timeline -->
+            <div class="space-y-4 relative border-l-2 border-red-200 ml-3 pl-4 py-2">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-red-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">1</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-red-600"><i class="fa-solid fa-suitcase mr-1"></i>08:00 ~ 09:30</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🏨 整理行囊 & 辦理退房</h3>
+                        <p class="text-xs text-slate-500 mt-1">辦理 Check-Out，可將大件行李寄託在 Ostay Ueno 櫃檯，以便雙手空出輕鬆血拼。</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-red-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">2</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-red-600"><i class="fa-solid fa-bag-shopping mr-1"></i>09:30 ~ 11:00</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🛍️ 阿美橫町（最後衝刺採購）</h3>
+                        <p class="text-xs text-slate-500 mt-1">步行前往阿美橫町，將藥妝、零食、白色戀人等伴手禮大補齊。11:00 前返回飯店拿行李。</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 (Transit) -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-red-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">3</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-red-50">
+                        <span class="text-[10px] font-bold text-red-600"><i class="fa-solid fa-bolt mr-1"></i>11:00 ~ 11:41</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🚄 交通：上野 ➔ 成田機場第二航廈</h3>
+
+                        <!-- Navigation Card -->
+                        <div class="mt-2 bg-slate-50 border border-slate-200 rounded-lg p-2 text-xs space-y-1">
+                            <div class="flex items-center gap-1 flex-wrap mt-1">
+                                <span class="bg-indigo-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">京成上野站</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-sky-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px]"><i class="fa-solid fa-bolt mr-0.5"></i>Skyliner (11:00班次)</span>
+                                <i class="fa-solid fa-angle-right text-slate-400"></i>
+                                <span class="bg-blue-600 text-white font-bold px-1.5 py-0.5 rounded text-[10px]">成田機場第2航廈</span>
+                            </div>
+                            <p class="text-slate-500 mt-1.5 text-[11px] leading-relaxed">
+                                <strong>交通指示</strong>：提早 10 分鐘抵達「京成上野站」搭乘 <strong>Skyliner 特急</strong>，約 41 分鐘極速直達「成田機場第2・3航廈站」下車，步行至 3 樓出境大廳。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-emerald-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">4</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-emerald-100">
+                        <span class="text-[10px] font-bold text-emerald-600"><i class="fa-solid fa-passport mr-1"></i>11:45 ~ 13:55</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🎒 機場櫃檯登記與海關檢查（安全提早 2 小時）</h3>
+                        <p class="text-xs text-slate-500 mt-1">於 11:45 抵達登機大廳，享有整整 2 小時 10 分鐘的安全黃金空檔，不慌不忙辦理托運與過安檢，完美防範排隊人潮。</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative">
+                    <span class="absolute -left-[23px] top-1 bg-slate-600 text-white rounded-full w-4.5 h-4.5 flex items-center justify-center text-[9px] border-2 border-white font-bold">5</span>
+                    <div class="bg-white rounded-xl p-3 shadow-sm border border-slate-100">
+                        <span class="text-[10px] font-bold text-slate-500"><i class="fa-solid fa-plane-arrival mr-1"></i>13:55 ~ 17:05</span>
+                        <h3 class="font-bold text-sm text-slate-800 mt-1">🛬 回程搭機 ➔ 抵達高雄小港機場</h3>
+                        <p class="text-xs text-slate-500 mt-1">搭乘泰國亞洲航空 FD235，在機上享用午餐。晚上 17:05 順利返抵高雄，回到溫馨的家！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB: TOOLS (VJW & BUDGET) ================= -->
+        <div id="tab-tools" class="tab-content hidden space-y-4">
+
+            <!-- VJW HELPER CARD -->
+            <div id="vjw-section" class="bg-slate-900 rounded-2xl p-4 text-white shadow-lg border border-indigo-500/30">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-emerald-500 text-white rounded-lg p-1.5 text-sm">
+                        <i class="fa-solid fa-passport"></i>
+                    </span>
+                    <div>
+                        <h2 class="text-base font-black text-emerald-400">Visit Japan Web 快速複製助手</h2>
+                        <p class="text-[10px] text-slate-400">過海關、申報快速填寫</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3.5 mt-4">
+                    <!-- Postal Code -->
+                    <div class="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">郵遞區號 (Postal Code)</p>
+                            <p class="text-sm font-mono font-bold text-emerald-300 mt-0.5" id="vjw-zip">1100015</p>
+                        </div>
+                        <button onclick="copyToClipboard('1100015', '郵遞區號')" class="bg-indigo-600 hover:bg-indigo-700 text-xs font-bold py-1.5 px-3 rounded-lg flex items-center gap-1 transition-all active:scale-95 shadow-md">
+                            <i class="fa-regular fa-copy"></i> 複製
+                        </button>
+                    </div>
+
+                    <!-- Prefecture -->
+                    <div class="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">都道府縣 (Prefecture)</p>
+                            <p class="text-sm font-bold text-slate-200 mt-0.5">東京都 (TOKYO)</p>
+                        </div>
+                        <button onclick="copyToClipboard('東京都', '都道府縣')" class="bg-indigo-600 hover:bg-indigo-700 text-xs font-bold py-1.5 px-3 rounded-lg flex items-center gap-1 transition-all active:scale-95 shadow-md">
+                            <i class="fa-regular fa-copy"></i> 複製
+                        </button>
+                    </div>
+
+                    <!-- City -->
+                    <div class="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">市區町村 (City)</p>
+                            <p class="text-sm font-bold text-slate-200 mt-0.5">台東区 (TAITO-KU)</p>
+                        </div>
+                        <button onclick="copyToClipboard('台東区', '市區町村')" class="bg-indigo-600 hover:bg-indigo-700 text-xs font-bold py-1.5 px-3 rounded-lg flex items-center gap-1 transition-all active:scale-95 shadow-md">
+                            <i class="fa-regular fa-copy"></i> 複製
+                        </button>
+                    </div>
+
+                    <!-- Detail Address -->
+                    <div class="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">町域名・番地 (Address Detail)</p>
+                            <p class="text-sm font-bold text-slate-200 mt-0.5">東上野5-22-4 Ostay Ueno</p>
+                        </div>
+                        <button onclick="copyToClipboard('東上野5-22-4 Ostay Ueno', '詳細地址')" class="bg-indigo-600 hover:bg-indigo-700 text-xs font-bold py-1.5 px-3 rounded-lg flex items-center gap-1 transition-all active:scale-95 shadow-md">
+                            <i class="fa-regular fa-copy"></i> 複製
+                        </button>
+                    </div>
+
+                    <!-- Hotel Name -->
+                    <div class="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">住宿酒店名稱 (Hotel Name)</p>
+                            <p class="text-sm font-bold text-slate-200 mt-0.5">Ostay Ueno</p>
+                        </div>
+                        <button onclick="copyToClipboard('Ostay Ueno', '飯店名稱')" class="bg-indigo-600 hover:bg-indigo-700 text-xs font-bold py-1.5 px-3 rounded-lg flex items-center gap-1 transition-all active:scale-95 shadow-md">
+                            <i class="fa-regular fa-copy"></i> 複製
+                        </button>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="flex items-center justify-between bg-slate-800/80 p-2.5 rounded-xl border border-slate-700/60">
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">聯絡電話 (Phone / 數字純格式)</p>
+                            <p class="text-sm font-mono font-bold text-emerald-300 mt-0.5" id="vjw-phone">0345883364</p>
+                        </div>
+                        <button onclick="copyToClipboard('0345883364', '電話號碼')" class="bg-indigo-600 hover:bg-indigo-700 text-xs font-bold py-1.5 px-3 rounded-lg flex items-center gap-1 transition-all active:scale-95 shadow-md">
+                            <i class="fa-regular fa-copy"></i> 複製
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHECKLIST MODULE -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-800 text-sm mb-3"><i class="fa-solid fa-clipboard-check text-indigo-500 mr-1.5"></i>景點踩點進度清單 (5人家庭進度)</h3>
+                <div class="space-y-2" id="checklist">
+                    <!-- Dynamic rendering of items -->
+                </div>
+            </div>
+
+            <!-- TRAVEL BUDGET MANAGER -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
+                <div class="flex justify-between items-center mb-3">
+                    <h3 class="font-bold text-slate-800 text-sm"><i class="fa-solid fa-coins text-amber-500 mr-1.5"></i>家庭記帳與即時換算</h3>
+                    <div class="text-[11px] text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md font-mono">
+                        匯率參考: 1 JPY = 0.22 TWD
+                    </div>
+                </div>
+
+                <!-- Input Row -->
+                <div class="space-y-2 mb-4 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs">
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="text" id="expense-name" placeholder="項目 (如: 文字燒、電車)" class="border border-slate-300 rounded px-2 py-1 bg-white">
+                        <input type="number" id="expense-amount" placeholder="金額 (日圓 JPY)" class="border border-slate-300 rounded px-2 py-1 bg-white">
+                    </div>
+                    <button onclick="addExpense()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-1 rounded transition-all">
+                        新增一筆花費
+                    </button>
+                </div>
+
+                <!-- Dynamic Expense List -->
+                <div class="max-h-40 overflow-y-auto divide-y divide-slate-100 mb-3 text-xs" id="expense-list">
+                    <!-- Dynamically populated -->
+                </div>
+
+                <!-- Total Footer -->
+                <div class="bg-indigo-900 text-white rounded-xl p-3 flex justify-between items-center">
+                    <div>
+                        <p class="text-[10px] text-indigo-200">總花費累計</p>
+                        <p class="text-xs font-bold mt-0.5" id="total-jpy">0 JPY</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-[10px] text-indigo-200">折合新台幣約</p>
+                        <p class="text-sm font-black text-amber-300 mt-0.5" id="total-twd">NT$ 0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PACKING LIST HELPER -->
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
+                <h3 class="font-bold text-slate-800 text-sm mb-3"><i class="fa-solid fa-umbrella-beach text-sky-500 mr-1.5"></i>7月防暑與行李檢查清單</h3>
+                <div class="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                    <label class="flex items-center gap-1.5"><input type="checkbox" checked class="rounded text-indigo-600"> 隨身防曬霜/遮陽帽</label>
+                    <label class="flex items-center gap-1.5"><input type="checkbox" checked class="rounded text-indigo-600"> 行動電源2部 (拍照用)</label>
+                    <label class="flex items-center gap-1.5"><input type="checkbox" checked class="rounded text-indigo-600"> Suica/卡片先裝好</label>
+                    <label class="flex items-center gap-1.5"><input type="checkbox" checked class="rounded text-indigo-600"> 水瓶 (隨時補水)</label>
+                    <label class="flex items-center gap-1.5"><input type="checkbox" checked class="rounded text-indigo-600"> 薄外套 (車廂冷氣)</label>
+                    <label class="flex items-center gap-1.5"><input type="checkbox" checked class="rounded text-indigo-600"> 胃腸藥/暈車藥</label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CUSTOM TOAST NOTIFICATION CONTAINER -->
+    <div id="toast-container" class="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50 flex flex-col gap-2 w-full max-w-xs px-4"></div>
+
+    <!-- PERSISTENT SUB-FOOTER NOTES -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg py-2.5 px-4 z-40">
+        <div class="max-w-md mx-auto flex items-center justify-between gap-3 text-xs">
+            <span class="font-bold text-slate-600 whitespace-nowrap"><i class="fa-solid fa-pen-fancy mr-1"></i>備忘備忘錄：</span>
+            <input type="text" id="quick-note" placeholder="在此隨手輸入行程隨想..." oninput="saveQuickNote()" class="w-full border-none focus:ring-0 focus:outline-none text-slate-700 placeholder-slate-400 bg-slate-50 rounded-lg px-2 py-1">
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const APP_ID = 'tokyo-2026-guide';
+        const JPY_TO_TWD = 0.22;
+
+        const defaultExpenses = [
+            { id: 1, name: '🏩 Ostay Ueno 四晚住宿預算', amount: 98000 }
+        ];
+
+        const sightsList = [
+            { id: 'sight1', name: '🎮 Day 1: 台場一丁目商店街', day: 'day1' },
+            { id: 'sight2', name: '🏢 Day 2: 池袋太陽城 ＆ 寶可夢旗艦店', day: 'day2' },
+            { id: 'sight3', name: '🧸 Day 2: 乙女路散策', day: 'day2' },
+            { id: 'sight4', name: '🦖 Day 2: 池袋懷舊玩具店', day: 'day2' },
+            { id: 'sight5', name: '🔥 Day 2: 池袋 Animate 旗艦店 (週一)', day: 'day2' },
+            { id: 'sight6', name: '🏮 Day 3: 柴又老街散策 & 柴又玩具橫丁', day: 'day3' },
+            { id: 'sight7', name: '🐒 Day 3: 原宿 KIDDY LAND 尋找夢奇奇', day: 'day3' },
+            { id: 'sight8', name: '🏛️ Day 3: 夜拍古典東京車站（丸之內中央口）', day: 'day3' },
+            { id: 'sight9', name: '🛍️ Day 4: 上野阿美橫町大採購', day: 'day4' }
+        ];
+
+        let state = {
+            activeTab: 'day1',
+            expenses: [],
+            completedSights: {},
+            quickNotes: {}
+        };
+
+        window.onload = function() {
+            loadState();
+            switchTab(state.activeTab);
+            startCountdown();
+            renderChecklist();
+            renderExpenses();
+            updateNotePlaceholder();
+        };
+
+        function loadState() {
+            const saved = localStorage.getItem(APP_ID);
+            if (saved) {
+                try {
+                    state = JSON.parse(saved);
+                    if (!['day1', 'day2', 'day3', 'day4', 'tools'].includes(state.activeTab)) {
+                        state.activeTab = 'day1';
+                    }
+                } catch(e) {
+                    initDefaultState();
+                }
+            } else {
+                initDefaultState();
+            }
+        }
+
+        function initDefaultState() {
+            state = {
+                activeTab: 'day1',
+                expenses: [...defaultExpenses],
+                completedSights: {},
+                quickNotes: {
+                    day1: '下午記得帶 Suica 加值。',
+                    day2: 'Animate 在下午 14:30 去最順路。',
+                    day3: '柴又海卡拉橫丁的懷舊彈珠台很好玩！',
+                    day4: '最後一天一定要提早 2 小時（11:55 前）到機場！'
+                }
+            };
+            saveState();
+        }
+
+        function saveState() {
+            localStorage.setItem(APP_ID, JSON.stringify(state));
+        }
+
+        function switchTab(tabId) {
+            state.activeTab = tabId;
+            saveState();
+
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = 'tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100';
+            });
+
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.className = 'tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-indigo-600 text-white shadow-md font-extrabold pulse-active';
+            }
+
+            updateNotePlaceholder();
+        }
+
+        function scrollToVJW() {
+            switchTab('tools');
+            setTimeout(() => {
+                const element = document.getElementById('vjw-section');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    element.classList.add('ring-4', 'ring-emerald-400');
+                    setTimeout(() => {
+                        element.classList.remove('ring-4', 'ring-emerald-400');
+                    }, 1500);
+                }
+            }, 100);
+        }
+
+        function copyToClipboard(text, fieldName) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showToast(`✅ ${fieldName}已成功複製到剪貼簿！`, 'success');
+                } else {
+                    showToast('❌ 複製失敗，請手動複製', 'error');
+                }
+            } catch (err) {
+                showToast('❌ 複製失敗，請手動複製', 'error');
+            }
+
+            document.body.removeChild(textarea);
+        }
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+
+            const bgClass = type === 'success' ? 'bg-slate-900 border-emerald-500 text-slate-100' : 'bg-red-900 border-red-500 text-red-100';
+
+            toast.className = `flex items-center gap-2 px-4 py-3 rounded-xl border shadow-lg text-xs font-semibold ${bgClass} transition-all transform translate-y-2 opacity-0 duration-300`;
+            toast.innerHTML = `
+                <i class="${type === 'success' ? 'fa-solid fa-circle-check text-emerald-400' : 'fa-solid fa-triangle-exclamation text-red-400'}"></i>
+                <span>${message}</span>
+            `;
+
+            container.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 50);
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-[-10px]');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 2500);
+        }
+
+        function startCountdown() {
+            const targetDate = new Date('2026/07/05 08:05:00').getTime();
+
+            function update() {
+                const now = new Date().getTime();
+                const diff = targetDate - now;
+
+                if (diff <= 0) {
+                    document.getElementById('countdown').innerHTML = "🎉 祝您東京旅途愉快！";
+                    return;
+                }
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('countdown').innerHTML = `<i class="fa-solid fa-hourglass-half text-amber-500 mr-1 animate-spin-slow"></i> 剩 ${days} 天 ${hours} 小時`;
+            }
+
+            update();
+            setInterval(update, 60000);
+        }
+
+        function renderChecklist() {
+            const el = document.getElementById('checklist');
+            el.innerHTML = '';
+
+            sightsList.forEach(sight => {
+                const isChecked = state.completedSights[sight.id] ? 'checked' : '';
+                const lineThrough = isChecked ? 'line-through text-slate-400' : 'text-slate-700';
+
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'flex items-center justify-between p-1.5 hover:bg-slate-50 rounded-lg transition-all';
+                itemDiv.innerHTML = `
+                    <label class="flex items-center gap-2 cursor-pointer w-full">
+                        <input type="checkbox" onchange="toggleSight('${sight.id}')" ${isChecked} class="rounded text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+                        <span class="text-xs font-medium ${lineThrough}">${sight.name}</span>
+                    </label>
+                    <button onclick="switchTab('${sight.day}')" class="text-[10px] text-indigo-500 hover:underline shrink-0 font-bold ml-2">看行程</button>
+                `;
+                el.appendChild(itemDiv);
+            });
+        }
+
+        function toggleSight(id) {
+            state.completedSights[id] = !state.completedSights[id];
+            saveState();
+            renderChecklist();
+            showToast('✅ 已同步更新景點打卡狀態！', 'success');
+        }
+
+        function renderExpenses() {
+            const listEl = document.getElementById('expense-list');
+            listEl.innerHTML = '';
+
+            let totalJpy = 0;
+
+            state.expenses.forEach(item => {
+                totalJpy += item.amount;
+                const row = document.createElement('div');
+                row.className = 'flex justify-between items-center py-2 text-xs';
+                row.innerHTML = `
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-slate-700">${item.name}</span>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <span class="font-bold text-slate-800">${item.amount.toLocaleString()} JPY</span>
+                        <button onclick="deleteExpense(${item.id})" class="text-red-400 hover:text-red-600"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                `;
+                listEl.appendChild(row);
+            });
+
+            if (state.expenses.length === 0) {
+                listEl.innerHTML = '<p class="text-slate-400 text-center py-4">目前沒有新增花費</p>';
+            }
+
+            const totalTwd = Math.round(totalJpy * JPY_TO_TWD);
+            document.getElementById('total-jpy').innerText = `${totalJpy.toLocaleString()} JPY`;
+            document.getElementById('total-twd').innerText = `NT$ ${totalTwd.toLocaleString()}`;
+        }
+
+        function addExpense() {
+            const nameEl = document.getElementById('expense-name');
+            const amountEl = document.getElementById('expense-amount');
+
+            const name = nameEl.value.trim();
+            const amount = parseInt(amountEl.value);
+
+            if (!name) {
+                showToast('❌ 請輸入花費項目名稱', 'error');
+                return;
+            }
+            if (isNaN(amount) || amount <= 0) {
+                showToast('❌ 請輸入正確的金額', 'error');
+                return;
+            }
+
+            const newItem = {
+                id: Date.now(),
+                name: name,
+                amount: amount
+            };
+
+            state.expenses.push(newItem);
+            saveState();
+            renderExpenses();
+
+            nameEl.value = '';
+            amountEl.value = '';
+
+            showToast(`💸 已成功新增 "${name}" 花費！`, 'success');
+        }
+
+        function deleteExpense(id) {
+            state.expenses = state.expenses.filter(item => item.id !== id);
+            saveState();
+            renderExpenses();
+            showToast('🗑️ 記帳項目已刪除！', 'success');
+        }
+
+        function updateNotePlaceholder() {
+            const noteEl = document.getElementById('quick-note');
+            const currentTab = state.activeTab;
+
+            if (currentTab === 'tools') {
+                noteEl.placeholder = '在此隨手輸入您的備忘記事（所有分頁皆能保存）...';
+                noteEl.value = state.quickNotes['tools'] || '';
+            } else {
+                noteEl.placeholder = `輸入您在 Day ${currentTab.replace('day', '')} 的特殊隨手小筆記...`;
+                noteEl.value = state.quickNotes[currentTab] || '';
+            }
+        }
+
+        function saveQuickNote() {
+            const noteEl = document.getElementById('quick-note');
+            const currentTab = state.activeTab;
+            state.quickNotes[currentTab] = noteEl.value;
+            saveState();
+        }
+    </script>
+</body>
+</html>
