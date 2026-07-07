@@ -1,149 +1,173 @@
 # AGENTS.md
 
-此專案是為 Chang 家族設計的 **2026 日本親子旅行入口網站** 與互動式行程手冊。為了讓未來的 AI 協作代理人（Agents）能快速上手並避免常規誤判，請遵循以下開發與維護指南：
+此專案是為 Chang 家族設計的 **日本親子旅行入口網站** 與互動式行程手冊。為了讓未來的 AI 協作代理人（Agents）能快速上手並避免常規誤判，請遵循以下開發與維護指南：
 
 ## 🚀 專案本質與架構 (不看會猜錯的部分)
 
 - **純靜態前端專案**：本專案**沒有** Node.js/npm 依賴（無 `package.json`），也沒有任何後端服務或編譯打包步驟。
 - **進入點 (Entry Point)**：
-  - `index.html`：整合兩段行程的入口首頁。
-  - `2026_0705__0708東京快閃.html`：東京 4 天 3 夜親子冒險互動手冊。
-  - `2026_0806__0813四國遊.html`：四國 8 天 7 夜自駕與祭典特化手冊。
-  - `template.html`：**通用旅遊行程範本網頁**，支援自駕/非自駕模式切換。
+  - `index.html`：**動態入口首頁**，自動讀取 `trips/*.json` 渲染行程卡片，依日期分類為進行中（大圖卡）與已結束（歷史書籤）。
+  - `viewer.html`：**統一行程檢視器**，接收 `?trip=xxx` 參數載入對應 JSON 並呈現完整互動介面（分頁、時間軸、記帳、打卡等）。
+  - `template.html`：移至 archive/（JSON 直接作為資料來源，不再需要範本網頁）
+- **資料層**：
+  - `trips/manifest.json`：所有行程 ID 列表（陣列）。
+  - `trips/{id}.json`：每個行程的完整資料（時間軸、美食、住宿、航班、VJW 等）。
+- **封存**：
+  - `archive/`：舊的獨立 HTML 檔案移入此處保留，不再被首頁參考。
 - **外部依賴 (CDN)**：全部使用 CDN 載入，包含：
   - Tailwind CSS (`https://cdn.tailwindcss.com`)
   - FontAwesome 圖標
-  - Chart.js (`https://cdn.jsdelivr.net/npm/chart.js`，僅四國遊頁面使用)
 - **狀態管理與持久化**：
-  - 頁面上的互動狀態（分頁、景點打卡、隨手筆記、記帳明細）皆透過瀏覽器 `localStorage` 進行讀寫與持久化（東京頁面命名空間為 `tokyo-2026-guide`，範本頁面則由 `tripConfig.appId` 動態指定）。
-  - 東京頁面的記帳功能含有硬編碼的日幣換台幣匯率 `JPY_TO_TWD = 0.22`。
-- **部署平台**：使用 Netlify 部署，`netlify.toml` 設定為發布根目錄 (`publish = "."`)，無 any build command。
+  - 首頁 `index.html` 的動態卡片與地圖狀態皆透過 `localStorage` 持久化。
+  - `viewer.html` 使用 `trip-{id}` 作為命名空間（如 `trip-2026-tokyo`）儲存分頁、打卡、記帳、筆記等狀態。
+  - 記帳匯率從行程 JSON 中的 `jpyToTwdRate` 讀取。
+- **部署平台**：使用 Netlify 部署，`netlify.toml` 設定為發布根目錄 (`publish = "."`)，無任何 build command。
 
 ---
 
-## 🗺️ 範本樣式框架 (Travel Template Framework)
+## 🗺️ JSON 行程資料架構 (Trip JSON Schema)
 
-專案中包含一個通用範本網頁 `template.html`。此範本為**資料驅動 (Data-Driven)** 架構，所有行程資訊均由檔案底部的 `tripConfig` 物件所控制。
+每個行程一個 JSON 檔，置於 `trips/` 目錄下。完整規格如下：
 
-### JSON 設定結構 (`tripConfig` 規格)
-當需要新增旅遊行程表時，未來的代理人只需複製 `template.html`，並用新的行程資訊替換 `tripConfig` 物件。規格如下：
+### 中繼資料（供首頁與地圖使用）
+```json
+{
+  "id": "2026-tokyo",
+  "type": "city",
+  "title": "東京親子冒險",
+  "subtitle": "7/5 - 7/8 親子交通導航・專屬手冊",
+  "badge": "Tokyo City Sprint",
+  "badgeIcon": "fa-train-subway",
+  "description": "上野住宿、台場夜景、行前清單與每日分頁。",
+  "stats": ["4天3夜", "成田進出", "互動記帳"],
+  "image": "tokyo",
+  "prefectures": ["12", "13"],
+  "airports": ["NRT"],
+  "dateStart": "2026-07-05",
+  "dateEnd": "2026-07-08"
+}
+```
 
-```javascript
-const tripConfig = {
-    appId: 'travel-template-2026',        // LocalStorage 儲存命名空間 (每個行程需唯一)
-    tripType: 'city',                     // 模式：'city' (市區/記帳/打卡) 或 'drive' (自駕/MAPCODE/隱藏記帳)
-    jpyToTwdRate: 0.22,                   // 日幣兌台幣匯率 (非自駕模式下記帳用)
-    countdownDate: '2026/07/05 08:05:00', // 倒數計時目標時間
-    title: 'TRAVEL NAVI 2026',            // 頁面主標題
-    subtitle: '日式親子旅行互動手冊',      // 頁面副標題
-    actionText: 'VJW / 工具',             // 頂部按鈕名稱
-    
-    // 航班資訊
-    flights: {
-        outbound: '去程：FD234 | 高雄 08:05 ➔ 12:55 成田',
-        inbound: '回程：FD235 | 成田 13:55 ➔ 17:05 高雄'
-    },
-    
-    // Visit Japan Web 填寫對照資料
-    vjw: {
-        zip: '110-0015',
-        address: '東京都台東区東上野 X-XX-X',
-        name: 'Ostay Ueno Hotel'
-    },
-    
-    // 景點解鎖清單 (僅市區模式或有設定時顯示)
-    sightsList: [
-        { id: 'sight1', name: '🎮 Day 1: 台場一丁目商店街', day: 'day1' }
-    ],
-    
-    // 預設記帳項目 (選填)
-    defaultExpenses: [
-        { id: 1, name: '🏩 預留住宿費用', amount: 98000 }
-    ],
-    
-    // 每日詳細行程資料
-    days: {
-        day1: {
-            label: 'Day 1',
-            date: '7/5 (日)',
-            title: '抵達東京與台場夜景',
-            timeRange: '12:55pm - 09:30pm',
-            
-            // 每日時間軸事件
-            timeline: [
-                {
-                    type: 'transport', // 類型：'transport' (非自駕大眾交通) 或 'act' (景點/活動)
-                    time: '12:55pm - 14:30pm',
-                    title: '成田機場 ➔ 上野京成電鐵 (大眾交通)',
-                    detail: '搭乘 Skyliner 42 號直達日暮里/上野。請先在櫃檯購票。',
-                    mapUrl: 'https://maps.app.goo.gl/...', // Google Map 連結 (選填)
-                    mapcode: '12 345 678*90'               // Mapcode (自駕模式選填)
-                }
-            ],
-            
-            // 每日美食補給
-            food: [
-                {
-                    meal: '晚餐 (18:00)',
-                    name: '名代宇奈とと 鰻魚飯',
-                    detail: '上野平價高 CP 值鰻魚飯。',
-                    mapUrl: 'https://maps.app.goo.gl/...',
-                    mapcode: '12 345 678*90'
-                }
-            ],
-            
-            // 建議停車場 (自駕模式選填，非自駕模式不渲染)
-            parking: [
-                {
-                    name: '上野中央地下停車場',
-                    detail: '寬敞好停。',
-                    mapUrl: 'https://maps.app.goo.gl/...',
-                    mapcode: '12 345 678*90'
-                }
-            ],
-            
-            // 每日住宿飯店
-            hotel: {
-                name: 'Ostay Ueno Hotel',
-                detail: '靠近上野站，出入非常方便。',
-                mapUrl: 'https://maps.app.goo.gl/...',
-                mapcode: '12 345 678*90' // 飯店 Mapcode (自駕與非自駕皆選填)
-            },
-            
-            details: '首日抵達請先在京成電鐵櫃檯加值 Suica 卡。' // 備註警告欄位 (選填)
-        }
+### 完整欄位說明
+| 欄位 | 說明 |
+|------|------|
+| `id` | 唯一識別碼，也是檔名（`trips/{id}.json`） |
+| `type` | `"city"`（市區）或 `"drive"`（自駕） |
+| `title` / `subtitle` | 頁面標題與副標題 |
+| `badge` / `badgeIcon` | 首頁卡片上的徽章文字與 FontAwesome 圖示 |
+| `description` | 首頁卡片描述 |
+| `stats` | 首頁卡片底部的統計標籤陣列 |
+| `image` | 對應 CSS class 名稱，控制卡片背景圖片 |
+| `prefectures` | 涵蓋的都道府縣代碼（二位數），供地圖自動標記 |
+| `airports` | 進出機場 IATA 代碼，供地圖自動標記 |
+| `dateStart` / `dateEnd` | ISO 日期（YYYY-MM-DD），首頁依此判斷進行中或已結束 |
+| `flights` | `{ outbound, inbound }` 航班資訊字串 |
+| `vjw` | `{ zip, address, name }` Visit Japan Web 填寫資料 |
+| `sightsList` | `[{ id, name, day }]` 景點解鎖清單（僅 city 模式） |
+| `defaultExpenses` | `[{ id, name, amount }]` 預設記帳項目（僅 city 模式） |
+| `countdownDate` | 倒數計時目標時間 |
+| `jpyToTwdRate` | 日幣匯率（city 模式記帳用） |
+| `actionText` | 頂部按鈕文字 |
+| `days` | 每日行程物件（見下方） |
+
+### 每日行程 (`days.dayN`)
+```json
+{
+  "date": "7/5 (日)",
+  "title": "抵達東京與台場夜景",
+  "timeRange": "12:55pm - 09:30pm",
+  "timeline": [
+    {
+      "type": "transport",
+      "time": "12:55pm - 14:30pm",
+      "title": "成田機場 ➔ 上野京成電鐵",
+      "detail": "搭乘 Skyliner 42 號。",
+      "mapUrl": "https://maps.app.goo.gl/...",
+      "mapcode": "12 345 678*90"
     }
-};
+  ],
+  "food": [
+    {
+      "meal": "晚餐",
+      "name": "名代宇奈とと 鰻魚飯",
+      "detail": "上野平價高 CP 值鰻魚飯。",
+      "mapUrl": "...",
+      "mapcode": "..."
+    }
+  ],
+  "parking": [
+    {
+      "name": "上野中央地下停車場",
+      "detail": "寬敞好停。",
+      "mapUrl": "...",
+      "mapcode": "..."
+    }
+  ],
+  "hotel": {
+    "name": "Ostay Ueno Hotel",
+    "detail": "靠近上野站。",
+    "mapUrl": "...",
+    "mapcode": "..."
+  },
+  "details": "首日記得加值 Suica。"
+}
 ```
 
-### 未來代理人生成新行程表的 Prompt 範本
-當需要新增行程表網頁時，可以直接使用以下 Prompt 指令：
+### 未來代理人生成新行程的 Prompt 範本
+當需要新增行程時，請使用以下流程，逐項與使用者確認後再產出：
+
 ```markdown
-請根據專案中的 `template.html` 做為範本，為我新增一個名為 `2026_XXXX__XXXX_OO遊.html` 的旅遊手冊網頁。
-讀取我提供的旅遊資訊後：
-1. 將行程資訊（時間軸、美食、停車場、飯店、VJW 資訊、航班等）正確地對照並填入 `tripConfig` 中。
-2. 確保每個景點、美食餐廳、飯店以及停車場都附上對應的 `mapUrl` (Google Maps 連結)。
-3. 如果是自駕行程（請將 `tripType` 設為 `'drive'`），請務必在飯店、景點及停車場加入 `mapcode`；如果是大眾交通，請將 `tripType` 設為 `'city'`，並於時間軸 of 交通事件中將 `type` 設為 `'transport'` 以標明大眾交通工具。
-4. 在入口網頁 `index.html` 的 `trip-grid` 行程卡清單中，為這個新行程加上專屬的入口卡片，維持樣式一致。
+我將協助您建立新的旅遊行程 JSON。在開始之前，請先提供以下基本資訊：
+
+## 步驟 1：確認行程基本資料
+請告訴我：
+- 📍 **目的地**：哪個城市/區域？
+- 📅 **日期**：出發與回程日期？
+- 👨‍👩‍👧‍👦 **同行成員**：有誰一起去？
+- 🚗 **交通方式**：自駕（drive）還是大眾交通（city）？
+- 🛫 **航班**：去回程航班資訊？
+- 🏨 **住宿**：每天住哪？
+
+## 步驟 2：逐日行程細節
+請提供每天的：
+- 主要目的地與活動
+- 用餐地點（如有推薦）
+- 自駕停車點（如有）
+- 特別注意事項
+
+## 步驟 3：產出 JSON
+我會根據 `trips/*.json` 的格式，在 `trips/` 目錄下建立 `{id}.json`，包含：
+1. 完整的中繼資料（`prefectures`、`airports`、`dateStart`、`dateEnd` 等）供首頁與地圖自動辨識
+2. 每天的 `timeline`、`food`、`parking`、`hotel`、`details`
+3. 所有景點、美食、飯店、停車場附上 `mapUrl`（Google Maps 連結）
+4. 自駕行程每個景點/停車場/飯店加入 `mapcode`，每天加入 `route` 路線點
+5. 將新的行程 ID 加入 `trips/manifest.json` 陣列中
 ```
 
 ---
 
-## 🗂️ 首頁行程分類指引 (index.html Layout Rules)
+## 🗂️ 首頁動態分類機制 (index.html Dynamic Layout)
 
-為防止首頁（`index.html`）隨著年份與行程增加而過度拉長，首頁採用**最新行程大圖卡 + 歷史行程收納區**的劃分規則：
-1. **最新/當年度行程**：使用大型背景圖卡（類別為 `.trip-card`，放置於 `.trip-grid` 內），享有最主要的視覺焦點。
-2. **過往/歷史行程**：使用簡潔的橫向歷史書籤卡片（類別為 `.archive-card`，放置於 `.archive-grid` 內），收納在「歷年足跡回顧」區塊，只呈現年份、名稱與天數，不加背景圖，以避免佔用過多頁面空間。
+`index.html` 完全由 JavaScript 驅動，執行流程：
+1. 載入時 fetch `trips/manifest.json` → 取得所有行程 ID。
+2. 逐一 fetch `trips/{id}.json`。
+3. 比較 `dateEnd` 與當天日期：
+   - `dateEnd >= 今天` → 顯示為大圖卡（`.trip-grid`）
+   - `dateEnd < 今天` → 顯示為歷史書籤（`.archive-grid`）
+4. 彙整所有進行中行程的 `prefectures` 與 `airports`，自動更新地圖的 `PLANNED_CODES`。
+5. 頁面標題、統計區塊、topbar 年份皆自動跟隨最新行程更新。
+
+若無任何進行中行程，則顯示「{明年} 年旅行規劃中 ✨」佔位卡。
 
 ---
 
 ## 🗺️ 日本制霸地圖 (Japan Prefecture Conquest Map)
 
 首頁 `index.html` 下方內嵌了一個基於 Geolonia 向量路徑的**日本制霸地圖**，支援自動同步與手動修改狀態：
-1. **自動規劃判定**：JS 中的 `PLANNED_CODES` 陣列包含當前所有規劃行程涉及的都道府縣代碼（例如千葉、東京、香川、德島、愛媛、高知）。這些地區預設會標記為「規劃中」（藍色）。
+1. **自動規劃判定**：地圖的 `PLANNED_CODES` 與 `PLANNED_AIRPORTS` 由 JS 從進行中行程的 JSON 資料自動彙整，不需手動維護。
 2. **手動點擊切換**：使用者可點擊地圖上的都道府縣來切換狀態（未訪 `#e2e8f0` -> 已去過 `#10b981` -> 想去 `#f59e0b` -> 未訪）。
 3. **資料持久化**：使用者的手動狀態儲存於 `localStorage` 的 `japan-conquest-map-states` 中，並可透過「重設手動修改」按鈕清除重算。
-4. **機場進出足跡 (Airports Visited)**：地圖控制面板下方設有主要機場進出狀態標籤。根據行程航班，成田機場 (NRT) 與高松機場 (TAK) 會自動標記為藍色「規劃進出」狀態；其餘機場（如羽田、關西、福岡、新千歲等）允許點擊手動切換為綠色「已進出」狀態，資料儲存於 `localStorage` 的 `japan-conquest-airports` 中。所有機場標示（含 35 座國內外主要機場）以圓點 + IATA 代碼形式直接標註在地圖上，點擊即可切換灰（未進出）/ 藍（規劃進出）/ 綠（已進出）狀態。
+4. **機場進出足跡 (Airports Visited)**：所有機場標示（含 35 座國內外主要機場）以圓點 + IATA 代碼形式直接標註在地圖上，點擊即可切換灰（未進出）/ 藍（規劃進出）/ 綠（已進出）狀態，資料儲存於 `localStorage` 的 `japan-conquest-airports` 中。
 5. **都道府縣名稱**：地圖上每個都道府縣中心均標記有灰色日文漢字名稱，協助辨識地理位置。
 
 ---
@@ -165,6 +189,7 @@ const tripConfig = {
 
 ## ⚠️ 開發注意事項與限制
 
-1. **修改 HTML 時**：由於是單一 HTML 檔案內含完整 CSS/JS，修改程式碼時請注意標籤閉合，尤其是大段的 `tripData` JSON 物件，避免語法錯誤導致整頁渲染失效。
-2. **匯率與時間**：倒數計時器及記帳匯率皆為靜態設定。若有調整需求需直接修改 JS 常數。
-3. **不要隨意引入打包工具**：除非使用者明確要求，否則請保持單一 HTML 靜態架喚，不要新增 webpack, vite 等繁雜的打包鏈。
+1. **修改 HTML 時**：由於是單一 HTML 檔案內含完整 CSS/JS，修改程式碼時請注意標籤閉合，避免語法錯誤導致整頁渲染失效。
+2. **JSON 語法**：`trips/*.json` 使用嚴格 JSON 格式（無 trailing comma、鍵名需雙引號），否則 fetch 會解析失敗。
+3. **新增行程流程**：建立 `trips/{id}.json` → 將 ID 加入 `trips/manifest.json` → 重載首頁即可看到新卡片（無需修改 `index.html`）。
+4. **不要隨意引入打包工具**：除非使用者明確要求，否則請保持靜態檔案架構，不要新增 webpack, vite 等打包鏈。
