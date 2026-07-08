@@ -328,20 +328,26 @@
         async function initMap(data) {
             const container = document.getElementById('map-container');
             try {
+                // Fetch japan-map.svg directly (canonical source)
                 const res = await fetch('japan-map.svg');
+                if (!res.ok) throw new Error('japan-map.svg not found');
                 const svgText = await res.text();
+
+                // Insert SVG via innerHTML (HTML parser handles SVG natively in modern browsers)
                 container.innerHTML = svgText;
+
                 const svgEl = container.querySelector('svg');
-                if (svgEl) {
-                    svgEl.setAttribute('viewBox', '0 0 1000 1000');
-                    svgEl.style.width = '100%';
-                    svgEl.style.height = 'auto';
-                    // Add overlay group for routes
-                    const overlay = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-                    overlay.id = 'route-overlay';
-                    svgEl.appendChild(overlay);
-                }
+                if (!svgEl) throw new Error('Invalid SVG');
+                svgEl.style.width = '100%';
+                svgEl.style.height = 'auto';
+
+                // Add route overlay at SVG root (viewport space — route coords match label positions)
+                const overlay = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                overlay.id = 'route-overlay';
+                svgEl.appendChild(overlay);
+
             } catch(e) {
+                console.error('Map load error:', e);
                 container.innerHTML = '<p class="text-xs text-slate-400">地圖載入失敗</p>';
             }
         }
