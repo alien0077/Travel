@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 日本親子旅行入口</title>
+    <title>D52F 快樂遊</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -1267,7 +1267,7 @@
             // Update title & description
             if (activeTrips.length > 0) {
                 const years = [...new Set(activeTrips.map(t => t.dateStart.slice(0,4)))];
-                document.getElementById('page-title').textContent = `${years.join('/')} 日本親子旅行入口`;
+                document.getElementById('page-title').textContent = `${years.join('/')} D52F 快樂遊`;
                 document.getElementById('hero-description').textContent =
                     activeTrips.map(t => t.description).join(' ');
                 document.getElementById('topbar-year-label').textContent =
