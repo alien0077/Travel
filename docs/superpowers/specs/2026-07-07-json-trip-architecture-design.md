@@ -22,8 +22,10 @@ Replace standalone trip HTML files with a unified JSON-driven system: each trip 
 ├── archive/                # Legacy standalone HTML files
 │   ├── 2026_0705__0708東京快閃.html
 │   └── 2026_0806__0813四國遊.html
+├── .github/workflows/
+│   └── deploy-pages.yml    # GitHub Pages deployment workflow
+├── .nojekyll               # Publish files directly without Jekyll processing
 ├── AGENTS.md
-├── netlify.toml
 └── .gitignore
 ```
 

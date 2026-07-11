@@ -21,7 +21,7 @@
   - 首頁 `index.html` 的動態卡片與地圖狀態皆透過 `localStorage` 持久化。
   - `viewer.html` 使用 `trip-{id}` 作為命名空間（如 `trip-2026-tokyo`）儲存分頁、打卡、記帳、筆記等狀態。
   - 記帳匯率從行程 JSON 中的 `jpyToTwdRate` 讀取。
-- **部署平台**：使用 Netlify 部署，`netlify.toml` 設定為發布根目錄 (`publish = "."`)，無任何 build command。
+- **部署平台**：使用 GitHub Pages 部署，透過 `.github/workflows/deploy-pages.yml` 在 `main` push 後直接發布根目錄，無任何 build command。
 
 ---
 
