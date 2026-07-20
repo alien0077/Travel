@@ -1,0 +1,706 @@
+{
+  "id": "2024-minamikyushu",
+  "type": "drive",
+  "title": "南九州自由行",
+  "subtitle": "福岡 × 久留米 × 熊本 × 鹿兒島 × 宮崎",
+  "badge": "South Kyushu Drive",
+  "badgeIcon": "fa-car-side",
+  "description": "南九州自駕大迴遊，久留米茶園、黑川溫泉、霧島神宮、高千穗峽。",
+  "stats": [
+    "多天行程",
+    "福岡進出",
+    "自駕"
+  ],
+  "image": "minamikyushu",
+  "prefectures": [
+    "40",
+    "42",
+    "43",
+    "44",
+    "45"
+  ],
+  "airports": [
+    "FUK"
+  ],
+  "dateStart": "2024-01-15",
+  "dateEnd": "2024-01-21",
+  "countdownDate": "",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：航班資訊待補 | 桃園 ➔ 福岡",
+    "inbound": "回程：航班資訊待補 | 福岡 ➔ 桃園"
+  },
+  "days": {
+    "day1": {
+      "date": "福岡",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "柳橋連合市場",
+          "detail": "Mapcode: 13 289 519*28",
+          "mapUrl": "https://maps.google.com/?q=33.5829794,130.4084273"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "櫛田神社",
+          "detail": "Mapcode: 13 319 736*17",
+          "mapUrl": "https://maps.google.com/?q=33.5930258,130.4105701"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "博多町家文化館",
+          "detail": "Mapcode: 13 319 799*77",
+          "mapUrl": "https://maps.google.com/?q=33.5937281,130.411474"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "住吉神社",
+          "detail": "Mapcode: 13 289 837*00",
+          "mapUrl": "https://maps.google.com/?q=33.5859192,130.4137369"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "天神地下街",
+          "detail": "Mapcode: 13 318 514*66",
+          "mapUrl": "https://maps.google.com/?q=33.5899517,130.399472"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "川端通商店街",
+          "detail": "Mapcode: 13 319 758*63",
+          "mapUrl": "https://maps.google.com/?q=33.5935617,130.4083601"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 蒙坦博多旅舍 Montan 博多",
+          "detail": "Mapcode: 13 321 229*85",
+          "mapUrl": "https://maps.google.com/?q=33.588725,130.427977"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "福岡塔",
+          "detail": "Mapcode: 13 312 735*00",
+          "mapUrl": "https://maps.google.com/?q=33.5932846,130.35151"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "福岡城",
+          "detail": "Mapcode: 13 286 817*44",
+          "mapUrl": "https://maps.google.com/?q=33.5844883,130.3828424"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "博多運河城",
+          "detail": "Mapcode: 13 319 319*55",
+          "mapUrl": "https://maps.google.com/?q=33.5898271,130.4107203"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "筥崎宮",
+          "detail": "Mapcode: 13 411 301*33",
+          "mapUrl": "https://maps.google.com/?q=33.6146471,130.4230991"
+        }
+      ],
+      "food": [
+        {
+          "meal": "宵夜",
+          "name": "屋台炒拉麵 小金ちゃん",
+          "detail": "Mapcode: 13 317 473*33",
+          "mapcode": "13 317 473*33"
+        }
+      ],
+      "parking": [
+        {
+          "name": "タイムズ 春吉1丁目",
+          "detail": "Mapcode: 13 289 696*41",
+          "mapcode": "13 289 696*41"
+        },
+        {
+          "name": "Trust Park Reizencho Parking Lot",
+          "detail": "Mapcode: 13 319 767*25",
+          "mapcode": "13 319 767*25"
+        },
+        {
+          "name": "Sumiyoshijinjayoko Parking Lot",
+          "detail": "Mapcode: 13 289 865*03",
+          "mapcode": "13 289 865*03"
+        },
+        {
+          "name": "Kiramekidori Parking Lot",
+          "detail": "Mapcode: 13 318 242*58  (天神地下街）",
+          "mapcode": "13 318 242*58"
+        },
+        {
+          "name": "Kawabatakosoku Parking Lot",
+          "detail": "Mapcode: 13 319 816*25",
+          "mapcode": "13 319 816*25"
+        },
+        {
+          "name": "K Parking Lot",
+          "detail": "Mapcode: 13 317 614*22",
+          "mapcode": "13 317 614*22"
+        },
+        {
+          "name": "Dパーキング 箱崎1丁目第7",
+          "detail": "Mapcode: 13 410 386*66",
+          "mapcode": "13 410 386*66"
+        },
+        {
+          "name": "Budget Car Rental Fukuoka Airport International Terminal",
+          "detail": "Mapcode: 13 293 514*28",
+          "mapcode": "13 293 514*28"
+        }
+      ],
+      "hotel": {
+        "name": "蒙坦博多旅舍 Montan 博多",
+        "detail": "Mapcode: 13 321 229*85",
+        "mapcode": "13 321 229*85"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "久留米",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "八女中央大茶園 Yame Central Tea Plantation",
+          "detail": "Mapcode: 37 267 223*85",
+          "mapUrl": "https://maps.google.com/?q=33.2387457,130.6016674"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "高良大社",
+          "detail": "Mapcode: 37 473 754*85",
+          "mapUrl": "https://maps.google.com/?q=33.3015999,130.565919"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "水天宮",
+          "detail": "Mapcode: 37 554 054*82",
+          "mapUrl": "https://maps.google.com/?q=33.320411,130.496044"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "北野天滿宮",
+          "detail": "北野天滿宮 Mapcode: 37 625 763*55",
+          "mapUrl": "https://maps.google.com/?q=33.34361,130.584617"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "秋月城跡--小京都",
+          "detail": "小京都 Mapcode: 55 173 472*44",
+          "mapUrl": "https://maps.google.com/?q=33.4658556,130.6953798"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "Ishibashi Cultural Center -石橋文化中心",
+          "detail": "石橋文化中心",
+          "mapUrl": "https://maps.google.com/?q=33.313179,130.5303837"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "田主丸車站--河童",
+          "detail": "河童",
+          "mapUrl": "https://maps.google.com/?q=33.3388958,130.692263"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "居蔵の館--老街",
+          "detail": "老街",
+          "mapUrl": "https://maps.google.com/?q=33.3439649,130.7596852"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "葛籠梯田",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=33.2686137,130.8246935"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "若松屋",
+          "detail": "Mapcode: 69 842 564*58",
+          "mapcode": "69 842 564*58"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "（株）紅乙女酒造 本社",
+          "detail": "",
+          "mapcode": ""
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "水縄茶寮",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "熊本",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 Vessel Hotel Kumamoto Airport",
+          "detail": "Mapcode: 29 747 559*82",
+          "mapUrl": "https://maps.google.com/?q=32.8751897,130.8530106"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "櫻之馬場",
+          "detail": "櫻之馬場 Mapcode: 29 489 081*03",
+          "mapUrl": "https://maps.google.com/?q=32.8038801,130.7037687"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "熊本站 綠色窗口",
+          "detail": "Mapcode: 29 428 301*52",
+          "mapUrl": "https://maps.google.com/?q=32.7901385,130.6885492"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鶴屋百貨公司",
+          "detail": "Mapcode: 29 460 798*11",
+          "mapUrl": "https://maps.google.com/?q=32.8023279,130.7110389"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 黑川溫泉觀光旅館協同組合",
+          "detail": "Mapcode: 440 572 000*03",
+          "mapUrl": "https://maps.google.com/?q=33.078069,131.141656"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "阿蘇神社",
+          "detail": "Mapcode: 256 704 249*22",
+          "mapUrl": "https://maps.google.com/?q=32.9476704,131.1166871"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 ANA皇冠假日酒店 熊本New Sky",
+          "detail": "Mapcode: 29 428 746*74",
+          "mapUrl": "https://maps.google.com/?q=32.7934354,130.6965473"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "人吉日本國寶 青井阿蘇神社",
+          "detail": "Mapcode: 195 765 198*77",
+          "mapUrl": "https://maps.google.com/?q=32.213415,130.752897"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "人吉城 中御門跡",
+          "detail": "Mapcode: 195 737 873*55",
+          "mapUrl": "https://maps.google.com/?q=32.2115248,130.766011"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "人吉-鍛治屋町通",
+          "detail": "Mapcode: 195 766 496*30",
+          "mapUrl": "https://maps.google.com/?q=32.2164226,130.7605702"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "太平燕 紅蘭亭",
+          "detail": "",
+          "mapcode": ""
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "しらいしうなぎ屋",
+          "detail": "Mapcode: 195 766 373*82",
+          "mapcode": "195 766 373*82"
+        }
+      ],
+      "parking": [
+        {
+          "name": "人吉駐車場",
+          "detail": "Mapcode: 195 766 378*63",
+          "mapcode": "195 766 378*63"
+        }
+      ],
+      "hotel": {
+        "name": "ANA皇冠假日酒店 熊本New Sky",
+        "detail": "Mapcode: 29 428 746*74",
+        "mapcode": "29 428 746*74"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "鹿耳島",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "霧島神宮",
+          "detail": "Mapcode: 376 089 596*85",
+          "mapUrl": "https://maps.google.com/?q=31.8588632,130.8716277"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "霧島溫泉市場",
+          "detail": "Mapcode: 376 204 674*74",
+          "mapUrl": "https://maps.google.com/?q=31.892783,130.826636"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "湯之平展望所",
+          "detail": "Mapcode: 42 015 505*44",
+          "mapUrl": "https://maps.google.com/?q=31.5914214,130.6300066"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "仙巖園",
+          "detail": "Mapcode: 42 099 681*28",
+          "mapUrl": "https://maps.google.com/?q=31.617327,130.57714"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "尚古集成館 世界文化遺產",
+          "detail": "Mapcode: 42 099 613*30",
+          "mapUrl": "https://maps.google.com/?q=31.617316,130.576297"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "異人館（舊鹿兒島紡織所技師館）",
+          "detail": "Mapcode: 42 099 425*28",
+          "mapUrl": "https://maps.google.com/?q=31.6156444,130.5742063"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 APAHOTEL KAGOSHIMA-TENMONKAN",
+          "detail": "Mapcode: 42 007 212*47",
+          "mapUrl": "https://maps.google.com/?q=31.5889522,130.5568725"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "西鄉隆盛銅像",
+          "detail": "Mapcode: 42 036 021*11",
+          "mapUrl": "https://maps.google.com/?q=31.5952998,130.5537581"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "城山公園展望台--觀賞火山",
+          "detail": "Mapcode: 42 036 045*00",
+          "mapUrl": "https://maps.google.com/?q=31.5963448,130.5499638"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "甲突川河畔--觀賞火山",
+          "detail": "Mapcode: 393 547 733*55",
+          "mapUrl": "https://maps.google.com/?q=31.5774508,130.5599245"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "購物中心 海豚灣",
+          "detail": "Mapcode: 42 007 623*44",
+          "mapUrl": "https://maps.google.com/?q=31.5928287,130.5626823"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "天文館商店街",
+          "detail": "Mapcode: 42 006 536*66",
+          "mapUrl": "https://maps.google.com/?q=31.5912899,130.5550162"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "百貨公司 AMU",
+          "detail": "Mapcode: 393 575 642*22",
+          "mapUrl": "https://maps.google.com/?q=31.5843829,130.5428033"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "百貨公司 山形屋",
+          "detail": "Mapcode: 42 007 693*03",
+          "mapUrl": "https://maps.google.com/?q=31.5932109,130.5567467"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "知覧武家屋敷庭園",
+          "detail": "Mapcode: 198 443 821*88",
+          "mapUrl": "https://maps.google.com/?q=31.3784258,130.4447465"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "龍宮神社",
+          "detail": "Mapcode: 648 565 655*77",
+          "mapUrl": "https://maps.google.com/?q=31.1591722,130.5884392"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "開聞岳",
+          "detail": "Mapcode: 285 094 680*36",
+          "mapUrl": "https://maps.google.com/?q=31.1803831,130.5278909"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "Aeon Mall",
+          "detail": "Mapcode: 393 364 834*66",
+          "mapUrl": "https://maps.google.com/?q=31.527235,130.536857"
+        }
+      ],
+      "food": [
+        {
+          "meal": "宵夜",
+          "name": "鹿兒島屋台村",
+          "detail": "Mapcode: 393 575 800*58",
+          "mapcode": "393 575 800*58"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "鹿兒島料理 さつま味",
+          "detail": "Mapcode: 285 257 085*25",
+          "mapcode": "285 257 085*25"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "鄉土料理黑豬地雞 青葉",
+          "detail": "Mapcode: 285 257 161*55",
+          "mapcode": "285 257 161*55"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "日本料理.蕎麥麵 長壽庵",
+          "detail": "Mapcode: 285 257 036*71",
+          "mapcode": "285 257 036*71"
+        }
+      ],
+      "parking": [
+        {
+          "name": "仙巌園駐車場",
+          "detail": "Mapcode: 42 099 642*52",
+          "mapcode": "42 099 642*52"
+        },
+        {
+          "name": "セラ602（鹿児島中央地下駐車場）",
+          "detail": "Mapcode: 42 006 863*17",
+          "mapcode": "42 006 863*17"
+        }
+      ],
+      "hotel": {
+        "name": "APAHOTEL KAGOSHIMA-TENMONKAN",
+        "detail": "Mapcode: 42 007 212*47",
+        "mapcode": "42 007 212*47"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "宮崎",
+      "title": "第5天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 Area One Miyazaki City Hotel",
+          "detail": "Mapcode: 66 290 533*03",
+          "mapUrl": "https://maps.google.com/?q=31.9167068,131.421013"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "高千穗峽谷",
+          "detail": "Mapcode: 330 711 699*47",
+          "mapUrl": "https://maps.google.com/?q=32.7022375,131.300649"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "高千穗神社",
+          "detail": "Mapcode: 330 741 350*11",
+          "mapUrl": "https://maps.google.com/?q=32.7065512,131.3027026"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "天岩戸神社",
+          "detail": "駐車場：Mapcode: 330 837 575*03",
+          "mapUrl": "https://maps.google.com/?q=32.7342763,131.3501006"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "中央通超市",
+          "detail": "中央通超市Mapcode: 66 290 506*66",
+          "mapUrl": "https://maps.google.com/?q=31.9162014,131.4215449"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "宮崎中央通",
+          "detail": "駐車場：Mapcode: 66 290 597*03",
+          "mapUrl": "https://maps.google.com/?q=31.9157338,131.4212269"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "宮崎神宮",
+          "detail": "東駐車場：Mapcode: 66 381 044*25",
+          "mapUrl": "https://maps.google.com/?q=31.9368881,131.4232031"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "宮崎山形屋百貨公司",
+          "detail": "Mapcode: 66 291 483*06",
+          "mapUrl": "https://maps.google.com/?q=31.9161311,131.4239154"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "宮崎平和台公園",
+          "detail": "駐車場：Mapcode: 66 410 216*58",
+          "mapUrl": "https://maps.google.com/?q=31.9496316,131.4161182"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "青島神社",
+          "detail": "無料駐車場：Mapcode: 843 161 435*28",
+          "mapUrl": "https://maps.google.com/?q=31.8045886,131.4749824"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "SunMesse日南--復活島巨石",
+          "detail": "Mapcode: 274 595 199*85",
+          "mapUrl": "https://maps.google.com/?q=31.662555,131.461155"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鵜戶神宮",
+          "detail": "第二駐車場：Mapcode: 274 536 189*55",
+          "mapUrl": "https://maps.google.com/?q=31.6504534,131.4665531"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "飫肥城跡",
+          "detail": "Mapcode: 274 432 702*85",
+          "mapUrl": "https://maps.google.com/?q=31.6286444,131.3515915"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "章魚燒：おい（美味）しんぼ",
+          "detail": "Mapcode: 274 405 199*55",
+          "mapUrl": "https://maps.google.com/?q=31.613514,131.377955"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "天城公園",
+          "detail": "Mapcode: 66 425 854*66",
+          "mapUrl": "https://maps.google.com/?q=31.961075,131.2930479"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "蝦野高原",
+          "detail": "Mapcode: 376 416 107*85",
+          "mapUrl": "https://maps.google.com/?q=31.9460563,130.845283"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "Handsman",
+          "detail": "Mapcode: 66 322 797*88",
+          "mapUrl": "https://maps.google.com/?q=31.9271228,131.4356208"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "Aeon mall",
+          "detail": "Mapcode: 66 324 299*47",
+          "mapUrl": "https://maps.google.com/?q=31.9226278,131.4564022"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "迴轉壽司： はま寿司 日向原町店",
+          "detail": "Mapcode: 136 315 178*55",
+          "mapcode": "136 315 178*55"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "饅魚飯：浜乃茶屋",
+          "detail": "Mapcode: 274 376 644*82",
+          "mapcode": "274 376 644*82"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "Area One Miyazaki City Hotel",
+        "detail": "Mapcode: 66 290 533*03",
+        "mapcode": "66 290 533*03"
+      },
+      "details": ""
+    }
+  }
+}

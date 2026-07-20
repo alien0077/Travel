@@ -1,0 +1,259 @@
+{
+  "id": "2024-kanazawa",
+  "type": "drive",
+  "title": "金澤北陸自駕七天",
+  "subtitle": "7/28 - 8/3 兼六園 × 白川鄉 × 輪島朝市",
+  "badge": "Hokuriku Drive",
+  "badgeIcon": "fa-car-side",
+  "description": "小松機場進出，走訪金澤城、兼六園、白川鄉合掌村、輪島朝市與能登半島。",
+  "stats": [
+    "7天6夜",
+    "小松進出",
+    "自駕"
+  ],
+  "image": "kanazawa",
+  "prefectures": [
+    "17",
+    "16"
+  ],
+  "airports": [
+    "KMQ"
+  ],
+  "dateStart": "2024-07-28",
+  "dateEnd": "2024-08-03",
+  "countdownDate": "2024/07/28 00:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：長榮航空 | 桃園 ➔ 小松",
+    "inbound": "回程：長榮航空 | 小松 ➔ 桃園"
+  },
+  "days": {
+    "day1": {
+      "date": "7/28",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 金澤凱悅嘉寓酒店",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5798773,136.6482764"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鼓門",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5778025,136.6491445"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "近江町市場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5717335,136.6558651"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "金澤凱悅嘉寓酒店",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "7/29",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "金澤城",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5648935,136.658151"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "兼六園",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5621278,136.6626515"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "7/30",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "白川鄉與五箇山的合掌構造村落",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.2577967,136.9061975"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "菅沼合掌造聚落",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.4041682,136.8864489"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "加賀傳統工藝村 湯之國森林",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.32414,136.4358376"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "日本自動車博物館",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.334222,136.4303915"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐",
+          "name": "宮川朝市",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "7/31",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "白米千枚田",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=37.4255423,136.9995074"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道駅輪島",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=37.3890755,136.9061829"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐",
+          "name": "輪島朝市",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "8/1",
+      "title": "第5天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "妙立寺（忍者寺）",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5553843,136.6489974"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "長町武家屋敷跡",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5636291,136.6510951"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "西茶屋街",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day6": {
+      "date": "8/2",
+      "title": "第6天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "大和百貨 金澤香林坊店",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5631795,136.654089"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "BRAND OFF",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.5794462,136.6501368"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day7": {
+      "date": "8/3",
+      "title": "第7天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "小松機場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=36.3928086,136.4059768"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    }
+  }
+}

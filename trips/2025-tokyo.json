@@ -1,0 +1,266 @@
+{
+  "id": "2025-tokyo",
+  "type": "city",
+  "title": "東京河口湖七日遊",
+  "subtitle": "1/22 - 1/28 淺草 × 鎌倉 × 川越 × 富士山",
+  "badge": "Tokyo Explorer",
+  "badgeIcon": "fa-train-subway",
+  "description": "東京進出，成田機場往來，河口湖賞富士山、鎌倉江之島一日遊。全程大眾運輸。",
+  "stats": [
+    "7天6夜",
+    "成田進出",
+    "大眾運輸"
+  ],
+  "image": "tokyo2",
+  "prefectures": [
+    "12",
+    "13",
+    "14",
+    "19"
+  ],
+  "airports": [
+    "NRT"
+  ],
+  "dateStart": "2025-01-22",
+  "dateEnd": "2025-01-28",
+  "countdownDate": "2025/01/22 00:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：中華航空 CI0100 | 桃園 ➔ 成田",
+    "inbound": "回程：中華航空 | 成田 ➔ 桃園"
+  },
+  "days": {
+    "day1": {
+      "date": "01/22",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "成田國際機場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.770178,140.3843215"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "阿美橫丁",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.708978,139.7747155"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "01/23",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "河口湖駅",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.4983333,138.7685556"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "下吉田站藍色火車月臺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.4977056,138.8032627"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "下吉田-本町通註車場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.4923145,138.80383"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "01/24",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "鎌倉大佛殿高德院",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3168145,139.5357442"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "江島神社 邊津宮",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3003664,139.4795955"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "小町通商店街",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3203179,139.5517335"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "江之島弁財天仲見世通",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3019678,139.4809956"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鶴岡八幡宮",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3259856,139.5563462"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鐮倉高校前",
+          "detail": "https://bobbyworld.tw/2024-02-16-2966/",
+          "mapUrl": "https://maps.google.com/?q=35.3067242,139.5005569"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "01/25",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "小江戶川越一番街商店街 藏造老屋街道",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.923527,139.4829325"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "01/26",
+      "title": "第5天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "吉祥寺-黑毛和牛炸肉餅 Satou",
+          "detail": "(ダイヤ街)",
+          "mapUrl": "https://maps.google.com/?q=35.703975,139.579041"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "吉祥寺 Sunroad",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.7050504,139.580504"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day6": {
+      "date": "01/27",
+      "title": "第6天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "TAMASHII NATIONS STORE TOKYO",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.6991106,139.7729878"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "秋葉原電氣街",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.6997178,139.7713799"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "淺草寺 雷門",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.7111163,139.7963656"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day7": {
+      "date": "01/28",
+      "title": "第7天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "成田山新勝寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.7860511,140.3182485"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "成田山表參道",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.7845166,140.317873"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "鰻魚老店 川豐 本店",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    }
+  }
+}

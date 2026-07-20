@@ -1,0 +1,256 @@
+{
+  "id": "2025-kyoto",
+  "type": "city",
+  "title": "京都奈良五日遊",
+  "subtitle": "4/19 - 4/23 金閣寺 × 伏見稻荷 × 奈良公園",
+  "badge": "Kyoto Classic",
+  "badgeIcon": "fa-train-subway",
+  "description": "關西進出，京都金閣寺、平安神宮、奈良東大寺與宇治平等院。全程大眾運輸。",
+  "stats": [
+    "5天4夜",
+    "關西進出",
+    "大眾運輸"
+  ],
+  "image": "kyoto",
+  "prefectures": [
+    "26",
+    "27",
+    "28",
+    "29"
+  ],
+  "airports": [
+    "KIX"
+  ],
+  "dateStart": "2025-04-19",
+  "dateEnd": "2025-04-23",
+  "countdownDate": "2025/04/19 06:30:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：長榮航空 | 桃園 06:30 ➔ 關西 10:10",
+    "inbound": "回程：長榮航空 | 關西 13:10 ➔ 桃園 15:05"
+  },
+  "days": {
+    "day1": {
+      "date": "4/19",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "關西機場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.4358892,135.243459"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 皮塞思酒店",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.9824056,135.756911"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "東本願寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.9909478,135.7584754"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "西本願寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.991777,135.7516549"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "東福寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.976025,135.7737627"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "皮塞思酒店",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "4/20",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "北野天滿宮",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0311737,135.7351227"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "金閣寺（鹿苑寺）",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.03937,135.7292431"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "上賀茂神社",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0603776,135.7527293"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "賀茂御祖神社(下鴨神社)",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0389778,135.7730068"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "4/21",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "東寺：每月21有市集",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.9803395,135.7476935"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "京都御苑",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0240977,135.7621436"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "熊野神社",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0177091,135.7780631"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "平安神宮",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0159823,135.7824263"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "南禪寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0114138,135.7944841"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "4/22",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "JR奈良駅",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.680987,135.819038"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "奈良公園",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.685047,135.843012"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "東大寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.6889851,135.8398158"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "JR 宇治駅",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.8904261,135.8005941"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "辻利 宇治本店",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.8903372,135.8027016"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "平等院",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.8892908,135.8076783"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "醍醐寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.9511172,135.8193543"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "4/23",
+      "title": "第5天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "JR 關西機場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.4359291,135.2432118"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    }
+  }
+}

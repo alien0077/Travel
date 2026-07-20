@@ -1,0 +1,403 @@
+{
+  "id": "2023-okayama-tottori",
+  "type": "drive",
+  "title": "岡山鳥取自駕九天",
+  "subtitle": "8/11 - 8/19 名城 × 砂丘 × 溫泉",
+  "badge": "Sanin Journey",
+  "badgeIcon": "fa-car-side",
+  "description": "從岡山出發，走訪倉敷美觀、鳥取砂丘、松江城、出雲大社，繞行中國山陰山陽一週。",
+  "stats": [
+    "9天8夜",
+    "岡山進出",
+    "中國地區"
+  ],
+  "image": "okayama",
+  "prefectures": [
+    "33",
+    "31",
+    "32",
+    "34"
+  ],
+  "airports": [
+    "OKJ"
+  ],
+  "dateStart": "2023-08-11",
+  "dateEnd": "2023-08-19",
+  "countdownDate": "2023/08/11 00:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：台灣虎航 IT214 | 桃園 11:30 ➔ 岡山 15:00",
+    "inbound": "回程：台灣虎航 IT215 | 岡山 15:55 ➔ 桃園 18:00"
+  },
+  "days": {
+    "day1": {
+      "date": "8/11",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "岡山機場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.7581724,133.8558092"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "永旺夢樂城 岡山",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.6620787,133.9174831"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "Nishikawa Parking Lot",
+          "detail": "",
+          "mapcode": ""
+        },
+        {
+          "name": "平成租車岡山機場店",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "8/12",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "岡山城",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.6651878,133.9360657"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "D-Parking Kurashiki；倉敷美觀",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "8/13",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "若桜鉄道株式会社",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3451925,134.398382"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鳥取砂丘",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.5421824,134.2294605"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "倉吉白壁土藏群",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.4321485,133.8244348"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 松風荘旅館",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.431212,133.817431"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "松風荘旅館",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "8/14",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "江島大橋",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.5192007,133.1999762"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "松江城",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.4751335,133.0506783"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 松江宍道湖溫泉 夕景湖畔 天水閣",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.4655171,133.0436692"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "松江宍道湖溫泉 夕景湖畔 天水閣",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "8/15",
+      "title": "第5天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "出雲大社",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.4018692,132.6854693"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 Tabist すぱゆばら 岡山湯原温泉",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.1994238,133.7329702"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鬼女台展望台",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3239223,133.5866646"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "御机の茅葺小屋",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3209823,133.5556995"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "御神社⛩️",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3228908,133.5563277"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "木谷沢渓流",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3396574,133.5548376"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鍵掛峠展望台",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3460455,133.5494304"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "三の沢",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3529399,133.5459708"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "大山寺",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.3910231,133.5347519"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "烏ヶ山 展望駐車場",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "hotel": {
+        "name": "Tabist すぱゆばら 岡山湯原温泉",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day6": {
+      "date": "8/16",
+      "title": "第6天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "勝山町老街保存地區",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=35.0817736,133.6910049"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "吹屋故鄉村",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.8616177,133.4698019"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "備中松山城",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.8090686,133.6224808"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 Nagi Kurashiki Hotel & Suites",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.6005774,133.7651456"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "Nagi Kurashiki Hotel & Suites",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day7": {
+      "date": "8/17",
+      "title": "第7天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "鷲羽山",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.4355475,133.8124415"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "瀨戶大橋紀念公園",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.3513765,133.8264782"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "丸龜城",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.2859887,133.800375"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 GRAND BASE Takamatsu",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.3461197,134.0531232"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "GRAND BASE Takamatsu",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day8": {
+      "date": "8/18",
+      "title": "第8天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "金刀比羅宮奧社",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.188073,133.8023384"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 Nagi Kurashiki Hotel & Suites",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.6005774,133.7651456"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "Nagi Kurashiki Hotel & Suites",
+        "detail": "",
+        "mapcode": ""
+      },
+      "details": ""
+    },
+    "day9": {
+      "date": "8/19",
+      "title": "第9天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "岡山機場",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=34.7581724,133.8558092"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "平成租車岡山機場店",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    }
+  }
+}

@@ -1,0 +1,615 @@
+{
+  "id": "2025-sendai",
+  "type": "drive",
+  "title": "東北六大祭自駕七天",
+  "subtitle": "7/27 - 8/2 仙台七夕 × 青森睡魔 × 秋田竿燈",
+  "badge": "Tohoku Matsuri",
+  "badgeIcon": "fa-car-side",
+  "description": "仙台進出，自駕走訪東北六縣，參與夏日祭典盛會。",
+  "stats": [
+    "7天6夜",
+    "仙台進出",
+    "自駕"
+  ],
+  "image": "sendai",
+  "prefectures": [
+    "04",
+    "03",
+    "05",
+    "02",
+    "06",
+    "07"
+  ],
+  "airports": [
+    "SDJ"
+  ],
+  "dateStart": "2025-07-27",
+  "dateEnd": "2025-08-02",
+  "countdownDate": "2025/07/27 11:35:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：星宇航空 JX | 桃園 11:35 ➔ 仙台 16:00",
+    "inbound": "回程：星宇航空 JX | 仙台 17:20 ➔ 桃園 20:10"
+  },
+  "days": {
+    "day1": {
+      "date": "07/27",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "桃機第一航廈",
+          "detail": "11:35 AM TPE T1 -> 16:00 PM SDJ",
+          "mapUrl": "https://maps.google.com/?q=25.0801069,121.2358126"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "利久 仙台站店",
+          "detail": "",
+          "mapUrl": "https://maps.google.com/?q=38.2608034,140.8818835"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "仙台大和魯內飯店",
+          "detail": "Mapcode: 21 616 617*13",
+          "mapUrl": "https://maps.google.com/?q=38.2586966,140.8848331"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "07/28",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "岩手銀行赤煉瓦館",
+          "detail": "Mapcode: 81 709 631*36",
+          "mapUrl": "https://maps.google.com/?q=39.7005195,141.1552147"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "盛岡八幡宮",
+          "detail": "Mapcode: 81 710 093*57",
+          "mapUrl": "https://maps.google.com/?q=39.6953498,141.1640378"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "盛岡城跡公園（岩手公園）",
+          "detail": "Mapcode: 81 708 677*67",
+          "mapUrl": "https://maps.google.com/?q=39.7006035,141.1513377"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "中尊寺",
+          "detail": "世界遺產\nMapcode: 142 282 772*78",
+          "mapUrl": "https://maps.google.com/?q=39.0014285,141.1005985"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "毛越寺",
+          "detail": "世界遺產\nMapcode: 142 253 099*18",
+          "mapUrl": "https://maps.google.com/?q=38.9871958,141.1075207"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 猊鼻溪",
+          "detail": "Mapcode: 308 241 332*81",
+          "mapUrl": "https://maps.google.com/?q=38.9893763,141.2553865"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道之驛 嚴美溪",
+          "detail": "Mapcode: 142 096 203*64",
+          "mapUrl": "https://maps.google.com/?q=38.9463292,141.0530604"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 花卷溫泉",
+          "detail": "Mapcode: 626 082 125*10",
+          "mapUrl": "https://maps.google.com/?q=39.4518393,141.0704576"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 道の駅 雫石あねっこ",
+          "detail": "Mapcode: 435 135 371*08",
+          "mapUrl": "https://maps.google.com/?q=39.7062965,140.8746409"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 遠野故鄉村",
+          "detail": "Mapcode: 810 215 158*53",
+          "mapUrl": "https://maps.google.com/?q=39.3960096,141.5403655"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "福田麵包 長田町本店",
+          "detail": "Mapcode: 81 737 584*81",
+          "mapUrl": "https://maps.google.com/?q=39.7082304,141.1420896"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 岩手：Richmond Hotel",
+          "detail": "Mapcode: 81 706 866*66",
+          "mapUrl": "https://maps.google.com/?q=39.7022911,141.1371534"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "XX 山貓軒",
+          "detail": "地方料理\nMapcode: 108 830 515*26",
+          "mapcode": "108 830 515*26"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "嚴美溪",
+          "detail": "Mapcode: 142 066 844*81\n在嚴美溪，只要把錢和點菜的單子放入河岸小屋的籃子中，對岸的茶屋便會用繩子送來著名的「郭公糰子」（也被稱為飛天糰子）",
+          "mapcode": "142 066 844*81"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "岩手：Richmond Hotel",
+        "detail": "Mapcode: 81 706 866*66",
+        "mapcode": "81 706 866*66"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "07/29",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "蕪嶋神社",
+          "detail": "Mapcode: 346 742 250*24",
+          "mapUrl": "https://maps.google.com/?q=40.5385428,141.5575712"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "睡魔之家 WA・RASSE",
+          "detail": "Mapcode: 99 583 201*88",
+          "mapUrl": "https://maps.google.com/?q=40.829495,140.7356284"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "A-FACTORY",
+          "detail": "Mapcode: 99 583 258*07",
+          "mapUrl": "https://maps.google.com/?q=40.8299965,140.7349272"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 青森：Dormy Inn Aomori",
+          "detail": "Mapcode: 99 554 732*70",
+          "mapUrl": "https://maps.google.com/?q=40.826055,140.7416743"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 奧入瀨溪流館",
+          "detail": "Mapcode: 612 852 566*26",
+          "mapUrl": "https://maps.google.com/?q=40.574573,140.9786978"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 銚子大瀑布",
+          "detail": "Mapcode: 612 549 254*12",
+          "mapUrl": "https://maps.google.com/?q=40.4886222,140.951221"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 道之駅：十和田湖",
+          "detail": "Mapcode: 839 883 700*31",
+          "mapUrl": "https://maps.google.com/?q=40.4176788,140.8577279"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "青森：Dormy Inn Aomori",
+        "detail": "Mapcode: 99 554 732*70",
+        "mapcode": "99 554 732*70"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "07/30",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "道の駅 なみおか アップルヒル",
+          "detail": "Mapcode: 71 474 718*44",
+          "mapUrl": "https://maps.google.com/?q=40.7176607,140.5794869"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "弘前城",
+          "detail": "Mapcode: 71 071 541*41",
+          "mapUrl": "https://maps.google.com/?q=40.6079159,140.4636654"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道之驛碇關",
+          "detail": "Mapcode: 323 525 398*85",
+          "mapUrl": "https://maps.google.com/?q=40.4814396,140.6236935"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 秋田犬之鄉",
+          "detail": "Mapcode: 229 742 064*40",
+          "mapUrl": "https://maps.google.com/?q=40.2868486,140.5561643"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "男鹿真山傳承館",
+          "detail": "Mapcode: 351 332 162*84",
+          "mapUrl": "https://maps.google.com/?q=39.9293246,139.7666579"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道の駅 あきた港",
+          "detail": "Mapcode: 88 292 892*00",
+          "mapUrl": "https://maps.google.com/?q=39.7526393,140.0611333"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "紅磚鄉土館",
+          "detail": "Mapcode: 88 179 608*52",
+          "mapUrl": "https://maps.google.com/?q=39.7167087,140.1157846"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "彌生遺址",
+          "detail": "Mapcode: 303 544 518*10",
+          "mapUrl": "https://maps.google.com/?q=39.6576522,140.1573317"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 秋田全日空皇冠假日酒店",
+          "detail": "Mapcode: 303 750 648*02",
+          "mapUrl": "https://maps.google.com/?q=39.7171132,140.1266486"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 道路休息站阿仁又鬼乃郷",
+          "detail": "Mapcode: 686 520 757*00",
+          "mapUrl": "https://maps.google.com/?q=39.9015343,140.4569231"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 御座石神社",
+          "detail": "Mapcode: 280 888 764*36",
+          "mapUrl": "https://maps.google.com/?q=39.7516029,140.6505312"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 田澤湖",
+          "detail": "日本第一深\nMapcode: 280 768 628*12",
+          "mapUrl": "https://maps.google.com/?q=39.7168527,140.6544861"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "XX 大正浪漫喫茶室",
+          "detail": "Mapcode: 71 070 083*48",
+          "mapcode": "71 070 083*48"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "秋田米棒鍋",
+          "detail": "Mapcode: 303 750 652*34",
+          "mapcode": "303 750 652*34"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "XX たつこ茶屋",
+          "detail": "味噌烤米棒\nMapcode: 280 709 567*33",
+          "mapcode": "280 709 567*33"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "秋田全日空皇冠假日酒店",
+        "detail": "Mapcode: 303 750 648*02",
+        "mapcode": "303 750 648*02"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "07/31",
+      "title": "第5天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "角館武家屋敷",
+          "detail": "Mapcode: 280 337 534*78",
+          "mapUrl": "https://maps.google.com/?q=39.5992618,140.5617163"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道の駅 十文字",
+          "detail": "Mapcode: 212 797 748*52",
+          "mapUrl": "https://maps.google.com/?q=39.2262704,140.5210024"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "銀山溫泉",
+          "detail": "銀山温泉 共同浴場 しろがね湯\nMapcode: 720 859 121*41",
+          "mapUrl": "https://maps.google.com/?q=38.6173247,140.5613515"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道の駅 寒河江 チェリーランド",
+          "detail": "Mapcode: 62 512 478*71",
+          "mapUrl": "https://maps.google.com/?q=38.3988169,140.2713015"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道の駅 天童温泉",
+          "detail": "Mapcode: 62 376 176*81",
+          "mapUrl": "https://maps.google.com/?q=38.3544867,140.3872332"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "文翔館",
+          "detail": "Mapcode: 62 011 400*60",
+          "mapUrl": "https://maps.google.com/?q=38.256637,140.3411866"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 山形站前大和 ROYNET 酒店",
+          "detail": "Mapcode: 273 594 329*56",
+          "mapUrl": "https://maps.google.com/?q=38.2474258,140.3296966"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 寶珠山立石寺",
+          "detail": "從山門延伸至山頂的1015個石台階被人們稱為修行之道\nMapcode: 62 232 196*13",
+          "mapUrl": "https://maps.google.com/?q=38.3131193,140.4346099"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 羽黑山五重塔",
+          "detail": "從位於登山道入口的隋神門到山頂為止，沿著石道和階梯行走約需1小時左右\nMapcode: 90 146 195*12",
+          "mapUrl": "https://maps.google.com/?q=38.7047357,139.967661"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 最上川遊船",
+          "detail": "Mapcode: 221 243 191*72",
+          "mapUrl": "https://maps.google.com/?q=38.7379836,140.1498384"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "御殿堰(山形五堰)",
+          "detail": "在復古街道「御殿堰」的復古咖啡廳小憩\nMapcode: 62 011 003*42",
+          "mapcode": "62 011 003*42"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "米澤牛 登起波 山形店",
+          "detail": "https://www.yonezawabeef.co.jp/yamagata.html\nMapcode: 273 594 299*86",
+          "mapcode": "273 594 299*86"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "山形站前大和 ROYNET 酒店",
+        "detail": "Mapcode: 273 594 329*56",
+        "mapcode": "273 594 329*56"
+      },
+      "details": ""
+    },
+    "day6": {
+      "date": "08/01",
+      "title": "第6天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX道の駅 やまがた蔵王",
+          "detail": "Mapcode: 273 382 355*72",
+          "mapUrl": "https://maps.google.com/?q=38.1894465,140.3120848"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 米澤城跡",
+          "detail": "Mapcode: 515 268 660*84",
+          "mapUrl": "https://maps.google.com/?q=37.9092742,140.1050564"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 上杉神社",
+          "detail": "Mapcode: 515 267 687*80",
+          "mapUrl": "https://maps.google.com/?q=37.9092616,140.1041694"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 道の駅 国見 あつかしの郷",
+          "detail": "Mapcode: 76 441 300*34",
+          "mapUrl": "https://maps.google.com/?q=37.8727314,140.5467713"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 白石城 本丸跡",
+          "detail": "Mapcode: 76 899 824*64",
+          "mapUrl": "https://maps.google.com/?q=38.0022507,140.617302"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 宮城藏王狐狸村",
+          "detail": "Mapcode: 569 139 481*61",
+          "mapUrl": "https://maps.google.com/?q=38.0408293,140.5303604"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "錦之丘 Hillside Mall： 購物中心",
+          "detail": "Mapcode: 21 602 486*81",
+          "mapUrl": "https://maps.google.com/?q=38.2575726,140.7649623"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "大崎八幡宫",
+          "detail": "Mapcode: 21 671 324*06",
+          "mapUrl": "https://maps.google.com/?q=38.2725199,140.8450332"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "仙台城跡",
+          "detail": "Mapcode: 21 613 034*03",
+          "mapUrl": "https://maps.google.com/?q=38.2534138,140.8561276"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "瑞鳳殿",
+          "detail": "Mapcode: 21 584 732*24",
+          "mapUrl": "https://maps.google.com/?q=38.2504479,140.8667079"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 鹽竈神社",
+          "detail": "Mapcode: 110 226 868*68",
+          "mapUrl": "https://maps.google.com/?q=38.3191457,141.0127515"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "仙台：The OneFive Sendai",
+          "detail": "Mapcode: 21 616 503*25",
+          "mapUrl": "https://maps.google.com/?q=38.2576338,140.8862866"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 圓通院",
+          "detail": "Mapcode: 110 442 163*12",
+          "mapUrl": "https://maps.google.com/?q=38.5250947,140.9287848"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 道の駅 三本木 やまなみ",
+          "detail": "Mapcode: 141 068 241*21",
+          "mapUrl": "https://maps.google.com/?q=38.5220803,140.9385664"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 瑞巖寺",
+          "detail": "Mapcode: 110 442 257*10",
+          "mapUrl": "https://maps.google.com/?q=38.3720098,141.0598105"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "XX 道の駅 上品の郷",
+          "detail": "Mapcode: 105 290 685*42",
+          "mapUrl": "https://maps.google.com/?q=38.5010077,141.2953299"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day7": {
+      "date": "08/02",
+      "title": "第7天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "仙台空港",
+          "detail": "17:20 PM SDJ -> 20:10 PM TPE T1",
+          "mapUrl": "https://maps.google.com/?q=38.1368492,140.9285289"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐",
+          "name": "仙台朝市（仙台朝市商店街振興組合）",
+          "detail": "Mapcode: 21 615 625*34",
+          "mapcode": "21 615 625*34"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    }
+  }
+}

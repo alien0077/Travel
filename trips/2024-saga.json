@@ -1,0 +1,184 @@
+{
+  "id": "2024-saga",
+  "type": "drive",
+  "title": "佐賀楓葉之旅",
+  "subtitle": "11/28 - 12/1 嬉野溫泉 × 武雄圖書館 × 唐津城",
+  "badge": "Saga Autumn",
+  "badgeIcon": "fa-car-side",
+  "description": "佐賀四天三夜自駕，武雄市圖書館、祐德稻荷神社、唐津城與呼子花枝。",
+  "stats": [
+    "4天3夜",
+    "佐賀進出",
+    "自駕"
+  ],
+  "image": "saga",
+  "prefectures": [
+    "41"
+  ],
+  "airports": [
+    "HSG"
+  ],
+  "dateStart": "2024-11-28",
+  "dateEnd": "2024-12-01",
+  "countdownDate": "2024/11/28 08:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：台灣虎航 IT246 | 桃園 08:00 ➔ 佐賀 11:15",
+    "inbound": "回程：台灣虎航 IT247 | 佐賀 11:25 ➔ 桃園 13:05"
+  },
+  "days": {
+    "day1": {
+      "date": "11/28",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "桃園機場第一航廈",
+          "detail": "8:00AM～11:15AM： IT-246",
+          "mapUrl": "https://maps.google.com/?q=25.081705,121.2391126"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "太良道的駅",
+          "detail": "Michinoeki Tara Parking Lot\nMapcode: 325 755 227*14",
+          "mapUrl": "https://maps.google.com/?q=33.0468817,130.1691422"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 溫泉飯店 櫻",
+          "detail": "15:00 pm check-in, 11:00AM check-out\n電話: +81 954 42 3000\nMapcode: 104 043 314*77\n地址: Ureshinomachi Shimojuku Oaza 1021, Ureshino, 843-0301, 日本 嬉􏰀町下宿乙1021, 嬉􏰀市",
+          "mapUrl": "https://maps.google.com/?q=33.0974717,129.9850528"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "大魚神社＋海鮮焼 海道丸",
+          "detail": "Mapcode: 325 696 286*04",
+          "mapcode": "325 696 286*04"
+        },
+        {
+          "meal": "午/晚餐",
+          "name": "佐賀牛燒肉 佐が家",
+          "detail": "武雄温泉駅南駐車場： Mapcode: 104 408 126*18\n\n燒肉店： Mapcode: 104 377 834*12",
+          "mapcode": "104 408 126*18"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "溫泉飯店 櫻",
+        "detail": "15:00 pm check-in, 11:00AM check-out\n電話: +81 954 42 3000\nMapcode: 104 043 314*77\n地址: Ureshinomachi Shimojuku Oaza 1021, Ureshino, 843-0301, 日本 嬉􏰀町下宿乙1021, 嬉􏰀市",
+        "mapcode": "104 043 314*77"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "11/29",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "祐德稻荷神社",
+          "detail": "Parking：Mapcode: 461 568 433*65",
+          "mapUrl": "https://maps.google.com/?q=33.073778,130.1079317"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "武雄市圖書館·歷史資料館",
+          "detail": "Mapcode: 104 378 363*57",
+          "mapUrl": "https://maps.google.com/?q=33.1890331,130.0236947"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "武雄神社参拝者駐車場",
+          "detail": "",
+          "mapcode": ""
+        }
+      ],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "11/30",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "唐津城 本丸腰曲輪櫓",
+          "detail": "Mapcode: 182 402 737*30",
+          "mapUrl": "https://maps.google.com/?q=33.4530262,129.9793815"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "海中餐廳 萬坊 呼子花枝",
+          "detail": "33.539487502719425, 129.88389726497644",
+          "mapUrl": "https://maps.google.com/?q=33.5383549,129.8833997"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "鏡山觀景台",
+          "detail": "Mapcode: 182 347 115*86",
+          "mapUrl": "https://maps.google.com/?q=33.4305767,130.0180433"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "永旺 唐津店",
+          "detail": "Mapcode: 182 376 023*22",
+          "mapUrl": "https://maps.google.com/?q=33.4367608,130.0123792"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 GRAND BASE Karatsu Ekiminami",
+          "detail": "Mapcode: 182 401 216*87",
+          "mapUrl": "https://maps.google.com/?q=33.4459213,129.9659894"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "GRAND BASE Karatsu Ekiminami",
+        "detail": "Mapcode: 182 401 216*87",
+        "mapcode": "182 401 216*87"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "12/01",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "佐賀機場",
+          "detail": "11:25AM ~ 13:05PM , IT-247\n\nTOYOTA Rent A CAR： Mapcode: 688 231 893*06",
+          "mapUrl": "https://maps.google.com/?q=33.1532729,130.3039849"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    }
+  }
+}

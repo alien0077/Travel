@@ -1,0 +1,396 @@
+{
+  "id": "2024-yamaguchi-hiroshima",
+  "type": "drive",
+  "title": "山口廣島自駕八天",
+  "subtitle": "5/4 - 5/11 錦帶橋 × 嚴島神社 × 元乃隅神社",
+  "badge": "Chugoku Road Trip",
+  "badgeIcon": "fa-car-side",
+  "description": "福岡進出，北九州下關、山口瑠璃光寺、廣島嚴島神社、錦帶橋，以及角島大橋絕景。",
+  "stats": [
+    "8天7夜",
+    "福岡進出",
+    "自駕"
+  ],
+  "image": "hiroshima",
+  "prefectures": [
+    "35",
+    "34",
+    "40"
+  ],
+  "airports": [
+    "FUK"
+  ],
+  "dateStart": "2024-05-04",
+  "dateEnd": "2024-05-11",
+  "countdownDate": "2024/05/04 00:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：航班資訊待補 | 桃園 ➔ 福岡",
+    "inbound": "回程：航班資訊待補 | 福岡 ➔ 桃園"
+  },
+  "days": {
+    "day1": {
+      "date": "2024/5/4～2024/05/05",
+      "title": "第1天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 下關永安國際酒店 (ホテルウィング インターナショナル下関)",
+          "detail": "Mapcode: 16 710 747*64",
+          "mapUrl": "https://maps.google.com/?q=33.9516649,130.9219294"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "下關南部町郵便局",
+          "detail": "Mapcode: 16 743 369*80",
+          "mapUrl": "https://maps.google.com/?q=33.9567026,130.9418124"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "皿倉山展望台",
+          "detail": "Mapcode: 16 365 413*68",
+          "mapUrl": "https://maps.google.com/?q=33.8467326,130.7968029"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "赤間神宮駐車場",
+          "detail": "Mapcode: 16 744 633*44",
+          "mapcode": "16 744 633*44"
+        }
+      ],
+      "hotel": {
+        "name": "下關永安國際酒店 (ホテルウィング インターナショナル下関)",
+        "detail": "Mapcode: 16 710 747*64",
+        "mapcode": "16 710 747*64"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "2024/05/06",
+      "title": "第2天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 山口市森特克爾酒店 (セントコア 山口)",
+          "detail": "Mapcode: 93 580 610*88",
+          "mapUrl": "https://maps.google.com/?q=34.1672434,131.4586878"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道之站 仁保之鄉",
+          "detail": "Mapcode: 93 742 792*28",
+          "mapUrl": "https://maps.google.com/?q=34.2106649,131.5592026"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道の駅 ソレーネ周南",
+          "detail": "Mapcode: 646 562 505*62",
+          "mapUrl": "https://maps.google.com/?q=34.0744711,131.6879412"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道の駅　きららあじす",
+          "detail": "Mapcode: 95 359 107*46",
+          "mapUrl": "https://maps.google.com/?q=34.0127831,131.369562"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "瑠璃光寺五重塔",
+          "detail": "Mapcode: 93 672 332*12",
+          "mapUrl": "https://maps.google.com/?q=34.1901821,131.4728985"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "湯田溫泉",
+          "detail": "Mapcode: 93 579 417*65",
+          "mapUrl": "https://maps.google.com/?q=34.1652204,131.4550133"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "防府天満宮参拝者無料駐車場",
+          "detail": "Mapcode: 93 204 784*60",
+          "mapcode": "93 204 784*60"
+        }
+      ],
+      "hotel": {
+        "name": "山口市森特克爾酒店 (セントコア 山口)",
+        "detail": "Mapcode: 93 580 610*88",
+        "mapcode": "93 580 610*88"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "2024/05/07",
+      "title": "第3天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 KIRO Hiroshima by THE SHARE HOTELS (KIRO 広島 by THE SHARE HOTELS )",
+          "detail": "Mapcode: 22 190 441*42",
+          "mapUrl": "https://maps.google.com/?q=34.390705,132.4618235"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "錦帶橋",
+          "detail": "Mapcode: 115 891 651*35",
+          "mapUrl": "https://maps.google.com/?q=34.1675959,132.1784105"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "嚴島神社",
+          "detail": "Mapcode: 103 473 110*33",
+          "mapUrl": "https://maps.google.com/?q=34.2959896,132.3198285"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "廣島原爆中心點",
+          "detail": "Mapcode: 22 189 895*30",
+          "mapUrl": "https://maps.google.com/?q=34.3947904,132.4547094"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "旭酒造株式會社",
+          "detail": "Mapcode: 115 720 594*16",
+          "mapcode": "115 720 594*16"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "KIRO Hiroshima by THE SHARE HOTELS (KIRO 広島 by THE SHARE HOTELS )",
+        "detail": "Mapcode: 22 190 441*42",
+        "mapcode": "22 190 441*42"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "2024/05/08",
+      "title": "第4天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "道之站 萩市",
+          "detail": "Mapcode: 588 305 661*55",
+          "mapUrl": "https://maps.google.com/?q=34.4259759,131.4145081"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道之站 阿武町",
+          "detail": "Mapcode: 588 581 314*05",
+          "mapUrl": "https://maps.google.com/?q=34.4977467,131.4680243"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "太鼓谷稻成神社千本鳥居",
+          "detail": "Mapcode: 513 152 442*46",
+          "mapUrl": "https://maps.google.com/?q=34.465624,131.770283"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "井仁梯田",
+          "detail": "Mapcode: 363 499 762*51",
+          "mapUrl": "https://maps.google.com/?q=34.5592634,132.2820808"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "安野 花の駅公園",
+          "detail": "Mapcode: 22 780 118*11",
+          "mapUrl": "https://maps.google.com/?q=34.5541602,132.3805018"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "萩城城下町",
+          "detail": "Mapcode: 243 887 166*05",
+          "mapUrl": "https://maps.google.com/?q=34.413012,131.3937628"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 萩・城下町の宿 椿庵",
+          "detail": "Mapcode: 243 887 104*04",
+          "mapUrl": "https://maps.google.com/?q=34.4126109,131.3931933"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "萩・城下町の宿 椿庵",
+        "detail": "Mapcode: 243 887 104*04",
+        "mapcode": "243 887 104*04"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "2024/05/09",
+      "title": "第5天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "JR九州小倉車站飯店",
+          "detail": "Mapcode: 16 466 874*56",
+          "mapUrl": "https://maps.google.com/?q=33.8865948,130.8821594"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "吉冨幸進堂",
+          "detail": "Mapcode: 327 590 291*85",
+          "mapUrl": "https://maps.google.com/?q=34.3306346,131.1702333"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "西念寺",
+          "detail": "Mapcode: 327 465 896*72",
+          "mapUrl": "https://maps.google.com/?q=34.3030143,131.1299955"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道之站 於福",
+          "detail": "Mapcode: 327 265 248*53",
+          "mapUrl": "https://maps.google.com/?q=34.238589,131.208215"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "角島大橋",
+          "detail": "Mapcode: 851 346 689*43",
+          "mapUrl": "https://maps.google.com/?q=34.3512369,130.8892142"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "道之站 北浦街道 豐北",
+          "detail": "Mapcode: 268 781 808*57",
+          "mapUrl": "https://maps.google.com/?q=34.3106189,130.8887785"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "秋芳洞-第一車場",
+          "detail": "Mapcode: 243 187 670*67",
+          "mapUrl": "https://maps.google.com/?q=34.2260044,131.3088345"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "元乃隅神社駐車場トイレ",
+          "detail": "Mapcode: 1017 007 056*82",
+          "mapcode": "1017 007 056*82"
+        }
+      ],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day6": {
+      "date": "2024/05/10",
+      "title": "第6天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "宮地嶽神社",
+          "detail": "Mapcode: 375 118 166*23",
+          "mapUrl": "https://maps.google.com/?q=33.7799141,130.4862328"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "住吉神社",
+          "detail": "Mapcode: 13 289 837*06",
+          "mapUrl": "https://maps.google.com/?q=33.5858948,130.4136385"
+        },
+        {
+          "type": "act",
+          "time": "",
+          "title": "入住 福岡天神東急STAY飯店",
+          "detail": "Mapcode: 13 318 296*21",
+          "mapUrl": "https://maps.google.com/?q=33.5894738,130.404873"
+        }
+      ],
+      "food": [
+        {
+          "meal": "午/晚餐",
+          "name": "博多 祇園 鐵鍋煎餃",
+          "detail": "Mapcode: 13 319 659*52",
+          "mapcode": "13 319 659*52"
+        }
+      ],
+      "parking": [
+        {
+          "name": "門司港停車場",
+          "detail": "Mapcode: 16 716 541*45",
+          "mapcode": "16 716 541*45"
+        }
+      ],
+      "hotel": {
+        "name": "福岡天神東急STAY飯店",
+        "detail": "Mapcode: 13 318 296*21",
+        "mapcode": "13 318 296*21"
+      },
+      "details": ""
+    },
+    "day7": {
+      "date": "2024/05/11",
+      "title": "第7天",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "福岡國際機場",
+          "detail": "Mapcode: 13 352 104*77",
+          "mapUrl": "https://maps.google.com/?q=33.5849983,130.4490865"
+        }
+      ],
+      "food": [],
+      "parking": [
+        {
+          "name": "Hi-Hi 租車福岡機場店",
+          "detail": "Mapcode: 13 352 104*77",
+          "mapcode": "13 352 104*77"
+        }
+      ],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    }
+  }
+}
