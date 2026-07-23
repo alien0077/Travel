@@ -26,8 +26,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：航班資訊待補 | 桃園 ➔ 福岡",
-    "inbound": "回程：航班資訊待補 | 福岡 ➔ 桃園"
+    "outbound": "去程：星宇航空 JX840 | 桃園 09:35 ➔ 福岡 13:00",
+    "inbound": "回程：星宇航空 JX841 | 福岡 14:10 ➔ 桃園 15:35"
   },
   "days": {
     "day1": {

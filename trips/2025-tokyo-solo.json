@@ -1,0 +1,91 @@
+{
+  "id": "2025-tokyo-solo",
+  "type": "city",
+  "title": "東京個人之旅",
+  "subtitle": "10/17 - 10/20 泰亞航高雄出發・長榮成田回台",
+  "badge": "Tokyo Solo",
+  "badgeIcon": "fa-train-subway",
+  "description": "泰亞航高雄飛成田、長榮成田回高雄，單人探索東京。",
+  "stats": ["4天3夜", "高雄出發", "成田進出"],
+  "image": "tokyo2",
+  "prefectures": ["12", "13"],
+  "airports": ["NRT"],
+  "dateStart": "2025-10-17",
+  "dateEnd": "2025-10-20",
+  "countdownDate": "2025/10/17 00:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：泰國亞洲航空 FD | 高雄 ➔ 成田",
+    "inbound": "回程：長榮航空 BR107 | 成田 12:45 ➔ 高雄 15:40"
+  },
+  "vjw": {
+    "zip": "",
+    "address": "",
+    "name": ""
+  },
+  "days": {
+    "day1": {
+      "date": "10/17 (五)",
+      "title": "抵達東京",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "",
+          "title": "高雄 ➔ 成田 (泰國亞洲航空 FD)",
+          "detail": "高雄小港機場出發，抵達成田國際機場。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "10/18 (六)",
+      "title": "東京探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "10/19 (日)",
+      "title": "東京探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "10/20 (一)",
+      "title": "返回台灣",
+      "timeRange": "12:45pm - 15:40pm",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "12:45pm - 15:40pm",
+          "title": "成田 ➔ 高雄 (長榮航空 BR107)",
+          "detail": "成田機場第一航廈出發，抵達高雄小港國際機場。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "溫暖的家"
+      },
+      "details": ""
+    }
+  }
+}

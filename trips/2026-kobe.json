@@ -1,0 +1,139 @@
+{
+  "id": "2026-kobe",
+  "type": "city",
+  "title": "神戶親子之旅",
+  "subtitle": "2/8 - 2/15 星宇航空直飛神戶",
+  "badge": "Kobe Family Trip",
+  "badgeIcon": "fa-plane",
+  "description": "星宇航空直飛神戶，享受神戶港夜景、北野異人館與有馬溫泉。",
+  "stats": ["8天7夜", "神戶進出"],
+  "image": "kobe",
+  "prefectures": ["28"],
+  "airports": ["UKB"],
+  "dateStart": "2026-02-08",
+  "dateEnd": "2026-02-15",
+  "countdownDate": "2026/02/08 06:30:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：星宇航空 JX834 | 桃園 06:30 ➔ 神戶 10:30",
+    "inbound": "回程：星宇航空 JX835 | 神戶 11:30 ➔ 桃園 13:50"
+  },
+  "vjw": {
+    "zip": "",
+    "address": "",
+    "name": ""
+  },
+  "days": {
+    "day1": {
+      "date": "2/8 (日)",
+      "title": "抵達神戶",
+      "timeRange": "06:30am -",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "06:30am - 10:30am",
+          "title": "桃園 ➔ 神戶 (星宇航空 JX834)",
+          "detail": "桃園機場第一航廈出發，抵達神戶機場第2航廈。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "2/9 (一)",
+      "title": "神戶探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "2/10 (二)",
+      "title": "神戶探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "2/11 (三)",
+      "title": "神戶探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "2/12 (四)",
+      "title": "神戶探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day6": {
+      "date": "2/13 (五)",
+      "title": "神戶探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day7": {
+      "date": "2/14 (六)",
+      "title": "神戶探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day8": {
+      "date": "2/15 (日)",
+      "title": "返回台灣",
+      "timeRange": "11:30am - 01:50pm",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "11:30am - 01:50pm",
+          "title": "神戶 ➔ 桃園 (星宇航空 JX835)",
+          "detail": "神戶機場第2航廈出發，抵達桃園機場第一航廈。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "溫暖的家"
+      },
+      "details": ""
+    }
+  }
+}

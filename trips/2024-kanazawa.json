@@ -25,8 +25,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：長榮航空 | 桃園 ➔ 小松",
-    "inbound": "回程：長榮航空 | 小松 ➔ 桃園"
+    "outbound": "去程：長榮航空 BR | 桃園 06:35 ➔ 小松 10:25",
+    "inbound": "回程：長榮航空 BR157 | 小松 11:45 ➔ 桃園 13:55"
   },
   "days": {
     "day1": {

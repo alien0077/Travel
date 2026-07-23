@@ -1,0 +1,91 @@
+{
+  "id": "2026-sapporo",
+  "type": "city",
+  "title": "北海道札幌之旅",
+  "subtitle": "5/4 - 5/7 泰亞航去程・虎航回程",
+  "badge": "Sapporo Trip",
+  "badgeIcon": "fa-plane",
+  "description": "泰國亞洲航空去程、台灣虎航回程，札幌市區探索與週邊景點。",
+  "stats": ["4天3夜", "札幌進出"],
+  "image": "sapporo",
+  "prefectures": ["01"],
+  "airports": ["CTS"],
+  "dateStart": "2026-05-04",
+  "dateEnd": "2026-05-07",
+  "countdownDate": "2026/05/04 00:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：泰國亞洲航空 FD | 桃園 ➔ 新千歲",
+    "inbound": "回程：台灣虎航 IT235 | 新千歲 ➔ 桃園"
+  },
+  "vjw": {
+    "zip": "",
+    "address": "",
+    "name": ""
+  },
+  "days": {
+    "day1": {
+      "date": "5/4 (一)",
+      "title": "抵達札幌",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "",
+          "title": "桃園 ➔ 新千歲 (泰國亞洲航空 FD)",
+          "detail": ""
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "5/5 (二)",
+      "title": "札幌探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "5/6 (三)",
+      "title": "札幌探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "5/7 (四)",
+      "title": "返回台灣",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "",
+          "title": "新千歲 ➔ 桃園 (台灣虎航 IT235)",
+          "detail": ""
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "溫暖的家"
+      },
+      "details": ""
+    }
+  }
+}

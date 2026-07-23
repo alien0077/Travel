@@ -27,8 +27,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：中華航空 CI0100 | 桃園 ➔ 成田",
-    "inbound": "回程：中華航空 | 成田 ➔ 桃園"
+    "outbound": "去程：中華航空 CI0100 | 桃園 09:30 ➔ 成田 13:30",
+    "inbound": "回程：中華航空 CI101 | 成田 14:35 ➔ 桃園 17:40"
   },
   "days": {
     "day1": {

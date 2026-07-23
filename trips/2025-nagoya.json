@@ -1,0 +1,91 @@
+{
+  "id": "2025-nagoya",
+  "type": "city",
+  "title": "名古屋聖誕之旅",
+  "subtitle": "12/19 - 12/22 虎航台中直飛名古屋",
+  "badge": "Nagoya Christmas",
+  "badgeIcon": "fa-train-subway",
+  "description": "台中清泉崗直飛名古屋中部國際機場，聖誕前夕名古屋市區探索。",
+  "stats": ["4天3夜", "名古屋進出", "台中出發"],
+  "image": "nagoya",
+  "prefectures": ["23"],
+  "airports": ["NGO"],
+  "dateStart": "2025-12-19",
+  "dateEnd": "2025-12-22",
+  "countdownDate": "2025/12/19 16:45:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：台灣虎航 IT778 | 台中 16:45 ➔ 名古屋 20:25",
+    "inbound": "回程：台灣虎航 IT779 | 名古屋 13:15 ➔ 台中 15:25"
+  },
+  "vjw": {
+    "zip": "",
+    "address": "",
+    "name": ""
+  },
+  "days": {
+    "day1": {
+      "date": "12/19 (五)",
+      "title": "抵達名古屋",
+      "timeRange": "16:45pm - 20:25pm",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "16:45pm - 20:25pm",
+          "title": "台中 ➔ 名古屋 (台灣虎航 IT778)",
+          "detail": "台中清泉崗機場出發，抵達名古屋中部國際機場。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "12/20 (六)",
+      "title": "名古屋探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "12/21 (日)",
+      "title": "名古屋探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "12/22 (一)",
+      "title": "返回台灣",
+      "timeRange": "13:15pm - 15:25pm",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "13:15pm - 15:25pm",
+          "title": "名古屋 ➔ 台中 (台灣虎航 IT779)",
+          "detail": "名古屋中部國際機場出發，抵達台中清泉崗機場。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "溫暖的家"
+      },
+      "details": ""
+    }
+  }
+}

@@ -27,8 +27,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：航班資訊待補 | 桃園 ➔ 福岡",
-    "inbound": "回程：航班資訊待補 | 福岡 ➔ 桃園"
+    "outbound": "去程：中華航空 CI110 | 桃園 06:50 ➔ 福岡 09:55",
+    "inbound": "回程：中華航空 CI129 | 福岡 19:10 ➔ 桃園 20:30"
   },
   "days": {
     "day1": {

@@ -29,8 +29,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：星宇航空 JX | 桃園 11:35 ➔ 仙台 16:00",
-    "inbound": "回程：星宇航空 JX | 仙台 17:20 ➔ 桃園 20:10"
+    "outbound": "去程：星宇航空 JX862 | 桃園 11:40 ➔ 仙台 16:00",
+    "inbound": "回程：星宇航空 JX863 | 仙台 17:20 ➔ 桃園 20:10"
   },
   "days": {
     "day1": {

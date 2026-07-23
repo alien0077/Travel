@@ -1,0 +1,128 @@
+{
+  "id": "2019-fukuoka",
+  "type": "drive",
+  "title": "福岡南九州自駕",
+  "subtitle": "8/11 - 8/17 長榮福岡進出・南九州一周",
+  "badge": "South Kyushu Solo",
+  "badgeIcon": "fa-car-side",
+  "description": "長榮航空福岡進出，自駕走訪熊本、鹿兒島、宮崎，南九州一周。",
+  "stats": ["7天6夜", "福岡進出", "自駕"],
+  "image": "minamikyushu",
+  "prefectures": ["40", "43", "44", "45"],
+  "airports": ["FUK"],
+  "dateStart": "2019-08-11",
+  "dateEnd": "2019-08-17",
+  "countdownDate": "2019/08/11 08:10:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "去程：長榮航空 BR106 | 桃園 08:10 ➔ 福岡 11:20",
+    "inbound": "回程：長榮航空 BR101 | 福岡 20:55 ➔ 桃園 22:25"
+  },
+  "notes": "原訂8/9 BR106取消，改期至8/11出發",
+  "vjw": {
+    "zip": "",
+    "address": "",
+    "name": ""
+  },
+  "days": {
+    "day1": {
+      "date": "8/11 (日)",
+      "title": "抵達福岡",
+      "timeRange": "08:10am - 11:20am",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "08:10am - 11:20am",
+          "title": "桃園 ➔ 福岡 (長榮航空 BR106)",
+          "detail": "原訂8/9出發因航班取消改期至8/11。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day2": {
+      "date": "8/12 (一)",
+      "title": "九州探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day3": {
+      "date": "8/13 (二)",
+      "title": "九州探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day4": {
+      "date": "8/14 (三)",
+      "title": "九州探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day5": {
+      "date": "8/15 (四)",
+      "title": "九州探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day6": {
+      "date": "8/16 (五)",
+      "title": "九州探索",
+      "timeRange": "",
+      "timeline": [],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "未記錄"
+      },
+      "details": ""
+    },
+    "day7": {
+      "date": "8/17 (六)",
+      "title": "返回台灣",
+      "timeRange": "20:55pm - 22:25pm",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "20:55pm - 22:25pm",
+          "title": "福岡 ➔ 桃園 (長榮航空 BR101)",
+          "detail": ""
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "溫暖的家"
+      },
+      "details": ""
+    }
+  }
+}
