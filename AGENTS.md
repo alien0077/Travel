@@ -175,6 +175,69 @@
 
 ---
 
+## 📸 實際路線重建機制 (Actual GPS Route Enrichment)
+
+完成一趟旅行後，可從 Synology NAS 的 HEIC 照片 GPS 資料重建實際行程路線：
+
+### 運作方式
+- **NAS 路徑**: `/Volumes/photo`
+- **HEIC 限定**: 僅 HEIC 格式保留 GPS 經緯度，JPG 無 GPS
+- **照片來源**: 掃描 `MobileBackup/iPhone/`、`MobileBackup/AlienChang/iPhone/`、`MobileBackup/nini/iPhone/`、`PhotoLibrary/` 四個目錄
+- **批次萃取**: 用 `exiftool` + `-json` 批次萃取，不逐檔讀取
+
+### 執行腳本
+```bash
+python3 ~/.config/opencode/skills/trip-gps-enrich/scripts/enrich_gps.py --trip <id>
+python3 ~/.config/opencode/skills/trip-gps-enrich/scripts/enrich_gps.py --all
+```
+
+### 資料結構
+行程 JSON 會增加 `actualDays` 區塊（保留原有 `days` 規劃不變）：
+```json
+{
+  "routeColor": "#EF4444",
+  "actualDays": {
+    "day1": {
+      "date": "2/8 (日)",
+      "timeline": [
+        {
+          "type": "stop", "category": "sight",
+          "actualTime": "10:18 - 11:45",
+          "placeName": "神戸空港",
+          "address": "神戸市中央区...",
+          "lat": 34.6379, "lng": 135.2259,
+          "svgX": 575, "svgY": 542,
+          "photoCount": 3
+        }
+      ],
+      "route": [[lat,lng], ...],
+      "svgRoute": [[svgX,svgY], ...]
+    }
+  }
+}
+```
+
+### 地圖渲染
+- `index.html` 載入時讀取所有行程的 `actualDays`
+- 使用 IDW 插值（82 控制點: 47 都道府縣 + 35 機場）將 GPS 轉為 SVG viewBox 座標
+- 每趟不同顏色，含路線 polyline + 停留點 marker + Day 標籤
+
+### 未來新增行程處理
+完成新旅行後，用 `enrich_gps.py --trip <新行程ID>` 即可重建實際路線，無需修改 `index.html`。
+
+### NAS GPS 資料匯出
+若有需要批次查詢 NAS 上所有照片的 GPS 資料，可使用：
+```bash
+# 1. 先建立 SSH 通道（輸入 DSM 密碼）
+ssh -M -S ~/.ssh/nas.control -o ControlPersist=2h alienchang@192.168.1.100
+
+# 2. 執行匯出腳本（再次輸入 DSM 密碼）
+bash scripts/export-nas-gps.sh
+```
+匯出的 CSV 包含 72,263 筆照片的 GPS 座標、拍攝時間、地名與使用者資訊。
+
+---
+
 ## 🛠️ 驗證與測試方式
 
 - **無自動化測試**：專案不包含 Jest、Playwright 等預設測試框架。
