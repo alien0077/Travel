@@ -25,15 +25,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: disable
 
-      - name: Upload Pages Artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
           path: .
+          include-hidden-files: true
 
       - name: Deploy to GitHub Pages
         id: deployment
