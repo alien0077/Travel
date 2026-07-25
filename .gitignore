@@ -2,3 +2,7 @@
 .netlify/
 logs/
 .playwright-mcp/
+.codegraph/
+map-*.png
+__pycache__/
+*.pyc
