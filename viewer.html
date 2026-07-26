@@ -6,11 +6,14 @@
     <title>行程檢視器</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
         .tab-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .scrollbar-none::-webkit-scrollbar { display: none; }
         .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
         .pulse-active { box-shadow: 0 0 12px rgba(99, 102, 241, 0.4); }
+        #map-container { height: 220px; border-radius: 12px; width: 100%; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased pb-24 min-h-screen">
@@ -122,7 +125,7 @@
                             <h3 class="font-bold text-xs text-slate-700">路線地圖</h3>
                             <span id="route-day-label" class="text-[9px] font-bold text-indigo-500 ml-auto">D1</span>
                         </div>
-                        <div class="w-full max-w-[380px] mx-auto" id="map-container"></div>
+                        <div class="w-full mx-auto rounded-xl" id="map-container" style="height:220px;"></div>
                     </div>
                 </div>
 
@@ -325,84 +328,165 @@
         }
 
         const DAY_COLORS = ['#ef4444','#3b82f6','#10b981','#f59e0b','#8b5cf6','#ec4899','#06b6d4','#84cc16'];
+        const ROUTE_COLOR = '#ef4444';
+        const PREF_STORAGE = 'japan-conquest-map-states';
 
         async function initMap(data) {
             const container = document.getElementById('map-container');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const vMap = L.map('map-container', {
+                zoomControl: false,
+                attributionControl: false,
+                scrollWheelZoom: false,
+                dragging: true
+            });
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18
+            }).addTo(vMap);
+            window._vMap = vMap;
+            // Force Leaflet to recalculate container size
+            setTimeout(() => vMap.invalidateSize(), 100);
+
+            // Load prefecture GeoJSON with conquest states
+            const prefLayer = L.layerGroup().addTo(vMap);
+            let customStates = {};
             try {
-                // Fetch japan-map.svg directly (canonical source)
-                const res = await fetch('japan-map.svg');
-                if (!res.ok) throw new Error('japan-map.svg not found');
-                const svgText = await res.text();
+                const saved = localStorage.getItem(PREF_STORAGE);
+                if (saved) customStates = JSON.parse(saved);
+            } catch (e) {}
 
-                // Insert SVG via innerHTML (HTML parser handles SVG natively in modern browsers)
-                container.innerHTML = svgText;
+            fetch('trips/japan-prefectures.geojson')
+                .then(r => r.json())
+                .then(data => {
+                    L.geoJSON(data, {
+                        style: feature => {
+                            const id = String(feature.properties.id).padStart(2, '0');
+                            const state = customStates[id] || 'none';
+                            const fillColors = { visited: '#ef4444', want: '#f59e0b', planned: '#3b82f6', none: '#e2e8f0' };
+                            const fillOpacities = { visited: 0.65, want: 0.65, planned: 0.45, none: 0.25 };
+                            return {
+                                weight: 1, opacity: 0.6, color: '#94a3b8',
+                                fillColor: fillColors[state], fillOpacity: fillOpacities[state]
+                            };
+                        },
+                        interactive: false
+                    }).addTo(prefLayer);
+                });
 
-                const svgEl = container.querySelector('svg');
-                if (!svgEl) throw new Error('Invalid SVG');
-                svgEl.style.width = '100%';
-                svgEl.style.height = 'auto';
+            // Load city boundaries
+            fetch('trips/japan-cities.geojson')
+                .then(r => r.json())
+                .then(cityData => {
+                    L.geoJSON(cityData, {
+                        style: () => ({
+                            weight: 0.6, opacity: 0.35, color: '#94a3b8',
+                            dashArray: '2,2', fillOpacity: 0, interactive: false
+                        }),
+                        interactive: false
+                    }).addTo(vMap);
+                });
 
-                // Add route overlay at SVG root (viewport space — route coords match label positions)
-                const overlay = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-                overlay.id = 'route-overlay';
-                svgEl.appendChild(overlay);
-
-            } catch(e) {
-                console.error('Map load error:', e);
-                container.innerHTML = '<p class="text-xs text-slate-400">地圖載入失敗</p>';
+            // Fit to trip bounds
+            const allLats = [], allLngs = [];
+            Object.values(data.actualDays || {}).forEach(day => {
+                if (day.route) day.route.forEach(([lat, lng]) => {
+                    if (lat && lng) { allLats.push(lat); allLngs.push(lng); }
+                });
+                if (day.timeline) day.timeline.forEach(s => {
+                    if (s.lat && s.lng) { allLats.push(s.lat); allLngs.push(s.lng); }
+                });
+            });
+            if (allLats.length > 0) {
+                const pad = 0.03;
+                vMap.fitBounds([
+                    [Math.min(...allLats) - pad, Math.min(...allLngs) - pad],
+                    [Math.max(...allLats) + pad, Math.max(...allLngs) + pad]
+                ]);
+            } else {
+                vMap.setView([36.5, 138.0], 6);
             }
         }
 
         function drawRoute(data, tabId) {
+            const vMap = window._vMap;
+            if (!vMap) return;
+
+            // Remove previous route layers (keep tile + prefecture + city)
+            vMap.eachLayer(layer => {
+                if (layer instanceof L.Polyline || layer instanceof L.CircleMarker) vMap.removeLayer(layer);
+            });
+
             if (tabId === 'tools' || !data.days[tabId]) return;
-            const day = data.days[tabId];
-            const overlay = document.getElementById('route-overlay');
-            if (!overlay || !day.route || day.route.length < 2) return;
-
-            overlay.innerHTML = '';
             const dayIndex = Object.keys(data.days).indexOf(tabId);
-            const color = DAY_COLORS[dayIndex % DAY_COLORS.length];
 
-            // Draw polyline
-            const points = day.route.map(p => `${p[0]},${p[1]}`).join(' ');
-            const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
-            polyline.setAttribute('points', points);
-            polyline.setAttribute('fill', 'none');
-            polyline.setAttribute('stroke', color);
-            polyline.setAttribute('stroke-width', '3');
-            polyline.setAttribute('stroke-linejoin', 'round');
-            polyline.setAttribute('stroke-linecap', 'round');
-            polyline.setAttribute('opacity', '0.85');
-            overlay.appendChild(polyline);
+            // Draw actual route + stops for this day only
+            const actualDay = data.actualDays ? data.actualDays[tabId] : null;
+            if (actualDay) {
+                // Route polyline
+                if (actualDay.route && actualDay.route.length >= 2) {
+                    L.polyline(actualDay.route, {
+                        color: ROUTE_COLOR, weight: 3, opacity: 0.85
+                    }).addTo(vMap);
+                }
 
-            // Draw start marker
-            const start = day.route[0];
-            const startCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            startCircle.setAttribute('cx', start[0]);
-            startCircle.setAttribute('cy', start[1]);
-            startCircle.setAttribute('r', '5');
-            startCircle.setAttribute('fill', color);
-            startCircle.setAttribute('stroke', '#ffffff');
-            startCircle.setAttribute('stroke-width', '2');
-            overlay.appendChild(startCircle);
+                // Stop markers
+                if (actualDay.timeline) {
+                    actualDay.timeline.forEach((stop, i) => {
+                        if (!stop.lat || !stop.lng) return;
+                        const isFirst = i === 0;
+                        const isLast = i === actualDay.timeline.length - 1;
+                        const r = (isFirst || isLast) ? 6 : 4;
+                        const fill = (isFirst || isLast) ? ROUTE_COLOR : '#fff';
 
-            // Draw end marker
-            const end = day.route[day.route.length - 1];
-            const endCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-            endCircle.setAttribute('cx', end[0]);
-            endCircle.setAttribute('cy', end[1]);
-            endCircle.setAttribute('r', '5');
-            endCircle.setAttribute('fill', color);
-            endCircle.setAttribute('stroke', '#ffffff');
-            endCircle.setAttribute('stroke-width', '2');
-            overlay.appendChild(endCircle);
+                        L.circleMarker([stop.lat, stop.lng], {
+                            radius: r, fillColor: fill, color: ROUTE_COLOR,
+                            weight: 2, opacity: 1, fillOpacity: 1
+                        }).addTo(vMap).bindTooltip(
+                            `${stop.placeName || ''}<br><small>${stop.actualTime || ''}</small>`,
+                            { direction: 'top', offset: [0, -4] }
+                        );
+                    });
+                }
+
+                // Fit to this day's bounds
+                const dayLats = [], dayLngs = [];
+                if (actualDay.route) actualDay.route.forEach(([lat, lng]) => {
+                    if (lat && lng) { dayLats.push(lat); dayLngs.push(lng); }
+                });
+                if (actualDay.timeline) actualDay.timeline.forEach(s => {
+                    if (s.lat && s.lng) { dayLats.push(s.lat); dayLngs.push(s.lng); }
+                });
+                if (dayLats.length > 0) {
+                    const pad = 0.008;
+                    vMap.fitBounds([
+                        [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
+                        [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
+                    ]);
+                }
+            } else {
+                // No actual data — fit to planned route if exists
+                const day = data.days[tabId];
+                if (day && day.route && day.route.length >= 2) {
+                    L.polyline(day.route, {
+                        color: ROUTE_COLOR, weight: 3, opacity: 0.6, dashArray: '6,4'
+                    }).addTo(vMap);
+                    const dayLats = day.route.map(p => p[0]);
+                    const dayLngs = day.route.map(p => p[1]);
+                    const pad = 0.008;
+                    vMap.fitBounds([
+                        [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
+                        [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
+                    ]);
+                }
+            }
 
             // Update day label
             const label = document.getElementById('route-day-label');
             if (label) {
-                const dayNum = dayIndex + 1;
-                label.textContent = `D${dayNum}`;
-                label.style.color = color;
+                label.textContent = `D${dayIndex + 1}`;
+                label.style.color = ROUTE_COLOR;
             }
         }
 
