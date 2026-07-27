@@ -349,8 +349,9 @@
         function clearCarAnimation() {
             if (_carAnimTimer) { _carAnimTimer.cancel(); _carAnimTimer = null; }
             if (_carAnimTimeout) { clearTimeout(_carAnimTimeout); _carAnimTimeout = null; }
-            if (_carMarker && window._vMap) {
-                window._vMap.removeLayer(_carMarker);
+            if (_carMarker) {
+                if (window._routeLayer) window._routeLayer.removeLayer(_carMarker);
+                else if (window._vMap) window._vMap.removeLayer(_carMarker);
                 _carMarker = null;
             }
         }
@@ -427,7 +428,7 @@
                 return { lat: last[0], lng: last[1], idx: route.length - 1 };
             }
 
-            _carMarker = L.marker(route[0], { icon: carIcon, zIndexOffset: 1000 }).addTo(vMap);
+            _carMarker = L.marker(route[0], { icon: carIcon, zIndexOffset: 1000 }).addTo(window._routeLayer || vMap);
 
             // Initial bearing
             const initPos = interp(0);
@@ -483,6 +484,7 @@
                 maxZoom: 18
             }).addTo(vMap);
             window._vMap = vMap;
+            window._routeLayer = L.layerGroup().addTo(vMap);
             // Force Leaflet to recalculate container size
             setTimeout(() => vMap.invalidateSize(), 300);
 
@@ -538,9 +540,10 @@
             clearCarAnimation();
 
             // Remove previous route layers (keep tile + prefecture + city)
-            vMap.eachLayer(layer => {
-                if (layer instanceof L.Polyline || layer instanceof L.CircleMarker) vMap.removeLayer(layer);
-            });
+            window._routeLayer.clearLayers();
+
+            // Force map to recalculate container size (critical on mobile Safari after tab switch)
+            vMap.invalidateSize();
 
             if (tabId === 'tools' || !data.days[tabId]) return;
             const dayIndex = Object.keys(data.days).indexOf(tabId);
@@ -552,7 +555,7 @@
                 if (actualDay.route && actualDay.route.length >= 2) {
                     L.polyline(actualDay.route, {
                         color: ROUTE_COLOR, weight: 3, opacity: 0.85
-                    }).addTo(vMap);
+                    }).addTo(window._routeLayer);
                 }
 
                 // Stop markers
@@ -567,47 +570,52 @@
                         L.circleMarker([stop.lat, stop.lng], {
                             radius: r, fillColor: fill, color: ROUTE_COLOR,
                             weight: 2, opacity: 1, fillOpacity: 1
-                        }).addTo(vMap).bindTooltip(
+                        }).addTo(window._routeLayer).bindTooltip(
                             `${stop.placeName || ''}<br><small>${stop.actualTime || ''}</small>`,
                             { direction: 'top', offset: [0, -4] }
                         );
                     });
                 }
 
-                // Fit to this day's bounds
-                const dayLats = [], dayLngs = [];
-                if (actualDay.route) actualDay.route.forEach(([lat, lng]) => {
-                    if (lat && lng) { dayLats.push(lat); dayLngs.push(lng); }
-                });
-                if (actualDay.timeline) actualDay.timeline.forEach(s => {
-                    if (s.lat && s.lng) { dayLats.push(s.lat); dayLngs.push(s.lng); }
-                });
-                if (dayLats.length > 0) {
-                    const pad = 0.008;
-                    vMap.fitBounds([
-                        [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
-                        [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
-                    ]);
-                }
+                // Fit + animate after map settles
+                setTimeout(() => {
+                    // Fit to this day's bounds
+                    const dayLats = [], dayLngs = [];
+                    if (actualDay.route) actualDay.route.forEach(([lat, lng]) => {
+                        if (lat && lng) { dayLats.push(lat); dayLngs.push(lng); }
+                    });
+                    if (actualDay.timeline) actualDay.timeline.forEach(s => {
+                        if (s.lat && s.lng) { dayLats.push(s.lat); dayLngs.push(s.lng); }
+                    });
+                    if (dayLats.length > 0) {
+                        const pad = 0.008;
+                        vMap.fitBounds([
+                            [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
+                            [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
+                        ]);
+                    }
 
-                // Animate car along route
-                if (actualDay.route && actualDay.route.length >= 2) {
-                    animateCar(actualDay.route);
-                }
+                    // Animate car along route
+                    if (actualDay.route && actualDay.route.length >= 2) {
+                        animateCar(actualDay.route);
+                    }
+                }, 150);
             } else {
                 // No actual data — fit to planned route if exists
                 const day = data.days[tabId];
                 if (day && day.route && day.route.length >= 2) {
                     L.polyline(day.route, {
                         color: ROUTE_COLOR, weight: 3, opacity: 0.6, dashArray: '6,4'
-                    }).addTo(vMap);
-                    const dayLats = day.route.map(p => p[0]);
-                    const dayLngs = day.route.map(p => p[1]);
-                    const pad = 0.008;
-                    vMap.fitBounds([
-                        [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
-                        [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
-                    ]);
+                    }).addTo(window._routeLayer);
+                    setTimeout(() => {
+                        const dayLats = day.route.map(p => p[0]);
+                        const dayLngs = day.route.map(p => p[1]);
+                        const pad = 0.008;
+                        vMap.fitBounds([
+                            [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
+                            [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
+                        ]);
+                    }, 150);
                 }
             }
 
