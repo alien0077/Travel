@@ -20,6 +20,9 @@ SCAN_SOURCES = [
     "MobileBackup/AlienChang/iPhone",
     "MobileBackup/nini/iPhone",
     "PhotoLibrary",
+    "Other_Picture/iphone6s_alien/DCIM",
+    "Other_Picture/iphone6_nini/backup_20170720/DCIM",
+    "Other_Picture/iphone6_nini/backup_20181111/DCIM",
 ]
 TRIPS_DIR = Path(__file__).parent.parent / "trips"
 CACHE_DIR = TRIPS_DIR / "gps-cache"
