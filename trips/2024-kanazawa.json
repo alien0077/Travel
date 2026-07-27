@@ -16,7 +16,8 @@
     "16",
     "17",
     "18",
-    "21"
+    "21",
+    "25"
   ],
   "airports": [
     "KMQ"
@@ -1202,6 +1203,19 @@
           "svgX": 578,
           "svgY": 544,
           "photoCount": 4
+        },
+        {
+          "type": "stop",
+          "category": "sight",
+          "actualTime": "14:22 - 14:22",
+          "duration": 0,
+          "placeName": "滋賀縣某處",
+          "address": "滋賀県",
+          "lat": 35.274258,
+          "lng": 136.011214,
+          "svgX": 0,
+          "svgY": 0,
+          "photoCount": 1
         },
         {
           "type": "stop",
