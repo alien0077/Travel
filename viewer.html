@@ -123,7 +123,12 @@
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fa-solid fa-map-marked-alt text-indigo-500"></i>
                             <h3 class="font-bold text-xs text-slate-700">路線地圖</h3>
-                            <span id="route-day-label" class="text-[9px] font-bold text-indigo-500 ml-auto">D1</span>
+                            <div class="flex items-center gap-2 ml-auto">
+                                <button id="replay-btn" onclick="replayCar()" class="text-[10px] text-slate-400 hover:text-indigo-500 transition-colors" title="重播動畫">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                                <span id="route-day-label" class="text-[9px] font-bold text-indigo-500">D1</span>
+                            </div>
                         </div>
                         <div class="w-full mx-auto rounded-xl" id="map-container" style="height:220px;"></div>
                     </div>
@@ -331,6 +336,83 @@
         const ROUTE_COLOR = '#ef4444';
         const PREF_STORAGE = 'japan-conquest-map-states';
 
+        // Car animation
+        let _carMarker = null;
+        let _carAnimTimer = null;
+        let _carAnimTimeout = null;
+        let _currentTripData = null;
+        let _currentTabId = null;
+
+        function clearCarAnimation() {
+            if (_carAnimTimer) { clearInterval(_carAnimTimer); _carAnimTimer = null; }
+            if (_carAnimTimeout) { clearTimeout(_carAnimTimeout); _carAnimTimeout = null; }
+            if (_carMarker && window._vMap) {
+                window._vMap.removeLayer(_carMarker);
+                _carMarker = null;
+            }
+        }
+
+        function getBearing(lat1, lng1, lat2, lng2) {
+            const dLng = (lng2 - lng1) * Math.PI / 180;
+            const y = Math.sin(dLng) * Math.cos(lat2 * Math.PI / 180);
+            const x = Math.cos(lat1 * Math.PI / 180) * Math.sin(lat2 * Math.PI / 180) -
+                      Math.sin(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.cos(dLng);
+            return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+        }
+
+        function animateCar(route) {
+            clearCarAnimation();
+            if (!route || route.length < 2) return;
+            const vMap = window._vMap;
+            if (!vMap) return;
+
+            const carIcon = L.divIcon({
+                html: '<div id="car-icon" style="font-size:20px;line-height:1;transform-origin:center center;">🚗</div>',
+                className: '',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+
+            _carMarker = L.marker(route[0], { icon: carIcon, zIndexOffset: 1000 }).addTo(vMap);
+
+            // Set initial bearing
+            const initBearing = getBearing(route[0][0], route[0][1], route[1][0], route[1][1]);
+            const initEl = _carMarker.getElement();
+            if (initEl) {
+                const carDiv = initEl.querySelector('#car-icon');
+                if (carDiv) carDiv.style.transform = `rotate(${initBearing}deg)`;
+            }
+
+            let idx = 0;
+            _carAnimTimeout = setTimeout(() => {
+                _carAnimTimer = setInterval(() => {
+                    idx++;
+                    if (idx >= route.length) {
+                        clearInterval(_carAnimTimer);
+                        _carAnimTimer = null;
+                        return;
+                    }
+                    _carMarker.setLatLng(route[idx]);
+
+                    // Update bearing
+                    if (idx < route.length - 1) {
+                        const bearing = getBearing(route[idx][0], route[idx][1], route[idx+1][0], route[idx+1][1]);
+                        const el = _carMarker.getElement();
+                        if (el) {
+                            const carDiv = el.querySelector('#car-icon');
+                            if (carDiv) carDiv.style.transform = `rotate(${bearing}deg)`;
+                        }
+                    }
+                }, 40);
+            }, 2000);
+        }
+
+        window.replayCar = () => {
+            if (!_currentTripData || !_currentTabId) return;
+            const actualDay = _currentTripData.actualDays?.[_currentTabId];
+            if (actualDay?.route) animateCar(actualDay.route);
+        };
+
         async function initMap(data) {
             const container = document.getElementById('map-container');
             if (!container) return;
@@ -413,6 +495,11 @@
             const vMap = window._vMap;
             if (!vMap) return;
 
+            // Save current state for replay
+            _currentTripData = data;
+            _currentTabId = tabId;
+            clearCarAnimation();
+
             // Remove previous route layers (keep tile + prefecture + city)
             vMap.eachLayer(layer => {
                 if (layer instanceof L.Polyline || layer instanceof L.CircleMarker) vMap.removeLayer(layer);
@@ -464,6 +551,11 @@
                         [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
                         [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
                     ]);
+                }
+
+                // Animate car along route
+                if (actualDay.route && actualDay.route.length >= 2) {
+                    animateCar(actualDay.route);
                 }
             } else {
                 // No actual data — fit to planned route if exists
