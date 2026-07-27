@@ -360,6 +360,15 @@
             return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
         }
 
+        function rotateCar(bearing) {
+            const el = _carMarker?.getElement();
+            if (el) {
+                const carDiv = el.querySelector('#car-icon');
+                // 🚗 emoji faces right (east) by default, adjust -90°
+                if (carDiv) carDiv.style.transform = `rotate(${bearing - 90}deg)`;
+            }
+        }
+
         function animateCar(route) {
             clearCarAnimation();
             if (!route || route.length < 2) return;
@@ -377,11 +386,7 @@
 
             // Set initial bearing
             const initBearing = getBearing(route[0][0], route[0][1], route[1][0], route[1][1]);
-            const initEl = _carMarker.getElement();
-            if (initEl) {
-                const carDiv = initEl.querySelector('#car-icon');
-                if (carDiv) carDiv.style.transform = `rotate(${initBearing}deg)`;
-            }
+            setTimeout(() => rotateCar(initBearing), 50);
 
             let idx = 0;
             _carAnimTimeout = setTimeout(() => {
@@ -397,13 +402,9 @@
                     // Update bearing
                     if (idx < route.length - 1) {
                         const bearing = getBearing(route[idx][0], route[idx][1], route[idx+1][0], route[idx+1][1]);
-                        const el = _carMarker.getElement();
-                        if (el) {
-                            const carDiv = el.querySelector('#car-icon');
-                            if (carDiv) carDiv.style.transform = `rotate(${bearing}deg)`;
-                        }
+                        rotateCar(bearing);
                     }
-                }, 40);
+                }, 200);
             }, 2000);
         }
 
