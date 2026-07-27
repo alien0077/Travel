@@ -398,7 +398,7 @@
             const totalDist = dists[dists.length - 1];
             if (totalDist < 0.1) return; // too short
 
-            const speedKmh = 500; // fast but visible
+            const speedKmh = 250; // fast but visible
             const totalMs = (totalDist / speedKmh) * 3600 * 1000;
 
             function interp(dist) {
