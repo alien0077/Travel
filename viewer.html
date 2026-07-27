@@ -319,7 +319,10 @@
             if (data.countdownDate) startCountdown(data.countdownDate);
 
             // Inject map and draw initial route
-            initMap(data).then(() => drawRoute(data, activeTab));
+            initMap(data).then(() => {
+                // 延遲確保 map 完全渲染後再 fitBounds
+                setTimeout(() => drawRoute(data, activeTab), 200);
+            });
 
             // Switch to default tab
             window.switchTab(activeTab);
@@ -471,9 +474,9 @@
             container.innerHTML = '';
 
             const vMap = L.map('map-container', {
-                zoomControl: false,
+                zoomControl: true,
                 attributionControl: false,
-                scrollWheelZoom: false,
+                scrollWheelZoom: true,
                 dragging: true
             });
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -481,7 +484,7 @@
             }).addTo(vMap);
             window._vMap = vMap;
             // Force Leaflet to recalculate container size
-            setTimeout(() => vMap.invalidateSize(), 100);
+            setTimeout(() => vMap.invalidateSize(), 300);
 
             // Load prefecture GeoJSON with conquest states
             const prefLayer = L.layerGroup().addTo(vMap);
@@ -522,25 +525,7 @@
                     }).addTo(vMap);
                 });
 
-            // Fit to trip bounds
-            const allLats = [], allLngs = [];
-            Object.values(data.actualDays || {}).forEach(day => {
-                if (day.route) day.route.forEach(([lat, lng]) => {
-                    if (lat && lng) { allLats.push(lat); allLngs.push(lng); }
-                });
-                if (day.timeline) day.timeline.forEach(s => {
-                    if (s.lat && s.lng) { allLats.push(s.lat); allLngs.push(s.lng); }
-                });
-            });
-            if (allLats.length > 0) {
-                const pad = 0.03;
-                vMap.fitBounds([
-                    [Math.min(...allLats) - pad, Math.min(...allLngs) - pad],
-                    [Math.max(...allLats) + pad, Math.max(...allLngs) + pad]
-                ]);
-            } else {
-                vMap.setView([36.5, 138.0], 6);
-            }
+            // 不在 initMap 做 fitBounds，由 drawRoute 處理
         }
 
         function drawRoute(data, tabId) {

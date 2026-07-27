@@ -919,48 +919,7 @@
         var PLANNED_AIRPORTS = [];
         const STORAGE_KEY = 'japan-conquest-map-states';
         const AIRPORT_STORAGE_KEY = 'japan-conquest-airports';
-
-        const AIRPORTS = [
-            { code: 'CTS', name: '新千歲機場' }, { code: 'HKD', name: '函館機場' },
-            { code: 'AKJ', name: '旭川機場' }, { code: 'AOJ', name: '青森機場' },
-            { code: 'SDJ', name: '仙台機場' }, { code: 'AXT', name: '秋田機場' },
-            { code: 'GAJ', name: '山形機場' }, { code: 'KIJ', name: '新潟機場' },
-            { code: 'NRT', name: '成田國際機場' }, { code: 'HND', name: '東京羽田機場' },
-            { code: 'NGO', name: '中部國際機場' }, { code: 'KMQ', name: '小松機場' },
-            { code: 'TOY', name: '富山機場' }, { code: 'FSZ', name: '靜岡機場' },
-            { code: 'KIX', name: '關西國際機場' }, { code: 'ITM', name: '大阪伊丹機場' },
-            { code: 'UKB', name: '神戶機場' }, { code: 'HIJ', name: '廣島機場' },
-            { code: 'OKJ', name: '岡山機場' }, { code: 'UBJ', name: '山口宇部機場' },
-            { code: 'TAK', name: '高松機場' }, { code: 'TKS', name: '德島機場' },
-            { code: 'MYJ', name: '松山機場' }, { code: 'KCZ', name: '高知機場' },
-            { code: 'FUK', name: '福岡機場' }, { code: 'KKJ', name: '北九州機場' },
-            { code: 'HSG', name: '佐賀機場' }, { code: 'NGS', name: '長崎機場' },
-            { code: 'KMJ', name: '熊本機場' }, { code: 'OIT', name: '大分機場' },
-            { code: 'KMI', name: '宮崎機場' }, { code: 'KOJ', name: '鹿兒島機場' },
-            { code: 'OKA', name: '那霸機場' }, { code: 'ISG', name: '石垣機場' },
-            { code: 'MMY', name: '宮古機場' }
-        ];
-
-        const AIRPORT_GPS = {
-            'CTS': [42.7752, 141.6925], 'HKD': [41.7700, 140.8220],
-            'AKJ': [43.7361, 142.4449], 'AOJ': [40.7346, 140.6908],
-            'SDJ': [38.1362, 140.8906], 'AXT': [39.6152, 140.2188],
-            'GAJ': [38.2400, 140.3000], 'KIJ': [37.9558, 139.1124],
-            'NRT': [35.7720, 140.3929], 'HND': [35.5494, 139.7798],
-            'NGO': [34.8584, 136.8125], 'KMQ': [36.3946, 136.4039],
-            'TOY': [36.6483, 137.1878], 'FSZ': [34.7960, 138.1894],
-            'KIX': [34.4273, 135.2440], 'ITM': [34.7855, 135.4383],
-            'UKB': [34.6308, 135.2304], 'HIJ': [34.4361, 132.9194],
-            'OKJ': [34.7569, 133.8408], 'UBJ': [33.9315, 131.2766],
-            'TAK': [34.2142, 134.0155], 'TKS': [34.1328, 134.6078],
-            'MYJ': [33.8272, 132.7864], 'KCZ': [33.5461, 133.6694],
-            'FUK': [33.5859, 130.4506], 'KKJ': [33.8455, 131.0344],
-            'HSG': [33.2382, 130.3018], 'NGS': [32.9169, 129.9136],
-            'KMJ': [32.8373, 130.8551], 'OIT': [33.4794, 131.7372],
-            'KMI': [31.8772, 131.4495], 'KOJ': [31.8034, 130.7194],
-            'OKA': [26.1958, 127.6459], 'ISG': [24.3964, 124.2450],
-            'MMY': [24.7828, 125.2952]
-        };
+        let allAirports = []; // 從 ourairports.json 載入
 
         const ROUTE_COLORS = [
             '#EF4444','#F97316','#EAB308','#22C55E','#14B8A6',
@@ -1059,8 +1018,11 @@
         // 5. Leaflet map initialization
         // ==========================================
         let map, prefectureLayer, cityLayer, airportLayer, routeLayer;
+        let worldAdmin1Layer, worldCityLayer;
         let geoJsonPrefData = null;
         let geoJsonCityData = null;
+        let geoJsonWorldAdmin1 = null;
+        let geoJsonWorldCities = null;
 
         function initLeafletMap() {
             map = L.map('leaflet-map', {
@@ -1081,9 +1043,13 @@
             cityLayer = L.layerGroup();
             routeLayer = L.layerGroup().addTo(map);
             airportLayer = L.layerGroup().addTo(map);
+            worldAdmin1Layer = L.layerGroup();
+            worldCityLayer = L.layerGroup();
+            visitedCitiesLayer = L.layerGroup().addTo(map);
 
             map.on('zoomend', function() {
-                if (map.getZoom() >= 8 && !map.hasLayer(cityLayer)) {
+                const zoom = map.getZoom();
+                if (zoom >= 8 && !map.hasLayer(cityLayer)) {
                     map.addLayer(cityLayer);
                     // Re-add route/airport layers so they render above city boundaries in SVG
                     map.removeLayer(routeLayer); map.addLayer(routeLayer);
@@ -1091,11 +1057,44 @@
                     // Force re-render of route paths (remove+add loses path projection)
                     drawActualRoutes();
                     renderAirportMarkers();
-                } else if (map.getZoom() < 8 && map.hasLayer(cityLayer)) {
+                } else if (zoom < 8 && map.hasLayer(cityLayer)) {
                     map.removeLayer(cityLayer);
                     drawActualRoutes();
                     renderAirportMarkers();
                 }
+                // World layers: admin1 at zoom>=3, cities at zoom>=6
+                if (zoom >= 3 && !map.hasLayer(worldAdmin1Layer)) {
+                    map.addLayer(worldAdmin1Layer);
+                    map.removeLayer(routeLayer); map.addLayer(routeLayer);
+                    map.removeLayer(airportLayer); map.addLayer(airportLayer);
+                } else if (zoom < 3 && map.hasLayer(worldAdmin1Layer)) {
+                    map.removeLayer(worldAdmin1Layer);
+                }
+                if (zoom >= 6 && !map.hasLayer(worldCityLayer)) {
+                    map.addLayer(worldCityLayer);
+                    map.removeLayer(routeLayer); map.addLayer(routeLayer);
+                    map.removeLayer(airportLayer); map.addLayer(airportLayer);
+                } else if (zoom < 6 && map.hasLayer(worldCityLayer)) {
+                    map.removeLayer(worldCityLayer);
+                }
+                // 永久隱藏區級標籤，只保留市級標籤；zoom 12+ 隱藏全部
+                document.querySelectorAll('.city-label').forEach(el => {
+                    const text = el.textContent || '';
+                    const isWard = /区$/.test(text);
+                    if (isWard || zoom >= 12) {
+                        el.style.display = 'none';
+                    } else {
+                        el.style.display = '';
+                    }
+                });
+                // Zoom 變化時重新渲染機場（篩選 large/medium）
+                renderAirportMarkers();
+            });
+
+            // 移動時重新渲染可見範圍內的世界 GeoJSON
+            map.on('moveend', function() {
+                if (map.hasLayer(worldAdmin1Layer)) renderWorldAdmin1();
+                if (map.hasLayer(worldCityLayer)) renderWorldCities();
             });
         }
 
@@ -1240,13 +1239,145 @@
             }).addTo(cityLayer);
 
             labelLayer.addTo(cityLayer);
+            
+            // 延遲套用 zoom 過濾，確保 DOM 已更新；永久隱藏區級標籤
+            setTimeout(() => {
+                const zoom = map.getZoom();
+                document.querySelectorAll('.city-label').forEach(el => {
+                    const text = el.textContent || '';
+                    const isWard = /区$/.test(text);
+                    if (isWard || zoom >= 12) {
+                        el.style.display = 'none';
+                    }
+                });
+            }, 100);
+        }
+
+        // ==========================================
+        // 7b. World admin1 GeoJSON layer
+        // ==========================================
+        function loadWorldAdmin1() {
+            fetch('trips/world-admin1.geojson')
+                .then(r => r.json())
+                .then(data => {
+                    geoJsonWorldAdmin1 = data;
+                    renderWorldAdmin1();
+                })
+                .catch(e => console.error('Failed to load world admin1 GeoJSON:', e));
+        }
+
+        // 從 GeoJSON 座標直接計算 bbox（不建立 Leaflet layer）
+        function geoJsonBbox(feature) {
+            const geom = feature.geometry;
+            if (!geom) return null;
+            let minLat = 90, maxLat = -90, minLon = 180, maxLon = -180;
+            const process = (ring) => {
+                for (let i = 0; i < ring.length; i++) {
+                    const lon = ring[i][0], lat = ring[i][1];
+                    if (lat < minLat) minLat = lat;
+                    if (lat > maxLat) maxLat = lat;
+                    if (lon < minLon) minLon = lon;
+                    if (lon > maxLon) maxLon = lon;
+                }
+            };
+            if (geom.type === 'Polygon') {
+                geom.coordinates.forEach(process);
+            } else if (geom.type === 'MultiPolygon') {
+                geom.coordinates.forEach(poly => poly.forEach(process));
+            } else {
+                return null;
+            }
+            return { minLat, maxLat, minLon, maxLon };
+        }
+
+        function bboxIntersects(a, b) {
+            return !(a.minLat > b.maxLat || a.maxLat < b.minLat ||
+                     a.minLon > b.maxLon || a.maxLon < b.minLon);
+        }
+
+        function renderWorldAdmin1() {
+            worldAdmin1Layer.clearLayers();
+            if (!geoJsonWorldAdmin1) return;
+
+            const bounds = map.getBounds();
+            const pad = 0.5;
+            const visBbox = {
+                minLat: bounds.getSouth() - pad, maxLat: bounds.getNorth() + pad,
+                minLon: bounds.getWest() - pad, maxLon: bounds.getEast() + pad
+            };
+
+            const renderer = L.canvas({ padding: 0.5 });
+            geoJsonWorldAdmin1.features.forEach(f => {
+                try {
+                    const fb = geoJsonBbox(f);
+                    if (!fb || !bboxIntersects(visBbox, fb)) return;
+                    L.geoJSON(f, {
+                        style: {
+                            weight: 0.5, opacity: 0.4, color: '#999',
+                            dashArray: '4,4', fillOpacity: 0, interactive: false
+                        },
+                        renderer: renderer
+                    }).addTo(worldAdmin1Layer);
+                } catch(e) {}
+            });
+        }
+
+        // ==========================================
+        // 7c. World cities GeoJSON layer
+        // ==========================================
+        function loadWorldCities() {
+            fetch('trips/world-cities.geojson')
+                .then(r => r.json())
+                .then(data => {
+                    geoJsonWorldCities = data;
+                    renderWorldCities();
+                })
+                .catch(e => console.error('Failed to load world cities GeoJSON:', e));
+        }
+
+        function renderWorldCities() {
+            worldCityLayer.clearLayers();
+            if (!geoJsonWorldCities) return;
+
+            const bounds = map.getBounds();
+            const pad = 0.5;
+            const visBbox = {
+                minLat: bounds.getSouth() - pad, maxLat: bounds.getNorth() + pad,
+                minLon: bounds.getWest() - pad, maxLon: bounds.getEast() + pad
+            };
+
+            const renderer = L.canvas({ padding: 0.5 });
+            geoJsonWorldCities.features.forEach(f => {
+                try {
+                    const fb = geoJsonBbox(f);
+                    if (!fb || !bboxIntersects(visBbox, fb)) return;
+                    L.geoJSON(f, {
+                        style: {
+                            weight: 0.4, opacity: 0.3, color: '#aaa',
+                            dashArray: '2,3', fillOpacity: 0, interactive: false
+                        },
+                        renderer: renderer
+                    }).addTo(worldCityLayer);
+                } catch(e) {}
+            });
         }
 
         // ==========================================
         // 8. Airport markers
         // ==========================================
+        function loadAirports() {
+            fetch('trips/ourairports.json')
+                .then(r => r.json())
+                .then(data => {
+                    allAirports = data;
+                    renderAirportMarkers();
+                })
+                .catch(e => console.error('Failed to load airports:', e));
+        }
+
         function renderAirportMarkers() {
             airportLayer.clearLayers();
+            if (!allAirports.length) return;
 
             let customStates = {};
             try {
@@ -1257,39 +1388,54 @@
             const now = new Date();
             const activeTrips = allTrips.filter(t => new Date(t.dateEnd) >= now);
             const plannedAirports = window.PLANNED_AIRPORTS || [];
-            const majorCodes = ['NRT','HND','KIX','NGO','FUK','OKA','CTS'];
+            const zoom = map.getZoom();
+            const bounds = map.getBounds();
 
-            AIRPORTS.forEach(ap => {
-                const [lat, lng] = AIRPORT_GPS[ap.code] || [0, 0];
+            // 依 zoom 決定顯示哪些機場
+            // zoom < 5: 只顯示 large（國際樞紐）
+            // zoom 5-7: 顯示 large + medium（區域機場）
+            // zoom >= 8: 顯示全部
+            allAirports.forEach(ap => {
+                const lat = ap.lat, lng = ap.lon;
                 if (!lat || !lng) return;
 
-                const state = getAirportState(ap.code, customStates, plannedAirports, activeTrips);
-                const color = getAirportColor(state);
-                const isMajor = majorCodes.includes(ap.code);
-                const radius = isMajor ? 6 : 4.5;
+                // 只渲染可見範圍內的機場
+                if (!bounds.contains([lat, lng])) return;
 
-                const marker = L.circleMarker([lat, lng], {
-                    radius: radius,
-                    fillColor: color,
-                    color: '#fff',
-                    weight: 1.5,
-                    opacity: 1,
-                    fillOpacity: 0.9,
-                    className: 'airport-marker'
+                // zoom 篩選：只顯示 large 或 zoom 夠高
+                if (zoom < 7 && ap.type !== 'large_airport') return;
+
+                const state = getAirportState(ap.iata, customStates, plannedAirports, activeTrips);
+                const color = getAirportColor(state);
+                const isMajor = ap.type === 'large_airport';
+                const fontSize = isMajor ? 18 : 14;
+                const icon = L.divIcon({
+                    className: 'airport-marker',
+                    html: `<span style="font-size:${fontSize}px;color:${color};filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5));cursor:pointer;">✈</span>`,
+                    iconSize: [fontSize, fontSize],
+                    iconAnchor: [fontSize/2, fontSize/2]
                 });
 
-                marker.bindTooltip(`${ap.name} (${ap.code})`, { direction: 'top', offset: [0, -6] });
+                const marker = L.marker([lat, lng], { icon: icon });
+
+                marker.bindTooltip(`${ap.name} (${ap.iata})`, { direction: 'top', offset: [0, -fontSize/2] });
 
                 marker.on('click', function() {
-                    const curState = customStates[ap.code] || state;
+                    const curState = customStates[ap.iata] || state;
                     let nextState;
                     if (curState === 'unvisited') nextState = 'planned';
                     else if (curState === 'planned') nextState = 'active';
                     else if (curState === 'active') nextState = 'unvisited';
                     else nextState = 'unvisited';
-                    customStates[ap.code] = nextState;
+                    customStates[ap.iata] = nextState;
                     localStorage.setItem(AIRPORT_STORAGE_KEY, JSON.stringify(customStates));
-                    marker.setStyle({ fillColor: getAirportColor(nextState) });
+                    const newColor = getAirportColor(nextState);
+                    marker.setIcon(L.divIcon({
+                        className: 'airport-marker',
+                        html: `<span style="font-size:${fontSize}px;color:${newColor};filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5));cursor:pointer;">✈</span>`,
+                        iconSize: [fontSize, fontSize],
+                        iconAnchor: [fontSize/2, fontSize/2]
+                    }));
                 });
 
                 marker.addTo(airportLayer);
@@ -1377,13 +1523,68 @@
         }
 
         // ==========================================
+        // 9b. Visited cities flag markers
+        // ==========================================
+        let visitedCitiesLayer;
+
+        function renderVisitedCities() {
+            visitedCitiesLayer.clearLayers();
+
+            // Collect all stops from all trips
+            const cityMap = new Map(); // key: "lat,lng" -> {lat, lng, name, tripCount}
+
+            allTrips.forEach(trip => {
+                if (!trip.actualDays) return;
+                Object.values(trip.actualDays).forEach(day => {
+                    (day.timeline || []).forEach(stop => {
+                        if (!stop.lat || !stop.lng) return;
+                        // Round to ~1km precision for grouping
+                        const key = `${Math.round(stop.lat * 10) / 10},${Math.round(stop.lng * 10) / 10}`;
+                        if (!cityMap.has(key)) {
+                            // Extract city name from address (Japanese format: 市/区 before 県/都/府)
+                            let cityName = stop.placeName || '';
+                            const addr = stop.address || '';
+                            const cityMatch = addr.match(/([^,]+?[市区町村郡])/);
+                            if (cityMatch) cityName = cityMatch[1];
+                            cityMap.set(key, {
+                                lat: stop.lat, lng: stop.lng,
+                                name: cityName, tripCount: 0, trips: new Set()
+                            });
+                        }
+                        cityMap.get(key).tripCount++;
+                        cityMap.get(key).trips.add(trip.id);
+                    });
+                });
+            });
+
+            // Create 🚩 flag markers
+            cityMap.forEach((city, key) => {
+                const icon = L.divIcon({
+                    className: 'visited-city-flag',
+                    html: `<span style="font-size:16px;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.5));cursor:pointer;">🚩</span>`,
+                    iconSize: [16, 16],
+                    iconAnchor: [8, 16]
+                });
+                const marker = L.marker([city.lat, city.lng], { icon: icon });
+                marker.bindTooltip(
+                    `${city.name}<br><small>${city.tripCount} 次停留・${city.trips.size} 趟旅程</small>`,
+                    { direction: 'top', offset: [0, -12] }
+                );
+                marker.addTo(visitedCitiesLayer);
+            });
+        }
+
+        // ==========================================
         // 10. Load all map data
         // ==========================================
         function loadMapData() {
             loadPrefectureGeoJSON();
             loadCityGeoJSON();
-            renderAirportMarkers();
+            loadWorldAdmin1();
+            loadWorldCities();
+            loadAirports();
             drawActualRoutes();
+            renderVisitedCities();
             updateConquestLevel();
         }
 

@@ -220,6 +220,23 @@ python3 ~/.config/opencode/skills/trip-gps-enrich/scripts/enrich_gps.py --all
 - 每趟不同顏色，含路線 polyline + 停留點 marker + Day 標籤
 - Viewer 地圖每日切換，自動 zoom 至當天路線範圍
 
+### 世界化地圖（World Map）
+- **世界省/州邊界**: `trips/world-admin1.geojson`（38.8MB，4596 features，Natural Earth 10m）
+- **世界城市邊界**: `trips/world-cities.geojson`（19.7MB，34472 features，geojson-world-cities）
+- **全球機場資料**: `trips/ourairports.json`（4562 個大型+中型機場，OurAirports.com）
+- **顯示邏輯**: zoom >= 3 顯示省/州虛線邊界，zoom >= 6 顯示城市虛線邊界
+- **Canvas 渲染**: 使用 `L.canvas()` 提升大量 polygon 的繪製效能
+- **插旗功能**: GPS 照片自動定位城市，以 🚩 標記visited cities（`visitedCitiesLayer`）
+- **機場圖標**: 4562 個機場使用 ✈️ divIcon（`L.divIcon`），zoom < 7 只顯示大型機場，加入 viewport 篩選避免效能問題
+
+### 航班時間窗口過濾
+照片歸屬判定改用**航班時間**（不依賴 GPS bbox）：
+- 從 `flights.outbound` 解析抵達時間（`➔` 後的 HH:MM）
+- 從 `flights.inbound` 解析離境時間（`➔` 前的 HH:MM）
+- 結合 `dateStart`/`dateEnd` 生成完整 datetime window
+- 照片時間在 `[arrival_time, departure_time]` 區間內 → 屬於此行程
+- 兩邊都是目的地當地時間，與 EXIF 當地時間一致，無需時區轉換
+
 ### 未來新增行程處理
 完成新旅行後，用 `enrich_gps.py --trip <新行程ID>` 即可重建實際路線，無需修改 `index.html`。
 
