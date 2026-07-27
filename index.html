@@ -1544,32 +1544,84 @@
         function renderVisitedCities() {
             visitedCitiesLayer.clearLayers();
 
-            // Collect all stops from all trips
-            const cityMap = new Map(); // key: "lat,lng" -> {lat, lng, name, tripCount}
+            // Collect GPS points from ALL trips (route points + timeline stops)
+            // Group by ~1km precision — if you were there, you flag it
+            const cityMap = new Map(); // key: "lat,lng" -> {lat, lng, name, tripCount, trips}
 
             allTrips.forEach(trip => {
                 if (!trip.actualDays) return;
                 Object.values(trip.actualDays).forEach(day => {
-                    (day.timeline || []).forEach(stop => {
-                        if (!stop.lat || !stop.lng) return;
-                        // Round to ~1km precision for grouping
-                        const key = `${Math.round(stop.lat * 10) / 10},${Math.round(stop.lng * 10) / 10}`;
+                    // From route GPS points (every point counts)
+                    (day.route || []).forEach(([lat, lng]) => {
+                        if (!lat || !lng) return;
+                        const key = `${Math.round(lat * 10) / 10},${Math.round(lng * 10) / 10}`;
                         if (!cityMap.has(key)) {
-                            // Extract city name from address (Japanese format: 市/区 before 県/都/府)
-                            let cityName = stop.placeName || '';
-                            const addr = stop.address || '';
-                            const cityMatch = addr.match(/([^,]+?[市区町村郡])/);
-                            if (cityMatch) cityName = cityMatch[1];
                             cityMap.set(key, {
-                                lat: stop.lat, lng: stop.lng,
-                                name: cityName, tripCount: 0, trips: new Set()
+                                lat, lng, name: '', tripCount: 0, trips: new Set()
                             });
                         }
                         cityMap.get(key).tripCount++;
                         cityMap.get(key).trips.add(trip.id);
                     });
+
+                    // From timeline stops (have placeName)
+                    (day.timeline || []).forEach(stop => {
+                        if (!stop.lat || !stop.lng) return;
+                        const key = `${Math.round(stop.lat * 10) / 10},${Math.round(stop.lng * 10) / 10}`;
+                        if (!cityMap.has(key)) {
+                            cityMap.set(key, {
+                                lat: stop.lat, lng: stop.lng,
+                                name: '', tripCount: 0, trips: new Set()
+                            });
+                        }
+                        const entry = cityMap.get(key);
+                        entry.tripCount++;
+                        entry.trips.add(trip.id);
+                        // Use placeName from timeline if available
+                        if (!entry.name && stop.placeName) {
+                            let cityName = stop.placeName;
+                            const addr = stop.address || '';
+                            const cityMatch = addr.match(/([^,]+?[市区町村郡])/);
+                            if (cityMatch) cityName = cityMatch[1];
+                            entry.name = cityName;
+                        }
+                    });
                 });
             });
+
+            // Match unnamed cities to world-cities GeoJSON for names
+            if (geoJsonWorldCities && cityMap.size > 0) {
+                // Precompute centroids from polygon features
+                const cityCentroids = [];
+                geoJsonWorldCities.features.forEach(f => {
+                    const props = f.properties || {};
+                    const name = props.NAME || props.name || '';
+                    if (!name || !f.geometry) return;
+                    // Compute centroid from coordinates
+                    let coords = f.geometry.coordinates;
+                    if (f.geometry.type === 'MultiPolygon') coords = coords[0][0];
+                    else if (f.geometry.type === 'Polygon') coords = coords[0];
+                    if (!Array.isArray(coords) || coords.length === 0) return;
+                    let sumLng = 0, sumLat = 0;
+                    coords.forEach(c => { sumLng += c[0]; sumLat += c[1]; });
+                    const cLng = sumLng / coords.length;
+                    const cLat = sumLat / coords.length;
+                    cityCentroids.push({ name, lat: cLat, lng: cLng });
+                });
+
+                cityMap.forEach((city, key) => {
+                    if (city.name) return;
+                    let bestName = '', bestDist = Infinity;
+                    cityCentroids.forEach(c => {
+                        const dist = Math.abs(city.lat - c.lat) + Math.abs(city.lng - c.lng);
+                        if (dist < bestDist && dist < 0.5) {
+                            bestDist = dist;
+                            bestName = c.name;
+                        }
+                    });
+                    if (bestName) city.name = bestName;
+                });
+            }
 
             // Create 🚩 flag markers
             cityMap.forEach((city, key) => {
@@ -1580,8 +1632,9 @@
                     iconAnchor: [8, 16]
                 });
                 const marker = L.marker([city.lat, city.lng], { icon: icon });
+                const label = city.name || `${city.lat.toFixed(2)}, ${city.lng.toFixed(2)}`;
                 marker.bindTooltip(
-                    `${city.name}<br><small>${city.tripCount} 次停留・${city.trips.size} 趟旅程</small>`,
+                    `${label}<br><small>${city.trips.size} 趟旅程</small>`,
                     { direction: 'top', offset: [0, -12] }
                 );
                 marker.addTo(visitedCitiesLayer);
