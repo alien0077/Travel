@@ -406,8 +406,7 @@
             const totalDist = dists[dists.length - 1];
             if (totalDist < 0.1) return; // too short
 
-            const speedKmh = 250; // fast but visible
-            const totalMs = (totalDist / speedKmh) * 3600 * 1000;
+            const totalMs = 10000; // always 10 seconds
 
             function interp(dist) {
                 // Find segment
