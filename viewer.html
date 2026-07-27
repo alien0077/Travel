@@ -372,8 +372,7 @@
             const el = _carMarker?.getElement();
             if (el) {
                 const carDiv = el.querySelector('#car-icon');
-                // 🚗 emoji faces right (east) by default, adjust -90°
-                if (carDiv) carDiv.style.transform = `rotate(${bearing - 90}deg)`;
+                if (carDiv) carDiv.style.transform = `rotate(${bearing}deg)`;
             }
         }
 
@@ -383,11 +382,20 @@
             const vMap = window._vMap;
             if (!vMap) return;
 
+            // SVG car icon pointing UP (0° = north)
+            const carSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" style="filter:drop-shadow(0 1px 2px rgba(0,0,0,.3))">
+                <path d="M12 2 L8 8 L6 8 L5 12 L3 14 L3 18 L21 18 L21 14 L19 12 L18 8 L16 8 Z" fill="#1e293b" stroke="#f1f5f9" stroke-width="1"/>
+                <circle cx="7" cy="18" r="2.5" fill="#475569" stroke="#f1f5f9" stroke-width="1"/>
+                <circle cx="17" cy="18" r="2.5" fill="#475569" stroke="#f1f5f9" stroke-width="1"/>
+                <rect x="8" y="4" width="8" height="5" rx="1" fill="#60a5fa" opacity="0.7"/>
+                <path d="M10 2 L14 2 L14 4 L10 4 Z" fill="#fbbf24"/>
+            </svg>`;
+
             const carIcon = L.divIcon({
-                html: '<div id="car-icon" style="font-size:20px;line-height:1;transform-origin:center center;">🚗</div>',
+                html: `<div id="car-icon" style="transform-origin:center center;">${carSvg}</div>`,
                 className: '',
-                iconSize: [24, 24],
-                iconAnchor: [12, 12]
+                iconSize: [28, 28],
+                iconAnchor: [14, 14]
             });
 
             // Build cumulative distances
