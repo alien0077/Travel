@@ -1047,54 +1047,68 @@
             worldCityLayer = L.layerGroup();
             visitedCitiesLayer = L.layerGroup().addTo(map);
 
+            let _lastZoomBracket = '';
+            let _zoomDebounce = null;
+
             map.on('zoomend', function() {
-                const zoom = map.getZoom();
-                if (zoom >= 8 && !map.hasLayer(cityLayer)) {
-                    map.addLayer(cityLayer);
-                    // Re-add route/airport layers so they render above city boundaries in SVG
-                    map.removeLayer(routeLayer); map.addLayer(routeLayer);
-                    map.removeLayer(airportLayer); map.addLayer(airportLayer);
-                    // Force re-render of route paths (remove+add loses path projection)
-                    drawActualRoutes();
-                    renderAirportMarkers();
-                } else if (zoom < 8 && map.hasLayer(cityLayer)) {
-                    map.removeLayer(cityLayer);
-                    drawActualRoutes();
-                    renderAirportMarkers();
-                }
-                // World layers: admin1 at zoom>=3, cities at zoom>=6
-                if (zoom >= 3 && !map.hasLayer(worldAdmin1Layer)) {
-                    map.addLayer(worldAdmin1Layer);
-                    map.removeLayer(routeLayer); map.addLayer(routeLayer);
-                    map.removeLayer(airportLayer); map.addLayer(airportLayer);
-                } else if (zoom < 3 && map.hasLayer(worldAdmin1Layer)) {
-                    map.removeLayer(worldAdmin1Layer);
-                }
-                if (zoom >= 6 && !map.hasLayer(worldCityLayer)) {
-                    map.addLayer(worldCityLayer);
-                    map.removeLayer(routeLayer); map.addLayer(routeLayer);
-                    map.removeLayer(airportLayer); map.addLayer(airportLayer);
-                } else if (zoom < 6 && map.hasLayer(worldCityLayer)) {
-                    map.removeLayer(worldCityLayer);
-                }
-                // 永久隱藏區級標籤，只保留市級標籤；zoom 12+ 隱藏全部
-                document.querySelectorAll('.city-label').forEach(el => {
-                    const text = el.textContent || '';
-                    const isWard = /区$/.test(text);
-                    if (isWard || zoom >= 12) {
-                        el.style.display = 'none';
-                    } else {
-                        el.style.display = '';
+                // Debounce: only process after user stops zooming
+                if (_zoomDebounce) clearTimeout(_zoomDebounce);
+                _zoomDebounce = setTimeout(() => {
+                    const zoom = map.getZoom();
+
+                    // City layer: show at zoom>=8
+                    if (zoom >= 8 && !map.hasLayer(cityLayer)) {
+                        map.addLayer(cityLayer);
+                    } else if (zoom < 8 && map.hasLayer(cityLayer)) {
+                        map.removeLayer(cityLayer);
                     }
-                });
-                // Zoom 變化時重新渲染機場（篩選 large/medium）
-                renderAirportMarkers();
+
+                    // World admin1: show at zoom>=3
+                    if (zoom >= 3 && !map.hasLayer(worldAdmin1Layer)) {
+                        map.addLayer(worldAdmin1Layer);
+                    } else if (zoom < 3 && map.hasLayer(worldAdmin1Layer)) {
+                        map.removeLayer(worldAdmin1Layer);
+                    }
+
+                    // World cities: show at zoom>=6
+                    if (zoom >= 6 && !map.hasLayer(worldCityLayer)) {
+                        map.addLayer(worldCityLayer);
+                    } else if (zoom < 6 && map.hasLayer(worldCityLayer)) {
+                        map.removeLayer(worldCityLayer);
+                    }
+
+                    // Re-z-order route/airport layers above everything
+                    map.removeLayer(routeLayer); map.addLayer(routeLayer);
+                    map.removeLayer(airportLayer); map.addLayer(airportLayer);
+
+                    // Only re-render airports when zoom bracket changes (performance)
+                    const bracket = zoom < 5 ? 's' : zoom < 7 ? 'm' : zoom < 8 ? 'l' : 'h';
+                    if (bracket !== _lastZoomBracket) {
+                        _lastZoomBracket = bracket;
+                        renderAirportMarkers();
+                    }
+
+                    // 永久隱藏區級標籤，只保留市級標籤；zoom 12+ 隱藏全部
+                    document.querySelectorAll('.city-label').forEach(el => {
+                        const text = el.textContent || '';
+                        const isWard = /区$/.test(text);
+                        if (isWard || zoom >= 12) {
+                            el.style.display = 'none';
+                        } else {
+                            el.style.display = '';
+                        }
+                    });
+                }, 200);
             });
 
             // 移動時重新渲染可見範圍內的世界 GeoJSON
+            let _moveDebounce = null;
             map.on('moveend', function() {
-                if (map.hasLayer(worldAdmin1Layer)) renderWorldAdmin1();
-                if (map.hasLayer(worldCityLayer)) renderWorldCities();
+                if (_moveDebounce) clearTimeout(_moveDebounce);
+                _moveDebounce = setTimeout(() => {
+                    if (map.hasLayer(worldAdmin1Layer)) renderWorldAdmin1();
+                    if (map.hasLayer(worldCityLayer)) renderWorldCities();
+                }, 250);
             });
         }
 

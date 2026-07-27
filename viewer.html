@@ -343,17 +343,30 @@
         let _carMarker = null;
         let _carAnimTimer = null;
         let _carAnimTimeout = null;
+        let _carAnimPaused = false;
+        let _carAnimResumeTimeout = null;
         let _currentTripData = null;
         let _currentTabId = null;
 
         function clearCarAnimation() {
             if (_carAnimTimer) { _carAnimTimer.cancel(); _carAnimTimer = null; }
             if (_carAnimTimeout) { clearTimeout(_carAnimTimeout); _carAnimTimeout = null; }
+            if (_carAnimResumeTimeout) { clearTimeout(_carAnimResumeTimeout); _carAnimResumeTimeout = null; }
+            _carAnimPaused = false;
             if (_carMarker) {
                 if (window._routeLayer) window._routeLayer.removeLayer(_carMarker);
                 else if (window._vMap) window._vMap.removeLayer(_carMarker);
                 _carMarker = null;
             }
+        }
+
+        function pauseCarAnimation() {
+            _carAnimPaused = true;
+        }
+
+        function resumeCarAnimation() {
+            if (_carAnimResumeTimeout) clearTimeout(_carAnimResumeTimeout);
+            _carAnimResumeTimeout = setTimeout(() => { _carAnimPaused = false; }, 300);
         }
 
         function haversine(lat1, lng1, lat2, lng2) {
@@ -446,11 +459,6 @@
                 const pos = interp(dist);
 
                 _carMarker.setLatLng([pos.lat, pos.lng]);
-
-                // Update bearing
-                const lookAhead = Math.min(dist + 0.05, totalDist);
-                const aheadPos = interp(lookAhead);
-                rotateCar(getBearing(pos.lat, pos.lng, aheadPos.lat, aheadPos.lng));
 
                 if (progress < 1) {
                     animFrame = requestAnimationFrame(step);
