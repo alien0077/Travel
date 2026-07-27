@@ -344,12 +344,20 @@
         let _currentTabId = null;
 
         function clearCarAnimation() {
-            if (_carAnimTimer) { clearInterval(_carAnimTimer); _carAnimTimer = null; }
+            if (_carAnimTimer) { _carAnimTimer.cancel(); _carAnimTimer = null; }
             if (_carAnimTimeout) { clearTimeout(_carAnimTimeout); _carAnimTimeout = null; }
             if (_carMarker && window._vMap) {
                 window._vMap.removeLayer(_carMarker);
                 _carMarker = null;
             }
+        }
+
+        function haversine(lat1, lng1, lat2, lng2) {
+            const R = 6371;
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLng = (lng2 - lng1) * Math.PI / 180;
+            const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLng/2)**2;
+            return R * 2 * Math.asin(Math.sqrt(a));
         }
 
         function getBearing(lat1, lng1, lat2, lng2) {
@@ -382,29 +390,65 @@
                 iconAnchor: [12, 12]
             });
 
+            // Build cumulative distances
+            const dists = [0];
+            for (let i = 1; i < route.length; i++) {
+                dists.push(dists[i-1] + haversine(route[i-1][0], route[i-1][1], route[i][0], route[i][1]));
+            }
+            const totalDist = dists[dists.length - 1];
+            if (totalDist < 0.1) return; // too short
+
+            const speedKmh = 30; // 30 km/h visible speed
+            const totalMs = (totalDist / speedKmh) * 3600 * 1000;
+
+            function interp(dist) {
+                // Find segment
+                for (let i = 1; i < dists.length; i++) {
+                    if (dists[i] >= dist) {
+                        const segDist = dists[i] - dists[i-1];
+                        const t = segDist > 0 ? (dist - dists[i-1]) / segDist : 0;
+                        const lat = route[i-1][0] + (route[i][0] - route[i-1][0]) * t;
+                        const lng = route[i-1][1] + (route[i][1] - route[i-1][1]) * t;
+                        return { lat, lng, idx: i };
+                    }
+                }
+                // End
+                const last = route[route.length - 1];
+                return { lat: last[0], lng: last[1], idx: route.length - 1 };
+            }
+
             _carMarker = L.marker(route[0], { icon: carIcon, zIndexOffset: 1000 }).addTo(vMap);
 
-            // Set initial bearing
-            const initBearing = getBearing(route[0][0], route[0][1], route[1][0], route[1][1]);
-            setTimeout(() => rotateCar(initBearing), 50);
+            // Initial bearing
+            const initPos = interp(0);
+            const nextPos = interp(Math.min(totalDist * 0.01, 0.05));
+            setTimeout(() => rotateCar(getBearing(initPos.lat, initPos.lng, nextPos.lat, nextPos.lng)), 50);
 
-            let idx = 0;
+            let startTime = null;
+            let animFrame = null;
+
+            function step(ts) {
+                if (!startTime) startTime = ts;
+                const elapsed = ts - startTime;
+                const progress = Math.min(elapsed / totalMs, 1);
+                const dist = progress * totalDist;
+                const pos = interp(dist);
+
+                _carMarker.setLatLng([pos.lat, pos.lng]);
+
+                // Update bearing
+                const lookAhead = Math.min(dist + 0.05, totalDist);
+                const aheadPos = interp(lookAhead);
+                rotateCar(getBearing(pos.lat, pos.lng, aheadPos.lat, aheadPos.lng));
+
+                if (progress < 1) {
+                    animFrame = requestAnimationFrame(step);
+                }
+            }
+
             _carAnimTimeout = setTimeout(() => {
-                _carAnimTimer = setInterval(() => {
-                    idx++;
-                    if (idx >= route.length) {
-                        clearInterval(_carAnimTimer);
-                        _carAnimTimer = null;
-                        return;
-                    }
-                    _carMarker.setLatLng(route[idx]);
-
-                    // Update bearing
-                    if (idx < route.length - 1) {
-                        const bearing = getBearing(route[idx][0], route[idx][1], route[idx+1][0], route[idx+1][1]);
-                        rotateCar(bearing);
-                    }
-                }, 200);
+                animFrame = requestAnimationFrame(step);
+                _carAnimTimer = { cancel: () => cancelAnimationFrame(animFrame) };
             }, 2000);
         }
 
