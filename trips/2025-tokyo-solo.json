@@ -13,8 +13,10 @@
   ],
   "image": "tokyo2",
   "prefectures": [
+    "11",
     "12",
-    "13"
+    "13",
+    "26"
   ],
   "airports": [
     "NRT"
