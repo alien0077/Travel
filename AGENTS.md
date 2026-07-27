@@ -177,11 +177,11 @@
 
 ## 📸 實際路線重建機制 (Actual GPS Route Enrichment)
 
-完成一趟旅行後，可從 Synology NAS 的 HEIC 照片 GPS 資料重建實際行程路線：
+完成一趟旅行後，可從 Synology NAS 的 HEIC/JPG 照片 GPS 資料重建實際行程路線：
 
 ### 運作方式
 - **NAS 路徑**: `/Volumes/photo`
-- **HEIC 限定**: 僅 HEIC 格式保留 GPS 經緯度，JPG 無 GPS
+- **照片格式**: HEIC 和 JPG 都有 GPS（2019 年後的 iPhone 照片）
 - **照片來源**: 掃描 `MobileBackup/iPhone/`、`MobileBackup/AlienChang/iPhone/`、`MobileBackup/nini/iPhone/`、`PhotoLibrary/` 四個目錄
 - **批次萃取**: 用 `exiftool` + `-json` 批次萃取，不逐檔讀取
 
@@ -206,21 +206,19 @@ python3 ~/.config/opencode/skills/trip-gps-enrich/scripts/enrich_gps.py --all
           "placeName": "神戸空港",
           "address": "神戸市中央区...",
           "lat": 34.6379, "lng": 135.2259,
-          "svgX": 575, "svgY": 542,
           "photoCount": 3
         }
       ],
-      "route": [[lat,lng], ...],
-      "svgRoute": [[svgX,svgY], ...]
+      "route": [[lat,lng], ...]
     }
   }
 }
 ```
 
 ### 地圖渲染
-- `index.html` 載入時讀取所有行程的 `actualDays`
-- 使用 IDW 插值（82 控制點: 47 都道府縣 + 35 機場）將 GPS 轉為 SVG viewBox 座標
+- `index.html` 使用 Leaflet + OpenStreetMap 渲染路線
 - 每趟不同顏色，含路線 polyline + 停留點 marker + Day 標籤
+- Viewer 地圖每日切換，自動 zoom 至當天路線範圍
 
 ### 未來新增行程處理
 完成新旅行後，用 `enrich_gps.py --trip <新行程ID>` 即可重建實際路線，無需修改 `index.html`。
