@@ -116,7 +116,25 @@ def extract_gps_from_nas(source, date_start, date_end, verbose=True):
     if verbose:
         print(f"\n    📊 共 {len(all_data)} 張含 GPS")
 
-    return all_data
+    if not all_data:
+        return []
+
+    # 按精確日期範圍篩選
+    filtered = []
+    for item in all_data:
+        dt_str = item.get("DateTimeOriginal", "")
+        if not dt_str:
+            continue
+        try:
+            dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S")
+            ds = date_start.date() if hasattr(date_start, 'date') else date_start
+            de = date_end.date() if hasattr(date_end, 'date') else date_end
+            if ds <= dt.date() <= de:
+                filtered.append(item)
+        except ValueError:
+            continue
+
+    return filtered
 
 
 def download_trip_gps(trip_id, verbose=True):
