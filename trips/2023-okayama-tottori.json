@@ -65,7 +65,10 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "Dormy Inn Okayama Natural Hot Spring",
+        "detail": "Booking.com | 3★ | 入住 15:00-凌晨12:00 / 退房 11:00前",
+        "address": "Kita-ku, Nishikimachi 8-1, 岡山, 700-0902",
+        "mapcode": ""
       },
       "details": ""
     },
@@ -91,7 +94,10 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "Dormy Inn Okayama Natural Hot Spring",
+        "detail": "Booking.com | 3★ | 入住 15:00-凌晨12:00 / 退房 11:00前",
+        "address": "Kita-ku, Nishikimachi 8-1, 岡山, 700-0902",
+        "mapcode": ""
       },
       "details": ""
     },
@@ -295,8 +301,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "Nagi Kurashiki Hotel & Suites",
-        "detail": "",
+        "name": "Nagi Kurashiki Hotel&Lounge",
+        "detail": "Booking.com | 4★ | 入住 15:00-21:00 / 退房 8:00-11:00",
+        "address": "1-14-3 Achi, Kurashiki-city, 倉敷, 720-0055",
         "mapcode": ""
       },
       "details": ""
@@ -339,7 +346,8 @@
       "parking": [],
       "hotel": {
         "name": "GRAND BASE Takamatsu",
-        "detail": "",
+        "detail": "Booking.com | 3★ | 入住 15:00-凌晨12:00 / 退房 10:00前",
+        "address": "Uchimachi 6-9, 高松, 760-0034",
         "mapcode": ""
       },
       "details": ""
@@ -367,8 +375,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "Nagi Kurashiki Hotel & Suites",
-        "detail": "",
+        "name": "Nagi Kurashiki Hotel&Lounge",
+        "detail": "Booking.com | 4★ | 入住 15:00-21:00 / 退房 8:00-11:00",
+        "address": "1-14-3 Achi, Kurashiki-city, 倉敷, 720-0055",
         "mapcode": ""
       },
       "details": ""

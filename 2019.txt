@@ -1,0 +1,8 @@
+住宿
+飯店	住址	住宿日期
+MIMARU KYOTO KARASUMA OIKE NORTH	724 Shimomatsuya-cho, Kamanza-dori Oike-agaru, Nakagyo-ku, 604-0034 Kyoto, Japan	2019/11/01 入住，2019/11/05 退房，共 4 晚
+
+航班
+日期	航班	路線	時間	訂位代號
+2019/11/01	長榮航空 BR182	高雄 KHH → 大阪關西 KIX	07:05 → 10:55	K2BJLO
+2019/11/05	長榮航空 BR181	大阪關西 KIX → 高雄 KHH	12:00 → 14:40	K2BJLO

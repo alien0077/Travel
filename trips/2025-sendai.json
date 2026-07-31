@@ -29,8 +29,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：星宇航空 JX862 | 桃園 11:40 ➔ 仙台 16:00",
-    "inbound": "回程：星宇航空 JX863 | 仙台 17:20 ➔ 桃園 20:10"
+    "outbound": "去程：星宇航空 JX862 | 桃園 11:40 ➔ 仙台 16:00 | PNR 5EBL62",
+    "inbound": "回程：星宇航空 JX863 | 仙台 17:20 ➔ 桃園 20:10 | PNR 5EBL62"
   },
   "days": {
     "day1": {
@@ -171,7 +171,12 @@
           "mapcode": "142 066 844*81"
         }
       ],
-      "parking": [],
+      "parking": [
+        {
+          "name": "Toyota Rent a Car 仙台站東口",
+          "detail": "Reservation 9987-3264-000 / R2506012327_BAB3 | 2025/07/28 09:00 - 08/01 17:00 | COROLLA TOURING | 54,120 JPY"
+        }
+      ],
       "hotel": {
         "name": "岩手：Richmond Hotel",
         "detail": "Mapcode: 81 706 866*66",

@@ -67,7 +67,8 @@
       ],
       "hotel": {
         "name": "下關永安國際酒店 (ホテルウィング インターナショナル下関)",
-        "detail": "Mapcode: 16 710 747*64",
+        "detail": "Booking.com | 3★ | 入住 15:00起 / 退房 10:00前 | Mapcode: 16 710 747*64",
+        "address": "Takezaki-cho 3-11-2, 下關, 750-0025",
         "mapcode": "16 710 747*64"
       },
       "details": ""
@@ -130,7 +131,8 @@
       ],
       "hotel": {
         "name": "山口市森特克爾酒店 (セントコア 山口)",
-        "detail": "Mapcode: 93 580 610*88",
+        "detail": "Booking.com | 3★ | 入住 15:00-23:00 / 退房 6:30-10:00 | Mapcode: 93 580 610*88",
+        "address": "Yudaonsen 3-2-7, 山口, 753-0056",
         "mapcode": "93 580 610*88"
       },
       "details": ""
@@ -180,7 +182,8 @@
       "parking": [],
       "hotel": {
         "name": "KIRO Hiroshima by THE SHARE HOTELS (KIRO 広島 by THE SHARE HOTELS )",
-        "detail": "Mapcode: 22 190 441*42",
+        "detail": "Booking.com | 3★ | 入住 15:00-凌晨12:00 / 退房 10:00前 | Mapcode: 22 190 441*42",
+        "address": "Naka-ku Mikawacho 3-21, 廣島, 730-0029",
         "mapcode": "22 190 441*42"
       },
       "details": ""
@@ -244,7 +247,8 @@
       "parking": [],
       "hotel": {
         "name": "萩・城下町の宿 椿庵",
-        "detail": "Mapcode: 243 887 104*04",
+        "detail": "Booking.com | 入住 16:00-19:00 / 退房 10:00前 | Mapcode: 243 887 104*04",
+        "address": "吳服町 1-2, 萩, 758-0072",
         "mapcode": "243 887 104*04"
       },
       "details": ""
@@ -313,7 +317,10 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "JR九州小倉車站飯店 (JR Kyushu Station Hotel Kokura)",
+        "detail": "Booking.com | 4★ | 入住 15:00起 / 退房 11:00前 | Mapcode: 16 466 874*56",
+        "address": "Kokurakita-ku Asano 1-1-1, 北九州, 802-0001",
+        "mapcode": "16 466 874*56"
       },
       "details": ""
     },

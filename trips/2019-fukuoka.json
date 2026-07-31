@@ -27,8 +27,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：長榮航空 BR106 | 桃園 08:10 ➔ 福岡 11:20",
-    "inbound": "回程：長榮航空 BR101 | 福岡 20:55 ➔ 桃園 22:25"
+    "outbound": "去程：長榮航空 BR106 | 桃園 08:10 ➔ 福岡 11:20 | PNR N34XFC",
+    "inbound": "回程：長榮航空 BR101 | 福岡 20:55 ➔ 桃園 22:25 | PNR N34XFC"
   },
   "notes": "原訂8/9 BR106取消，改期至8/11出發",
   "vjw": {
@@ -50,7 +50,12 @@
         }
       ],
       "food": [],
-      "parking": [],
+      "parking": [
+        {
+          "name": "Budget 福岡機場國際線航廈店",
+          "detail": "預約 1908001068 | 2019/08/11 11:30 - 08/17 17:00 | Toyota Wish 等 7 人座 | 74,080 JPY"
+        }
+      ],
       "hotel": {
         "name": "未記錄"
       },
@@ -64,7 +69,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "ホテルエリアワン宮崎シティ",
+        "address": "〒880-0002 宮崎県宮崎市中央通4-1",
+        "detail": "Jalan 預約 | 2019/08/12 - 08/13"
       },
       "details": ""
     },
@@ -76,7 +83,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "APA Hotel Kagoshima Tenmonkan",
+        "address": "〒892-0843 鹿児島県鹿児島市千日町13-23",
+        "detail": "Booking ID 418421672 | 2019/08/13 - 08/14"
       },
       "details": ""
     },
@@ -88,7 +97,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "ANA Crowne Plaza Hotel Kumamoto New Sky",
+        "address": "〒860-0034 熊本市中央区東阿弥陀寺町2",
+        "detail": "Jalan 予約番号 07GPJW39 | 2019/08/14 - 08/15"
       },
       "details": ""
     },
@@ -100,7 +111,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "montan HAKATA HOSTEL",
+        "address": "〒812-0013 福岡県福岡市博多区博多駅東3-6-11",
+        "detail": "Agoda 訂單 381812920 | 2019/08/15 - 08/17"
       },
       "details": ""
     },
@@ -112,7 +125,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "montan HAKATA HOSTEL",
+        "address": "〒812-0013 福岡県福岡市博多区博多駅東3-6-11",
+        "detail": "Agoda 訂單 381812920 | 2019/08/15 - 08/17"
       },
       "details": ""
     },

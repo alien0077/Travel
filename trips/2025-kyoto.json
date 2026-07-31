@@ -118,7 +118,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "皮塞思酒店",
+        "detail": "",
+        "mapcode": ""
       },
       "details": ""
     },
@@ -166,7 +168,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "皮塞思酒店",
+        "detail": "",
+        "mapcode": ""
       },
       "details": ""
     },
@@ -228,7 +232,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "皮塞思酒店",
+        "detail": "",
+        "mapcode": ""
       },
       "details": ""
     },

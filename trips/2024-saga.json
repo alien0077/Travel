@@ -71,8 +71,9 @@
       ],
       "parking": [],
       "hotel": {
-        "name": "溫泉飯店 櫻",
-        "detail": "15:00 pm check-in, 11:00AM check-out\n電話: +81 954 42 3000\nMapcode: 104 043 314*77\n地址: Ureshinomachi Shimojuku Oaza 1021, Ureshino, 843-0301, 日本 嬉􏰀町下宿乙1021, 嬉􏰀市",
+        "name": "溫泉飯店 櫻（嬉野溫泉旅館）",
+        "detail": "15:00 pm check-in, 11:00AM check-out\n電話: +81 954 42 3000\nMapcode: 104 043 314*77",
+        "address": "Otsu-1021 Ureshinomachi Oaza Shimojuku, Ureshino, Saga 843-0301",
         "mapcode": "104 043 314*77"
       },
       "details": ""
@@ -106,7 +107,10 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "溫泉飯店 櫻（嬉野溫泉旅館）",
+        "detail": "15:00 pm check-in, 11:00AM check-out\n電話: +81 954 42 3000\nMapcode: 104 043 314*77",
+        "address": "Otsu-1021 Ureshinomachi Oaza Shimojuku, Ureshino, Saga 843-0301",
+        "mapcode": "104 043 314*77"
       },
       "details": ""
     },

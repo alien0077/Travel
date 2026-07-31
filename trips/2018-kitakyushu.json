@@ -27,8 +27,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：中華航空 CI110 | 桃園 06:50 ➔ 福岡 09:55",
-    "inbound": "回程：中華航空 CI129 | 福岡 19:10 ➔ 桃園 20:30"
+    "outbound": "去程：中華航空 CI110 | 桃園 06:50 ➔ 福岡 09:55 | PNR ETPQHY",
+    "inbound": "回程：中華航空 CI129 | 福岡 19:10 ➔ 桃園 20:30 | PNR ETPQHY"
   },
   "days": {
     "day1": {
@@ -103,9 +103,8 @@
       "food": [],
       "parking": [
         {
-          "name": "Eki Mahe Park Parking Lot",
-          "detail": "",
-          "mapcode": ""
+          "name": "Budget 福岡機場國際線店",
+          "detail": "預約 140193136 | 2018/06/14 10:00 - 06/21 15:00 | WISH 同級 | 71,940 JPY"
         }
       ],
       "hotel": {
@@ -551,8 +550,8 @@
         }
       ],
       "hotel": {
-        "name": "禦幸笛田岐山酒店",
-        "detail": "禦幸笛田岐山酒店，停車場： 61輛（免費），無早餐，Chisun Inn Kumamoto Miyukifueda",
+        "name": "Chisun Inn Kumamoto Miyuki Fueta（熊本御幸笛田知鄉舍飯店）",
+        "detail": "Agoda 訂單 274907568 | 2018/06/17 - 06/18",
         "mapcode": ""
       },
       "details": ""
@@ -877,8 +876,8 @@
         }
       ],
       "hotel": {
-        "name": "博多陽光酒店",
-        "detail": "Sunline Hotel",
+        "name": "Hotel Sunline Fukuoka Hakata-Ekimae（福岡博多站前太陽線飯店）",
+        "detail": "Agoda 訂單 267212481 | 2018/06/20 - 06/21",
         "mapcode": ""
       },
       "details": ""
@@ -920,35 +919,6 @@
       ],
       "hotel": {
         "name": "未記錄"
-      },
-      "details": ""
-    },
-    "day9": {
-      "date": "Directions from Japan, Ōita Prefecture, Beppu, Chuomachi, 5−17別府 龜之井飯店 to Chisun Inn Kumamoto Miyukifueda",
-      "title": "第9天",
-      "timeRange": "",
-      "timeline": [
-        {
-          "type": "act",
-          "time": "",
-          "title": "入住 Japan, Ōita Prefecture, Beppu, Chuomachi, 5−17別府 龜之井飯店",
-          "detail": "",
-          "mapUrl": "https://maps.google.com/?q=33.2761726,131.4997469"
-        },
-        {
-          "type": "act",
-          "time": "",
-          "title": "入住 Chisun Inn Kumamoto Miyukifueda",
-          "detail": "",
-          "mapUrl": "https://maps.google.com/?q=32.7638759,130.7087544"
-        }
-      ],
-      "food": [],
-      "parking": [],
-      "hotel": {
-        "name": "Chisun Inn Kumamoto Miyukifueda",
-        "detail": "",
-        "mapcode": ""
       },
       "details": ""
     }

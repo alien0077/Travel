@@ -55,7 +55,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Hotel Aima（ホテル愛馬）",
+        "detail": "東京都台東区東上野2丁目19-7 TEL: 03-5834-3603",
+        "address": "東上野2-19-7, 台東区, 東京"
       },
       "details": ""
     },
@@ -89,7 +91,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Hotel Aima（ホテル愛馬）",
+        "detail": "東京都台東区東上野2丁目19-7 TEL: 03-5834-3603",
+        "address": "東上野2-19-7, 台東区, 東京"
       },
       "details": ""
     },
@@ -144,7 +148,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Hotel Aima（ホテル愛馬）",
+        "detail": "東京都台東区東上野2丁目19-7 TEL: 03-5834-3603",
+        "address": "東上野2-19-7, 台東区, 東京"
       },
       "details": ""
     },
@@ -164,7 +170,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Hotel Aima（ホテル愛馬）",
+        "detail": "東京都台東区東上野2丁目19-7 TEL: 03-5834-3603",
+        "address": "東上野2-19-7, 台東区, 東京"
       },
       "details": ""
     },
@@ -191,7 +199,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Hotel Aima（ホテル愛馬）",
+        "detail": "東京都台東区東上野2丁目19-7 TEL: 03-5834-3603",
+        "address": "東上野2-19-7, 台東区, 東京"
       },
       "details": ""
     },
@@ -225,7 +235,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Hotel Aima（ホテル愛馬）",
+        "detail": "東京都台東区東上野2丁目19-7 TEL: 03-5834-3603",
+        "address": "東上野2-19-7, 台東区, 東京"
       },
       "details": ""
     },
@@ -259,7 +271,8 @@
       ],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Narita Tobu Hotel Airport（東武機場飯店）",
+        "detail": "成田機場旁"
       },
       "details": ""
     }
