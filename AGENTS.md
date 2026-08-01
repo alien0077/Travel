@@ -240,6 +240,19 @@ python3 ~/.config/opencode/skills/trip-gps-enrich/scripts/enrich_gps.py --all
 ### 未來新增行程處理
 完成新旅行後，用 `enrich_gps.py --trip <新行程ID>` 即可重建實際路線，無需修改 `index.html`。
 
+### 🏞️ 實際景點與規劃落差 enrichment
+
+已有 GPS 快取的行程可使用本地腳本補上 OpenStreetMap 景點：
+```bash
+python3 scripts/enrich-attractions.py --trip <id> --apply
+python3 scripts/enrich-attractions.py --all --apply
+```
+
+- 腳本先讀取 `trips/gps-cache/`，再以每日照片停留群組查詢 Overpass；查詢結果快取在未納入版本控制的 `trips/osm-cache/`。
+- 行程 JSON 的 `actualDays.dayN.attractions` 會保存 OSM 來源、座標、照片數量與 `visited`、`planned_not_visited`、`unplanned_visited` 狀態。
+- `actualDays.dayN.source = "planned"` 不會被當成實際 GPS 證據；只有照片 GPS 或真實 enrichment 停留點能判定已造訪。
+- 查詢前應確認照片 GPS 可送至外部 OSM 服務；若不允許外傳，先使用既有 OSM 快取或離線資料，不要在頁面即時查詢。
+
 ### NAS GPS 資料匯出
 若有需要批次查詢 NAS 上所有照片的 GPS 資料，可使用：
 ```bash

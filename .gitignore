@@ -6,3 +6,4 @@ logs/
 map-*.png
 __pycache__/
 *.pyc
+trips/osm-cache/
