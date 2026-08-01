@@ -1001,9 +1001,10 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/823695331",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 25,
-          "photoCount": 1
+          "photoCount": 1,
+          "plannedName": "旧門司税関"
         },
         {
           "id": "way-976479446",
@@ -1013,7 +1014,7 @@
           "category": "viewpoint",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/976479446",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 26,
           "photoCount": 2
         },
@@ -1025,7 +1026,7 @@
           "category": "viewpoint",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/2959854421",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 56,
           "photoCount": 1
         },
@@ -1037,7 +1038,7 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/7690522548",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 68,
           "photoCount": 1
         },
@@ -1049,7 +1050,7 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/5603043146",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 158,
           "photoCount": 1
         },
@@ -1061,7 +1062,7 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/1423757203",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 161,
           "photoCount": 1
         },
@@ -1073,7 +1074,7 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/627252015",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 164,
           "photoCount": 1
         },
@@ -1085,7 +1086,7 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/5563278622",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 165,
           "photoCount": 1
         },
@@ -1097,7 +1098,7 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/627252021",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 205,
           "photoCount": 1
         },
@@ -1109,7 +1110,7 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/9604719247",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 215,
           "photoCount": 1
         },
@@ -1121,9 +1122,41 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/776283065",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 188,
           "photoCount": 1
+        },
+        {
+          "id": "planned-day2-11",
+          "name": "唐戶市場",
+          "lat": 33.9566245,
+          "lng": 130.945817,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 102,
+          "plannedName": "龜山八幡宮"
+        },
+        {
+          "id": "planned-day2-12",
+          "name": "赤間神宮",
+          "lat": 33.9597029,
+          "lng": 130.9486925,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 335,
+          "plannedName": "日清講和紀念館"
+        },
+        {
+          "id": "planned-day2-13",
+          "name": "Times",
+          "lat": 35.7236585,
+          "lng": 139.6621238,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 817731
         }
       ]
     },
@@ -1213,6 +1246,56 @@
         ]
       ],
       "attractions": [
+        {
+          "id": "planned-day3-0",
+          "name": "Amu Plaza Oita",
+          "lat": 33.2331399,
+          "lng": 131.6062932,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 10974
+        },
+        {
+          "id": "planned-day3-1",
+          "name": "Times",
+          "lat": 35.7236585,
+          "lng": 139.6621238,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 786260
+        },
+        {
+          "id": "planned-day3-2",
+          "name": "Hello kitty",
+          "lat": 35.6245615,
+          "lng": 139.4294453,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 762960
+        },
+        {
+          "id": "planned-day3-3",
+          "name": "豆田町商店街",
+          "lat": 33.3275873,
+          "lng": 130.9368142,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 133
+        },
+        {
+          "id": "planned-day3-4",
+          "name": "湯の坪街道",
+          "lat": 33.2660923,
+          "lng": 131.3632115,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 12741
+        },
         {
           "id": "gps-day3-0",
           "name": "大字藤原",
@@ -1341,9 +1424,10 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/352889243",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 97,
-          "photoCount": 1
+          "photoCount": 1,
+          "plannedName": "金鱗湖"
         },
         {
           "id": "node-4382782597",
@@ -1353,9 +1437,109 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/4382782597",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 240,
           "photoCount": 1
+        },
+        {
+          "id": "planned-day4-2",
+          "name": "朝日台展望台",
+          "lat": 33.1727683,
+          "lng": 131.2503603,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 426
+        },
+        {
+          "id": "planned-day4-3",
+          "name": "Shirotori Shrine",
+          "lat": 35.124554,
+          "lng": 136.908655,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 549642
+        },
+        {
+          "id": "planned-day4-4",
+          "name": "九重夢大吊橋",
+          "lat": 33.174177,
+          "lng": 131.227066,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 2116
+        },
+        {
+          "id": "planned-day4-5",
+          "name": "シェ・タニ瀬の本高原店",
+          "lat": 33.0817208,
+          "lng": 131.1927797,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 11025
+        },
+        {
+          "id": "planned-day4-6",
+          "name": "城山展望所",
+          "lat": 32.9761455,
+          "lng": 131.1399868,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 11698
+        },
+        {
+          "id": "planned-day4-7",
+          "name": "三凩稲荷神社",
+          "lat": 35.2989751,
+          "lng": 135.1261022,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 412510
+        },
+        {
+          "id": "planned-day4-8",
+          "name": "Aso shrine",
+          "lat": 32.9477081,
+          "lng": 131.1161157,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 7900
+        },
+        {
+          "id": "planned-day4-9",
+          "name": "Kusasenri",
+          "lat": 32.8849643,
+          "lng": 131.0503283,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 22
+        },
+        {
+          "id": "planned-day4-10",
+          "name": "Kamitoricho",
+          "lat": 32.804646,
+          "lng": 130.7113862,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 32921
+        },
+        {
+          "id": "planned-day4-11",
+          "name": "禦幸笛田岐山酒店",
+          "lat": 36.0616194,
+          "lng": 139.7473817,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 826486
         }
       ]
     },
@@ -1453,6 +1637,66 @@
         ]
       ],
       "attractions": [
+        {
+          "id": "planned-day5-0",
+          "name": "Kumamoto Castle",
+          "lat": 32.8052691,
+          "lng": 130.7054642,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 11780
+        },
+        {
+          "id": "planned-day5-1",
+          "name": "加藤神社",
+          "lat": 35.7695894,
+          "lng": 139.3474046,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 871011
+        },
+        {
+          "id": "planned-day5-2",
+          "name": "櫻之馬場城彩苑",
+          "lat": 32.8035571,
+          "lng": 130.703562,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 11542
+        },
+        {
+          "id": "planned-day5-3",
+          "name": "眼鏡橋",
+          "lat": 32.747165,
+          "lng": 129.8801025,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 471
+        },
+        {
+          "id": "planned-day5-4",
+          "name": "大浦天主堂",
+          "lat": 32.734189,
+          "lng": 129.8701625,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 1086
+        },
+        {
+          "id": "planned-day5-5",
+          "name": "大村國小",
+          "lat": 38.5053936,
+          "lng": 140.3290269,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 1086323
+        },
         {
           "id": "gps-day5-0",
           "name": "新港一丁目",
@@ -1589,6 +1833,26 @@
         ]
       ],
       "attractions": [
+        {
+          "id": "planned-day6-0",
+          "name": "豪斯登堡",
+          "lat": 33.0862043,
+          "lng": 129.7883148,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 50577
+        },
+        {
+          "id": "planned-day6-1",
+          "name": "佐賀新大谷酒店",
+          "lat": 35.866384,
+          "lng": 139.745542,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 912516
+        },
         {
           "id": "gps-day6-0",
           "name": "与賀八丁馬場小路",
@@ -1998,9 +2262,40 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/1151689369",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 228,
-          "photoCount": 1
+          "photoCount": 1,
+          "plannedName": "太宰府天満宮本殿"
+        },
+        {
+          "id": "planned-day7-6",
+          "name": "武雄溫泉樓門",
+          "lat": 33.1962789,
+          "lng": 130.0146927,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 26671
+        },
+        {
+          "id": "planned-day7-7",
+          "name": "武雄神社",
+          "lat": 33.1884302,
+          "lng": 130.0211412,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 26295
+        },
+        {
+          "id": "planned-day7-8",
+          "name": "Ichiran Hakata",
+          "lat": 33.5901116,
+          "lng": 130.4183546,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 487
         }
       ]
     },
@@ -2106,6 +2401,16 @@
         ]
       ],
       "attractions": [
+        {
+          "id": "planned-day8-0",
+          "name": "博多阪急",
+          "lat": 33.5892954,
+          "lng": 130.4205241,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 293
+        },
         {
           "id": "gps-day8-0",
           "name": "社領三丁目",

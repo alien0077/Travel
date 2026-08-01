@@ -63,7 +63,9 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "Daiwa Roynet Hotel Sendai（仙台大和魯內飯店）",
+        "detail": "Booking.com | 2025/07/27 入住 → 2025/07/28 退房",
+        "address": "Tsutsujigaoka 1-2-37, 仙台, 983-0852"
       },
       "details": ""
     },
@@ -178,9 +180,10 @@
         }
       ],
       "hotel": {
-        "name": "岩手：Richmond Hotel",
+        "name": "Richmond Hotel Morioka Ekimae（盛岡站前里士滿酒店）",
         "detail": "Mapcode: 81 706 866*66",
-        "mapcode": "81 706 866*66"
+        "mapcode": "81 706 866*66",
+        "address": "9-17 Moriokaekimaedori, 盛岡, 020-0034"
       },
       "details": ""
     },
@@ -242,9 +245,10 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "青森：Dormy Inn Aomori",
+        "name": "Dormy Inn Aomori Natural Hot Spring（青森多米天然溫泉酒店）",
         "detail": "Mapcode: 99 554 732*70",
-        "mapcode": "99 554 732*70"
+        "mapcode": "99 554 732*70",
+        "address": "Shin-Machi 2-5-1, 青森, 日本"
       },
       "details": ""
     },
@@ -360,9 +364,10 @@
       ],
       "parking": [],
       "hotel": {
-        "name": "秋田全日空皇冠假日酒店",
+        "name": "ANA Crowne Plaza Akita by IHG（秋田全日空皇冠假日酒店）",
         "detail": "Mapcode: 303 750 648*02",
-        "mapcode": "303 750 648*02"
+        "mapcode": "303 750 648*02",
+        "address": "Nakadori 2-6-1, 秋田市, 日本"
       },
       "details": ""
     },
@@ -458,9 +463,10 @@
       ],
       "parking": [],
       "hotel": {
-        "name": "山形站前大和 ROYNET 酒店",
+        "name": "Daiwa Roynet Hotel Yamagata Ekimae（山形站前大和 ROYNET 酒店）",
         "detail": "Mapcode: 273 594 329*56",
-        "mapcode": "273 594 329*56"
+        "mapcode": "273 594 329*56",
+        "address": "Saiwaicho 2-9, 山形, 990-0038"
       },
       "details": ""
     },
@@ -585,7 +591,10 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "The OneFive Sendai",
+        "detail": "Booking.com | 3★ | 2025/08/01 入住 15:00起 → 2025/08/02 退房 10:00前",
+        "mapcode": "21 616 503*25",
+        "address": "Miyagino-ku Tsutsujigaoka 4-6-28, 仙台, 983-0852"
       },
       "details": ""
     },
@@ -1040,9 +1049,10 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/160311126",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 38,
-          "photoCount": 3
+          "photoCount": 3,
+          "plannedName": "毛越寺"
         },
         {
           "id": "way-218653376",
@@ -1064,7 +1074,7 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/1056607217",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 97,
           "photoCount": 10
         },
@@ -1091,6 +1101,36 @@
           "status": "unplanned_visited",
           "distanceMeters": 231,
           "photoCount": 5
+        },
+        {
+          "id": "planned-day2-6",
+          "name": "盛岡八幡宮",
+          "lat": 39.6953481,
+          "lng": 141.1640146,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 2436
+        },
+        {
+          "id": "planned-day2-7",
+          "name": "中尊寺",
+          "lat": 39.000941,
+          "lng": 141.1020699,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 1603
+        },
+        {
+          "id": "planned-day2-8",
+          "name": "XX 猊鼻溪",
+          "lat": 37.5153544,
+          "lng": 138.7741449,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 203380
         }
       ]
     },
@@ -1491,9 +1531,10 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/138098524",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 9,
-          "photoCount": 39
+          "photoCount": 39,
+          "plannedName": "A-FACTORY"
         },
         {
           "id": "node-7226673990",
@@ -1515,7 +1556,7 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/102403837",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 145,
           "photoCount": 39
         },
@@ -1527,7 +1568,7 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/695946241",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 186,
           "photoCount": 39
         },
@@ -1551,7 +1592,7 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/138098525",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 227,
           "photoCount": 16
         },
@@ -1563,7 +1604,7 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/823479244",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 39,
           "photoCount": 16
         },
@@ -1575,7 +1616,7 @@
           "category": "beach",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/1106222810",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 47,
           "photoCount": 16
         },
@@ -1587,9 +1628,10 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/469013469",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 50,
-          "photoCount": 2
+          "photoCount": 2,
+          "plannedName": "蕪嶋神社"
         },
         {
           "id": "way-279712145",
@@ -1599,7 +1641,7 @@
           "category": "beach",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/279712145",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 75,
           "photoCount": 2
         },
@@ -1659,9 +1701,19 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/295236617",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 248,
           "photoCount": 16
+        },
+        {
+          "id": "planned-day3-15",
+          "name": "青森：Dormy Inn Aomori",
+          "lat": 40.8260013,
+          "lng": 140.7416654,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 321
         }
       ]
     },
@@ -1921,9 +1973,10 @@
           "category": "viewpoint",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/13666422801",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 151,
-          "photoCount": 8
+          "photoCount": 8,
+          "plannedName": "弘前城"
         },
         {
           "id": "node-12883859751",
@@ -1933,7 +1986,7 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/12883859751",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 178,
           "photoCount": 8
         },
@@ -1945,7 +1998,7 @@
           "category": "castle",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/757850283",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 15,
           "photoCount": 8
         },
@@ -1957,7 +2010,7 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/85932862",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 16,
           "photoCount": 6
         },
@@ -1984,6 +2037,56 @@
           "status": "unplanned_visited",
           "distanceMeters": 152,
           "photoCount": 7
+        },
+        {
+          "id": "planned-day4-8",
+          "name": "道之驛碇關",
+          "lat": 36.465589,
+          "lng": 139.883111,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 362184
+        },
+        {
+          "id": "planned-day4-9",
+          "name": "XX 秋田犬之鄉",
+          "lat": 39.7271726,
+          "lng": 140.1060445,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 2039
+        },
+        {
+          "id": "planned-day4-10",
+          "name": "道の駅 あきた港",
+          "lat": 39.7527392,
+          "lng": 140.0615997,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 6782
+        },
+        {
+          "id": "planned-day4-11",
+          "name": "彌生遺址",
+          "lat": 35.2465773,
+          "lng": 136.9872064,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 568957
+        },
+        {
+          "id": "planned-day4-12",
+          "name": "XX 田澤湖",
+          "lat": 39.7122297,
+          "lng": 140.7271881,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 51420
         }
       ]
     },
@@ -2523,6 +2626,56 @@
       ],
       "attractions": [
         {
+          "id": "planned-day5-21",
+          "name": "銀山溫泉",
+          "lat": 38.5738187,
+          "lng": 140.5244619,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 291
+        },
+        {
+          "id": "planned-day5-20",
+          "name": "道の駅 十文字",
+          "lat": 39.226367,
+          "lng": 140.5209281,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 3204
+        },
+        {
+          "id": "planned-day5-22",
+          "name": "道の駅 天童温泉",
+          "lat": 38.3539121,
+          "lng": 140.386832,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 8339
+        },
+        {
+          "id": "planned-day5-24",
+          "name": "XX 寶珠山立石寺",
+          "lat": 36.6133712,
+          "lng": 139.9834401,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 184239
+        },
+        {
+          "id": "planned-day5-23",
+          "name": "文翔館",
+          "lat": 35.7131521,
+          "lng": 139.7353932,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 286685
+        },
+        {
           "id": "node-7451188060",
           "name": "武家屋敷 岩橋家",
           "lat": 39.5987327,
@@ -2530,9 +2683,10 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/7451188060",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 11,
-          "photoCount": 15
+          "photoCount": 15,
+          "plannedName": "角館武家屋敷"
         },
         {
           "id": "node-7451188061",
@@ -2542,9 +2696,81 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/7451188061",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 24,
           "photoCount": 16
+        },
+        {
+          "id": "node-2598309158",
+          "name": "武家屋敷松本家",
+          "lat": 39.5982059,
+          "lng": 140.5613494,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2598309158",
+          "status": "visited",
+          "distanceMeters": 84,
+          "photoCount": 15
+        },
+        {
+          "id": "node-5670412921",
+          "name": "Samurai District",
+          "lat": 39.5978313,
+          "lng": 140.5621565,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5670412921",
+          "status": "visited",
+          "distanceMeters": 91,
+          "photoCount": 15
+        },
+        {
+          "id": "way-253970115",
+          "name": "大村美術館",
+          "lat": 39.599204,
+          "lng": 140.563019,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/253970115",
+          "status": "visited",
+          "distanceMeters": 92,
+          "photoCount": 16
+        },
+        {
+          "id": "way-797116800",
+          "name": "佐竹歴史文化博物館",
+          "lat": 39.5989887,
+          "lng": 140.5603797,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/797116800",
+          "status": "visited",
+          "distanceMeters": 134,
+          "photoCount": 7
+        },
+        {
+          "id": "node-2598170931",
+          "name": "武家屋敷河原田家",
+          "lat": 39.597202,
+          "lng": 140.5626807,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2598170931",
+          "status": "visited",
+          "distanceMeters": 167,
+          "photoCount": 15
+        },
+        {
+          "id": "node-2598170930",
+          "name": "史跡小田野家",
+          "lat": 39.5969552,
+          "lng": 140.5626371,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2598170930",
+          "status": "visited",
+          "distanceMeters": 193,
+          "photoCount": 15
         },
         {
           "id": "way-975143913",
@@ -2629,138 +2855,6 @@
           "status": "unplanned_visited",
           "distanceMeters": 49,
           "photoCount": 5
-        },
-        {
-          "id": "way-975145791",
-          "name": "旧石田理吉家",
-          "lat": 39.2042447,
-          "lng": 140.5461805,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/975145791",
-          "status": "unplanned_visited",
-          "distanceMeters": 74,
-          "photoCount": 4
-        },
-        {
-          "id": "node-2598309158",
-          "name": "武家屋敷松本家",
-          "lat": 39.5982059,
-          "lng": 140.5613494,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/2598309158",
-          "status": "unplanned_visited",
-          "distanceMeters": 84,
-          "photoCount": 15
-        },
-        {
-          "id": "node-5670412921",
-          "name": "Samurai District",
-          "lat": 39.5978313,
-          "lng": 140.5621565,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/5670412921",
-          "status": "unplanned_visited",
-          "distanceMeters": 91,
-          "photoCount": 15
-        },
-        {
-          "id": "way-770618816",
-          "name": "佐藤養助 漆蔵資料館",
-          "lat": 39.2052055,
-          "lng": 140.5450326,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/770618816",
-          "status": "unplanned_visited",
-          "distanceMeters": 91,
-          "photoCount": 1
-        },
-        {
-          "id": "way-253970115",
-          "name": "大村美術館",
-          "lat": 39.599204,
-          "lng": 140.563019,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/253970115",
-          "status": "unplanned_visited",
-          "distanceMeters": 92,
-          "photoCount": 16
-        },
-        {
-          "id": "way-797116800",
-          "name": "佐竹歴史文化博物館",
-          "lat": 39.5989887,
-          "lng": 140.5603797,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/797116800",
-          "status": "unplanned_visited",
-          "distanceMeters": 134,
-          "photoCount": 7
-        },
-        {
-          "id": "node-2598170891",
-          "name": "角館歴史村青柳家",
-          "lat": 39.60051,
-          "lng": 140.5617441,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/2598170891",
-          "status": "unplanned_visited",
-          "distanceMeters": 140,
-          "photoCount": 7
-        },
-        {
-          "id": "node-2598170931",
-          "name": "武家屋敷河原田家",
-          "lat": 39.597202,
-          "lng": 140.5626807,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/2598170931",
-          "status": "unplanned_visited",
-          "distanceMeters": 167,
-          "photoCount": 15
-        },
-        {
-          "id": "node-2598170930",
-          "name": "史跡小田野家",
-          "lat": 39.5969552,
-          "lng": 140.5626371,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/2598170930",
-          "status": "unplanned_visited",
-          "distanceMeters": 193,
-          "photoCount": 15
-        },
-        {
-          "id": "node-6075136886",
-          "name": "白銀公園",
-          "lat": 38.568201,
-          "lng": 140.5324693,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/6075136886",
-          "status": "unplanned_visited",
-          "distanceMeters": 195,
-          "photoCount": 9
-        },
-        {
-          "id": "node-2598170890",
-          "name": "武家屋敷石黒家",
-          "lat": 39.6011819,
-          "lng": 140.5617229,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/2598170890",
-          "status": "unplanned_visited",
-          "distanceMeters": 215,
-          "photoCount": 7
         }
       ]
     },
@@ -2975,9 +3069,10 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/9438632323",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 49,
-          "photoCount": 7
+          "photoCount": 7,
+          "plannedName": "仙台城跡"
         },
         {
           "id": "node-11039676958",
@@ -2999,7 +3094,7 @@
           "category": "castle",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/60100947",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 38,
           "photoCount": 7
         },
@@ -3011,9 +3106,10 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/228045455",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 148,
-          "photoCount": 3
+          "photoCount": 3,
+          "plannedName": "仙台：The OneFive Sendai"
         },
         {
           "id": "way-108580511",
@@ -3023,7 +3119,7 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/108580511",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 207,
           "photoCount": 3
         },
@@ -3038,6 +3134,46 @@
           "status": "unplanned_visited",
           "distanceMeters": 248,
           "photoCount": 1
+        },
+        {
+          "id": "planned-day6-6",
+          "name": "大崎八幡宫",
+          "lat": 38.2716378,
+          "lng": 140.8448528,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 2307
+        },
+        {
+          "id": "planned-day6-7",
+          "name": "瑞鳳殿",
+          "lat": 38.2504733,
+          "lng": 140.8667109,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 854
+        },
+        {
+          "id": "planned-day6-8",
+          "name": "XX 圓通院",
+          "lat": 41.187136,
+          "lng": 141.3895572,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 328311
+        },
+        {
+          "id": "planned-day6-9",
+          "name": "XX 瑞巖寺",
+          "lat": 35.457568,
+          "lng": 136.514836,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 459737
         }
       ]
     },
@@ -3187,6 +3323,16 @@
           "status": "unplanned_visited",
           "distanceMeters": 98,
           "photoCount": 3
+        },
+        {
+          "id": "planned-day7-2",
+          "name": "仙台空港",
+          "lat": 38.1377913,
+          "lng": 140.9216114,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 799
         }
       ]
     }

@@ -637,6 +637,16 @@
           "status": "unplanned_visited",
           "distanceMeters": 137,
           "photoCount": 2
+        },
+        {
+          "id": "planned-day1-3",
+          "name": "太良道的駅",
+          "lat": 36.2616744,
+          "lng": 139.2774742,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 889690
         }
       ]
     },
@@ -1391,9 +1401,10 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/753618055",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 78,
-          "photoCount": 4
+          "photoCount": 4,
+          "plannedName": "祐德稻荷神社"
         },
         {
           "id": "way-992250888",
@@ -1451,9 +1462,10 @@
           "category": "garden",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/454431465",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 219,
-          "photoCount": 9
+          "photoCount": 9,
+          "plannedName": "武雄市圖書館·歷史資料館"
         }
       ]
     },
@@ -1902,6 +1914,16 @@
           "status": "unplanned_visited",
           "distanceMeters": 78,
           "photoCount": 2
+        },
+        {
+          "id": "planned-day3-3",
+          "name": "鏡山觀景台",
+          "lat": 35.7767536,
+          "lng": 139.5320638,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 908320
         }
       ]
     },
