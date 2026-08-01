@@ -394,7 +394,7 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/7175752589",
-          "status": "visited",
+          "status": "unplanned_visited",
           "distanceMeters": 196,
           "photoCount": 3
         },
@@ -1043,6 +1043,36 @@
       ],
       "attractions": [
         {
+          "id": "planned-day2-19",
+          "name": "下吉田站藍色火車月臺",
+          "lat": 35.4977056,
+          "lng": 138.8032627,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 291
+        },
+        {
+          "id": "planned-day2-18",
+          "name": "河口湖駅",
+          "lat": 35.4983333,
+          "lng": 138.7685556,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 21
+        },
+        {
+          "id": "planned-day2-20",
+          "name": "下吉田-本町通註車場",
+          "lat": 35.4923145,
+          "lng": 138.80383,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 141
+        },
+        {
           "id": "node-6859319785",
           "name": "展望デッキ",
           "lat": 35.5013511,
@@ -1091,6 +1121,18 @@
           "photoCount": 1
         },
         {
+          "id": "way-765997878",
+          "name": "新倉山浅間公園",
+          "lat": 35.5005078,
+          "lng": 138.801574,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/765997878",
+          "status": "unplanned_visited",
+          "distanceMeters": 40,
+          "photoCount": 3
+        },
+        {
           "id": "node-4646514992",
           "name": "東京ラーメンストリート",
           "lat": 35.6803754,
@@ -1127,6 +1169,18 @@
           "photoCount": 1
         },
         {
+          "id": "way-380172455",
+          "name": "常盤橋公園",
+          "lat": 35.6859701,
+          "lng": 139.7700433,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/380172455",
+          "status": "unplanned_visited",
+          "distanceMeters": 110,
+          "photoCount": 2
+        },
+        {
           "id": "node-12995244485",
           "name": "TOKYO TORCH Terrace",
           "lat": 35.6843176,
@@ -1149,6 +1203,18 @@
           "status": "unplanned_visited",
           "distanceMeters": 123,
           "photoCount": 1
+        },
+        {
+          "id": "way-1352477642",
+          "name": "Tokyo Torch Park",
+          "lat": 35.6843403,
+          "lng": 139.7701695,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1352477642",
+          "status": "unplanned_visited",
+          "distanceMeters": 127,
+          "photoCount": 2
         },
         {
           "id": "node-441655802",
@@ -1187,66 +1253,6 @@
           "photoCount": 1
         },
         {
-          "id": "node-12606700702",
-          "name": "Cat face facade",
-          "lat": 35.6828884,
-          "lng": 139.765645,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/12606700702",
-          "status": "unplanned_visited",
-          "distanceMeters": 238,
-          "photoCount": 1
-        },
-        {
-          "id": "node-10538350869",
-          "name": "トライアンフギャラリー",
-          "lat": 35.6814698,
-          "lng": 139.771564,
-          "category": "gallery",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/10538350869",
-          "status": "unplanned_visited",
-          "distanceMeters": 243,
-          "photoCount": 1
-        },
-        {
-          "id": "way-765997878",
-          "name": "新倉山浅間公園",
-          "lat": 35.5005078,
-          "lng": 138.801574,
-          "category": "park",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/765997878",
-          "status": "unplanned_visited",
-          "distanceMeters": 40,
-          "photoCount": 3
-        },
-        {
-          "id": "way-380172455",
-          "name": "常盤橋公園",
-          "lat": 35.6859701,
-          "lng": 139.7700433,
-          "category": "park",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/380172455",
-          "status": "unplanned_visited",
-          "distanceMeters": 110,
-          "photoCount": 2
-        },
-        {
-          "id": "way-1352477642",
-          "name": "Tokyo Torch Park",
-          "lat": 35.6843403,
-          "lng": 139.7701695,
-          "category": "park",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/1352477642",
-          "status": "unplanned_visited",
-          "distanceMeters": 127,
-          "photoCount": 2
-        },
-        {
           "id": "node-5906019304",
           "name": "摺鉢山",
           "lat": 35.7138597,
@@ -1259,14 +1265,16 @@
           "photoCount": 2
         },
         {
-          "id": "planned-day2-18",
-          "name": "河口湖駅",
-          "lat": 35.498109,
-          "lng": 138.7692809,
-          "category": "planned",
-          "source": "planned",
-          "status": "visited",
-          "distanceMeters": 37
+          "id": "node-12606700702",
+          "name": "Cat face facade",
+          "lat": 35.6828884,
+          "lng": 139.765645,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12606700702",
+          "status": "unplanned_visited",
+          "distanceMeters": 238,
+          "photoCount": 1
         }
       ]
     },
@@ -1555,52 +1563,53 @@
         {
           "id": "planned-day3-9",
           "name": "鎌倉大佛殿高德院",
-          "lat": 35.3160061,
-          "lng": 139.5355269,
+          "lat": 35.3168145,
+          "lng": 139.5357442,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 47566
+          "distanceMeters": 47477
         },
         {
           "id": "planned-day3-10",
           "name": "江島神社 邊津宮",
-          "lat": 35.3004857,
-          "lng": 139.4795407,
+          "lat": 35.3003664,
+          "lng": 139.4795955,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 51523
+          "distanceMeters": 51532,
+          "plannedName": "江之島弁財天仲見世通"
         },
         {
           "id": "planned-day3-11",
           "name": "小町通商店街",
-          "lat": 43.0569761,
-          "lng": 141.3505831,
+          "lat": 35.3203179,
+          "lng": 139.5517335,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 827793
+          "distanceMeters": 46492
         },
         {
           "id": "planned-day3-12",
           "name": "鶴岡八幡宮",
-          "lat": 35.3251836,
-          "lng": 139.5561787,
+          "lat": 35.3259856,
+          "lng": 139.5563462,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 45831
+          "distanceMeters": 45743
         },
         {
           "id": "planned-day3-13",
           "name": "鐮倉高校前",
-          "lat": 35.3067209,
-          "lng": 139.5007098,
+          "lat": 35.3067242,
+          "lng": 139.5005569,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 49961
+          "distanceMeters": 49967
         }
       ]
     },
@@ -1874,6 +1883,16 @@
       ],
       "attractions": [
         {
+          "id": "planned-day4-20",
+          "name": "小江戶川越一番街商店街 藏造老屋街道",
+          "lat": 35.923527,
+          "lng": 139.4829325,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 35252
+        },
+        {
           "id": "way-173154849",
           "name": "雷門",
           "lat": 35.7111333,
@@ -1896,6 +1915,18 @@
           "status": "unplanned_visited",
           "distanceMeters": 12,
           "photoCount": 3
+        },
+        {
+          "id": "way-166180328",
+          "name": "竹町公園",
+          "lat": 35.7057601,
+          "lng": 139.7803272,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/166180328",
+          "status": "unplanned_visited",
+          "distanceMeters": 45,
+          "photoCount": 8
         },
         {
           "id": "node-441655802",
@@ -1958,6 +1989,18 @@
           "photoCount": 9
         },
         {
+          "id": "way-1043647221",
+          "name": "雷門中部ポケットパーク",
+          "lat": 35.709539,
+          "lng": 139.7956519,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1043647221",
+          "status": "unplanned_visited",
+          "distanceMeters": 172,
+          "photoCount": 11
+        },
+        {
           "id": "node-10806528645",
           "name": "日本浮世絵博物館　東京",
           "lat": 35.7117112,
@@ -1980,78 +2023,6 @@
           "status": "unplanned_visited",
           "distanceMeters": 179,
           "photoCount": 1
-        },
-        {
-          "id": "node-4496960001",
-          "name": "アメヤ横丁",
-          "lat": 35.7100592,
-          "lng": 139.7745428,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/4496960001",
-          "status": "unplanned_visited",
-          "distanceMeters": 210,
-          "photoCount": 4
-        },
-        {
-          "id": "way-145344198",
-          "name": "したまちミュージアム",
-          "lat": 35.7102385,
-          "lng": 139.7727469,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/145344198",
-          "status": "unplanned_visited",
-          "distanceMeters": 220,
-          "photoCount": 4
-        },
-        {
-          "id": "node-4670288696",
-          "name": "阿美橫丁",
-          "lat": 35.7097123,
-          "lng": 139.7743577,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/4670288696",
-          "status": "unplanned_visited",
-          "distanceMeters": 246,
-          "photoCount": 4
-        },
-        {
-          "id": "node-4987634563",
-          "name": "ハス",
-          "lat": 35.7131688,
-          "lng": 139.7717749,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/4987634563",
-          "status": "unplanned_visited",
-          "distanceMeters": 249,
-          "photoCount": 4
-        },
-        {
-          "id": "way-166180328",
-          "name": "竹町公園",
-          "lat": 35.7057601,
-          "lng": 139.7803272,
-          "category": "park",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/166180328",
-          "status": "unplanned_visited",
-          "distanceMeters": 45,
-          "photoCount": 8
-        },
-        {
-          "id": "way-1043647221",
-          "name": "雷門中部ポケットパーク",
-          "lat": 35.709539,
-          "lng": 139.7956519,
-          "category": "park",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/1043647221",
-          "status": "unplanned_visited",
-          "distanceMeters": 172,
-          "photoCount": 11
         },
         {
           "id": "node-5906019304",
@@ -2090,6 +2061,18 @@
           "photoCount": 1
         },
         {
+          "id": "node-4496960001",
+          "name": "アメヤ横丁",
+          "lat": 35.7100592,
+          "lng": 139.7745428,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4496960001",
+          "status": "unplanned_visited",
+          "distanceMeters": 210,
+          "photoCount": 4
+        },
+        {
           "id": "way-166180330",
           "name": "小島公園",
           "lat": 35.7056938,
@@ -2102,6 +2085,18 @@
           "photoCount": 5
         },
         {
+          "id": "way-145344198",
+          "name": "したまちミュージアム",
+          "lat": 35.7102385,
+          "lng": 139.7727469,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/145344198",
+          "status": "unplanned_visited",
+          "distanceMeters": 220,
+          "photoCount": 4
+        },
+        {
           "id": "way-505256902",
           "name": "御徒町公園",
           "lat": 35.7063549,
@@ -2112,6 +2107,18 @@
           "status": "unplanned_visited",
           "distanceMeters": 239,
           "photoCount": 1
+        },
+        {
+          "id": "node-4670288696",
+          "name": "阿美橫丁",
+          "lat": 35.7097123,
+          "lng": 139.7743577,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4670288696",
+          "status": "unplanned_visited",
+          "distanceMeters": 246,
+          "photoCount": 4
         }
       ]
     },
@@ -2673,13 +2680,14 @@
       "attractions": [
         {
           "id": "planned-day5-20",
-          "name": "吉祥寺 Sunroad",
-          "lat": 35.7063581,
-          "lng": 139.5812087,
+          "name": "吉祥寺-黑毛和牛炸肉餅 Satou",
+          "lat": 35.703975,
+          "lng": 139.579041,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 17760
+          "distanceMeters": 17965,
+          "plannedName": "吉祥寺 Sunroad"
         },
         {
           "id": "way-390608380",
@@ -3503,13 +3511,23 @@
         {
           "id": "planned-day6-10",
           "name": "TAMASHII NATIONS STORE TOKYO",
-          "lat": 35.6989873,
-          "lng": 139.7728991,
+          "lat": 35.6991106,
+          "lng": 139.7729878,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 1390,
+          "distanceMeters": 1376,
           "plannedName": "秋葉原電氣街"
+        },
+        {
+          "id": "planned-day6-11",
+          "name": "淺草寺 雷門",
+          "lat": 35.7111163,
+          "lng": 139.7963656,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 1610
         }
       ]
     },
@@ -3590,22 +3608,13 @@
         {
           "id": "planned-day7-1",
           "name": "成田山新勝寺",
-          "lat": 35.7863311,
-          "lng": 140.3172238,
+          "lat": 35.7860511,
+          "lng": 140.3182485,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 5674
-        },
-        {
-          "id": "planned-day7-2",
-          "name": "成田山表參道",
-          "lat": 35.7824205,
-          "lng": 140.3156399,
-          "category": "planned",
-          "source": "planned",
-          "status": "planned_not_visited",
-          "distanceMeters": 5784
+          "distanceMeters": 5579,
+          "plannedName": "成田山表參道"
         }
       ]
     }

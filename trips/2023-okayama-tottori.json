@@ -481,9 +481,10 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/13111942267",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 94,
-          "photoCount": 4
+          "photoCount": 4,
+          "plannedName": "永旺夢樂城 岡山"
         },
         {
           "id": "way-559114888",
@@ -493,7 +494,7 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/559114888",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 80,
           "photoCount": 1
         },
@@ -505,7 +506,7 @@
           "category": "garden",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/576293216",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 178,
           "photoCount": 1
         }
@@ -915,12 +916,12 @@
         {
           "id": "planned-day2-7",
           "name": "岡山城",
-          "lat": 34.6651763,
-          "lng": 133.9360446,
+          "lat": 34.6651878,
+          "lng": 133.9360657,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 1341
+          "distanceMeters": 1343
         }
       ]
     },
@@ -1459,19 +1460,31 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/4406459451",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 215,
-          "photoCount": 8
+          "photoCount": 8,
+          "plannedName": "若桜鉄道株式会社"
         },
         {
           "id": "planned-day3-1",
           "name": "鳥取砂丘",
-          "lat": 35.5412997,
-          "lng": 134.2277259,
+          "lat": 35.5421824,
+          "lng": 134.2294605,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 574,
+          "visitConfirmation": "user"
+        },
+        {
+          "id": "planned-day3-2",
+          "name": "倉吉白壁土藏群",
+          "lat": 35.4321485,
+          "lng": 133.8244348,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 735
+          "distanceMeters": 637
         }
       ]
     },
@@ -2011,12 +2024,12 @@
         {
           "id": "planned-day4-20",
           "name": "江島大橋",
-          "lat": 35.5190935,
-          "lng": 133.199912,
+          "lat": 35.5192007,
+          "lng": 133.1999762,
           "category": "planned",
           "source": "planned",
           "status": "visited",
-          "distanceMeters": 16
+          "distanceMeters": 28
         },
         {
           "id": "way-412916152",
@@ -2054,18 +2067,6 @@
           "status": "visited",
           "distanceMeters": 115,
           "photoCount": 19
-        },
-        {
-          "id": "way-311398093",
-          "name": "松江歴史館",
-          "lat": 35.4752236,
-          "lng": 133.0535061,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/311398093",
-          "status": "visited",
-          "distanceMeters": 218,
-          "photoCount": 9
         },
         {
           "id": "node-2993281968",
@@ -2246,6 +2247,18 @@
           "status": "unplanned_visited",
           "distanceMeters": 199,
           "photoCount": 1
+        },
+        {
+          "id": "way-311398093",
+          "name": "松江歴史館",
+          "lat": 35.4752236,
+          "lng": 133.0535061,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/311398093",
+          "status": "unplanned_visited",
+          "distanceMeters": 218,
+          "photoCount": 9
         }
       ]
     },
@@ -2715,62 +2728,63 @@
         {
           "id": "planned-day5-5",
           "name": "鬼女台展望台",
-          "lat": 35.3253049,
-          "lng": 133.5882936,
+          "lat": 35.3239223,
+          "lng": 133.5866646,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 5804
+          "distanceMeters": 5650
         },
         {
           "id": "planned-day5-6",
           "name": "御机の茅葺小屋",
-          "lat": 35.3209769,
-          "lng": 133.555716,
+          "lat": 35.3209823,
+          "lng": 133.5556995,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 6043
+          "distanceMeters": 6044,
+          "plannedName": "御神社⛩"
         },
         {
           "id": "planned-day5-7",
-          "name": "御神社⛩",
-          "lat": 39.2000084,
-          "lng": 140.4004563,
+          "name": "木谷沢渓流",
+          "lat": 35.3396574,
+          "lng": 133.5548376,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 738998
+          "distanceMeters": 7962
         },
         {
           "id": "planned-day5-8",
-          "name": "木谷沢渓流",
-          "lat": 35.760005,
-          "lng": 139.5336257,
+          "name": "鍵掛峠展望台",
+          "lat": 35.3460455,
+          "lng": 133.5494304,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 528832
+          "distanceMeters": 8806
         },
         {
           "id": "planned-day5-9",
           "name": "三の沢",
-          "lat": 43.3642574,
-          "lng": 142.6120634,
+          "lat": 35.3529399,
+          "lng": 133.5459708,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 1184204
+          "distanceMeters": 9634
         },
         {
           "id": "planned-day5-10",
           "name": "大山寺",
-          "lat": 35.42958,
-          "lng": 139.2409705,
+          "lat": 35.3910231,
+          "lng": 133.5347519,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 500335
+          "distanceMeters": 12612
         }
       ]
     },
@@ -3369,65 +3383,14 @@
       ],
       "attractions": [
         {
-          "id": "node-3719549889",
-          "name": "旧片山家住宅",
-          "lat": 34.8617827,
-          "lng": 133.4688304,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/3719549889",
-          "status": "unplanned_visited",
-          "distanceMeters": 29,
-          "photoCount": 7
-        },
-        {
-          "id": "node-3719549888",
-          "name": "吹屋ふるさと村郷土館",
-          "lat": 34.8618552,
-          "lng": 133.4693549,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/3719549888",
-          "status": "unplanned_visited",
-          "distanceMeters": 43,
-          "photoCount": 31
-        },
-        {
-          "id": "node-1423613069",
-          "name": "旧吹屋小学校",
-          "lat": 34.8629595,
-          "lng": 133.4705455,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/1423613069",
-          "status": "unplanned_visited",
-          "distanceMeters": 141,
-          "photoCount": 56
-        },
-        {
-          "id": "node-6536930848",
-          "name": "臥牛山のサル生息地",
-          "lat": 34.8087846,
-          "lng": 133.6199075,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/6536930848",
-          "status": "visited",
-          "distanceMeters": 217,
-          "photoCount": 7,
-          "plannedName": "備中松山城"
-        },
-        {
-          "id": "node-13070986443",
-          "name": "湯原温泉ミュージアム",
-          "lat": 35.2011732,
-          "lng": 133.7323776,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/13070986443",
-          "status": "unplanned_visited",
-          "distanceMeters": 219,
-          "photoCount": 20
+          "id": "planned-day6-20",
+          "name": "勝山町老街保存地區",
+          "lat": 35.0817736,
+          "lng": 133.6910049,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 13597
         },
         {
           "id": "way-323418330",
@@ -3514,6 +3477,19 @@
           "photoCount": 7
         },
         {
+          "id": "node-3719549889",
+          "name": "旧片山家住宅",
+          "lat": 34.8617827,
+          "lng": 133.4688304,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3719549889",
+          "status": "visited",
+          "distanceMeters": 29,
+          "photoCount": 7,
+          "plannedName": "吹屋故鄉村"
+        },
+        {
           "id": "way-1328866984",
           "name": "水の手門脇曲輪",
           "lat": 34.8093852,
@@ -3538,28 +3514,16 @@
           "photoCount": 4
         },
         {
-          "id": "way-431597747",
-          "name": "中太鼓の丸跡",
-          "lat": 34.8064347,
-          "lng": 133.6221206,
-          "category": "castle",
+          "id": "node-3719549888",
+          "name": "吹屋ふるさと村郷土館",
+          "lat": 34.8618552,
+          "lng": 133.4693549,
+          "category": "museum",
           "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/431597747",
-          "status": "unplanned_visited",
-          "distanceMeters": 53,
-          "photoCount": 2
-        },
-        {
-          "id": "node-12294491823",
-          "name": "中太鼓櫓跡",
-          "lat": 34.8065973,
-          "lng": 133.6221435,
-          "category": "castle",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/12294491823",
+          "sourceUrl": "https://www.openstreetmap.org/node/3719549888",
           "status": "visited",
-          "distanceMeters": 69,
-          "photoCount": 2
+          "distanceMeters": 43,
+          "photoCount": 31
         },
         {
           "id": "node-12306879278",
@@ -3574,16 +3538,16 @@
           "photoCount": 4
         },
         {
-          "id": "node-12294491822",
-          "name": "下太鼓の丸跡",
-          "lat": 34.8051899,
-          "lng": 133.6211704,
-          "category": "castle",
+          "id": "node-1423613069",
+          "name": "旧吹屋小学校",
+          "lat": 34.8629595,
+          "lng": 133.4705455,
+          "category": "museum",
           "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/12294491822",
-          "status": "unplanned_visited",
-          "distanceMeters": 111,
-          "photoCount": 2
+          "sourceUrl": "https://www.openstreetmap.org/node/1423613069",
+          "status": "visited",
+          "distanceMeters": 141,
+          "photoCount": 56
         },
         {
           "id": "way-1330151220",
@@ -3593,9 +3557,34 @@
           "category": "castle",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/1330151220",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 199,
           "photoCount": 4
+        },
+        {
+          "id": "node-6536930848",
+          "name": "臥牛山のサル生息地",
+          "lat": 34.8087846,
+          "lng": 133.6199075,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6536930848",
+          "status": "visited",
+          "distanceMeters": 217,
+          "photoCount": 7,
+          "plannedName": "備中松山城"
+        },
+        {
+          "id": "way-431597747",
+          "name": "中太鼓の丸跡",
+          "lat": 34.8064347,
+          "lng": 133.6221206,
+          "category": "castle",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/431597747",
+          "status": "unplanned_visited",
+          "distanceMeters": 53,
+          "photoCount": 2
         },
         {
           "id": "way-1060029423",
@@ -3608,6 +3597,30 @@
           "status": "unplanned_visited",
           "distanceMeters": 63,
           "photoCount": 7
+        },
+        {
+          "id": "node-12294491823",
+          "name": "中太鼓櫓跡",
+          "lat": 34.8065973,
+          "lng": 133.6221435,
+          "category": "castle",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12294491823",
+          "status": "unplanned_visited",
+          "distanceMeters": 69,
+          "photoCount": 2
+        },
+        {
+          "id": "node-12294491822",
+          "name": "下太鼓の丸跡",
+          "lat": 34.8051899,
+          "lng": 133.6211704,
+          "category": "castle",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12294491822",
+          "status": "unplanned_visited",
+          "distanceMeters": 111,
+          "photoCount": 2
         }
       ]
     },
@@ -4147,32 +4160,32 @@
         {
           "id": "planned-day7-6",
           "name": "鷲羽山",
-          "lat": 34.4354877,
-          "lng": 133.8124716,
+          "lat": 34.4355475,
+          "lng": 133.8124415,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 265
+          "distanceMeters": 270
         },
         {
           "id": "planned-day7-7",
           "name": "瀨戶大橋紀念公園",
-          "lat": 34.3518232,
-          "lng": 133.8264226,
+          "lat": 34.3513765,
+          "lng": 133.8264782,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 5596
+          "distanceMeters": 5546
         },
         {
           "id": "planned-day7-8",
           "name": "丸龜城",
-          "lat": 34.2860216,
-          "lng": 133.8001009,
+          "lat": 34.2859887,
+          "lng": 133.800375,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 3035
+          "distanceMeters": 3009
         }
       ]
     },
@@ -4752,12 +4765,12 @@
         {
           "id": "planned-day8-12",
           "name": "金刀比羅宮奧社",
-          "lat": 35.4008162,
-          "lng": 132.6844663,
+          "lat": 34.188073,
+          "lng": 133.8023384,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 132684
+          "distanceMeters": 867
         }
       ]
     },

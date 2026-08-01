@@ -677,12 +677,22 @@
         {
           "id": "planned-day1-0",
           "name": "下關南部町郵便局",
-          "lat": 33.9566852,
-          "lng": 130.9418829,
+          "lat": 33.9567026,
+          "lng": 130.9418124,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 1733
+          "distanceMeters": 1728
+        },
+        {
+          "id": "planned-day1-1",
+          "name": "皿倉山展望台",
+          "lat": 33.8467326,
+          "lng": 130.7968029,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 16427
         },
         {
           "id": "gps-day1-0",
@@ -1327,23 +1337,53 @@
         },
         {
           "id": "planned-day2-13",
-          "name": "瑠璃光寺五重塔",
-          "lat": 34.1901755,
-          "lng": 131.4729196,
+          "name": "道之站 仁保之鄉",
+          "lat": 34.2106649,
+          "lng": 131.5592026,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 52647
+          "distanceMeters": 60858
         },
         {
           "id": "planned-day2-14",
-          "name": "湯田溫泉",
-          "lat": 34.1598753,
-          "lng": 131.4604069,
+          "name": "道の駅 ソレーネ周南",
+          "lat": 34.0744711,
+          "lng": 131.6879412,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 50364
+          "distanceMeters": 67750
+        },
+        {
+          "id": "planned-day2-15",
+          "name": "道の駅　きららあじす",
+          "lat": 34.0127831,
+          "lng": 131.369562,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 37639
+        },
+        {
+          "id": "planned-day2-16",
+          "name": "瑠璃光寺五重塔",
+          "lat": 34.1901821,
+          "lng": 131.4728985,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 52646
+        },
+        {
+          "id": "planned-day2-17",
+          "name": "湯田溫泉",
+          "lat": 34.1652204,
+          "lng": 131.4550133,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 50100
         }
       ]
     },
@@ -1845,22 +1885,32 @@
         {
           "id": "planned-day3-6",
           "name": "錦帶橋",
-          "lat": 34.1676435,
-          "lng": 132.1783208,
+          "lat": 34.1675959,
+          "lng": 132.1784105,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 56824
+          "distanceMeters": 56831
         },
         {
           "id": "planned-day3-7",
           "name": "嚴島神社",
-          "lat": 34.2965418,
-          "lng": 132.3190077,
+          "lat": 34.2959896,
+          "lng": 132.3198285,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 73273
+          "distanceMeters": 73322
+        },
+        {
+          "id": "planned-day3-8",
+          "name": "廣島原爆中心點",
+          "lat": 34.3947904,
+          "lng": 132.4547094,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 88962
         }
       ]
     },
@@ -2502,42 +2552,62 @@
         {
           "id": "planned-day4-7",
           "name": "道之站 萩市",
-          "lat": 34.9232795,
-          "lng": 135.6871303,
+          "lat": 34.4259759,
+          "lng": 131.4145081,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 300831
+          "distanceMeters": 27350
         },
         {
           "id": "planned-day4-8",
-          "name": "井仁梯田",
-          "lat": 33.2448791,
-          "lng": 133.1613028,
+          "name": "道之站 阿武町",
+          "lat": 34.4977467,
+          "lng": 131.4680243,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 136767
+          "distanceMeters": 32975
         },
         {
           "id": "planned-day4-9",
-          "name": "安野 花の駅公園",
-          "lat": 34.5544702,
-          "lng": 132.3803644,
+          "name": "太鼓谷稻成神社千本鳥居",
+          "lat": 34.465624,
+          "lng": 131.770283,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 19592
+          "distanceMeters": 34305
         },
         {
           "id": "planned-day4-10",
-          "name": "萩城城下町",
-          "lat": 36.7324076,
-          "lng": 140.713993,
+          "name": "井仁梯田",
+          "lat": 34.5592634,
+          "lng": 132.2820808,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 790180
+          "distanceMeters": 24891
+        },
+        {
+          "id": "planned-day4-11",
+          "name": "安野 花の駅公園",
+          "lat": 34.5541602,
+          "lng": 132.3805018,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 19556
+        },
+        {
+          "id": "planned-day4-12",
+          "name": "萩城城下町",
+          "lat": 34.413012,
+          "lng": 131.3937628,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 27116
         }
       ]
     },
@@ -3209,34 +3279,64 @@
       ],
       "attractions": [
         {
-          "id": "planned-day5-22",
-          "name": "角島大橋",
-          "lat": 34.3523746,
-          "lng": 130.8872191,
+          "id": "planned-day5-25",
+          "name": "秋芳洞-第一車場",
+          "lat": 34.2260044,
+          "lng": 131.3088345,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 46893
+          "distanceMeters": 21879
         },
         {
           "id": "planned-day5-20",
           "name": "吉冨幸進堂",
-          "lat": 34.6141632,
-          "lng": 135.5332557,
+          "lat": 34.3306346,
+          "lng": 131.1702333,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 282537
+          "distanceMeters": 22386
+        },
+        {
+          "id": "planned-day5-22",
+          "name": "道之站 於福",
+          "lat": 34.238589,
+          "lng": 131.208215,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 25738
         },
         {
           "id": "planned-day5-21",
           "name": "西念寺",
-          "lat": 36.3645249,
-          "lng": 140.202592,
+          "lat": 34.3030143,
+          "lng": 131.1299955,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 735001
+          "distanceMeters": 27045
+        },
+        {
+          "id": "planned-day5-23",
+          "name": "角島大橋",
+          "lat": 34.3512369,
+          "lng": 130.8892142,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 46730
+        },
+        {
+          "id": "planned-day5-24",
+          "name": "道之站 北浦街道 豐北",
+          "lat": 34.3106189,
+          "lng": 130.8887785,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 47650
         },
         {
           "id": "way-687707063",
@@ -3405,42 +3505,6 @@
           "status": "unplanned_visited",
           "distanceMeters": 148,
           "photoCount": 9
-        },
-        {
-          "id": "way-130371527",
-          "name": "体育館",
-          "lat": 34.3959178,
-          "lng": 132.4505997,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/130371527",
-          "status": "unplanned_visited",
-          "distanceMeters": 151,
-          "photoCount": 1
-        },
-        {
-          "id": "node-5697677021",
-          "name": "本川",
-          "lat": 34.3947664,
-          "lng": 132.4511897,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/5697677021",
-          "status": "unplanned_visited",
-          "distanceMeters": 168,
-          "photoCount": 1
-        },
-        {
-          "id": "node-9203775117",
-          "name": "鯉の米屋",
-          "lat": 34.4718215,
-          "lng": 131.7756512,
-          "category": "viewpoint",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/9203775117",
-          "status": "unplanned_visited",
-          "distanceMeters": 172,
-          "photoCount": 6
         }
       ]
     },
@@ -4449,22 +4513,22 @@
         {
           "id": "planned-day6-11",
           "name": "宮地嶽神社",
-          "lat": 33.780017,
-          "lng": 130.485876,
+          "lat": 33.7799141,
+          "lng": 130.4862328,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 38399
+          "distanceMeters": 38371
         },
         {
           "id": "planned-day6-12",
           "name": "住吉神社",
-          "lat": 33.5857544,
-          "lng": 130.4134348,
+          "lat": 33.5858948,
+          "lng": 130.4136385,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 54655
+          "distanceMeters": 54631
         }
       ]
     },

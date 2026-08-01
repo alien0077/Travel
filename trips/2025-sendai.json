@@ -714,9 +714,10 @@
           "category": "garden",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/1374054302",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 114,
-          "photoCount": 3
+          "photoCount": 3,
+          "plannedName": "利久 仙台站店"
         },
         {
           "id": "way-601311661",
@@ -726,7 +727,7 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/601311661",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 206,
           "photoCount": 1
         },
@@ -738,7 +739,7 @@
           "category": "memorial",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/12875711903",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 223,
           "photoCount": 1
         },
@@ -750,7 +751,7 @@
           "category": "park",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/1390755348",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 228,
           "photoCount": 3
         },
@@ -765,6 +766,16 @@
           "status": "unplanned_visited",
           "distanceMeters": 234,
           "photoCount": 4
+        },
+        {
+          "id": "planned-day1-5",
+          "name": "桃機第一航廈",
+          "lat": 25.0801069,
+          "lng": 121.2358126,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 343
         }
       ]
     },
@@ -1104,33 +1115,103 @@
         },
         {
           "id": "planned-day2-6",
-          "name": "盛岡八幡宮",
-          "lat": 39.6953481,
-          "lng": 141.1640146,
+          "name": "岩手銀行赤煉瓦館",
+          "lat": 39.7005195,
+          "lng": 141.1552147,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 2436
+          "distanceMeters": 1566
         },
         {
           "id": "planned-day2-7",
-          "name": "中尊寺",
-          "lat": 39.000941,
-          "lng": 141.1020699,
+          "name": "盛岡八幡宮",
+          "lat": 39.6953498,
+          "lng": 141.1640378,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 1603
+          "distanceMeters": 2438
         },
         {
           "id": "planned-day2-8",
-          "name": "XX 猊鼻溪",
-          "lat": 37.5153544,
-          "lng": 138.7741449,
+          "name": "盛岡城跡公園（岩手公園）",
+          "lat": 39.7006035,
+          "lng": 141.1513377,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 203380
+          "distanceMeters": 1237
+        },
+        {
+          "id": "planned-day2-9",
+          "name": "中尊寺",
+          "lat": 39.0014285,
+          "lng": 141.1005985,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 1698
+        },
+        {
+          "id": "planned-day2-10",
+          "name": "XX 猊鼻溪",
+          "lat": 38.9893763,
+          "lng": 141.2553865,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 12201
+        },
+        {
+          "id": "planned-day2-11",
+          "name": "道之驛 嚴美溪",
+          "lat": 38.9463292,
+          "lng": 141.0530604,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 555
+        },
+        {
+          "id": "planned-day2-12",
+          "name": "XX 花卷溫泉",
+          "lat": 39.4518393,
+          "lng": 141.0704576,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 28436
+        },
+        {
+          "id": "planned-day2-13",
+          "name": "XX 道の駅 雫石あねっこ",
+          "lat": 39.7062965,
+          "lng": 140.8746409,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 22390
+        },
+        {
+          "id": "planned-day2-14",
+          "name": "XX 遠野故鄉村",
+          "lat": 39.3960096,
+          "lng": 141.5403655,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 48547
+        },
+        {
+          "id": "planned-day2-15",
+          "name": "福田麵包 長田町本店",
+          "lat": 39.7082304,
+          "lng": 141.1420896,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 771
         }
       ]
     },
@@ -1707,13 +1788,33 @@
         },
         {
           "id": "planned-day3-15",
-          "name": "青森：Dormy Inn Aomori",
-          "lat": 40.8260013,
-          "lng": 140.7416654,
+          "name": "XX 奧入瀨溪流館",
+          "lat": 40.574573,
+          "lng": 140.9786978,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 321
+          "distanceMeters": 33255
+        },
+        {
+          "id": "planned-day3-16",
+          "name": "XX 銚子大瀑布",
+          "lat": 40.4886222,
+          "lng": 140.951221,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 40607
+        },
+        {
+          "id": "planned-day3-17",
+          "name": "XX 道之駅：十和田湖",
+          "lat": 40.4176788,
+          "lng": 140.8577279,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 45934
         }
       ]
     },
@@ -2040,53 +2141,103 @@
         },
         {
           "id": "planned-day4-8",
-          "name": "道之驛碇關",
-          "lat": 36.465589,
-          "lng": 139.883111,
+          "name": "道の駅 なみおか アップルヒル",
+          "lat": 40.7176607,
+          "lng": 140.5794869,
           "category": "planned",
           "source": "planned",
-          "status": "planned_not_visited",
-          "distanceMeters": 362184
+          "status": "visited",
+          "distanceMeters": 95
         },
         {
           "id": "planned-day4-9",
-          "name": "XX 秋田犬之鄉",
-          "lat": 39.7271726,
-          "lng": 140.1060445,
+          "name": "道之驛碇關",
+          "lat": 40.4814396,
+          "lng": 140.6236935,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 2039
+          "distanceMeters": 16815
         },
         {
           "id": "planned-day4-10",
-          "name": "道の駅 あきた港",
-          "lat": 39.7527392,
-          "lng": 140.0615997,
+          "name": "XX 秋田犬之鄉",
+          "lat": 40.2868486,
+          "lng": 140.5561643,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 6782
+          "distanceMeters": 23868
         },
         {
           "id": "planned-day4-11",
-          "name": "彌生遺址",
-          "lat": 35.2465773,
-          "lng": 136.9872064,
+          "name": "男鹿真山傳承館",
+          "lat": 39.9293246,
+          "lng": 139.7666579,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 568957
+          "distanceMeters": 38709
         },
         {
           "id": "planned-day4-12",
-          "name": "XX 田澤湖",
-          "lat": 39.7122297,
-          "lng": 140.7271881,
+          "name": "道の駅 あきた港",
+          "lat": 39.7526393,
+          "lng": 140.0611333,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 51420
+          "distanceMeters": 6808
+        },
+        {
+          "id": "planned-day4-13",
+          "name": "紅磚鄉土館",
+          "lat": 39.7167087,
+          "lng": 140.1157846,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 879
+        },
+        {
+          "id": "planned-day4-14",
+          "name": "彌生遺址",
+          "lat": 39.6576522,
+          "lng": 140.1573317,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 7139
+        },
+        {
+          "id": "planned-day4-15",
+          "name": "XX 道路休息站阿仁又鬼乃郷",
+          "lat": 39.9015343,
+          "lng": 140.4569231,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 25215
+        },
+        {
+          "id": "planned-day4-16",
+          "name": "XX 御座石神社",
+          "lat": 39.7516029,
+          "lng": 140.6505312,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 45011
+        },
+        {
+          "id": "planned-day4-17",
+          "name": "XX 田澤湖",
+          "lat": 39.7168527,
+          "lng": 140.6544861,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 45197
         }
       ]
     },
@@ -2626,54 +2777,84 @@
       ],
       "attractions": [
         {
-          "id": "planned-day5-21",
-          "name": "銀山溫泉",
-          "lat": 38.5738187,
-          "lng": 140.5244619,
+          "id": "planned-day5-24",
+          "name": "文翔館",
+          "lat": 38.256637,
+          "lng": 140.3411866,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 291
+          "distanceMeters": 1442
         },
         {
           "id": "planned-day5-20",
           "name": "道の駅 十文字",
-          "lat": 39.226367,
-          "lng": 140.5209281,
+          "lat": 39.2262704,
+          "lng": 140.5210024,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 3204
+          "distanceMeters": 3192
         },
         {
           "id": "planned-day5-22",
-          "name": "道の駅 天童温泉",
-          "lat": 38.3539121,
-          "lng": 140.386832,
+          "name": "道の駅 寒河江 チェリーランド",
+          "lat": 38.3988169,
+          "lng": 140.2713015,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 8339
+          "distanceMeters": 5202
         },
         {
-          "id": "planned-day5-24",
-          "name": "XX 寶珠山立石寺",
-          "lat": 36.6133712,
-          "lng": 139.9834401,
+          "id": "planned-day5-21",
+          "name": "銀山溫泉",
+          "lat": 38.6173247,
+          "lng": 140.5613515,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 184239
+          "distanceMeters": 5808
         },
         {
           "id": "planned-day5-23",
-          "name": "文翔館",
-          "lat": 35.7131521,
-          "lng": 139.7353932,
+          "name": "道の駅 天童温泉",
+          "lat": 38.3544867,
+          "lng": 140.3872332,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 286685
+          "distanceMeters": 8310
+        },
+        {
+          "id": "planned-day5-25",
+          "name": "XX 寶珠山立石寺",
+          "lat": 38.3131193,
+          "lng": 140.4346099,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 11721
+        },
+        {
+          "id": "planned-day5-27",
+          "name": "XX 最上川遊船",
+          "lat": 38.7379836,
+          "lng": 140.1498384,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 25924
+        },
+        {
+          "id": "planned-day5-26",
+          "name": "XX 羽黑山五重塔",
+          "lat": 38.7047357,
+          "lng": 139.967661,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 39107
         },
         {
           "id": "node-7451188060",
@@ -2749,6 +2930,18 @@
           "photoCount": 7
         },
         {
+          "id": "node-2598170891",
+          "name": "角館歴史村青柳家",
+          "lat": 39.60051,
+          "lng": 140.5617441,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2598170891",
+          "status": "visited",
+          "distanceMeters": 140,
+          "photoCount": 7
+        },
+        {
           "id": "node-2598170931",
           "name": "武家屋敷河原田家",
           "lat": 39.597202,
@@ -2761,16 +2954,16 @@
           "photoCount": 15
         },
         {
-          "id": "node-2598170930",
-          "name": "史跡小田野家",
-          "lat": 39.5969552,
-          "lng": 140.5626371,
+          "id": "node-2598170890",
+          "name": "武家屋敷石黒家",
+          "lat": 39.6011819,
+          "lng": 140.5617229,
           "category": "attraction",
           "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/2598170930",
+          "sourceUrl": "https://www.openstreetmap.org/node/2598170890",
           "status": "visited",
-          "distanceMeters": 193,
-          "photoCount": 15
+          "distanceMeters": 215,
+          "photoCount": 7
         },
         {
           "id": "way-975143913",
@@ -2807,54 +3000,6 @@
           "status": "unplanned_visited",
           "distanceMeters": 38,
           "photoCount": 22
-        },
-        {
-          "id": "way-770615956",
-          "name": "旧松浦家住宅",
-          "lat": 39.2033474,
-          "lng": 140.5462457,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/770615956",
-          "status": "unplanned_visited",
-          "distanceMeters": 41,
-          "photoCount": 9
-        },
-        {
-          "id": "way-975143929",
-          "name": "佐藤三十郎家",
-          "lat": 39.2027172,
-          "lng": 140.5457894,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/975143929",
-          "status": "unplanned_visited",
-          "distanceMeters": 43,
-          "photoCount": 9
-        },
-        {
-          "id": "way-770615955",
-          "name": "佐藤多三郎家",
-          "lat": 39.2032614,
-          "lng": 140.5463596,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/way/770615955",
-          "status": "unplanned_visited",
-          "distanceMeters": 44,
-          "photoCount": 9
-        },
-        {
-          "id": "node-12246225917",
-          "name": "髙橋茶舗座敷蔵",
-          "lat": 39.2023131,
-          "lng": 140.5457226,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/12246225917",
-          "status": "unplanned_visited",
-          "distanceMeters": 49,
-          "photoCount": 5
         }
       ]
     },
@@ -3137,43 +3282,134 @@
         },
         {
           "id": "planned-day6-6",
-          "name": "大崎八幡宫",
-          "lat": 38.2716378,
-          "lng": 140.8448528,
+          "name": "XX道の駅 やまがた蔵王",
+          "lat": 38.1894465,
+          "lng": 140.3120848,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 2307
+          "distanceMeters": 6613
         },
         {
           "id": "planned-day6-7",
-          "name": "瑞鳳殿",
-          "lat": 38.2504733,
-          "lng": 140.8667109,
+          "name": "XX 米澤城跡",
+          "lat": 37.9092742,
+          "lng": 140.1050564,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 854
+          "distanceMeters": 42416,
+          "plannedName": "XX 上杉神社"
         },
         {
           "id": "planned-day6-8",
-          "name": "XX 圓通院",
-          "lat": 41.187136,
-          "lng": 141.3895572,
+          "name": "XX 道の駅 国見 あつかしの郷",
+          "lat": 37.8727314,
+          "lng": 140.5467713,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 328311
+          "distanceMeters": 37933
         },
         {
           "id": "planned-day6-9",
-          "name": "XX 瑞巖寺",
-          "lat": 35.457568,
-          "lng": 136.514836,
+          "name": "XX 白石城 本丸跡",
+          "lat": 38.0022507,
+          "lng": 140.617302,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 459737
+          "distanceMeters": 22464
+        },
+        {
+          "id": "planned-day6-10",
+          "name": "XX 宮城藏王狐狸村",
+          "lat": 38.0408293,
+          "lng": 140.5303604,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 19214
+        },
+        {
+          "id": "planned-day6-11",
+          "name": "錦之丘 Hillside Mall： 購物中心",
+          "lat": 38.2575726,
+          "lng": 140.7649623,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 7997
+        },
+        {
+          "id": "planned-day6-12",
+          "name": "大崎八幡宫",
+          "lat": 38.2725199,
+          "lng": 140.8450332,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 2387
+        },
+        {
+          "id": "planned-day6-13",
+          "name": "瑞鳳殿",
+          "lat": 38.2504479,
+          "lng": 140.8667079,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 855
+        },
+        {
+          "id": "planned-day6-14",
+          "name": "XX 鹽竈神社",
+          "lat": 38.3191457,
+          "lng": 141.0127515,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 12948
+        },
+        {
+          "id": "planned-day6-15",
+          "name": "XX 圓通院",
+          "lat": 38.5250947,
+          "lng": 140.9287848,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 29706
+        },
+        {
+          "id": "planned-day6-16",
+          "name": "XX 道の駅 三本木 やまなみ",
+          "lat": 38.5220803,
+          "lng": 140.9385664,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 29497
+        },
+        {
+          "id": "planned-day6-17",
+          "name": "XX 瑞巖寺",
+          "lat": 38.3720098,
+          "lng": 141.0598105,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 19690
+        },
+        {
+          "id": "planned-day6-18",
+          "name": "XX 道の駅 上品の郷",
+          "lat": 38.5010077,
+          "lng": 141.2953299,
+          "category": "planned",
+          "source": "planned",
+          "status": "planned_not_visited",
+          "distanceMeters": 44693
         }
       ]
     },
@@ -3320,19 +3556,10 @@
           "category": "viewpoint",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/1329128576",
-          "status": "unplanned_visited",
-          "distanceMeters": 98,
-          "photoCount": 3
-        },
-        {
-          "id": "planned-day7-2",
-          "name": "仙台空港",
-          "lat": 38.1377913,
-          "lng": 140.9216114,
-          "category": "planned",
-          "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 799
+          "distanceMeters": 98,
+          "photoCount": 3,
+          "plannedName": "仙台空港"
         }
       ]
     }

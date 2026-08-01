@@ -272,6 +272,33 @@ def clean_planned_name(item):
     return title
 
 
+def is_non_attraction_title(title):
+    """排除住宿、交通與停車項目，避免混入每日景點清單。"""
+    return bool(re.search(
+        r"入住|住宿|酒店|飯店|旅館|hotel|機場|租車|還車|航班|Ferry Port|Times",
+        title or "",
+        re.I,
+    ))
+
+
+def extract_map_coords(map_url):
+    """讀取 Google Maps 的 @lat,lng 或 ?q=lat,lng 座標。"""
+    if not map_url:
+        return None
+    match = re.search(r"@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)", map_url)
+    if not match:
+        try:
+            query = urllib.parse.parse_qs(urllib.parse.urlparse(map_url).query)
+            raw = query.get("q", [None])[0] or query.get("ll", [None])[0]
+            if raw:
+                match = re.search(r"^\s*(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)", raw)
+        except ValueError:
+            match = None
+    if not match:
+        return None
+    return float(match.group(1)), float(match.group(2))
+
+
 def nominatim_geocode(query):
     """以 OSM Nominatim 補上沒有 mapUrl 座標的規劃景點。"""
     cache = {}
@@ -307,12 +334,15 @@ def planned_points(day, trip, day_key):
     for item in day.get("timeline", []):
         if item.get("type") not in ("act", "sight", "visit"):
             continue
+        raw_title = item.get("title") or item.get("name", "")
+        if is_non_attraction_title(raw_title):
+            continue
         name = clean_planned_name(item)
         if not name or re.search(r"機場|租車|還車|入住|check.?in|check.?out|航班|辦理|移動|前往", name, re.I):
             continue
-        coords = re.search(r"@(-?\d+\.\d+),(-?\d+\.\d+)", item.get("mapUrl") or "")
+        coords = extract_map_coords(item.get("mapUrl"))
         if coords:
-            result.append((float(coords.group(1)), float(coords.group(2)), name))
+            result.append((coords[0], coords[1], name))
             continue
         point = nominatim_geocode(name)
         if point:
@@ -397,6 +427,13 @@ def enrich_trip(trip, refresh=False, verbose=False):
                     existing_stops.append((lat, lng, stop.get("photoCount", 0)))
         photo_clusters = cluster_points(photo_points)
         evidence = existing_stops + photo_clusters
+        confirmed_plans = {
+            name
+            for attraction in actual_day.get("attractions", [])
+            if attraction.get("visitConfirmation") == "user"
+            for name in (attraction.get("name"), attraction.get("plannedName"))
+            if name
+        }
         # 優先使用 GPS enrichment 已經辨識出的停留點；照片群組只作為沒有停留點時的 fallback。
         # 路線上的每張照片不應各自觸發一次 Overpass 查詢。
         centers = existing_stops or photo_clusters
@@ -422,12 +459,15 @@ def enrich_trip(trip, refresh=False, verbose=False):
         for lat, lng, name in planned:
             _, distance = nearest_evidence((lat, lng), evidence)
             match = next((a for a in enriched if haversine_m((lat, lng), (a["lat"], a["lng"])) <= MATCH_RADIUS_M), None)
-            status = "visited" if distance is not None and distance <= MATCH_RADIUS_M else "planned_not_visited"
+            user_confirmed = name in confirmed_plans
+            status = "visited" if user_confirmed or (distance is not None and distance <= MATCH_RADIUS_M) else "planned_not_visited"
             if match:
                 match["status"] = status
                 match["plannedName"] = name
+                if user_confirmed:
+                    match["visitConfirmation"] = "user"
                 continue
-            enriched.append({
+            planned_attraction = {
                 "id": f"planned-{day_key}-{len(enriched)}",
                 "name": name,
                 "lat": round(lat, 7),
@@ -436,7 +476,10 @@ def enrich_trip(trip, refresh=False, verbose=False):
                 "source": "planned",
                 "status": status,
                 "distanceMeters": round(distance) if distance is not None else None,
-            })
+            }
+            if user_confirmed:
+                planned_attraction["visitConfirmation"] = "user"
+            enriched.append(planned_attraction)
         if not attractions and actual_day.get("source") != "planned":
             enriched.extend(gps_fallback_attractions(actual_day, evidence, day_key))
         if len(enriched) > MAX_ATTRACTIONS_PER_DAY:
@@ -484,7 +527,10 @@ def validate_enrichment(enriched):
                     errors.append(f"{day_key}: {name} 被判定為已造訪但沒有照片證據")
                 elif attraction.get("source") in {"osm", "gps"}:
                     evidence_count += 1
-                if attraction.get("distanceMeters") is None or attraction["distanceMeters"] > MATCH_RADIUS_M:
+                if (
+                    attraction.get("visitConfirmation") != "user"
+                    and (attraction.get("distanceMeters") is None or attraction["distanceMeters"] > MATCH_RADIUS_M)
+                ):
                     errors.append(f"{day_key}: {name} 的造訪距離不合理")
     if total == 0:
         errors.append("沒有產生任何景點")

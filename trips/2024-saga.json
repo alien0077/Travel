@@ -641,12 +641,12 @@
         {
           "id": "planned-day1-3",
           "name": "太良道的駅",
-          "lat": 36.2616744,
-          "lng": 139.2774742,
+          "lat": 33.0468817,
+          "lng": 130.1691422,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 889690
+          "distanceMeters": 314
         }
       ]
     },
@@ -1462,10 +1462,19 @@
           "category": "garden",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/454431465",
-          "status": "visited",
+          "status": "unplanned_visited",
           "distanceMeters": 219,
-          "photoCount": 9,
-          "plannedName": "武雄市圖書館·歷史資料館"
+          "photoCount": 9
+        },
+        {
+          "id": "planned-day2-6",
+          "name": "武雄市圖書館·歷史資料館",
+          "lat": 33.1890331,
+          "lng": 130.0236947,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 38
         }
       ]
     },
@@ -1887,9 +1896,10 @@
           "category": "viewpoint",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/6419027089",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 8,
-          "photoCount": 4
+          "photoCount": 4,
+          "plannedName": "鏡山觀景台"
         },
         {
           "id": "way-500427895",
@@ -1899,9 +1909,10 @@
           "category": "castle",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/500427895",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 35,
-          "photoCount": 13
+          "photoCount": 13,
+          "plannedName": "唐津城 本丸腰曲輪櫓"
         },
         {
           "id": "node-3500782076",
@@ -1917,13 +1928,23 @@
         },
         {
           "id": "planned-day3-3",
-          "name": "鏡山觀景台",
-          "lat": 35.7767536,
-          "lng": 139.5320638,
+          "name": "海中餐廳 萬坊 呼子花枝",
+          "lat": 33.5383549,
+          "lng": 129.8833997,
+          "category": "planned",
+          "source": "planned",
+          "status": "visited",
+          "distanceMeters": 90
+        },
+        {
+          "id": "planned-day3-4",
+          "name": "永旺 唐津店",
+          "lat": 33.4367608,
+          "lng": 130.0123792,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 908320
+          "distanceMeters": 846
         }
       ]
     },

@@ -651,7 +651,7 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/1422972907",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 161,
           "photoCount": 1
         },
@@ -663,7 +663,7 @@
           "category": "museum",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/12189675719",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 161,
           "photoCount": 5
         },
@@ -682,12 +682,12 @@
         {
           "id": "planned-day1-8",
           "name": "東福寺",
-          "lat": 35.3905209,
-          "lng": 139.5971441,
+          "lat": 34.976025,
+          "lng": 135.7737627,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 351506
+          "distanceMeters": 1481
         }
       ]
     },
@@ -1041,9 +1041,10 @@
           "category": "garden",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/way/350366597",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 24,
-          "photoCount": 2
+          "photoCount": 2,
+          "plannedName": "賀茂御祖神社(下鴨神社)"
         },
         {
           "id": "way-159160779",
@@ -1096,32 +1097,22 @@
         {
           "id": "planned-day2-7",
           "name": "北野天滿宮",
-          "lat": 35.0304752,
-          "lng": 135.7349176,
+          "lat": 35.0311737,
+          "lng": 135.7351227,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 1051
+          "distanceMeters": 985
         },
         {
           "id": "planned-day2-8",
           "name": "上賀茂神社",
-          "lat": 35.0604683,
-          "lng": 135.7522589,
+          "lat": 35.0603776,
+          "lng": 135.7527293,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 2888
-        },
-        {
-          "id": "planned-day2-9",
-          "name": "賀茂御祖神社(下鴨神社)",
-          "lat": 35.0341725,
-          "lng": 135.7724956,
-          "category": "planned",
-          "source": "planned",
-          "status": "planned_not_visited",
-          "distanceMeters": 524
+          "distanceMeters": 2855
         }
       ]
     },
@@ -1574,9 +1565,10 @@
           "category": "attraction",
           "source": "osm",
           "sourceUrl": "https://www.openstreetmap.org/node/13913771965",
-          "status": "unplanned_visited",
+          "status": "visited",
           "distanceMeters": 192,
-          "photoCount": 6
+          "photoCount": 6,
+          "plannedName": "東寺：每月21有市集"
         },
         {
           "id": "node-1422965148",
@@ -1654,32 +1646,32 @@
         {
           "id": "planned-day3-14",
           "name": "京都御苑",
-          "lat": 35.023396,
-          "lng": 135.7632,
+          "lat": 35.0240977,
+          "lng": 135.7621436,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 1835
+          "distanceMeters": 1959
         },
         {
           "id": "planned-day3-15",
           "name": "熊野神社",
-          "lat": 34.4374389,
-          "lng": 132.4610625,
+          "lat": 35.0177091,
+          "lng": 135.7780631,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 306392
+          "distanceMeters": 456
         },
         {
           "id": "planned-day3-16",
           "name": "南禪寺",
-          "lat": 35.0115254,
-          "lng": 135.7927213,
+          "lat": 35.0114138,
+          "lng": 135.7944841,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 805
+          "distanceMeters": 962
         }
       ]
     },
@@ -2112,53 +2104,43 @@
         {
           "id": "planned-day4-19",
           "name": "奈良公園",
-          "lat": 34.6829008,
-          "lng": 135.8545975,
+          "lat": 34.685047,
+          "lng": 135.843012,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 602
+          "distanceMeters": 267
         },
         {
           "id": "planned-day4-20",
           "name": "JR 宇治駅",
-          "lat": 34.890199,
-          "lng": 135.8014423,
+          "lat": 34.8904261,
+          "lng": 135.8005941,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 3369,
+          "distanceMeters": 3351,
           "plannedName": "辻利 宇治本店"
         },
         {
           "id": "planned-day4-21",
           "name": "平等院",
-          "lat": 34.8895001,
-          "lng": 135.8074525,
+          "lat": 34.8892908,
+          "lng": 135.8076783,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 3623
+          "distanceMeters": 3619
         },
         {
           "id": "planned-day4-22",
           "name": "醍醐寺",
-          "lat": 34.9513438,
-          "lng": 135.8209305,
+          "lat": 34.9511172,
+          "lng": 135.8193543,
           "category": "planned",
           "source": "planned",
           "status": "planned_not_visited",
-          "distanceMeters": 6819
-        },
-        {
-          "id": "planned-day4-18",
-          "name": "JR奈良駅",
-          "lat": 34.6814898,
-          "lng": 135.8200748,
-          "category": "planned",
-          "source": "planned",
-          "status": "visited",
-          "distanceMeters": 15
+          "distanceMeters": 6716
         },
         {
           "id": "node-6500093440",
@@ -2174,16 +2156,26 @@
           "plannedName": "東大寺"
         },
         {
-          "id": "node-8447477865",
-          "name": "東大寺ミュージアム",
-          "lat": 34.6864697,
-          "lng": 135.83905,
-          "category": "museum",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/8447477865",
+          "id": "planned-day4-18",
+          "name": "JR奈良駅",
+          "lat": 34.680987,
+          "lng": 135.819038,
+          "category": "planned",
+          "source": "planned",
           "status": "visited",
-          "distanceMeters": 132,
-          "photoCount": 7
+          "distanceMeters": 98
+        },
+        {
+          "id": "node-12417084130",
+          "name": "銀杏",
+          "lat": 34.6894142,
+          "lng": 135.8422061,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12417084130",
+          "status": "visited",
+          "distanceMeters": 186,
+          "photoCount": 4
         },
         {
           "id": "node-3689032300",
@@ -2294,6 +2286,18 @@
           "photoCount": 4
         },
         {
+          "id": "node-8447477865",
+          "name": "東大寺ミュージアム",
+          "lat": 34.6864697,
+          "lng": 135.83905,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/8447477865",
+          "status": "unplanned_visited",
+          "distanceMeters": 132,
+          "photoCount": 7
+        },
+        {
           "id": "way-238822707",
           "name": "鹿苑",
           "lat": 34.6806066,
@@ -2328,18 +2332,6 @@
           "status": "unplanned_visited",
           "distanceMeters": 162,
           "photoCount": 7
-        },
-        {
-          "id": "node-13881273098",
-          "name": "Field with a lot of deer",
-          "lat": 34.6813206,
-          "lng": 135.8411975,
-          "category": "attraction",
-          "source": "osm",
-          "sourceUrl": "https://www.openstreetmap.org/node/13881273098",
-          "status": "unplanned_visited",
-          "distanceMeters": 175,
-          "photoCount": 4
         }
       ]
     },
