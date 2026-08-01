@@ -382,7 +382,10 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "Beppu Kamenoi Hotel（別府龜の井ホテル）",
+        "detail": "Agoda 訂單 276595460 | 2018/06/15 - 06/17，2晚",
+        "address": "5-17, Chuo-machi, Beppu, Beppu, Japan 874-0936",
+        "mapcode": ""
       },
       "details": ""
     },
@@ -689,7 +692,7 @@
         {
           "meal": "午/晚餐",
           "name": "平和公園-大浦天主堂下",
-          "detail": "5KM\n1. 搭 (藍: 赤迫-正覺寺) 或 (灰: 赤迫-螢茶屋):松山町至 築町 轉車\n2. 搭 (綠: 石橋-螢茶屋):築町至大浦天主堂下",
+          "detail": "5KM\n1. 搭 (藍: 赤迫-正覺寺) 或 (灰: 赤迫-螢茶屋):松山町至 築町 轉車\n2. 搭 (綠: 石橋-螢茶屋):築町至大浦天主堂下",
           "mapcode": ""
         }
       ],
@@ -716,7 +719,10 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "Hotel Nikko Huis Ten Bosch（ホテル日航ハウステンボス）",
+        "detail": "Agoda 訂單 | 2018/06/18 - 06/19",
+        "address": "6, Huis Ten Bosch-cho, Sasebo, Sasebo, Japan, 859-3243",
+        "mapcode": ""
       },
       "details": ""
     },
@@ -918,7 +924,7 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "可愛的家（台灣）"
       },
       "details": ""
     }
@@ -985,6 +991,140 @@
           171,
           715
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-823695331",
+          "name": "大連友好記念館",
+          "lat": 33.948085,
+          "lng": 130.964187,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/823695331",
+          "status": "unplanned_visited",
+          "distanceMeters": 25,
+          "photoCount": 1
+        },
+        {
+          "id": "way-976479446",
+          "name": "旧門司税関",
+          "lat": 33.947733,
+          "lng": 130.9635844,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/976479446",
+          "status": "unplanned_visited",
+          "distanceMeters": 26,
+          "photoCount": 2
+        },
+        {
+          "id": "node-2959854421",
+          "name": "門司港レトロハイマート展望室",
+          "lat": 33.9484316,
+          "lng": 130.9641434,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2959854421",
+          "status": "unplanned_visited",
+          "distanceMeters": 56,
+          "photoCount": 1
+        },
+        {
+          "id": "node-7690522548",
+          "name": "黄色いバナナのポスト",
+          "lat": 33.9485293,
+          "lng": 130.9637488,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7690522548",
+          "status": "unplanned_visited",
+          "distanceMeters": 68,
+          "photoCount": 1
+        },
+        {
+          "id": "node-5603043146",
+          "name": "ﾊﾞｽ乗降",
+          "lat": 33.949363,
+          "lng": 130.96379,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5603043146",
+          "status": "unplanned_visited",
+          "distanceMeters": 158,
+          "photoCount": 1
+        },
+        {
+          "id": "node-1423757203",
+          "name": "出光佐三記念美術館・出光美術館（門司）",
+          "lat": 33.94891,
+          "lng": 130.965276,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1423757203",
+          "status": "unplanned_visited",
+          "distanceMeters": 161,
+          "photoCount": 1
+        },
+        {
+          "id": "way-627252015",
+          "name": "旧大阪商船",
+          "lat": 33.9461299,
+          "lng": 130.9622371,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/627252015",
+          "status": "unplanned_visited",
+          "distanceMeters": 164,
+          "photoCount": 1
+        },
+        {
+          "id": "node-5563278622",
+          "name": "ワンマン(ボギー)車100型",
+          "lat": 33.9494341,
+          "lng": 130.9640397,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5563278622",
+          "status": "unplanned_visited",
+          "distanceMeters": 165,
+          "photoCount": 1
+        },
+        {
+          "id": "way-627252021",
+          "name": "旧門司三井倶楽部",
+          "lat": 33.9457306,
+          "lng": 130.9625755,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/627252021",
+          "status": "unplanned_visited",
+          "distanceMeters": 205,
+          "photoCount": 1
+        },
+        {
+          "id": "node-9604719247",
+          "name": "アインシュタイン・メモリアルルーム",
+          "lat": 33.9456352,
+          "lng": 130.9626369,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/9604719247",
+          "status": "unplanned_visited",
+          "distanceMeters": 215,
+          "photoCount": 1
+        },
+        {
+          "id": "way-776283065",
+          "name": "鎮西橋公園",
+          "lat": 33.9467466,
+          "lng": 130.9654174,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/776283065",
+          "status": "unplanned_visited",
+          "distanceMeters": 188,
+          "photoCount": 1
+        }
       ]
     },
     "day3": {
@@ -1071,6 +1211,19 @@
           161,
           743
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day3-0",
+          "name": "大字藤原",
+          "lat": 33.402584,
+          "lng": 131.547864,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        }
       ]
     },
     "day4": {
@@ -1178,6 +1331,32 @@
           160,
           790
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-352889243",
+          "name": "下ん湯",
+          "lat": 33.2672661,
+          "lng": 131.3690882,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/352889243",
+          "status": "unplanned_visited",
+          "distanceMeters": 97,
+          "photoCount": 1
+        },
+        {
+          "id": "node-4382782597",
+          "name": "floral village",
+          "lat": 33.2682777,
+          "lng": 131.3676562,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4382782597",
+          "status": "unplanned_visited",
+          "distanceMeters": 240,
+          "photoCount": 1
+        }
       ]
     },
     "day5": {
@@ -1272,6 +1451,19 @@
           72,
           704
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day5-0",
+          "name": "新港一丁目",
+          "lat": 32.762844,
+          "lng": 130.589947,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 4
+        }
       ]
     },
     "day6": {
@@ -1395,6 +1587,30 @@
           123,
           740
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day6-0",
+          "name": "与賀八丁馬場小路",
+          "lat": 33.248929,
+          "lng": 130.295737,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        },
+        {
+          "id": "gps-day6-1",
+          "name": "与賀八丁馬場小路",
+          "lat": 33.249036,
+          "lng": 130.29581,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        }
       ]
     },
     "day7": {
@@ -1712,6 +1928,80 @@
           139,
           730
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-1533562216",
+          "name": "飛梅",
+          "lat": 33.5213562,
+          "lng": 130.534896,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1533562216",
+          "status": "unplanned_visited",
+          "distanceMeters": 21,
+          "photoCount": 7
+        },
+        {
+          "id": "way-45775588",
+          "name": "宝物殿",
+          "lat": 33.5207848,
+          "lng": 130.5353535,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/45775588",
+          "status": "unplanned_visited",
+          "distanceMeters": 75,
+          "photoCount": 7
+        },
+        {
+          "id": "node-13733831689",
+          "name": "Kyushu National Museum",
+          "lat": 33.5202385,
+          "lng": 130.5363361,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13733831689",
+          "status": "unplanned_visited",
+          "distanceMeters": 154,
+          "photoCount": 9
+        },
+        {
+          "id": "node-6241383282",
+          "name": "展望ホール (SAGA360)",
+          "lat": 33.2493811,
+          "lng": 130.2990586,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6241383282",
+          "status": "unplanned_visited",
+          "distanceMeters": 216,
+          "photoCount": 1
+        },
+        {
+          "id": "way-507855599",
+          "name": "曲水の庭",
+          "lat": 33.520711,
+          "lng": 130.5359963,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/507855599",
+          "status": "unplanned_visited",
+          "distanceMeters": 130,
+          "photoCount": 9
+        },
+        {
+          "id": "way-1151689369",
+          "name": "曲水の広場",
+          "lat": 33.5178934,
+          "lng": 130.5324874,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1151689369",
+          "status": "unplanned_visited",
+          "distanceMeters": 228,
+          "photoCount": 1
+        }
       ]
     },
     "day8": {
@@ -1814,6 +2104,19 @@
           139,
           730
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day8-0",
+          "name": "社領三丁目",
+          "lat": 33.607528,
+          "lng": 130.43985,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 6
+        }
       ]
     }
   }

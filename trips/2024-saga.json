@@ -180,7 +180,7 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "可愛的家（台灣）"
       },
       "details": ""
     }
@@ -600,6 +600,44 @@
           80,
           709
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-6657980686",
+          "name": "大魚神社の海中鳥居",
+          "lat": 33.0311011,
+          "lng": 130.1774465,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6657980686",
+          "status": "unplanned_visited",
+          "distanceMeters": 10,
+          "photoCount": 10
+        },
+        {
+          "id": "way-567649644",
+          "name": "嬉野温泉公園",
+          "lat": 33.0962811,
+          "lng": 129.9865127,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/567649644",
+          "status": "unplanned_visited",
+          "distanceMeters": 115,
+          "photoCount": 2
+        },
+        {
+          "id": "way-978734589",
+          "name": "新湯広場",
+          "lat": 33.0967699,
+          "lng": 129.9869599,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/978734589",
+          "status": "unplanned_visited",
+          "distanceMeters": 137,
+          "photoCount": 2
+        }
       ]
     },
     "day2": {
@@ -1343,6 +1381,80 @@
           80,
           709
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-753618055",
+          "name": "祐徳博物館",
+          "lat": 33.0739371,
+          "lng": 130.1097882,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/753618055",
+          "status": "unplanned_visited",
+          "distanceMeters": 78,
+          "photoCount": 4
+        },
+        {
+          "id": "way-992250888",
+          "name": "御船が丘梅林",
+          "lat": 33.1863652,
+          "lng": 130.0213372,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/992250888",
+          "status": "unplanned_visited",
+          "distanceMeters": 178,
+          "photoCount": 15
+        },
+        {
+          "id": "way-454164461",
+          "name": "筈町河畔公園",
+          "lat": 33.1917274,
+          "lng": 130.0236527,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/454164461",
+          "status": "unplanned_visited",
+          "distanceMeters": 33,
+          "photoCount": 1
+        },
+        {
+          "id": "way-567649644",
+          "name": "嬉野温泉公園",
+          "lat": 33.0962811,
+          "lng": 129.9865127,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/567649644",
+          "status": "unplanned_visited",
+          "distanceMeters": 164,
+          "photoCount": 3
+        },
+        {
+          "id": "way-978734589",
+          "name": "新湯広場",
+          "lat": 33.0967699,
+          "lng": 129.9869599,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/978734589",
+          "status": "unplanned_visited",
+          "distanceMeters": 175,
+          "photoCount": 3
+        },
+        {
+          "id": "way-454431465",
+          "name": "旧武雄鍋島家庭園",
+          "lat": 33.1903079,
+          "lng": 130.021461,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/454431465",
+          "status": "unplanned_visited",
+          "distanceMeters": 219,
+          "photoCount": 9
+        }
       ]
     },
     "day3": {
@@ -1753,6 +1865,44 @@
           114,
           727
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-6419027089",
+          "name": "鏡山展望台",
+          "lat": 33.4307599,
+          "lng": 130.0179359,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6419027089",
+          "status": "unplanned_visited",
+          "distanceMeters": 8,
+          "photoCount": 4
+        },
+        {
+          "id": "way-500427895",
+          "name": "唐津城",
+          "lat": 33.4535131,
+          "lng": 129.9781934,
+          "category": "castle",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/500427895",
+          "status": "unplanned_visited",
+          "distanceMeters": 35,
+          "photoCount": 13
+        },
+        {
+          "id": "node-3500782076",
+          "name": "鏡山",
+          "lat": 33.4283303,
+          "lng": 130.0220311,
+          "category": "peak",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3500782076",
+          "status": "unplanned_visited",
+          "distanceMeters": 78,
+          "photoCount": 2
+        }
       ]
     },
     "day4": {
@@ -2060,6 +2210,30 @@
           123,
           737
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day4-0",
+          "name": "クレオパーク鍋島",
+          "lat": 33.263874,
+          "lng": 130.247976,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        },
+        {
+          "id": "gps-day4-1",
+          "name": "国造干拓(平和搦)",
+          "lat": 33.153512,
+          "lng": 130.303231,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 4
+        }
       ]
     }
   }

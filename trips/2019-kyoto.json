@@ -368,6 +368,68 @@
           532,
           590
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-314446153",
+          "name": "京都国際マンガミュージアム",
+          "lat": 35.0116781,
+          "lng": 135.7591763,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/314446153",
+          "status": "unplanned_visited",
+          "distanceMeters": 118,
+          "photoCount": 5
+        },
+        {
+          "id": "node-12749348037",
+          "name": "細辻伊兵衛美術館",
+          "lat": 35.0092756,
+          "lng": 135.7582358,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12749348037",
+          "status": "unplanned_visited",
+          "distanceMeters": 183,
+          "photoCount": 5
+        },
+        {
+          "id": "way-851443537",
+          "name": "京都伝統工芸館",
+          "lat": 35.0090535,
+          "lng": 135.7593299,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/851443537",
+          "status": "unplanned_visited",
+          "distanceMeters": 197,
+          "photoCount": 2
+        },
+        {
+          "id": "way-579761964",
+          "name": "Kyoto Shibori Museum",
+          "lat": 35.0101665,
+          "lng": 135.7537349,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/579761964",
+          "status": "unplanned_visited",
+          "distanceMeters": 243,
+          "photoCount": 3
+        },
+        {
+          "id": "node-4717686679",
+          "name": "ギャラリー 新双洞",
+          "lat": 35.0123289,
+          "lng": 135.7603076,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4717686679",
+          "status": "unplanned_visited",
+          "distanceMeters": 243,
+          "photoCount": 5
+        }
       ]
     },
     "day2": {
@@ -1001,6 +1063,152 @@
           532,
           590
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-13913771965",
+          "name": "Goshuin Stamp Place",
+          "lat": 34.9815125,
+          "lng": 135.7475928,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13913771965",
+          "status": "unplanned_visited",
+          "distanceMeters": 35,
+          "photoCount": 41
+        },
+        {
+          "id": "node-5936885886",
+          "name": "松下資料館",
+          "lat": 34.9837651,
+          "lng": 135.7546664,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5936885886",
+          "status": "unplanned_visited",
+          "distanceMeters": 49,
+          "photoCount": 2
+        },
+        {
+          "id": "node-6680911405",
+          "name": "羅城門",
+          "lat": 34.9865798,
+          "lng": 135.7604012,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6680911405",
+          "status": "unplanned_visited",
+          "distanceMeters": 90,
+          "photoCount": 10
+        },
+        {
+          "id": "way-314446153",
+          "name": "京都国際マンガミュージアム",
+          "lat": 35.0116781,
+          "lng": 135.7591763,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/314446153",
+          "status": "unplanned_visited",
+          "distanceMeters": 98,
+          "photoCount": 3
+        },
+        {
+          "id": "way-187657227",
+          "name": "東寺 宝物館",
+          "lat": 34.9821434,
+          "lng": 135.7473149,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/187657227",
+          "status": "unplanned_visited",
+          "distanceMeters": 107,
+          "photoCount": 18
+        },
+        {
+          "id": "node-1494857741",
+          "name": "京都タワー",
+          "lat": 34.9875524,
+          "lng": 135.7593295,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1494857741",
+          "status": "unplanned_visited",
+          "distanceMeters": 130,
+          "photoCount": 10
+        },
+        {
+          "id": "node-4717686679",
+          "name": "ギャラリー 新双洞",
+          "lat": 35.0123289,
+          "lng": 135.7603076,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4717686679",
+          "status": "unplanned_visited",
+          "distanceMeters": 172,
+          "photoCount": 3
+        },
+        {
+          "id": "way-851443537",
+          "name": "京都伝統工芸館",
+          "lat": 35.0090535,
+          "lng": 135.7593299,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/851443537",
+          "status": "unplanned_visited",
+          "distanceMeters": 205,
+          "photoCount": 4
+        },
+        {
+          "id": "node-9342783969",
+          "name": "京都万華鏡ミュージアム",
+          "lat": 35.0096386,
+          "lng": 135.7613759,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/9342783969",
+          "status": "unplanned_visited",
+          "distanceMeters": 210,
+          "photoCount": 4
+        },
+        {
+          "id": "node-12749348037",
+          "name": "細辻伊兵衛美術館",
+          "lat": 35.0092756,
+          "lng": 135.7582358,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12749348037",
+          "status": "unplanned_visited",
+          "distanceMeters": 220,
+          "photoCount": 4
+        },
+        {
+          "id": "way-159160779",
+          "name": "春日公園",
+          "lat": 34.9813803,
+          "lng": 135.7545714,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/159160779",
+          "status": "unplanned_visited",
+          "distanceMeters": 160,
+          "photoCount": 4
+        },
+        {
+          "id": "way-67584856",
+          "name": "寺ノ前児童公園",
+          "lat": 34.9846669,
+          "lng": 135.7527222,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/67584856",
+          "status": "unplanned_visited",
+          "distanceMeters": 248,
+          "photoCount": 2
+        }
       ]
     },
     "day3": {
@@ -1725,6 +1933,248 @@
           532,
           590
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-1422972572",
+          "name": "金比羅絵馬館・ガラスの部屋",
+          "lat": 35.000031,
+          "lng": 135.776161,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1422972572",
+          "status": "unplanned_visited",
+          "distanceMeters": 12,
+          "photoCount": 22
+        },
+        {
+          "id": "node-1422962103",
+          "name": "何必館・京都現代美術館",
+          "lat": 35.0040072,
+          "lng": 135.7754288,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1422962103",
+          "status": "unplanned_visited",
+          "distanceMeters": 30,
+          "photoCount": 2
+        },
+        {
+          "id": "node-12850366223",
+          "name": "KYOTO SAMURAI NINJA MUSEUM With Experience (Experience Floor of the Kyoto Samurai Ninja Museum)",
+          "lat": 35.0048744,
+          "lng": 135.7667701,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12850366223",
+          "status": "unplanned_visited",
+          "distanceMeters": 35,
+          "photoCount": 10
+        },
+        {
+          "id": "node-12779869002",
+          "name": "Kenninji Temple",
+          "lat": 34.9999925,
+          "lng": 135.7735501,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12779869002",
+          "status": "unplanned_visited",
+          "distanceMeters": 36,
+          "photoCount": 33
+        },
+        {
+          "id": "node-5755521721",
+          "name": "京都サムライ忍者体験ミュージアム",
+          "lat": 35.0048435,
+          "lng": 135.7667948,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5755521721",
+          "status": "unplanned_visited",
+          "distanceMeters": 39,
+          "photoCount": 10
+        },
+        {
+          "id": "way-772134672",
+          "name": "錦市場",
+          "lat": 35.0050295,
+          "lng": 135.7647092,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/772134672",
+          "status": "unplanned_visited",
+          "distanceMeters": 45,
+          "photoCount": 3
+        },
+        {
+          "id": "way-356602541",
+          "name": "井伊美術館",
+          "lat": 35.0000874,
+          "lng": 135.7755156,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/356602541",
+          "status": "unplanned_visited",
+          "distanceMeters": 47,
+          "photoCount": 22
+        },
+        {
+          "id": "node-4233370290",
+          "name": "先斗町",
+          "lat": 35.0042456,
+          "lng": 135.7712126,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4233370290",
+          "status": "unplanned_visited",
+          "distanceMeters": 64,
+          "photoCount": 8
+        },
+        {
+          "id": "node-13703786973",
+          "name": "両足院",
+          "lat": 35.0001763,
+          "lng": 135.7746218,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13703786973",
+          "status": "unplanned_visited",
+          "distanceMeters": 64,
+          "photoCount": 33
+        },
+        {
+          "id": "way-314446153",
+          "name": "京都国際マンガミュージアム",
+          "lat": 35.0116781,
+          "lng": 135.7591763,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/314446153",
+          "status": "unplanned_visited",
+          "distanceMeters": 95,
+          "photoCount": 1
+        },
+        {
+          "id": "way-481603641",
+          "name": "寺町通",
+          "lat": 35.0061636,
+          "lng": 135.7669418,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/481603641",
+          "status": "unplanned_visited",
+          "distanceMeters": 116,
+          "photoCount": 5
+        },
+        {
+          "id": "node-13375809740",
+          "name": "Ezoshi",
+          "lat": 35.0062458,
+          "lng": 135.7765424,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13375809740",
+          "status": "unplanned_visited",
+          "distanceMeters": 120,
+          "photoCount": 3
+        },
+        {
+          "id": "node-12994058601",
+          "name": "Kyoto Gion Matsuri Festival Gallery",
+          "lat": 35.0035873,
+          "lng": 135.7766339,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12994058601",
+          "status": "unplanned_visited",
+          "distanceMeters": 121,
+          "photoCount": 28
+        },
+        {
+          "id": "way-37278116",
+          "name": "新京極通",
+          "lat": 35.0062116,
+          "lng": 135.7673204,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/37278116",
+          "status": "unplanned_visited",
+          "distanceMeters": 121,
+          "photoCount": 5
+        },
+        {
+          "id": "way-275176319",
+          "name": "漢検 漢字博物館・図書館 漢字ミュージアム",
+          "lat": 35.0035249,
+          "lng": 135.7766055,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/275176319",
+          "status": "unplanned_visited",
+          "distanceMeters": 123,
+          "photoCount": 28
+        },
+        {
+          "id": "node-4798098775",
+          "name": "唐子の間",
+          "lat": 35.0012125,
+          "lng": 135.7738834,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4798098775",
+          "status": "unplanned_visited",
+          "distanceMeters": 128,
+          "photoCount": 33
+        },
+        {
+          "id": "node-13006284568",
+          "name": "南東から見た二条城東南隅櫓の眺め",
+          "lat": 35.011972,
+          "lng": 135.7512038,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13006284568",
+          "status": "unplanned_visited",
+          "distanceMeters": 132,
+          "photoCount": 5
+        },
+        {
+          "id": "node-4198049508",
+          "name": "gion 衹园",
+          "lat": 35.002524,
+          "lng": 135.7747856,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4198049508",
+          "status": "unplanned_visited",
+          "distanceMeters": 151,
+          "photoCount": 2
+        },
+        {
+          "id": "node-4242307490",
+          "name": "行者橋",
+          "lat": 35.007111,
+          "lng": 135.7786745,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4242307490",
+          "status": "unplanned_visited",
+          "distanceMeters": 168,
+          "photoCount": 3
+        },
+        {
+          "id": "way-579761964",
+          "name": "Kyoto Shibori Museum",
+          "lat": 35.0101665,
+          "lng": 135.7537349,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/579761964",
+          "status": "unplanned_visited",
+          "distanceMeters": 168,
+          "photoCount": 1
+        }
       ]
     },
     "day4": {
@@ -2308,6 +2758,74 @@
           532,
           590
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day4-0",
+          "name": "ゼスト御池 河原町広場",
+          "lat": 35.011789,
+          "lng": 135.755661,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        },
+        {
+          "id": "gps-day4-1",
+          "name": "ゼスト御池 河原町広場",
+          "lat": 35.013387,
+          "lng": 135.749825,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 43
+        },
+        {
+          "id": "gps-day4-2",
+          "name": "コトチカ広場",
+          "lat": 34.987044,
+          "lng": 135.758933,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 6
+        },
+        {
+          "id": "gps-day4-3",
+          "name": "コトチカ広場",
+          "lat": 34.987791,
+          "lng": 135.759339,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        },
+        {
+          "id": "gps-day4-4",
+          "name": "コトチカ広場",
+          "lat": 34.986189,
+          "lng": 135.759094,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        },
+        {
+          "id": "gps-day4-5",
+          "name": "ゼスト御池 河原町広場",
+          "lat": 35.011801,
+          "lng": 135.7556,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        }
       ]
     },
     "day5": {
@@ -2543,6 +3061,20 @@
           524,
           649
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-1422972907",
+          "name": "風俗博物館",
+          "lat": 34.993226,
+          "lng": 135.753275,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1422972907",
+          "status": "unplanned_visited",
+          "distanceMeters": 40,
+          "photoCount": 1
+        }
       ]
     }
   }

@@ -371,6 +371,56 @@
           823,
           645
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-4496960001",
+          "name": "アメヤ横丁",
+          "lat": 35.7100592,
+          "lng": 139.7745428,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4496960001",
+          "status": "unplanned_visited",
+          "distanceMeters": 175,
+          "photoCount": 3
+        },
+        {
+          "id": "node-7175752589",
+          "name": "Ameyoko Market Street",
+          "lat": 35.7114931,
+          "lng": 139.7747862,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7175752589",
+          "status": "unplanned_visited",
+          "distanceMeters": 196,
+          "photoCount": 3
+        },
+        {
+          "id": "node-4670288696",
+          "name": "阿美橫丁",
+          "lat": 35.7097123,
+          "lng": 139.7743577,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4670288696",
+          "status": "unplanned_visited",
+          "distanceMeters": 201,
+          "photoCount": 3
+        },
+        {
+          "id": "way-175058778",
+          "name": "西町公園",
+          "lat": 35.7093332,
+          "lng": 139.7796967,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/175058778",
+          "status": "unplanned_visited",
+          "distanceMeters": 228,
+          "photoCount": 2
+        }
       ]
     },
     "day2": {
@@ -989,6 +1039,224 @@
           823,
           645
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-6859319785",
+          "name": "展望デッキ",
+          "lat": 35.5013511,
+          "lng": 138.8015617,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6859319785",
+          "status": "unplanned_visited",
+          "distanceMeters": 7,
+          "photoCount": 14
+        },
+        {
+          "id": "way-1454561686",
+          "name": "新倉山浅間公園 展望デッキ",
+          "lat": 35.501439,
+          "lng": 138.8015717,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1454561686",
+          "status": "unplanned_visited",
+          "distanceMeters": 14,
+          "photoCount": 14
+        },
+        {
+          "id": "node-6350139786",
+          "name": "Kitchen Street",
+          "lat": 35.6827329,
+          "lng": 139.7687319,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6350139786",
+          "status": "unplanned_visited",
+          "distanceMeters": 37,
+          "photoCount": 2
+        },
+        {
+          "id": "way-1358679892",
+          "name": "Tokyo Character Street",
+          "lat": 35.6823717,
+          "lng": 139.7687508,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1358679892",
+          "status": "unplanned_visited",
+          "distanceMeters": 39,
+          "photoCount": 1
+        },
+        {
+          "id": "node-4646514992",
+          "name": "東京ラーメンストリート",
+          "lat": 35.6803754,
+          "lng": 139.7678774,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4646514992",
+          "status": "unplanned_visited",
+          "distanceMeters": 65,
+          "photoCount": 1
+        },
+        {
+          "id": "node-6499036686",
+          "name": "富士パノラマ台",
+          "lat": 35.5019419,
+          "lng": 138.8018206,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6499036686",
+          "status": "unplanned_visited",
+          "distanceMeters": 72,
+          "photoCount": 14
+        },
+        {
+          "id": "node-7175752589",
+          "name": "Ameyoko Market Street",
+          "lat": 35.7114931,
+          "lng": 139.7747862,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7175752589",
+          "status": "unplanned_visited",
+          "distanceMeters": 104,
+          "photoCount": 1
+        },
+        {
+          "id": "node-12995244485",
+          "name": "TOKYO TORCH Terrace",
+          "lat": 35.6843176,
+          "lng": 139.7703261,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12995244485",
+          "status": "unplanned_visited",
+          "distanceMeters": 122,
+          "photoCount": 2
+        },
+        {
+          "id": "node-13360999501",
+          "name": "View of trains at Ueno Station, and Ameyayokocho",
+          "lat": 35.7121554,
+          "lng": 139.7747091,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13360999501",
+          "status": "unplanned_visited",
+          "distanceMeters": 123,
+          "photoCount": 1
+        },
+        {
+          "id": "node-441655802",
+          "name": "上野の森美術館",
+          "lat": 35.7128522,
+          "lng": 139.7747663,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/441655802",
+          "status": "unplanned_visited",
+          "distanceMeters": 145,
+          "photoCount": 2
+        },
+        {
+          "id": "node-3164340661",
+          "name": "東京ステーションギャラリー",
+          "lat": 35.6824302,
+          "lng": 139.7664939,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3164340661",
+          "status": "unplanned_visited",
+          "distanceMeters": 208,
+          "photoCount": 1
+        },
+        {
+          "id": "node-4496960001",
+          "name": "アメヤ横丁",
+          "lat": 35.7100592,
+          "lng": 139.7745428,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4496960001",
+          "status": "unplanned_visited",
+          "distanceMeters": 217,
+          "photoCount": 1
+        },
+        {
+          "id": "node-12606700702",
+          "name": "Cat face facade",
+          "lat": 35.6828884,
+          "lng": 139.765645,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12606700702",
+          "status": "unplanned_visited",
+          "distanceMeters": 238,
+          "photoCount": 1
+        },
+        {
+          "id": "node-10538350869",
+          "name": "トライアンフギャラリー",
+          "lat": 35.6814698,
+          "lng": 139.771564,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/10538350869",
+          "status": "unplanned_visited",
+          "distanceMeters": 243,
+          "photoCount": 1
+        },
+        {
+          "id": "way-765997878",
+          "name": "新倉山浅間公園",
+          "lat": 35.5005078,
+          "lng": 138.801574,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/765997878",
+          "status": "unplanned_visited",
+          "distanceMeters": 40,
+          "photoCount": 3
+        },
+        {
+          "id": "way-380172455",
+          "name": "常盤橋公園",
+          "lat": 35.6859701,
+          "lng": 139.7700433,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/380172455",
+          "status": "unplanned_visited",
+          "distanceMeters": 110,
+          "photoCount": 2
+        },
+        {
+          "id": "way-1352477642",
+          "name": "Tokyo Torch Park",
+          "lat": 35.6843403,
+          "lng": 139.7701695,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1352477642",
+          "status": "unplanned_visited",
+          "distanceMeters": 127,
+          "photoCount": 2
+        },
+        {
+          "id": "node-5906019304",
+          "name": "摺鉢山",
+          "lat": 35.7138597,
+          "lng": 139.7740034,
+          "category": "peak",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5906019304",
+          "status": "unplanned_visited",
+          "distanceMeters": 221,
+          "photoCount": 2
+        }
       ]
     },
     "day3": {
@@ -1163,6 +1431,19 @@
           824,
           644
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day3-0",
+          "name": "上野六丁目",
+          "lat": 35.708353,
+          "lng": 139.7751,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        }
       ]
     },
     "day4": {
@@ -1432,6 +1713,52 @@
           824,
           645
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day4-0",
+          "name": "上野公園",
+          "lat": 35.712248,
+          "lng": 139.774647,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        },
+        {
+          "id": "gps-day4-1",
+          "name": "台東四丁目",
+          "lat": 35.705782,
+          "lng": 139.781117,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 7
+        },
+        {
+          "id": "gps-day4-2",
+          "name": "浅草一丁目",
+          "lat": 35.710974,
+          "lng": 139.7966,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 6
+        },
+        {
+          "id": "gps-day4-3",
+          "name": "東上野三丁目",
+          "lat": 35.712053,
+          "lng": 139.777735,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        }
       ]
     },
     "day5": {
@@ -1988,6 +2315,248 @@
           823,
           645
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-3937261506",
+          "name": "スラムダンク登場する場所",
+          "lat": 35.3066013,
+          "lng": 139.5020923,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3937261506",
+          "status": "unplanned_visited",
+          "distanceMeters": 23,
+          "photoCount": 67
+        },
+        {
+          "id": "node-12176453331",
+          "name": "鶴岡八幡宮",
+          "lat": 35.3260317,
+          "lng": 139.5563001,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12176453331",
+          "status": "unplanned_visited",
+          "distanceMeters": 40,
+          "photoCount": 9
+        },
+        {
+          "id": "node-1420834625",
+          "name": "鶴岡八幡宮宝物殿",
+          "lat": 35.324866,
+          "lng": 139.556311,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1420834625",
+          "status": "unplanned_visited",
+          "distanceMeters": 57,
+          "photoCount": 6
+        },
+        {
+          "id": "node-1420815652",
+          "name": "吉兆庵美術館",
+          "lat": 35.3204156,
+          "lng": 139.552062,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1420815652",
+          "status": "unplanned_visited",
+          "distanceMeters": 57,
+          "photoCount": 6
+        },
+        {
+          "id": "node-6747360485",
+          "name": "かまくら画廊",
+          "lat": 35.3206858,
+          "lng": 139.5519762,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6747360485",
+          "status": "unplanned_visited",
+          "distanceMeters": 77,
+          "photoCount": 6
+        },
+        {
+          "id": "way-460141218",
+          "name": "小町通り",
+          "lat": 35.3207885,
+          "lng": 139.5519476,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/460141218",
+          "status": "unplanned_visited",
+          "distanceMeters": 87,
+          "photoCount": 6
+        },
+        {
+          "id": "way-34742566",
+          "name": "市立鎌倉国宝館",
+          "lat": 35.3246687,
+          "lng": 139.5570209,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/34742566",
+          "status": "unplanned_visited",
+          "distanceMeters": 118,
+          "photoCount": 6
+        },
+        {
+          "id": "node-1791638946",
+          "name": "鶴岡文庫",
+          "lat": 35.3272126,
+          "lng": 139.5564475,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1791638946",
+          "status": "unplanned_visited",
+          "distanceMeters": 172,
+          "photoCount": 9
+        },
+        {
+          "id": "node-7021223804",
+          "name": "うんこミュージアム YOKOHAMA",
+          "lat": 35.4638344,
+          "lng": 139.6220899,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7021223804",
+          "status": "unplanned_visited",
+          "distanceMeters": 186,
+          "photoCount": 3
+        },
+        {
+          "id": "way-46158374",
+          "name": "神奈川県立近代美術館鎌倉別館",
+          "lat": 35.3275664,
+          "lng": 139.5557557,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/46158374",
+          "status": "unplanned_visited",
+          "distanceMeters": 212,
+          "photoCount": 9
+        },
+        {
+          "id": "way-702538918",
+          "name": "BAM",
+          "lat": 35.3226621,
+          "lng": 139.5545516,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/702538918",
+          "status": "unplanned_visited",
+          "distanceMeters": 215,
+          "photoCount": 3
+        },
+        {
+          "id": "way-390608380",
+          "name": "腰越ラッコ公園",
+          "lat": 35.3067562,
+          "lng": 139.5018953,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/390608380",
+          "status": "unplanned_visited",
+          "distanceMeters": 3,
+          "photoCount": 67
+        },
+        {
+          "id": "way-36836370",
+          "name": "神宛ぼたん園",
+          "lat": 35.3237344,
+          "lng": 139.556185,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/36836370",
+          "status": "unplanned_visited",
+          "distanceMeters": 89,
+          "photoCount": 3
+        },
+        {
+          "id": "way-340589456",
+          "name": "ジョイナス彫刻の森公園",
+          "lat": 35.4653633,
+          "lng": 139.6209626,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/340589456",
+          "status": "unplanned_visited",
+          "distanceMeters": 116,
+          "photoCount": 3
+        },
+        {
+          "id": "way-53752092",
+          "name": "七里ヶ浜",
+          "lat": 35.3058215,
+          "lng": 139.5027261,
+          "category": "swimming_area",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/53752092",
+          "status": "unplanned_visited",
+          "distanceMeters": 127,
+          "photoCount": 67
+        },
+        {
+          "id": "way-222836206",
+          "name": "長谷なでしこ公園",
+          "lat": 35.3153678,
+          "lng": 139.536513,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/222836206",
+          "status": "unplanned_visited",
+          "distanceMeters": 154,
+          "photoCount": 8
+        },
+        {
+          "id": "node-13606456988",
+          "name": "大臣山",
+          "lat": 35.326726,
+          "lng": 139.5574301,
+          "category": "peak",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13606456988",
+          "status": "unplanned_visited",
+          "distanceMeters": 163,
+          "photoCount": 9
+        },
+        {
+          "id": "way-442707588",
+          "name": "腰越ふぐ公園",
+          "lat": 35.3078895,
+          "lng": 139.4992261,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/442707588",
+          "status": "unplanned_visited",
+          "distanceMeters": 192,
+          "photoCount": 23
+        },
+        {
+          "id": "way-442712498",
+          "name": "腰越かつお公園",
+          "lat": 35.3087885,
+          "lng": 139.5009852,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/442712498",
+          "status": "unplanned_visited",
+          "distanceMeters": 227,
+          "photoCount": 23
+        },
+        {
+          "id": "way-222835734",
+          "name": "こめまち児童遊園",
+          "lat": 35.3160102,
+          "lng": 139.5517497,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/222835734",
+          "status": "unplanned_visited",
+          "distanceMeters": 249,
+          "photoCount": 2
+        }
       ]
     },
     "day6": {
@@ -2457,6 +3026,128 @@
           876,
           547
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-7175752589",
+          "name": "Ameyoko Market Street",
+          "lat": 35.7114931,
+          "lng": 139.7747862,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7175752589",
+          "status": "unplanned_visited",
+          "distanceMeters": 18,
+          "photoCount": 5
+        },
+        {
+          "id": "node-13360999501",
+          "name": "View of trains at Ueno Station, and Ameyayokocho",
+          "lat": 35.7121554,
+          "lng": 139.7747091,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13360999501",
+          "status": "unplanned_visited",
+          "distanceMeters": 65,
+          "photoCount": 5
+        },
+        {
+          "id": "way-226944234",
+          "name": "成田羊羹資料館",
+          "lat": 35.7818551,
+          "lng": 140.3154524,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/226944234",
+          "status": "unplanned_visited",
+          "distanceMeters": 66,
+          "photoCount": 18
+        },
+        {
+          "id": "node-5965633086",
+          "name": "D51 609",
+          "lat": 35.7786152,
+          "lng": 140.3185723,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5965633086",
+          "status": "unplanned_visited",
+          "distanceMeters": 69,
+          "photoCount": 3
+        },
+        {
+          "id": "node-4987573179",
+          "name": "びわ湖長浜観音ハウス",
+          "lat": 35.7112349,
+          "lng": 139.7730445,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4987573179",
+          "status": "unplanned_visited",
+          "distanceMeters": 104,
+          "photoCount": 6
+        },
+        {
+          "id": "node-441655802",
+          "name": "上野の森美術館",
+          "lat": 35.7128522,
+          "lng": 139.7747663,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/441655802",
+          "status": "unplanned_visited",
+          "distanceMeters": 133,
+          "photoCount": 5
+        },
+        {
+          "id": "node-4496960001",
+          "name": "アメヤ横丁",
+          "lat": 35.7100592,
+          "lng": 139.7745428,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4496960001",
+          "status": "unplanned_visited",
+          "distanceMeters": 158,
+          "photoCount": 6
+        },
+        {
+          "id": "way-145344198",
+          "name": "したまちミュージアム",
+          "lat": 35.7102385,
+          "lng": 139.7727469,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/145344198",
+          "status": "unplanned_visited",
+          "distanceMeters": 186,
+          "photoCount": 6
+        },
+        {
+          "id": "node-4670288696",
+          "name": "阿美橫丁",
+          "lat": 35.7097123,
+          "lng": 139.7743577,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4670288696",
+          "status": "unplanned_visited",
+          "distanceMeters": 194,
+          "photoCount": 6
+        },
+        {
+          "id": "way-763944770",
+          "name": "栗山近隣公園",
+          "lat": 35.7785374,
+          "lng": 140.3190504,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/763944770",
+          "status": "unplanned_visited",
+          "distanceMeters": 98,
+          "photoCount": 3
+        }
       ]
     },
     "day7": {
@@ -2519,6 +3210,20 @@
           876,
           547
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-1093276379",
+          "name": "Observation Deck (North)",
+          "lat": 35.7750635,
+          "lng": 140.3878796,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1093276379",
+          "status": "unplanned_visited",
+          "distanceMeters": 35,
+          "photoCount": 3
+        }
       ]
     }
   }

@@ -240,6 +240,92 @@
           407,
           230
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-5628197721",
+          "name": "観覧車",
+          "lat": 43.056191,
+          "lng": 141.3510469,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5628197721",
+          "status": "unplanned_visited",
+          "distanceMeters": 71,
+          "photoCount": 9
+        },
+        {
+          "id": "node-9504115746",
+          "name": "小説家・武林無想庵 生誕地",
+          "lat": 43.0603281,
+          "lng": 141.3545114,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/9504115746",
+          "status": "unplanned_visited",
+          "distanceMeters": 125,
+          "photoCount": 3
+        },
+        {
+          "id": "node-13658759804",
+          "name": "ニッカウヰスキー",
+          "lat": 43.0554048,
+          "lng": 141.3536128,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13658759804",
+          "status": "unplanned_visited",
+          "distanceMeters": 141,
+          "photoCount": 4
+        },
+        {
+          "id": "node-12591780477",
+          "name": "さっぽろ名所 新ラーメン横丁",
+          "lat": 43.0554795,
+          "lng": 141.3541995,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12591780477",
+          "status": "unplanned_visited",
+          "distanceMeters": 188,
+          "photoCount": 4
+        },
+        {
+          "id": "way-64747104",
+          "name": "札幌市時計台",
+          "lat": 43.0625566,
+          "lng": 141.3536455,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/64747104",
+          "status": "unplanned_visited",
+          "distanceMeters": 217,
+          "photoCount": 3
+        },
+        {
+          "id": "node-5735296434",
+          "name": "ルピナス",
+          "lat": 43.053662,
+          "lng": 141.351728,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5735296434",
+          "status": "unplanned_visited",
+          "distanceMeters": 218,
+          "photoCount": 4
+        },
+        {
+          "id": "node-5603039967",
+          "name": "重役室",
+          "lat": 43.053581,
+          "lng": 141.351233,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5603039967",
+          "status": "unplanned_visited",
+          "distanceMeters": 233,
+          "photoCount": 4
+        }
       ]
     },
     "day2": {
@@ -690,6 +776,68 @@
           407,
           230
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-5735053731",
+          "name": "場外市場",
+          "lat": 43.0709582,
+          "lng": 141.3201097,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5735053731",
+          "status": "unplanned_visited",
+          "distanceMeters": 56,
+          "photoCount": 20
+        },
+        {
+          "id": "node-5628197721",
+          "name": "観覧車",
+          "lat": 43.056191,
+          "lng": 141.3510469,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5628197721",
+          "status": "unplanned_visited",
+          "distanceMeters": 180,
+          "photoCount": 2
+        },
+        {
+          "id": "node-13658759804",
+          "name": "ニッカウヰスキー",
+          "lat": 43.0554048,
+          "lng": 141.3536128,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13658759804",
+          "status": "unplanned_visited",
+          "distanceMeters": 197,
+          "photoCount": 2
+        },
+        {
+          "id": "node-12591780477",
+          "name": "さっぽろ名所 新ラーメン横丁",
+          "lat": 43.0554795,
+          "lng": 141.3541995,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12591780477",
+          "status": "unplanned_visited",
+          "distanceMeters": 209,
+          "photoCount": 2
+        },
+        {
+          "id": "way-167320140",
+          "name": "どんぐり公園",
+          "lat": 43.0689052,
+          "lng": 141.3207051,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/167320140",
+          "status": "unplanned_visited",
+          "distanceMeters": 188,
+          "photoCount": 20
+        }
       ]
     },
     "day3": {
@@ -1129,6 +1277,224 @@
           407,
           230
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-1256671137",
+          "name": "小樽オルゴール堂",
+          "lat": 43.1905785,
+          "lng": 141.007792,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1256671137",
+          "status": "unplanned_visited",
+          "distanceMeters": 10,
+          "photoCount": 6
+        },
+        {
+          "id": "node-5668665422",
+          "name": "出抜小路",
+          "lat": 43.1973887,
+          "lng": 141.0028962,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5668665422",
+          "status": "unplanned_visited",
+          "distanceMeters": 14,
+          "photoCount": 1
+        },
+        {
+          "id": "node-6038918589",
+          "name": "メルヘン交差点",
+          "lat": 43.1906873,
+          "lng": 141.0075101,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6038918589",
+          "status": "unplanned_visited",
+          "distanceMeters": 16,
+          "photoCount": 6
+        },
+        {
+          "id": "node-5843118491",
+          "name": "田中酒造 亀甲蔵",
+          "lat": 43.1861668,
+          "lng": 141.0134412,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5843118491",
+          "status": "unplanned_visited",
+          "distanceMeters": 16,
+          "photoCount": 8
+        },
+        {
+          "id": "node-5843118387",
+          "name": "小樽 浪漫館",
+          "lat": 43.1963783,
+          "lng": 141.0028406,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5843118387",
+          "status": "unplanned_visited",
+          "distanceMeters": 22,
+          "photoCount": 3
+        },
+        {
+          "id": "node-4607329891",
+          "name": "小樽運河クルーズ",
+          "lat": 43.1999384,
+          "lng": 141.0017623,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4607329891",
+          "status": "unplanned_visited",
+          "distanceMeters": 31,
+          "photoCount": 2
+        },
+        {
+          "id": "way-526347032",
+          "name": "北一 ヴェネツィア 美術館",
+          "lat": 43.1935904,
+          "lng": 141.0069048,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/526347032",
+          "status": "unplanned_visited",
+          "distanceMeters": 32,
+          "photoCount": 6
+        },
+        {
+          "id": "node-4279688789",
+          "name": "小樽運河",
+          "lat": 43.197773,
+          "lng": 141.0030447,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4279688789",
+          "status": "unplanned_visited",
+          "distanceMeters": 37,
+          "photoCount": 7
+        },
+        {
+          "id": "node-5628197721",
+          "name": "観覧車",
+          "lat": 43.056191,
+          "lng": 141.3510469,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5628197721",
+          "status": "unplanned_visited",
+          "distanceMeters": 60,
+          "photoCount": 5
+        },
+        {
+          "id": "node-7874135085",
+          "name": "ステンドグラス美術館",
+          "lat": 43.1980049,
+          "lng": 141.0019889,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7874135085",
+          "status": "unplanned_visited",
+          "distanceMeters": 71,
+          "photoCount": 7
+        },
+        {
+          "id": "way-525960324",
+          "name": "小樽オルゴール堂 2号館 アンティーク ミュージアム",
+          "lat": 43.1911232,
+          "lng": 141.0068332,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/525960324",
+          "status": "unplanned_visited",
+          "distanceMeters": 86,
+          "photoCount": 10
+        },
+        {
+          "id": "node-3086081067",
+          "name": "似鳥美術館",
+          "lat": 43.1972362,
+          "lng": 141.0018641,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3086081067",
+          "status": "unplanned_visited",
+          "distanceMeters": 94,
+          "photoCount": 1
+        },
+        {
+          "id": "node-5668706017",
+          "name": "旧商工会議所",
+          "lat": 43.198258,
+          "lng": 141.0004164,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5668706017",
+          "status": "unplanned_visited",
+          "distanceMeters": 141,
+          "photoCount": 1
+        },
+        {
+          "id": "node-462763241",
+          "name": "金融資料館",
+          "lat": 43.1962697,
+          "lng": 141.0003253,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/462763241",
+          "status": "unplanned_visited",
+          "distanceMeters": 188,
+          "photoCount": 3
+        },
+        {
+          "id": "node-462763881",
+          "name": "小樽市立 小樽美術館",
+          "lat": 43.1966451,
+          "lng": 141.0002996,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/462763881",
+          "status": "unplanned_visited",
+          "distanceMeters": 195,
+          "photoCount": 3
+        },
+        {
+          "id": "node-5841733786",
+          "name": "市立小樽文学館",
+          "lat": 43.1968801,
+          "lng": 141.000351,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5841733786",
+          "status": "unplanned_visited",
+          "distanceMeters": 199,
+          "photoCount": 3
+        },
+        {
+          "id": "node-12591780477",
+          "name": "さっぽろ名所 新ラーメン横丁",
+          "lat": 43.0554795,
+          "lng": 141.3541995,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12591780477",
+          "status": "unplanned_visited",
+          "distanceMeters": 219,
+          "photoCount": 2
+        },
+        {
+          "id": "node-13658759804",
+          "name": "ニッカウヰスキー",
+          "lat": 43.0554048,
+          "lng": 141.3536128,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13658759804",
+          "status": "unplanned_visited",
+          "distanceMeters": 223,
+          "photoCount": 3
+        }
       ]
     },
     "day4": {
@@ -1169,6 +1535,44 @@
           408,
           230
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-5628197721",
+          "name": "観覧車",
+          "lat": 43.056191,
+          "lng": 141.3510469,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5628197721",
+          "status": "unplanned_visited",
+          "distanceMeters": 174,
+          "photoCount": 1
+        },
+        {
+          "id": "node-13658759804",
+          "name": "ニッカウヰスキー",
+          "lat": 43.0554048,
+          "lng": 141.3536128,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13658759804",
+          "status": "unplanned_visited",
+          "distanceMeters": 193,
+          "photoCount": 1
+        },
+        {
+          "id": "node-12591780477",
+          "name": "さっぽろ名所 新ラーメン横丁",
+          "lat": 43.0554795,
+          "lng": 141.3541995,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12591780477",
+          "status": "unplanned_visited",
+          "distanceMeters": 206,
+          "photoCount": 1
+        }
       ]
     }
   }

@@ -27,8 +27,8 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：長榮航空 BR | 桃園 06:30 ➔ 關西 10:10",
-    "inbound": "回程：長榮航空 BR131 | 關西 13:10 ➔ 桃園 15:05"
+    "outbound": "去程：長榮航空 BR178 | 桃園 06:30 ➔ 關西 10:10 | PNR 5975RH",
+    "inbound": "回程：長榮航空 BR131 | 關西 13:10 ➔ 桃園 15:05 | PNR 5975RH"
   },
   "days": {
     "day1": {
@@ -254,7 +254,7 @@
       "food": [],
       "parking": [],
       "hotel": {
-        "name": "未記錄"
+        "name": "可愛的家（台灣）"
       },
       "details": ""
     }
@@ -579,6 +579,41 @@
           532,
           594
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day1-0",
+          "name": "コトチカ広場",
+          "lat": 34.990662,
+          "lng": 135.759349,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 7
+        },
+        {
+          "id": "gps-day1-1",
+          "name": "コトチカ広場",
+          "lat": 34.991233,
+          "lng": 135.752042,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 12
+        },
+        {
+          "id": "gps-day1-2",
+          "name": "東九条上殿田町",
+          "lat": 34.983452,
+          "lng": 135.758108,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 10
+        }
       ]
     },
     "day2": {
@@ -896,6 +931,92 @@
           532,
           593
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-6199656003",
+          "name": "金閣",
+          "lat": 35.0395179,
+          "lng": 135.7284537,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6199656003",
+          "status": "unplanned_visited",
+          "distanceMeters": 22,
+          "photoCount": 7
+        },
+        {
+          "id": "node-5936885886",
+          "name": "松下資料館",
+          "lat": 34.9837651,
+          "lng": 135.7546664,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5936885886",
+          "status": "unplanned_visited",
+          "distanceMeters": 89,
+          "photoCount": 4
+        },
+        {
+          "id": "way-350366597",
+          "name": "葵の庭 (カリンの庭)",
+          "lat": 35.0390665,
+          "lng": 135.7724085,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/350366597",
+          "status": "unplanned_visited",
+          "distanceMeters": 24,
+          "photoCount": 2
+        },
+        {
+          "id": "way-159160779",
+          "name": "春日公園",
+          "lat": 34.9813803,
+          "lng": 135.7545714,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/159160779",
+          "status": "unplanned_visited",
+          "distanceMeters": 114,
+          "photoCount": 1
+        },
+        {
+          "id": "way-67584856",
+          "name": "寺ノ前児童公園",
+          "lat": 34.9846669,
+          "lng": 135.7527222,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/67584856",
+          "status": "unplanned_visited",
+          "distanceMeters": 133,
+          "photoCount": 8
+        },
+        {
+          "id": "way-451980286",
+          "name": "東塩小路公園",
+          "lat": 34.9859494,
+          "lng": 135.7552258,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/451980286",
+          "status": "unplanned_visited",
+          "distanceMeters": 139,
+          "photoCount": 1
+        },
+        {
+          "id": "way-66979422",
+          "name": "戒光寺公園 (Kaikouzikouen)",
+          "lat": 34.984792,
+          "lng": 135.7518447,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/66979422",
+          "status": "unplanned_visited",
+          "distanceMeters": 202,
+          "photoCount": 8
+        }
       ]
     },
     "day3": {
@@ -1253,6 +1374,52 @@
           532,
           594
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day3-0",
+          "name": "コトチカ広場",
+          "lat": 34.984796,
+          "lng": 135.757894,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        },
+        {
+          "id": "gps-day3-1",
+          "name": "東寺東門前町",
+          "lat": 34.979803,
+          "lng": 135.747851,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 6
+        },
+        {
+          "id": "gps-day3-2",
+          "name": "東寺東門前町",
+          "lat": 34.979742,
+          "lng": 135.747567,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        },
+        {
+          "id": "gps-day3-3",
+          "name": "岡崎円勝寺町",
+          "lat": 35.01506,
+          "lng": 135.782921,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 17
+        }
       ]
     },
     "day4": {
@@ -1679,6 +1846,224 @@
           536,
           616
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-3689032300",
+          "name": "神石「出現石」or「額塚」",
+          "lat": 34.6809256,
+          "lng": 135.848404,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3689032300",
+          "status": "unplanned_visited",
+          "distanceMeters": 11,
+          "photoCount": 3
+        },
+        {
+          "id": "node-13033638001",
+          "name": "A lot of lined stoned lanterns",
+          "lat": 34.6806333,
+          "lng": 135.8486884,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13033638001",
+          "status": "unplanned_visited",
+          "distanceMeters": 31,
+          "photoCount": 3
+        },
+        {
+          "id": "node-6500093440",
+          "name": "Buddha's Nostril",
+          "lat": 34.6888681,
+          "lng": 135.8399366,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6500093440",
+          "status": "unplanned_visited",
+          "distanceMeters": 41,
+          "photoCount": 4
+        },
+        {
+          "id": "node-1494857741",
+          "name": "京都タワー",
+          "lat": 34.9875524,
+          "lng": 135.7593295,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1494857741",
+          "status": "unplanned_visited",
+          "distanceMeters": 55,
+          "photoCount": 2
+        },
+        {
+          "id": "way-97803806",
+          "name": "仏教美術資料研究センター",
+          "lat": 34.6825458,
+          "lng": 135.8391507,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/97803806",
+          "status": "unplanned_visited",
+          "distanceMeters": 57,
+          "photoCount": 4
+        },
+        {
+          "id": "way-360731133",
+          "name": "春日大社国宝殿",
+          "lat": 34.6815214,
+          "lng": 135.8464926,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/360731133",
+          "status": "unplanned_visited",
+          "distanceMeters": 69,
+          "photoCount": 1
+        },
+        {
+          "id": "way-97803803",
+          "name": "文化財保存修理所",
+          "lat": 34.6827723,
+          "lng": 135.8389643,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/97803803",
+          "status": "unplanned_visited",
+          "distanceMeters": 85,
+          "photoCount": 4
+        },
+        {
+          "id": "node-6680911405",
+          "name": "羅城門",
+          "lat": 34.9865798,
+          "lng": 135.7604012,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6680911405",
+          "status": "unplanned_visited",
+          "distanceMeters": 121,
+          "photoCount": 4
+        },
+        {
+          "id": "node-8447477865",
+          "name": "東大寺ミュージアム",
+          "lat": 34.6864697,
+          "lng": 135.83905,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/8447477865",
+          "status": "unplanned_visited",
+          "distanceMeters": 132,
+          "photoCount": 7
+        },
+        {
+          "id": "way-238822707",
+          "name": "鹿苑",
+          "lat": 34.6806066,
+          "lng": 135.8430079,
+          "category": "zoo",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/238822707",
+          "status": "unplanned_visited",
+          "distanceMeters": 136,
+          "photoCount": 1
+        },
+        {
+          "id": "way-921353198",
+          "name": "奈良国立博物館",
+          "lat": 34.6830909,
+          "lng": 135.838307,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/921353198",
+          "status": "unplanned_visited",
+          "distanceMeters": 155,
+          "photoCount": 4
+        },
+        {
+          "id": "node-3899496400",
+          "name": "後園",
+          "lat": 34.6853754,
+          "lng": 135.8381866,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3899496400",
+          "status": "unplanned_visited",
+          "distanceMeters": 162,
+          "photoCount": 7
+        },
+        {
+          "id": "node-13881273098",
+          "name": "Field with a lot of deer",
+          "lat": 34.6813206,
+          "lng": 135.8411975,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13881273098",
+          "status": "unplanned_visited",
+          "distanceMeters": 175,
+          "photoCount": 4
+        },
+        {
+          "id": "node-12417084130",
+          "name": "銀杏",
+          "lat": 34.6894142,
+          "lng": 135.8422061,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12417084130",
+          "status": "unplanned_visited",
+          "distanceMeters": 186,
+          "photoCount": 4
+        },
+        {
+          "id": "node-12189675719",
+          "name": "シナリー金沢翔子美術館",
+          "lat": 34.9890921,
+          "lng": 135.7594822,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12189675719",
+          "status": "unplanned_visited",
+          "distanceMeters": 219,
+          "photoCount": 2
+        },
+        {
+          "id": "way-1392272279",
+          "name": "林檎の庭",
+          "lat": 34.6813797,
+          "lng": 135.8484495,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1392272279",
+          "status": "unplanned_visited",
+          "distanceMeters": 29,
+          "photoCount": 12
+        },
+        {
+          "id": "way-1392256950",
+          "name": "萬葉植物園",
+          "lat": 34.6820598,
+          "lng": 135.844498,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1392256950",
+          "status": "unplanned_visited",
+          "distanceMeters": 83,
+          "photoCount": 1
+        },
+        {
+          "id": "way-97082272",
+          "name": "依水園",
+          "lat": 34.6854763,
+          "lng": 135.8377354,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/97082272",
+          "status": "unplanned_visited",
+          "distanceMeters": 202,
+          "photoCount": 7
+        }
       ]
     },
     "day5": {
@@ -1789,6 +2174,20 @@
           524,
           649
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-6680911405",
+          "name": "羅城門",
+          "lat": 34.9865798,
+          "lng": 135.7604012,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6680911405",
+          "status": "unplanned_visited",
+          "distanceMeters": 177,
+          "photoCount": 1
+        }
       ]
     }
   }

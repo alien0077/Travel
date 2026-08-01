@@ -27,7 +27,7 @@
   "jpyToTwdRate": 0.22,
   "actionText": "行程手冊",
   "flights": {
-    "outbound": "去程：泰國亞洲航空 FD | 高雄 ➔ 成田",
+    "outbound": "去程：泰國亞洲航空 FD234 | 高雄 08:05 ➔ 成田 12:55",
     "inbound": "回程：長榮航空 BR107 | 成田 12:45 ➔ 高雄 15:40"
   },
   "vjw": {
@@ -244,6 +244,92 @@
           823,
           645
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-5147139423",
+          "name": "Clone Factory (Build a replica of yourself)",
+          "lat": 35.6974253,
+          "lng": 139.772526,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5147139423",
+          "status": "unplanned_visited",
+          "distanceMeters": 103,
+          "photoCount": 2
+        },
+        {
+          "id": "way-544733763",
+          "name": "万世橋",
+          "lat": 35.6971326,
+          "lng": 139.7709729,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/544733763",
+          "status": "unplanned_visited",
+          "distanceMeters": 182,
+          "photoCount": 2
+        },
+        {
+          "id": "node-13357119635",
+          "name": "太平洋美術会",
+          "lat": 35.7306822,
+          "lng": 139.7667947,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13357119635",
+          "status": "unplanned_visited",
+          "distanceMeters": 185,
+          "photoCount": 1
+        },
+        {
+          "id": "node-13717730501",
+          "name": "海老原商店",
+          "lat": 35.6964047,
+          "lng": 139.7744904,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13717730501",
+          "status": "unplanned_visited",
+          "distanceMeters": 247,
+          "photoCount": 3
+        },
+        {
+          "id": "way-47127861",
+          "name": "秋葉原公園",
+          "lat": 35.6978305,
+          "lng": 139.7749404,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/47127861",
+          "status": "unplanned_visited",
+          "distanceMeters": 158,
+          "photoCount": 3
+        },
+        {
+          "id": "way-143144113",
+          "name": "秋葉原中央令和広場",
+          "lat": 35.6995609,
+          "lng": 139.7748853,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/143144113",
+          "status": "unplanned_visited",
+          "distanceMeters": 188,
+          "photoCount": 3
+        },
+        {
+          "id": "way-162043806",
+          "name": "西日暮里公園",
+          "lat": 35.7315104,
+          "lng": 139.7664529,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/162043806",
+          "status": "unplanned_visited",
+          "distanceMeters": 209,
+          "photoCount": 1
+        }
       ]
     },
     "day2": {
@@ -452,6 +538,41 @@
           823,
           645
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day2-0",
+          "name": "新宿三丁目",
+          "lat": 35.69072,
+          "lng": 139.700293,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        },
+        {
+          "id": "gps-day2-1",
+          "name": "中野五丁目",
+          "lat": 35.708075,
+          "lng": 139.665686,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        },
+        {
+          "id": "gps-day2-2",
+          "name": "谷中三丁目",
+          "lat": 35.727645,
+          "lng": 139.766128,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        }
       ]
     },
     "day3": {
@@ -711,6 +832,152 @@
           812,
           510
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-12495882616",
+          "name": "川越一番街商店街 - 蔵造りの街",
+          "lat": 35.9235447,
+          "lng": 139.4829264,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12495882616",
+          "status": "unplanned_visited",
+          "distanceMeters": 9,
+          "photoCount": 5
+        },
+        {
+          "id": "node-1484544024",
+          "name": "服部民族資料館",
+          "lat": 35.9232232,
+          "lng": 139.4829944,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1484544024",
+          "status": "unplanned_visited",
+          "distanceMeters": 28,
+          "photoCount": 5
+        },
+        {
+          "id": "node-1420193190",
+          "name": "川越市蔵造り資料館",
+          "lat": 35.9237132,
+          "lng": 139.4828468,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1420193190",
+          "status": "unplanned_visited",
+          "distanceMeters": 28,
+          "photoCount": 5
+        },
+        {
+          "id": "node-1420192853",
+          "name": "山崎美術館",
+          "lat": 35.9212192,
+          "lng": 139.4829939,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1420192853",
+          "status": "unplanned_visited",
+          "distanceMeters": 35,
+          "photoCount": 2
+        },
+        {
+          "id": "node-1420203267",
+          "name": "蘭山記念美術館",
+          "lat": 35.924615,
+          "lng": 139.4829049,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1420203267",
+          "status": "unplanned_visited",
+          "distanceMeters": 43,
+          "photoCount": 8
+        },
+        {
+          "id": "node-1420193131",
+          "name": "川越まつり会館",
+          "lat": 35.9243784,
+          "lng": 139.48248,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1420193131",
+          "status": "unplanned_visited",
+          "distanceMeters": 70,
+          "photoCount": 8
+        },
+        {
+          "id": "node-11779584116",
+          "name": "復原展示室",
+          "lat": 35.9201658,
+          "lng": 139.4841747,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/11779584116",
+          "status": "unplanned_visited",
+          "distanceMeters": 72,
+          "photoCount": 4
+        },
+        {
+          "id": "way-35570953",
+          "name": "菓子屋横町",
+          "lat": 35.9247371,
+          "lng": 139.4813307,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/35570953",
+          "status": "unplanned_visited",
+          "distanceMeters": 179,
+          "photoCount": 8
+        },
+        {
+          "id": "way-1493934206",
+          "name": "鍛冶町広場",
+          "lat": 35.9214532,
+          "lng": 139.4831516,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/1493934206",
+          "status": "unplanned_visited",
+          "distanceMeters": 8,
+          "photoCount": 2
+        },
+        {
+          "id": "node-13704709101",
+          "name": "鍛冶町公園",
+          "lat": 35.9215359,
+          "lng": 139.4829218,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13704709101",
+          "status": "unplanned_visited",
+          "distanceMeters": 18,
+          "photoCount": 2
+        },
+        {
+          "id": "way-682198169",
+          "name": "ときのかねひろば",
+          "lat": 35.9237292,
+          "lng": 139.4832513,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/682198169",
+          "status": "unplanned_visited",
+          "distanceMeters": 43,
+          "photoCount": 5
+        },
+        {
+          "id": "way-682204466",
+          "name": "旧山崎家別邸",
+          "lat": 35.9217639,
+          "lng": 139.4843551,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/682204466",
+          "status": "unplanned_visited",
+          "distanceMeters": 114,
+          "photoCount": 2
+        }
       ]
     },
     "day4": {
@@ -818,6 +1085,56 @@
           876,
           547
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-4437654809",
+          "name": "トレインミュージアム",
+          "lat": 35.7285652,
+          "lng": 139.7705097,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4437654809",
+          "status": "unplanned_visited",
+          "distanceMeters": 53,
+          "photoCount": 4
+        },
+        {
+          "id": "node-5603040062",
+          "name": "28F",
+          "lat": 35.7625976,
+          "lng": 140.3839255,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5603040062",
+          "status": "unplanned_visited",
+          "distanceMeters": 84,
+          "photoCount": 3
+        },
+        {
+          "id": "node-2134199633",
+          "name": "展望デッキ",
+          "lat": 35.763594,
+          "lng": 140.3836128,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2134199633",
+          "status": "unplanned_visited",
+          "distanceMeters": 188,
+          "photoCount": 3
+        },
+        {
+          "id": "way-568507908",
+          "name": "天王寺公園",
+          "lat": 35.7272119,
+          "lng": 139.770647,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/568507908",
+          "status": "unplanned_visited",
+          "distanceMeters": 106,
+          "photoCount": 4
+        }
       ]
     }
   }

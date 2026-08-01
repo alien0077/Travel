@@ -387,6 +387,68 @@
           824,
           644
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-1093276379",
+          "name": "Observation Deck (North)",
+          "lat": 35.7750635,
+          "lng": 140.3878796,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1093276379",
+          "status": "unplanned_visited",
+          "distanceMeters": 209,
+          "photoCount": 1
+        },
+        {
+          "id": "node-4947850854",
+          "name": "たいとうアートギャラリー",
+          "lat": 35.7126533,
+          "lng": 139.7799259,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4947850854",
+          "status": "unplanned_visited",
+          "distanceMeters": 221,
+          "photoCount": 1
+        },
+        {
+          "id": "node-7246554988",
+          "name": "Observation Deck (South)",
+          "lat": 35.7725066,
+          "lng": 140.3897216,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7246554988",
+          "status": "unplanned_visited",
+          "distanceMeters": 226,
+          "photoCount": 1
+        },
+        {
+          "id": "node-6261728292",
+          "name": "ギャラリー心",
+          "lat": 35.7142739,
+          "lng": 139.7848829,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6261728292",
+          "status": "unplanned_visited",
+          "distanceMeters": 235,
+          "photoCount": 3
+        },
+        {
+          "id": "node-13360999502",
+          "name": "View of trains at Ueno Station, and Ameyayokocho",
+          "lat": 35.7124277,
+          "lng": 139.7748569,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13360999502",
+          "status": "unplanned_visited",
+          "distanceMeters": 244,
+          "photoCount": 1
+        }
       ]
     },
     "day2": {
@@ -608,6 +670,248 @@
           824,
           644
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-13321786436",
+          "name": "ちいかわパーク",
+          "lat": 35.7302409,
+          "lng": 139.7173053,
+          "category": "theme_park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13321786436",
+          "status": "unplanned_visited",
+          "distanceMeters": 111,
+          "photoCount": 5
+        },
+        {
+          "id": "node-6380694945",
+          "name": "都電6080号",
+          "lat": 35.7503675,
+          "lng": 139.7387432,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6380694945",
+          "status": "unplanned_visited",
+          "distanceMeters": 120,
+          "photoCount": 3
+        },
+        {
+          "id": "node-13360999502",
+          "name": "View of trains at Ueno Station, and Ameyayokocho",
+          "lat": 35.7124277,
+          "lng": 139.7748569,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13360999502",
+          "status": "unplanned_visited",
+          "distanceMeters": 121,
+          "photoCount": 2
+        },
+        {
+          "id": "node-8828795450",
+          "name": "オトメイトスクエア",
+          "lat": 35.7291861,
+          "lng": 139.715647,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/8828795450",
+          "status": "unplanned_visited",
+          "distanceMeters": 121,
+          "photoCount": 5
+        },
+        {
+          "id": "node-1439037612",
+          "name": "Sky Circus",
+          "lat": 35.729442,
+          "lng": 139.7180675,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1439037612",
+          "status": "unplanned_visited",
+          "distanceMeters": 126,
+          "photoCount": 1
+        },
+        {
+          "id": "node-6380696689",
+          "name": "蒸気機関車D51 853",
+          "lat": 35.7501111,
+          "lng": 139.7388469,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6380696689",
+          "status": "unplanned_visited",
+          "distanceMeters": 129,
+          "photoCount": 3
+        },
+        {
+          "id": "node-441655802",
+          "name": "上野の森美術館",
+          "lat": 35.7128522,
+          "lng": 139.7747663,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/441655802",
+          "status": "unplanned_visited",
+          "distanceMeters": 139,
+          "photoCount": 2
+        },
+        {
+          "id": "node-12067181245",
+          "name": "Sunshine observatory",
+          "lat": 35.7296483,
+          "lng": 139.717942,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12067181245",
+          "status": "unplanned_visited",
+          "distanceMeters": 146,
+          "photoCount": 1
+        },
+        {
+          "id": "node-7175752589",
+          "name": "Ameyoko Market Street",
+          "lat": 35.7114931,
+          "lng": 139.7747862,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7175752589",
+          "status": "unplanned_visited",
+          "distanceMeters": 160,
+          "photoCount": 2
+        },
+        {
+          "id": "node-4183500642",
+          "name": "お札と切手の博物館",
+          "lat": 35.7543212,
+          "lng": 139.7392655,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4183500642",
+          "status": "unplanned_visited",
+          "distanceMeters": 204,
+          "photoCount": 1
+        },
+        {
+          "id": "node-6477665285",
+          "name": "乙女ロード",
+          "lat": 35.7307084,
+          "lng": 139.7183194,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6477665285",
+          "status": "unplanned_visited",
+          "distanceMeters": 209,
+          "photoCount": 5
+        },
+        {
+          "id": "node-11727641387",
+          "name": "北とぴあ",
+          "lat": 35.7548512,
+          "lng": 139.7366726,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/11727641387",
+          "status": "unplanned_visited",
+          "distanceMeters": 219,
+          "photoCount": 1
+        },
+        {
+          "id": "node-4379340492",
+          "name": "ハイパーレーン",
+          "lat": 35.7327694,
+          "lng": 139.7135437,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4379340492",
+          "status": "unplanned_visited",
+          "distanceMeters": 241,
+          "photoCount": 1
+        },
+        {
+          "id": "way-53542672",
+          "name": "音無親水公園",
+          "lat": 35.7526672,
+          "lng": 139.7358789,
+          "category": "hanami",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/53542672",
+          "status": "unplanned_visited",
+          "distanceMeters": 48,
+          "photoCount": 1
+        },
+        {
+          "id": "node-5906168180",
+          "name": "飛鳥山",
+          "lat": 35.7522835,
+          "lng": 139.7370565,
+          "category": "peak",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5906168180",
+          "status": "unplanned_visited",
+          "distanceMeters": 50,
+          "photoCount": 2
+        },
+        {
+          "id": "way-595622665",
+          "name": "中池袋公園",
+          "lat": 35.7315925,
+          "lng": 139.7150147,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/595622665",
+          "status": "unplanned_visited",
+          "distanceMeters": 60,
+          "photoCount": 1
+        },
+        {
+          "id": "way-38017808",
+          "name": "飛鳥山公園",
+          "lat": 35.7505735,
+          "lng": 139.7387497,
+          "category": "hanami",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/38017808",
+          "status": "unplanned_visited",
+          "distanceMeters": 126,
+          "photoCount": 3
+        },
+        {
+          "id": "way-311069857",
+          "name": "東池袋中央公園",
+          "lat": 35.7301284,
+          "lng": 139.7187189,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/311069857",
+          "status": "unplanned_visited",
+          "distanceMeters": 139,
+          "photoCount": 1
+        },
+        {
+          "id": "way-520708892",
+          "name": "醸造試験所跡地公園",
+          "lat": 35.7512023,
+          "lng": 139.7355131,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/520708892",
+          "status": "unplanned_visited",
+          "distanceMeters": 154,
+          "photoCount": 1
+        },
+        {
+          "id": "way-627528740",
+          "name": "東池袋公園",
+          "lat": 35.7312688,
+          "lng": 139.7178641,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/627528740",
+          "status": "unplanned_visited",
+          "distanceMeters": 199,
+          "photoCount": 5
+        }
       ]
     },
     "day3": {
@@ -994,6 +1298,248 @@
           823,
           645
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-1883764885",
+          "name": "柴又のおもちゃ博物館",
+          "lat": 35.757482,
+          "lng": 139.8759074,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1883764885",
+          "status": "unplanned_visited",
+          "distanceMeters": 17,
+          "photoCount": 16
+        },
+        {
+          "id": "node-12593014303",
+          "name": "動輪の広場(C62形蒸気機関車)",
+          "lat": 35.6811103,
+          "lng": 139.7649563,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12593014303",
+          "status": "unplanned_visited",
+          "distanceMeters": 46,
+          "photoCount": 4
+        },
+        {
+          "id": "node-7175752589",
+          "name": "Ameyoko Market Street",
+          "lat": 35.7114931,
+          "lng": 139.7747862,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7175752589",
+          "status": "unplanned_visited",
+          "distanceMeters": 55,
+          "photoCount": 1
+        },
+        {
+          "id": "node-10707618747",
+          "name": "中川圭一 マンホール",
+          "lat": 35.7669956,
+          "lng": 139.8483722,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/10707618747",
+          "status": "unplanned_visited",
+          "distanceMeters": 60,
+          "photoCount": 14
+        },
+        {
+          "id": "node-10707533027",
+          "name": "本田巡査 マンホール",
+          "lat": 35.7671754,
+          "lng": 139.8477053,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/10707533027",
+          "status": "unplanned_visited",
+          "distanceMeters": 71,
+          "photoCount": 4
+        },
+        {
+          "id": "node-10707622819",
+          "name": "麗子 マンホール",
+          "lat": 35.7659552,
+          "lng": 139.8475191,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/10707622819",
+          "status": "unplanned_visited",
+          "distanceMeters": 73,
+          "photoCount": 4
+        },
+        {
+          "id": "node-13360999501",
+          "name": "View of trains at Ueno Station, and Ameyayokocho",
+          "lat": 35.7121554,
+          "lng": 139.7747091,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13360999501",
+          "status": "unplanned_visited",
+          "distanceMeters": 92,
+          "photoCount": 2
+        },
+        {
+          "id": "node-4987573179",
+          "name": "びわ湖長浜観音ハウス",
+          "lat": 35.7112349,
+          "lng": 139.7730445,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4987573179",
+          "status": "unplanned_visited",
+          "distanceMeters": 95,
+          "photoCount": 2
+        },
+        {
+          "id": "node-12151295691",
+          "name": "丸の内ハウス",
+          "lat": 35.6824495,
+          "lng": 139.7646788,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12151295691",
+          "status": "unplanned_visited",
+          "distanceMeters": 138,
+          "photoCount": 4
+        },
+        {
+          "id": "node-12606699905",
+          "name": "Tokyo Station & Cat face Viewpoint 6F",
+          "lat": 35.6800689,
+          "lng": 139.7650998,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12606699905",
+          "status": "unplanned_visited",
+          "distanceMeters": 142,
+          "photoCount": 10
+        },
+        {
+          "id": "node-441655802",
+          "name": "上野の森美術館",
+          "lat": 35.7128522,
+          "lng": 139.7747663,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/441655802",
+          "status": "unplanned_visited",
+          "distanceMeters": 143,
+          "photoCount": 2
+        },
+        {
+          "id": "node-3164340661",
+          "name": "東京ステーションギャラリー",
+          "lat": 35.6824302,
+          "lng": 139.7664939,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3164340661",
+          "status": "unplanned_visited",
+          "distanceMeters": 157,
+          "photoCount": 4
+        },
+        {
+          "id": "node-4272532291",
+          "name": "インターメディアテク",
+          "lat": 35.6800322,
+          "lng": 139.764534,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4272532291",
+          "status": "unplanned_visited",
+          "distanceMeters": 164,
+          "photoCount": 10
+        },
+        {
+          "id": "node-4496960001",
+          "name": "アメヤ横丁",
+          "lat": 35.7100592,
+          "lng": 139.7745428,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4496960001",
+          "status": "unplanned_visited",
+          "distanceMeters": 165,
+          "photoCount": 1
+        },
+        {
+          "id": "way-724002077",
+          "name": "こち亀記念館",
+          "lat": 35.7650971,
+          "lng": 139.8502466,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/724002077",
+          "status": "unplanned_visited",
+          "distanceMeters": 170,
+          "photoCount": 5
+        },
+        {
+          "id": "node-12606700702",
+          "name": "Cat face facade",
+          "lat": 35.6828884,
+          "lng": 139.765645,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12606700702",
+          "status": "unplanned_visited",
+          "distanceMeters": 173,
+          "photoCount": 4
+        },
+        {
+          "id": "way-145344198",
+          "name": "したまちミュージアム",
+          "lat": 35.7102385,
+          "lng": 139.7727469,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/145344198",
+          "status": "unplanned_visited",
+          "distanceMeters": 202,
+          "photoCount": 2
+        },
+        {
+          "id": "node-4670288696",
+          "name": "阿美橫丁",
+          "lat": 35.7097123,
+          "lng": 139.7743577,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4670288696",
+          "status": "unplanned_visited",
+          "distanceMeters": 207,
+          "photoCount": 1
+        },
+        {
+          "id": "node-12606700203",
+          "name": "Tokyo Station train tracks Viewpoint 6F",
+          "lat": 35.6794006,
+          "lng": 139.7654879,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12606700203",
+          "status": "unplanned_visited",
+          "distanceMeters": 214,
+          "photoCount": 10
+        },
+        {
+          "id": "node-13606792473",
+          "name": "三菱UFJ信託銀行 信託博物館",
+          "lat": 35.6832961,
+          "lng": 139.7649308,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13606792473",
+          "status": "unplanned_visited",
+          "distanceMeters": 220,
+          "photoCount": 4
+        }
       ]
     },
     "day4": {
@@ -1042,6 +1588,116 @@
           876,
           547
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-4987573179",
+          "name": "びわ湖長浜観音ハウス",
+          "lat": 35.7112349,
+          "lng": 139.7730445,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4987573179",
+          "status": "unplanned_visited",
+          "distanceMeters": 65,
+          "photoCount": 2
+        },
+        {
+          "id": "node-7175752589",
+          "name": "Ameyoko Market Street",
+          "lat": 35.7114931,
+          "lng": 139.7747862,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/7175752589",
+          "status": "unplanned_visited",
+          "distanceMeters": 77,
+          "photoCount": 1
+        },
+        {
+          "id": "way-145344198",
+          "name": "したまちミュージアム",
+          "lat": 35.7102385,
+          "lng": 139.7727469,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/145344198",
+          "status": "unplanned_visited",
+          "distanceMeters": 119,
+          "photoCount": 2
+        },
+        {
+          "id": "node-4496960001",
+          "name": "アメヤ横丁",
+          "lat": 35.7100592,
+          "lng": 139.7745428,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4496960001",
+          "status": "unplanned_visited",
+          "distanceMeters": 124,
+          "photoCount": 1
+        },
+        {
+          "id": "node-13360999501",
+          "name": "View of trains at Ueno Station, and Ameyayokocho",
+          "lat": 35.7121554,
+          "lng": 139.7747091,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/13360999501",
+          "status": "unplanned_visited",
+          "distanceMeters": 130,
+          "photoCount": 1
+        },
+        {
+          "id": "node-4670288696",
+          "name": "阿美橫丁",
+          "lat": 35.7097123,
+          "lng": 139.7743577,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4670288696",
+          "status": "unplanned_visited",
+          "distanceMeters": 153,
+          "photoCount": 2
+        },
+        {
+          "id": "node-441655802",
+          "name": "上野の森美術館",
+          "lat": 35.7128522,
+          "lng": 139.7747663,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/441655802",
+          "status": "unplanned_visited",
+          "distanceMeters": 204,
+          "photoCount": 1
+        },
+        {
+          "id": "way-364032622",
+          "name": "蓮観察ゾーン",
+          "lat": 35.7100998,
+          "lng": 139.7716293,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/364032622",
+          "status": "unplanned_visited",
+          "distanceMeters": 211,
+          "photoCount": 2
+        },
+        {
+          "id": "node-10692944607",
+          "name": "タイトーステーション",
+          "lat": 35.708804,
+          "lng": 139.774138,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/10692944607",
+          "status": "unplanned_visited",
+          "distanceMeters": 246,
+          "photoCount": 2
+        }
       ]
     }
   }

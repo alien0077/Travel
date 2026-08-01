@@ -126,6 +126,20 @@
           612,
           612
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-110353877",
+          "name": "花表南公園",
+          "lat": 35.1248436,
+          "lng": 136.915185,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/110353877",
+          "status": "unplanned_visited",
+          "distanceMeters": 237,
+          "photoCount": 1
+        }
       ]
     },
     "day2": {
@@ -249,6 +263,32 @@
           612,
           612
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-187042984",
+          "name": "裏門前公園",
+          "lat": 35.1612072,
+          "lng": 136.9040959,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/187042984",
+          "status": "unplanned_visited",
+          "distanceMeters": 134,
+          "photoCount": 3
+        },
+        {
+          "id": "way-515610247",
+          "name": "大須公園",
+          "lat": 35.1595494,
+          "lng": 136.9026146,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/515610247",
+          "status": "unplanned_visited",
+          "distanceMeters": 182,
+          "photoCount": 3
+        }
       ]
     },
     "day3": {
@@ -598,6 +638,52 @@
           612,
           612
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day3-0",
+          "name": "名古屋城",
+          "lat": 35.183086,
+          "lng": 136.904682,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        },
+        {
+          "id": "gps-day3-1",
+          "name": "名古屋城",
+          "lat": 35.184822,
+          "lng": 136.899518,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        },
+        {
+          "id": "gps-day3-2",
+          "name": "白鳥二丁目",
+          "lat": 35.124785,
+          "lng": 136.908372,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 16
+        },
+        {
+          "id": "gps-day3-3",
+          "name": "二番一丁目",
+          "lat": 35.122359,
+          "lng": 136.908523,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        }
       ]
     },
     "day4": {
@@ -856,6 +942,63 @@
           603,
           629
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day4-0",
+          "name": "名駅一丁目",
+          "lat": 35.170377,
+          "lng": 136.882843,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        },
+        {
+          "id": "gps-day4-1",
+          "name": "セントレア一丁目",
+          "lat": 34.859243,
+          "lng": 136.814957,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        },
+        {
+          "id": "gps-day4-2",
+          "name": "セントレア一丁目",
+          "lat": 34.858793,
+          "lng": 136.816127,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        },
+        {
+          "id": "gps-day4-3",
+          "name": "セントレア五丁目",
+          "lat": 34.855583,
+          "lng": 136.817228,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 7
+        },
+        {
+          "id": "gps-day4-4",
+          "name": "セントレア五丁目",
+          "lat": 34.852433,
+          "lng": 136.815421,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        }
       ]
     }
   }

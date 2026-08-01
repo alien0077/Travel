@@ -57,7 +57,10 @@
         }
       ],
       "hotel": {
-        "name": "未記錄"
+        "name": "VESSEL HOTEL KUMAMOTO AIRPORT（ベッセルホテル熊本空港）",
+        "detail": "2019/08/11 入住",
+        "address": "〒861-2204 熊本県熊本市東区日高町1076",
+        "mapcode": ""
       },
       "details": ""
     },
@@ -197,6 +200,19 @@
           156,
           795
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day1-0",
+          "name": "久保田",
+          "lat": 32.875858,
+          "lng": 130.851654,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        }
       ]
     },
     "day2": {
@@ -514,6 +530,68 @@
           203,
           848
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-6695235888",
+          "name": "Takachiho foot path",
+          "lat": 32.7035152,
+          "lng": 131.3001578,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6695235888",
+          "status": "unplanned_visited",
+          "distanceMeters": 68,
+          "photoCount": 2
+        },
+        {
+          "id": "node-5803369377",
+          "name": "鬼八の力石",
+          "lat": 32.7032236,
+          "lng": 131.2998229,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5803369377",
+          "status": "unplanned_visited",
+          "distanceMeters": 77,
+          "photoCount": 2
+        },
+        {
+          "id": "node-4563512590",
+          "name": "高千穂峡",
+          "lat": 32.7017851,
+          "lng": 131.300939,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4563512590",
+          "status": "unplanned_visited",
+          "distanceMeters": 95,
+          "photoCount": 5
+        },
+        {
+          "id": "node-1423866229",
+          "name": "天岩戸神社徴古館",
+          "lat": 32.732893,
+          "lng": 131.350581,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1423866229",
+          "status": "unplanned_visited",
+          "distanceMeters": 143,
+          "photoCount": 21
+        },
+        {
+          "id": "node-6696257585",
+          "name": "槍飛橋",
+          "lat": 32.7039878,
+          "lng": 131.2984537,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6696257585",
+          "status": "unplanned_visited",
+          "distanceMeters": 228,
+          "photoCount": 2
+        }
       ]
     },
     "day3": {
@@ -876,6 +954,56 @@
           149,
           885
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-342417079",
+          "name": "湯之平展望所",
+          "lat": 31.5914575,
+          "lng": 130.6299762,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/342417079",
+          "status": "unplanned_visited",
+          "distanceMeters": 19,
+          "photoCount": 7
+        },
+        {
+          "id": "node-1423870026",
+          "name": "日南市国際交流センター小村記念館",
+          "lat": 31.6273269,
+          "lng": 131.3527356,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1423870026",
+          "status": "unplanned_visited",
+          "distanceMeters": 96,
+          "photoCount": 8
+        },
+        {
+          "id": "node-3708719577",
+          "name": "湯之平",
+          "lat": 31.5915561,
+          "lng": 130.630241,
+          "category": "peak",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3708719577",
+          "status": "unplanned_visited",
+          "distanceMeters": 7,
+          "photoCount": 2
+        },
+        {
+          "id": "way-644311594",
+          "name": "飫肥城下町",
+          "lat": 31.6260669,
+          "lng": 131.3530909,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/644311594",
+          "status": "unplanned_visited",
+          "distanceMeters": 132,
+          "photoCount": 6
+        }
       ]
     },
     "day4": {
@@ -1161,6 +1289,52 @@
           155,
           796
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day4-0",
+          "name": "西姶良一丁目",
+          "lat": 31.727513,
+          "lng": 130.614756,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        },
+        {
+          "id": "gps-day4-1",
+          "name": "麓町",
+          "lat": 32.210537,
+          "lng": 130.763483,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 7
+        },
+        {
+          "id": "gps-day4-2",
+          "name": "上青井町",
+          "lat": 32.212984,
+          "lng": 130.753006,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 13
+        },
+        {
+          "id": "gps-day4-3",
+          "name": "東阿弥陀寺町",
+          "lat": 32.793111,
+          "lng": 130.696889,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 3
+        }
       ]
     },
     "day5": {
@@ -1177,6 +1351,128 @@
           123,
           738
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-3478445254",
+          "name": "立花家史料館",
+          "lat": 33.1587783,
+          "lng": 130.3971773,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3478445254",
+          "status": "unplanned_visited",
+          "distanceMeters": 48,
+          "photoCount": 3
+        },
+        {
+          "id": "node-3655576179",
+          "name": "カフェ&ギャラリー バンカム",
+          "lat": 33.1587316,
+          "lng": 130.3957684,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3655576179",
+          "status": "unplanned_visited",
+          "distanceMeters": 90,
+          "photoCount": 3
+        },
+        {
+          "id": "way-360923227",
+          "name": "北原白秋生家・柳川市立歴史民俗資料館",
+          "lat": 33.1587409,
+          "lng": 130.3941122,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/360923227",
+          "status": "unplanned_visited",
+          "distanceMeters": 243,
+          "photoCount": 3
+        },
+        {
+          "id": "node-3786119444",
+          "name": "古民家北島",
+          "lat": 33.1599528,
+          "lng": 130.3946005,
+          "category": "gallery",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3786119444",
+          "status": "unplanned_visited",
+          "distanceMeters": 250,
+          "photoCount": 3
+        },
+        {
+          "id": "way-360717768",
+          "name": "御花",
+          "lat": 33.1581939,
+          "lng": 130.398274,
+          "category": "yes",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/360717768",
+          "status": "unplanned_visited",
+          "distanceMeters": 151,
+          "photoCount": 3
+        },
+        {
+          "id": "node-3778266463",
+          "name": "拝領の庭",
+          "lat": 33.1583917,
+          "lng": 130.3960999,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3778266463",
+          "status": "unplanned_visited",
+          "distanceMeters": 61,
+          "photoCount": 3
+        },
+        {
+          "id": "way-360717771",
+          "name": "松濤園",
+          "lat": 33.1578181,
+          "lng": 130.3977778,
+          "category": "yes",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/360717771",
+          "status": "unplanned_visited",
+          "distanceMeters": 130,
+          "photoCount": 3
+        },
+        {
+          "id": "way-360880816",
+          "name": "旧椛島邸庭園",
+          "lat": 33.1602174,
+          "lng": 130.3965402,
+          "category": "yes",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/360880816",
+          "status": "unplanned_visited",
+          "distanceMeters": 183,
+          "photoCount": 3
+        },
+        {
+          "id": "way-941034766",
+          "name": "東庭園",
+          "lat": 33.1579928,
+          "lng": 130.398795,
+          "category": "garden",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/941034766",
+          "status": "unplanned_visited",
+          "distanceMeters": 204,
+          "photoCount": 3
+        },
+        {
+          "id": "way-360961608",
+          "name": "旧戸島家住宅",
+          "lat": 33.1606896,
+          "lng": 130.3958311,
+          "category": "yes",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/360961608",
+          "status": "unplanned_visited",
+          "distanceMeters": 249,
+          "photoCount": 3
+        }
       ]
     },
     "day6": {
@@ -1279,6 +1575,20 @@
           139,
           730
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-633160416",
+          "name": "姪浜東公園",
+          "lat": 33.5877026,
+          "lng": 130.3323567,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/633160416",
+          "status": "unplanned_visited",
+          "distanceMeters": 180,
+          "photoCount": 1
+        }
       ]
     },
     "day7": {
@@ -1458,6 +1768,128 @@
           139,
           730
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-4293172389",
+          "name": "博多町家鄉土館",
+          "lat": 33.5936544,
+          "lng": 130.4115066,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4293172389",
+          "status": "unplanned_visited",
+          "distanceMeters": 18,
+          "photoCount": 4
+        },
+        {
+          "id": "way-379059633",
+          "name": "博多歴史館",
+          "lat": 33.5927982,
+          "lng": 130.410919,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/379059633",
+          "status": "unplanned_visited",
+          "distanceMeters": 61,
+          "photoCount": 7
+        },
+        {
+          "id": "node-5787229285",
+          "name": "櫛田神社飾り山笠",
+          "lat": 33.5928207,
+          "lng": 130.4105843,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5787229285",
+          "status": "unplanned_visited",
+          "distanceMeters": 67,
+          "photoCount": 7
+        },
+        {
+          "id": "node-5657109222",
+          "name": "Mangyoji Shrine",
+          "lat": 33.5930714,
+          "lng": 130.4121466,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5657109222",
+          "status": "unplanned_visited",
+          "distanceMeters": 86,
+          "photoCount": 4
+        },
+        {
+          "id": "node-5001667124",
+          "name": "川端商店街",
+          "lat": 33.5925534,
+          "lng": 130.4102258,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5001667124",
+          "status": "unplanned_visited",
+          "distanceMeters": 107,
+          "photoCount": 11
+        },
+        {
+          "id": "node-11337871815",
+          "name": "中洲ぜんざい",
+          "lat": 33.5922868,
+          "lng": 130.4100858,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/11337871815",
+          "status": "unplanned_visited",
+          "distanceMeters": 140,
+          "photoCount": 11
+        },
+        {
+          "id": "node-6660634487",
+          "name": "Kawabata shopping streets",
+          "lat": 33.5933995,
+          "lng": 130.408707,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6660634487",
+          "status": "unplanned_visited",
+          "distanceMeters": 188,
+          "photoCount": 11
+        },
+        {
+          "id": "node-6657136685",
+          "name": "Kawabata Shopping Street",
+          "lat": 33.5933978,
+          "lng": 130.408671,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6657136685",
+          "status": "unplanned_visited",
+          "distanceMeters": 192,
+          "photoCount": 11
+        },
+        {
+          "id": "node-5539558822",
+          "name": "停車場",
+          "lat": 33.5914103,
+          "lng": 130.4101968,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5539558822",
+          "status": "unplanned_visited",
+          "distanceMeters": 226,
+          "photoCount": 7
+        },
+        {
+          "id": "way-283402446",
+          "name": "冷泉公園",
+          "lat": 33.5945656,
+          "lng": 130.4087409,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/283402446",
+          "status": "unplanned_visited",
+          "distanceMeters": 225,
+          "photoCount": 11
+        }
       ]
     }
   }

@@ -396,6 +396,20 @@
           519,
           630
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-298017532",
+          "name": "神戸空港島 中央緑地",
+          "lat": 34.6389953,
+          "lng": 135.2290549,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/298017532",
+          "status": "unplanned_visited",
+          "distanceMeters": 183,
+          "photoCount": 1
+        }
       ]
     },
     "day2": {
@@ -843,6 +857,248 @@
           519,
           630
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-2483157001",
+          "name": "上山里",
+          "lat": 34.8383986,
+          "lng": 134.6938089,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483157001",
+          "status": "unplanned_visited",
+          "distanceMeters": 68,
+          "photoCount": 3
+        },
+        {
+          "id": "node-2483126445",
+          "name": "アカカンガルー",
+          "lat": 34.83676,
+          "lng": 134.694257,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483126445",
+          "status": "unplanned_visited",
+          "distanceMeters": 87,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483230070",
+          "name": "フラミンゴ",
+          "lat": 34.8366009,
+          "lng": 134.6944764,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483230070",
+          "status": "unplanned_visited",
+          "distanceMeters": 100,
+          "photoCount": 4
+        },
+        {
+          "id": "node-12615302901",
+          "name": "Western Bailey Corridor",
+          "lat": 34.8383107,
+          "lng": 134.6913493,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12615302901",
+          "status": "unplanned_visited",
+          "distanceMeters": 103,
+          "photoCount": 1
+        },
+        {
+          "id": "node-6865998803",
+          "name": "ジャンカラ",
+          "lat": 34.648436,
+          "lng": 134.9912216,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6865998803",
+          "status": "unplanned_visited",
+          "distanceMeters": 105,
+          "photoCount": 2
+        },
+        {
+          "id": "node-2483230083",
+          "name": "ワラビー",
+          "lat": 34.8368002,
+          "lng": 134.6944788,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483230083",
+          "status": "unplanned_visited",
+          "distanceMeters": 107,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483229921",
+          "name": "カピバラ",
+          "lat": 34.8369,
+          "lng": 134.6944905,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483229921",
+          "status": "unplanned_visited",
+          "distanceMeters": 113,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2489508164",
+          "name": "ブラッザグェノン",
+          "lat": 34.8369856,
+          "lng": 134.6944892,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2489508164",
+          "status": "unplanned_visited",
+          "distanceMeters": 117,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2489508113",
+          "name": "ニホンザル",
+          "lat": 34.8370154,
+          "lng": 134.6944838,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2489508113",
+          "status": "unplanned_visited",
+          "distanceMeters": 119,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2489508108",
+          "name": "サバンナモンキー",
+          "lat": 34.8370488,
+          "lng": 134.6944774,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2489508108",
+          "status": "unplanned_visited",
+          "distanceMeters": 120,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483229923",
+          "name": "チンパンジー",
+          "lat": 34.8373952,
+          "lng": 134.6942213,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483229923",
+          "status": "unplanned_visited",
+          "distanceMeters": 131,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483159855",
+          "name": "ホッキョクグマ",
+          "lat": 34.837259,
+          "lng": 134.694473,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483159855",
+          "status": "unplanned_visited",
+          "distanceMeters": 134,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483149139",
+          "name": "観覧車",
+          "lat": 34.836512,
+          "lng": 134.694887,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483149139",
+          "status": "unplanned_visited",
+          "distanceMeters": 137,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483165540",
+          "name": "桜見所",
+          "lat": 34.8360066,
+          "lng": 134.6948271,
+          "category": "viewpoint",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483165540",
+          "status": "unplanned_visited",
+          "distanceMeters": 139,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483229922",
+          "name": "タンチョウ",
+          "lat": 34.8369887,
+          "lng": 134.6949004,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483229922",
+          "status": "unplanned_visited",
+          "distanceMeters": 151,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483131292",
+          "name": "カバ",
+          "lat": 34.837608,
+          "lng": 134.694297,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483131292",
+          "status": "unplanned_visited",
+          "distanceMeters": 154,
+          "photoCount": 3
+        },
+        {
+          "id": "node-2483230073",
+          "name": "ホンドキツネ",
+          "lat": 34.8370903,
+          "lng": 134.6948976,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483230073",
+          "status": "unplanned_visited",
+          "distanceMeters": 155,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483130924",
+          "name": "ラクダ",
+          "lat": 34.837506,
+          "lng": 134.694506,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483130924",
+          "status": "unplanned_visited",
+          "distanceMeters": 156,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483230081",
+          "name": "ホンドタヌキ",
+          "lat": 34.8371243,
+          "lng": 134.6949033,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483230081",
+          "status": "unplanned_visited",
+          "distanceMeters": 158,
+          "photoCount": 4
+        },
+        {
+          "id": "node-2483229924",
+          "name": "ニッポンアナグマ",
+          "lat": 34.8371526,
+          "lng": 134.6949072,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2483229924",
+          "status": "unplanned_visited",
+          "distanceMeters": 159,
+          "photoCount": 4
+        }
       ]
     },
     "day3": {
@@ -1096,6 +1352,116 @@
           519,
           630
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-100296035",
+          "name": "鳳翔館",
+          "lat": 34.8887046,
+          "lng": 135.8073903,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/100296035",
+          "status": "unplanned_visited",
+          "distanceMeters": 99,
+          "photoCount": 4
+        },
+        {
+          "id": "node-12403607701",
+          "name": "宇治橋",
+          "lat": 34.8930374,
+          "lng": 135.8063355,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/12403607701",
+          "status": "unplanned_visited",
+          "distanceMeters": 122,
+          "photoCount": 9
+        },
+        {
+          "id": "node-5260350491",
+          "name": "平等院多宝塔跡",
+          "lat": 34.8883379,
+          "lng": 135.8088349,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5260350491",
+          "status": "unplanned_visited",
+          "distanceMeters": 145,
+          "photoCount": 10
+        },
+        {
+          "id": "node-4921644322",
+          "name": "旧宇治橋三の間",
+          "lat": 34.8932507,
+          "lng": 135.8069587,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4921644322",
+          "status": "unplanned_visited",
+          "distanceMeters": 173,
+          "photoCount": 9
+        },
+        {
+          "id": "node-5843263146",
+          "name": "宇治十帖",
+          "lat": 34.8905408,
+          "lng": 135.809775,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/5843263146",
+          "status": "unplanned_visited",
+          "distanceMeters": 193,
+          "photoCount": 10
+        },
+        {
+          "id": "node-3406566118",
+          "name": "兎楽の樹",
+          "lat": 34.8905339,
+          "lng": 135.8099897,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/3406566118",
+          "status": "unplanned_visited",
+          "distanceMeters": 208,
+          "photoCount": 10
+        },
+        {
+          "id": "node-1422965547",
+          "name": "朝日焼窯芸資料館",
+          "lat": 34.8900184,
+          "lng": 135.8105887,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/1422965547",
+          "status": "unplanned_visited",
+          "distanceMeters": 235,
+          "photoCount": 10
+        },
+        {
+          "id": "way-544170895",
+          "name": "よりみち公園",
+          "lat": 34.8884407,
+          "lng": 135.8088482,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/544170895",
+          "status": "unplanned_visited",
+          "distanceMeters": 136,
+          "photoCount": 10
+        },
+        {
+          "id": "way-602166990",
+          "name": "里尻公園",
+          "lat": 34.8921734,
+          "lng": 135.8019086,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/602166990",
+          "status": "unplanned_visited",
+          "distanceMeters": 214,
+          "photoCount": 5
+        }
       ]
     },
     "day4": {
@@ -1437,6 +1803,80 @@
           519,
           630
         ]
+      ],
+      "attractions": [
+        {
+          "id": "node-4441763434",
+          "name": "尼崎市立歴史博物館",
+          "lat": 34.7149245,
+          "lng": 135.4208108,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/4441763434",
+          "status": "unplanned_visited",
+          "distanceMeters": 145,
+          "photoCount": 7
+        },
+        {
+          "id": "way-687765338",
+          "name": "尼崎城",
+          "lat": 34.7166719,
+          "lng": 135.4187981,
+          "category": "castle",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/687765338",
+          "status": "unplanned_visited",
+          "distanceMeters": 12,
+          "photoCount": 17
+        },
+        {
+          "id": "way-391419538",
+          "name": "尼崎城址公園",
+          "lat": 34.7167813,
+          "lng": 135.4186763,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/391419538",
+          "status": "unplanned_visited",
+          "distanceMeters": 24,
+          "photoCount": 17
+        },
+        {
+          "id": "way-194112434",
+          "name": "中央公園",
+          "lat": 34.7192597,
+          "lng": 135.4171865,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/194112434",
+          "status": "unplanned_visited",
+          "distanceMeters": 74,
+          "photoCount": 9
+        },
+        {
+          "id": "way-446966924",
+          "name": "二の丸公園",
+          "lat": 34.715549,
+          "lng": 135.4210355,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/446966924",
+          "status": "unplanned_visited",
+          "distanceMeters": 113,
+          "photoCount": 7
+        },
+        {
+          "id": "way-355203611",
+          "name": "開明中公園",
+          "lat": 34.7170336,
+          "lng": 135.4155477,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/355203611",
+          "status": "unplanned_visited",
+          "distanceMeters": 240,
+          "photoCount": 7
+        }
       ]
     },
     "day5": {
@@ -1921,6 +2361,85 @@
           519,
           630
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day5-0",
+          "name": "明石町",
+          "lat": 34.696323,
+          "lng": 135.190968,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 4
+        },
+        {
+          "id": "gps-day5-1",
+          "name": "布引町四丁目",
+          "lat": 34.697166,
+          "lng": 135.191352,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        },
+        {
+          "id": "gps-day5-2",
+          "name": "布引町四丁目",
+          "lat": 34.70102,
+          "lng": 135.18989,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 9
+        },
+        {
+          "id": "gps-day5-3",
+          "name": "山本通二丁目",
+          "lat": 34.701887,
+          "lng": 135.191464,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 10
+        },
+        {
+          "id": "gps-day5-4",
+          "name": "サンポルタ広場",
+          "lat": 34.682931,
+          "lng": 135.188736,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 6
+        },
+        {
+          "id": "gps-day5-5",
+          "name": "サンポルタ広場",
+          "lat": 34.690587,
+          "lng": 135.188675,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 2
+        },
+        {
+          "id": "gps-day5-6",
+          "name": "サンポルタ広場",
+          "lat": 34.69331,
+          "lng": 135.191019,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 9
+        }
       ]
     },
     "day6": {
@@ -2448,6 +2967,74 @@
           524,
           629
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day6-0",
+          "name": "サンポルタ広場",
+          "lat": 34.693534,
+          "lng": 135.191125,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        },
+        {
+          "id": "gps-day6-1",
+          "name": "なんば広場",
+          "lat": 34.665269,
+          "lng": 135.50121,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 4
+        },
+        {
+          "id": "gps-day6-2",
+          "name": "難波千日前",
+          "lat": 34.663329,
+          "lng": 135.503827,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 5
+        },
+        {
+          "id": "gps-day6-3",
+          "name": "道頓堀",
+          "lat": 34.66855,
+          "lng": 135.501118,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 7
+        },
+        {
+          "id": "gps-day6-4",
+          "name": "大阪城",
+          "lat": 34.686802,
+          "lng": 135.525865,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 14
+        },
+        {
+          "id": "gps-day6-5",
+          "name": "グランフロント大阪",
+          "lat": 34.703391,
+          "lng": 135.49532,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 16
+        }
       ]
     },
     "day7": {
@@ -2800,6 +3387,80 @@
           519,
           630
         ]
+      ],
+      "attractions": [
+        {
+          "id": "way-262669640",
+          "name": "有馬玩具博物館",
+          "lat": 34.7970506,
+          "lng": 135.2479028,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/262669640",
+          "status": "unplanned_visited",
+          "distanceMeters": 32,
+          "photoCount": 26
+        },
+        {
+          "id": "node-2924055456",
+          "name": "姑泉源",
+          "lat": 34.7961695,
+          "lng": 135.2492016,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2924055456",
+          "status": "unplanned_visited",
+          "distanceMeters": 38,
+          "photoCount": 7
+        },
+        {
+          "id": "node-6373329566",
+          "name": "袂石",
+          "lat": 34.7988609,
+          "lng": 135.2473311,
+          "category": "attraction",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6373329566",
+          "status": "unplanned_visited",
+          "distanceMeters": 41,
+          "photoCount": 1
+        },
+        {
+          "id": "node-6373329587",
+          "name": "太閤の湯殿館",
+          "lat": 34.7956267,
+          "lng": 135.2485825,
+          "category": "museum",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/6373329587",
+          "status": "unplanned_visited",
+          "distanceMeters": 68,
+          "photoCount": 12
+        },
+        {
+          "id": "way-680641914",
+          "name": "有馬川親水公園",
+          "lat": 34.7984516,
+          "lng": 135.2472595,
+          "category": "park",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/way/680641914",
+          "status": "unplanned_visited",
+          "distanceMeters": 35,
+          "photoCount": 16
+        },
+        {
+          "id": "node-2920281534",
+          "name": "愛宕山",
+          "lat": 34.7944297,
+          "lng": 135.2478767,
+          "category": "peak",
+          "source": "osm",
+          "sourceUrl": "https://www.openstreetmap.org/node/2920281534",
+          "status": "unplanned_visited",
+          "distanceMeters": 200,
+          "photoCount": 12
+        }
       ]
     },
     "day8": {
@@ -2824,6 +3485,41 @@
           519,
           630
         ]
+      ],
+      "attractions": [
+        {
+          "id": "gps-day8-0",
+          "name": "GPS 實際停留點",
+          "lat": 34.6353556,
+          "lng": 135.2229778,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 1
+        },
+        {
+          "id": "gps-day8-1",
+          "name": "GPS 實際停留點",
+          "lat": 34.6367222,
+          "lng": 135.2286528,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 1
+        },
+        {
+          "id": "gps-day8-2",
+          "name": "GPS 實際停留點",
+          "lat": 24.5286833,
+          "lng": 120.6909722,
+          "category": "gps_stop",
+          "source": "gps",
+          "status": "unplanned_visited",
+          "distanceMeters": 0,
+          "photoCount": 1
+        }
       ]
     }
   }
