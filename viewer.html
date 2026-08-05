@@ -757,7 +757,7 @@
                 const badgeClass = isTransit ? 'bg-blue-50 text-blue-600' : 'bg-indigo-50 text-indigo-600';
                 let extra = '';
                 if (item.mapUrl) extra += `<a href="${item.mapUrl}" target="_blank" class="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1.5 rounded-lg"><i class="fa-solid fa-map-location-dot"></i> 導航</a>`;
-                if (item.mapcode && isDrive) extra += `<button onclick="copyToClipboard('${item.mapcode}', 'Mapcode')" class="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1.5 rounded-lg ml-1.5"><i class="fa-solid fa-keyboard"></i> ${item.mapcode}</button>`;
+                if (item.mapcode) extra += `<button onclick="copyToClipboard('${item.mapcode}', 'Mapcode')" class="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1.5 rounded-lg ml-1.5"><i class="fa-solid fa-keyboard"></i> ${item.mapcode}</button>`;
                 html += `
                     <div class="relative">
                         <div class="absolute -left-[24px] top-0 bg-white border border-slate-100 w-4 h-4 rounded-full flex items-center justify-center shadow-sm">
