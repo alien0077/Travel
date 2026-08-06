@@ -148,7 +148,8 @@
           "time": "08:00am - 09:00am",
           "title": "晨間朝烏龍",
           "detail": "手打十段 うどんバカ一代。",
-          "mapcode": "60 607 010*12"
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=34.3367664,134.0585208",
+          "mapcode": "60 607 010*35"
         },
         {
           "type": "drive",
@@ -195,7 +196,8 @@
           "meal": "早餐",
           "name": "手打十段 うどんバカ一代",
           "detail": "必點溫泉蛋奶油黑胡椒烏龍麵。",
-          "mapcode": "60 607 010*12"
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=34.3367664,134.0585208",
+          "mapcode": "60 607 010*35"
         },
         {
           "meal": "午餐",
