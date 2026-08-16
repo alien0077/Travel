@@ -483,7 +483,10 @@
         window.replayCar = () => {
             if (!_currentTripData || !_currentTabId) return;
             const actualDay = _currentTripData.actualDays?.[_currentTabId];
-            if (actualDay?.route) animateCar(actualDay.route);
+            const route = actualDay?.route?.length >= 2
+                ? actualDay.route
+                : window._plannedCarRoute;
+            if (route?.length >= 2) animateCar(route);
         };
 
         function getItemCoordinates(data, item) {
@@ -601,6 +604,7 @@
             _currentTripData = data;
             _currentTabId = tabId;
             clearCarAnimation();
+            window._plannedCarRoute = null;
 
             // Remove previous route layers (keep tile + prefecture + city)
             window._routeLayer.clearLayers();
@@ -695,10 +699,12 @@
                 const plannedRoute = plannedStops.map(stop => [stop.lat, stop.lng]);
 
                 if (plannedRoute.length >= 2) {
+                    window._plannedCarRoute = plannedRoute;
                     L.polyline(plannedRoute, {
                         color: ROUTE_COLOR, weight: 3, opacity: 0.6, dashArray: '6,4'
                     }).addTo(window._routeLayer);
                 } else if (day && day.route && day.route.length >= 2) {
+                    window._plannedCarRoute = day.route;
                     L.polyline(day.route, {
                         color: ROUTE_COLOR, weight: 3, opacity: 0.6, dashArray: '6,4'
                     }).addTo(window._routeLayer);
@@ -725,6 +731,7 @@
                             [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
                             [Math.max(...dayLats) + pad, Math.max(...dayLngs) + pad]
                         ]);
+                        if (plannedRoute.length >= 2) animateCar(plannedRoute);
                     }, 150);
                 }
             }
