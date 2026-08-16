@@ -15,6 +15,9 @@
         .pulse-active { box-shadow: 0 0 12px rgba(99, 102, 241, 0.4); }
         #map-container { height: 220px; border-radius: 12px; width: 100%; }
         .attraction-status { font-size: 9px; font-weight: 800; padding: 2px 6px; border-radius: 999px; }
+        .viewer-original .timeline-card { box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06); }
+        .viewer-original .timeline-card:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(15, 23, 42, 0.1); }
+        .viewer-original .timeline-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased pb-24 min-h-screen">
@@ -69,6 +72,7 @@
             const currencyCode = data.currency || 'JPY';
             const currencyName = data.currencyName || '日幣';
             const currencyRate = data.currencyToTwdRate ?? data.jpyToTwdRate ?? null;
+            document.body.classList.toggle('viewer-original', (data.ui?.theme || 'original') === 'original');
             document.title = `${data.title} - ${data.subtitle || ''}`;
 
             let state = loadState(APP_ID, data);
@@ -482,17 +486,62 @@
             if (actualDay?.route) animateCar(actualDay.route);
         };
 
+        function getItemCoordinates(data, item) {
+            if (!item) return null;
+            const lat = Number(item.lat);
+            const lng = Number(item.lng ?? item.lon);
+            if (Number.isFinite(lat) && Number.isFinite(lng)) return { lat, lng };
+
+            const mapped = item.mapUrl && data?.mapCoordinates?.[item.mapUrl];
+            if (!mapped) return null;
+            const mappedLat = Number(mapped.lat);
+            const mappedLng = Number(mapped.lng ?? mapped.lon);
+            return Number.isFinite(mappedLat) && Number.isFinite(mappedLng)
+                ? { lat: mappedLat, lng: mappedLng }
+                : null;
+        }
+
+        function getPlannedMapStops(data, day) {
+            const stops = [];
+            const seen = new Set();
+            (day?.timeline || []).forEach(item => {
+                const coordinates = getItemCoordinates(data, item);
+                if (!coordinates) return;
+                const key = `${coordinates.lat},${coordinates.lng}`;
+                if (seen.has(key)) return;
+                seen.add(key);
+                stops.push({ ...item, ...coordinates });
+            });
+            return stops;
+        }
+
+        function getInitialMapView(data) {
+            if (Array.isArray(data?.mapCenter) && data.mapCenter.length === 2) {
+                const center = data.mapCenter.map(Number);
+                if (center.every(Number.isFinite)) return { center, zoom: Number(data.mapZoom) || 11 };
+            }
+
+            const firstPlannedStop = Object.values(data?.days || {})
+                .flatMap(day => getPlannedMapStops(data, day))
+                .find(Boolean);
+            if (firstPlannedStop) return { center: [firstPlannedStop.lat, firstPlannedStop.lng], zoom: 12 };
+
+            return { center: [35.68, 139.76], zoom: 5 };
+        }
+
         async function initMap(data) {
             const container = document.getElementById('map-container');
             if (!container) return;
             container.innerHTML = '';
 
+            const initialView = getInitialMapView(data);
             const vMap = L.map('map-container', {
                 zoomControl: true,
                 attributionControl: true,
                 scrollWheelZoom: true,
                 dragging: true
             });
+            vMap.setView(initialView.center, initialView.zoom);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a>'
@@ -640,15 +689,37 @@
                     }
                 }, 150);
             } else {
-                // No actual data — fit to planned route if exists
+                // No actual data — use the Google Maps URL coordinates for planned stops.
                 const day = data.days[tabId];
-                if (day && day.route && day.route.length >= 2) {
+                const plannedStops = getPlannedMapStops(data, day);
+                const plannedRoute = plannedStops.map(stop => [stop.lat, stop.lng]);
+
+                if (plannedRoute.length >= 2) {
+                    L.polyline(plannedRoute, {
+                        color: ROUTE_COLOR, weight: 3, opacity: 0.6, dashArray: '6,4'
+                    }).addTo(window._routeLayer);
+                } else if (day && day.route && day.route.length >= 2) {
                     L.polyline(day.route, {
                         color: ROUTE_COLOR, weight: 3, opacity: 0.6, dashArray: '6,4'
                     }).addTo(window._routeLayer);
+                    plannedRoute.push(...day.route);
+                }
+
+                plannedStops.forEach((stop, index) => {
+                    const isEndpoint = index === 0 || index === plannedStops.length - 1;
+                    L.circleMarker([stop.lat, stop.lng], {
+                        radius: isEndpoint ? 7 : 5,
+                        fillColor: isEndpoint ? ROUTE_COLOR : '#fff',
+                        color: ROUTE_COLOR, weight: 2, opacity: 1, fillOpacity: 1
+                    }).addTo(window._routeLayer)
+                        .bindTooltip(`${escapeHTML(stop.title || stop.name || '')}`, { direction: 'top', offset: [0, -4] })
+                        .bindPopup(`<strong>${escapeHTML(stop.title || stop.name || '規劃停靠點')}</strong>${mapNavButton(stop)}`);
+                });
+
+                if (plannedRoute.length > 0) {
                     setTimeout(() => {
-                        const dayLats = day.route.map(p => p[0]);
-                        const dayLngs = day.route.map(p => p[1]);
+                        const dayLats = plannedRoute.map(point => point[0]);
+                        const dayLngs = plannedRoute.map(point => point[1]);
                         const pad = 0.008;
                         vMap.fitBounds([
                             [Math.min(...dayLats) - pad, Math.min(...dayLngs) - pad],
@@ -778,27 +849,28 @@
                     <h3 class="font-bold text-slate-800 text-xs mb-4 flex items-center gap-1.5">
                         <i class="fa-solid fa-route text-indigo-500"></i> 時間軸
                     </h3>
-                    <div class="relative border-l border-slate-100 pl-4 ml-2 space-y-5">
+                    <div class="relative border-l-2 border-indigo-200 ml-3 pl-4 py-2 space-y-4">
             `;
-            (day.timeline || []).forEach(item => {
+            (day.timeline || []).forEach((item, index) => {
                 const isTransit = item.type === 'transport' || item.type === 'drive';
                 const icon = isTransit ? (item.type === 'drive' ? 'fa-car-side text-blue-500' : 'fa-train-subway text-blue-500') : 'fa-location-dot text-indigo-500';
                 const badge = isTransit ? (item.type === 'drive' ? '交通自駕' : '大眾交通') : '景點活動';
                 const badgeClass = isTransit ? 'bg-blue-50 text-blue-600' : 'bg-indigo-50 text-indigo-600';
+                const cardBorder = isTransit ? 'border-blue-100' : 'border-indigo-100';
                 let extra = '';
                 extra += mapNavButton(item);
                 if (item.mapcode) extra += `<button onclick="copyToClipboard('${item.mapcode}', 'Mapcode')" class="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1.5 rounded-lg ml-1.5"><i class="fa-solid fa-keyboard"></i> ${item.mapcode}</button>`;
                 html += `
-                    <div class="relative">
-                        <div class="absolute -left-[24px] top-0 bg-white border border-slate-100 w-4 h-4 rounded-full flex items-center justify-center shadow-sm">
-                            <i class="fa-solid ${icon} text-[8px]"></i>
+                    <div class="relative timeline-card bg-white rounded-xl p-3 shadow-sm border ${cardBorder}">
+                        <div class="absolute -left-[27px] top-3 bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[9px] border-2 border-white font-bold shadow-sm">
+                            ${index + 1}
                         </div>
                         <div class="flex items-center gap-1.5 flex-wrap">
-                            <span class="text-xs font-black text-slate-800">${item.time || ''}</span>
+                            <span class="text-[10px] font-bold ${isTransit ? 'text-blue-600' : 'text-indigo-600'}"><i class="fa-solid ${icon} mr-1"></i>${item.time || ''}</span>
                             <span class="text-[9px] font-bold px-1.5 py-0.5 rounded-md border ${badgeClass}">${badge}</span>
                         </div>
-                        <h4 class="text-xs font-bold text-slate-700 mt-1">${item.title || ''}</h4>
-                        <p class="text-[10px] text-slate-500 mt-0.5 leading-relaxed">${item.detail || ''}</p>
+                        <h4 class="text-sm font-bold text-slate-800 mt-1">${item.title || ''}</h4>
+                        <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">${item.detail || ''}</p>
                         <div class="flex flex-wrap">${extra}</div>
                     </div>
                 `;

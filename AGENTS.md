@@ -63,6 +63,9 @@
 | `image` | 對應 CSS class 名稱，控制卡片背景圖片 |
 | `prefectures` | 涵蓋的都道府縣代碼（二位數），供地圖自動標記 |
 | `airports` | 進出機場 IATA 代碼，供地圖自動標記 |
+| `mapCenter` / `mapZoom` | 可選的地圖初始中心與縮放層級；沒有時由行程座標或舊版預設值決定 |
+| `mapCoordinates` | 可選的 `{ mapUrl: { lat, lng } }` 對照表，將原有 Google Maps 導航連結轉為地圖標記座標 |
+| `ui` | 可選的 viewer 外觀設定；目前 `theme: "original"` 採用原始 HTML 的卡片與時間軸風格 |
 | `dateStart` / `dateEnd` | ISO 日期（YYYY-MM-DD），首頁依此判斷進行中或已結束 |
 | `flights` | `{ outbound, inbound }` 航班資訊字串 |
 | `vjw` | `{ zip, address, name }` Visit Japan Web 填寫資料 |

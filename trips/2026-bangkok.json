@@ -21,6 +21,39 @@
     "TH",
     "TW"
   ],
+  "mapCenter": [
+    13.7563,
+    100.5018
+  ],
+  "mapZoom": 11,
+  "ui": {
+    "theme": "original",
+    "mapMode": "planned-stops"
+  },
+  "mapCoordinates": {
+    "https://maps.google.com/?q=Ama+Bakery+Silom+Bangkok": { "lat": 13.7244367, "lng": 100.5206819 },
+    "https://maps.google.com/?q=Big+C+Extra+Ratchadapisek": { "lat": 13.7691616, "lng": 100.5687061 },
+    "https://maps.google.com/?q=Boat+Noodle+Alley+Victory+Monument": { "lat": 13.7659183, "lng": 100.5365979 },
+    "https://maps.google.com/?q=Chatuchak+Weekend+Market": { "lat": 13.8006755, "lng": 100.5481173 },
+    "https://maps.google.com/?q=Don+Mueang+International+Airport": { "lat": 13.9150135, "lng": 100.6029074 },
+    "https://maps.google.com/?q=Guay+Tiew+Kua+Gai+Nai+Hong": { "lat": 13.7467096, "lng": 100.5086247 },
+    "https://maps.google.com/?q=Huai+Khwang+Night+Market": { "lat": 13.7780365, "lng": 100.568141 },
+    "https://maps.google.com/?q=ICONSIAM": { "lat": 13.7268227, "lng": 100.510294 },
+    "https://maps.google.com/?q=ICONSIAM+Pier": { "lat": 13.7269756, "lng": 100.5088331 },
+    "https://maps.google.com/?q=Lim+Lao+Ngow+Yaowarat+Bangkok": { "lat": 13.7373678, "lng": 100.5075978 },
+    "https://maps.google.com/?q=Mama+Restaurant+Phahurat+Bangkok": { "lat": 13.7431935, "lng": 100.4993202 },
+    "https://maps.google.com/?q=Sam+Yan+Market+Bangkok": { "lat": 13.7369796, "lng": 100.5218058 },
+    "https://maps.google.com/?q=Siam+Paragon": { "lat": 13.7467785, "lng": 100.534954 },
+    "https://maps.google.com/?q=Somboon+Seafood+Ratchada": { "lat": 13.7778463, "lng": 100.5732508 },
+    "https://maps.google.com/?q=TK+Seafood+Yaowarat": { "lat": 13.7400778, "lng": 100.5080611 },
+    "https://maps.google.com/?q=Tha+Tien+Pier": { "lat": 13.7460625, "lng": 100.487502 },
+    "https://maps.google.com/?q=The+Grand+Palace+Bangkok": { "lat": 13.7498558, "lng": 100.4890016 },
+    "https://maps.google.com/?q=Trok+Mor+Morning+Market": { "lat": 13.7495696, "lng": 100.496646 },
+    "https://maps.google.com/?q=Wat+Arun+Bangkok": { "lat": 13.7421076, "lng": 100.4757347 },
+    "https://maps.google.com/?q=Wat+Arun+Pier": { "lat": 13.7449508, "lng": 100.4874637 },
+    "https://maps.google.com/?q=Wat+Pho+Bangkok": { "lat": 13.745493, "lng": 100.4894527 },
+    "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok": { "lat": 13.7979951, "lng": 100.5729264 }
+  },
   "dateStart": "2026-08-19",
   "dateEnd": "2026-08-23",
   "countdownDate": "2026/08/19 18:05:00",
