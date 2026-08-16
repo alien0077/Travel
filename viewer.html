@@ -66,6 +66,9 @@
         function renderTrip(root, data) {
             const isDrive = data.type === 'drive';
             const APP_ID = `trip-${data.id}`;
+            const currencyCode = data.currency || 'JPY';
+            const currencyName = data.currencyName || '日幣';
+            const currencyRate = data.currencyToTwdRate ?? data.jpyToTwdRate ?? null;
             document.title = `${data.title} - ${data.subtitle || ''}`;
 
             let state = loadState(APP_ID, data);
@@ -140,6 +143,7 @@
                     <div id="tab-contents"></div>
 
                     <div id="tools-panel" class="tab-content hidden space-y-4 mt-4">
+                        ${buildTripSupplementHTML(data)}
                         ${isDrive ? '' : `
                         <div id="checklist-section" class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
                             <div class="flex items-center gap-2 mb-3 text-slate-800">
@@ -155,18 +159,18 @@
                                     <i class="fa-solid fa-calculator text-indigo-500"></i>
                                     <h3 class="font-bold text-sm">記帳本</h3>
                                 </div>
-                                <div class="text-[10px] text-slate-400 font-bold">1 JPY ≈ ${data.jpyToTwdRate || 0.22} TWD</div>
+                                <div class="text-[10px] text-slate-400 font-bold">${currencyRate == null ? `${currencyName}匯率待補` : `1 ${currencyCode} ≈ ${currencyRate} TWD`}</div>
                             </div>
                             <div class="grid grid-cols-5 gap-1.5 mb-4">
                                 <input type="text" id="expense-name" placeholder="項目" class="col-span-3 text-xs bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                                <input type="number" id="expense-amount" placeholder="日幣" class="col-span-2 text-xs bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <input type="number" id="expense-amount" placeholder="${currencyName}" class="col-span-2 text-xs bg-slate-50 border border-slate-100 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                 <button onclick="window.addExpense()" class="col-span-5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2.5 rounded-xl transition-all shadow-md">新增記帳</button>
                             </div>
                             <div id="expense-list" class="divide-y divide-slate-100 max-h-[220px] overflow-y-auto"></div>
                             <div class="border-t border-slate-100 mt-3 pt-3 flex justify-between items-center">
                                 <span class="text-xs font-bold text-slate-500">累計</span>
                                 <div class="text-right">
-                                    <p id="total-jpy" class="text-base font-black text-slate-800">0 JPY</p>
+                                    <p id="total-jpy" class="text-base font-black text-slate-800">0 ${currencyCode}</p>
                                     <p id="total-twd" class="text-[10px] font-bold text-slate-400">NT$ 0</p>
                                 </div>
                             </div>
@@ -181,7 +185,7 @@
                             <div id="pretrip-checklist" class="space-y-2">
                                 <label class="flex items-center gap-2.5 cursor-pointer py-1"><input type="checkbox" onchange="togglePreTrip('passport')" class="rounded text-emerald-600 h-4 w-4"><span class="text-xs font-medium text-slate-700">🛂 護照</span></label>
                                 <label class="flex items-center gap-2.5 cursor-pointer py-1"><input type="checkbox" onchange="togglePreTrip('license')" class="rounded text-emerald-600 h-4 w-4"><span class="text-xs font-medium text-slate-700">🚗 日文駕照譯本、台灣駕照、身分證</span></label>
-                                <label class="flex items-center gap-2.5 cursor-pointer py-1"><input type="checkbox" onchange="togglePreTrip('money')" class="rounded text-emerald-600 h-4 w-4"><span class="text-xs font-medium text-slate-700">💳 信用卡、日幣</span></label>
+                                <label class="flex items-center gap-2.5 cursor-pointer py-1"><input type="checkbox" onchange="togglePreTrip('money')" class="rounded text-emerald-600 h-4 w-4"><span class="text-xs font-medium text-slate-700">💳 信用卡、${currencyName}</span></label>
                                 <label class="flex items-center gap-2.5 cursor-pointer py-1"><input type="checkbox" onchange="togglePreTrip('luggage')" class="rounded text-emerald-600 h-4 w-4"><span class="text-xs font-medium text-slate-700">🧳 行李、牙線、綿花棒、襪子、衣服</span></label>
                                 <label class="flex items-center gap-2.5 cursor-pointer py-1"><input type="checkbox" onchange="togglePreTrip('phone')" class="rounded text-emerald-600 h-4 w-4"><span class="text-xs font-medium text-slate-700">📱 手機、充電器</span></label>
                                 <label class="flex items-center gap-2.5 cursor-pointer py-1"><input type="checkbox" onchange="togglePreTrip('itinerary')" class="rounded text-emerald-600 h-4 w-4"><span class="text-xs font-medium text-slate-700">📋 行程表</span></label>
@@ -974,6 +978,39 @@
             });
         }
 
+        function buildTripSupplementHTML(data) {
+            const sections = data.sourceContent?.sections || {};
+            const sectionLabels = {
+                'tab-overview': '總覽與實用指南（原文）',
+                'tab-day1': 'Day 1 原文',
+                'tab-day2': 'Day 2 原文',
+                'tab-day3': 'Day 3 原文',
+                'tab-day4': 'Day 4-5 原文',
+                'tab-food': '必吃打卡清單（原文）'
+            };
+            const available = Object.entries(sectionLabels).filter(([key]) => Array.isArray(sections[key]) && sections[key].length);
+            if (!available.length) return '';
+            return `
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100">
+                    <div class="flex items-center gap-2 mb-3 text-slate-800">
+                        <i class="fa-solid fa-file-lines text-amber-500"></i>
+                        <h3 class="font-bold text-sm">原始內容完整保留</h3>
+                    </div>
+                    <p class="text-[11px] text-slate-500 mb-3">以下保留來源 HTML 的原始可見文字，結構化行程資料同時提供上方每日分頁使用。</p>
+                    <div class="space-y-2">
+                        ${available.map(([key, label]) => `
+                            <details class="border border-slate-100 rounded-xl p-3">
+                                <summary class="cursor-pointer text-xs font-bold text-slate-700">${escapeHTML(label)}</summary>
+                                <div class="mt-3 space-y-1.5 text-[11px] text-slate-600 leading-relaxed">
+                                    ${sections[key].map(text => `<p>${escapeHTML(text)}</p>`).join('')}
+                                </div>
+                            </details>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
         function renderExpenses(data, state) {
             const listEl = document.getElementById('expense-list');
             if (!listEl) return;
@@ -985,16 +1022,17 @@
                     <div class="flex justify-between items-center py-2 text-xs">
                         <span class="text-slate-700">${item.name}</span>
                         <div class="flex items-center gap-2.5">
-                            <span class="font-bold text-slate-800">${item.amount.toLocaleString()} JPY</span>
+                            <span class="font-bold text-slate-800">${item.amount.toLocaleString()} ${data.currency || 'JPY'}</span>
                             <button onclick="deleteExpense(${item.id})" class="text-red-400 hover:text-red-600"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
                     </div>
                 `;
             });
             if (state.expenses.length === 0) listEl.innerHTML = '<p class="text-slate-400 text-center py-4">沒有花費記錄</p>';
-            const rate = data.jpyToTwdRate || 0.22;
-            document.getElementById('total-jpy').textContent = `${total.toLocaleString()} JPY`;
-            document.getElementById('total-twd').textContent = `NT$ ${Math.round(total * rate).toLocaleString()}`;
+            const currencyCode = data.currency || 'JPY';
+            const rate = data.currencyToTwdRate ?? data.jpyToTwdRate ?? null;
+            document.getElementById('total-jpy').textContent = `${total.toLocaleString()} ${currencyCode}`;
+            document.getElementById('total-twd').textContent = rate == null ? 'NT$ —' : `NT$ ${Math.round(total * rate).toLocaleString()}`;
         }
 
         function updateNotePlaceholder(data, state) {

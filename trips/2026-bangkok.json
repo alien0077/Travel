@@ -1,0 +1,899 @@
+{
+  "id": "2026-bangkok",
+  "type": "city",
+  "title": "曼谷 5 天 4 夜客製行程",
+  "subtitle": "8/19 - 8/23 5人同行・換匯與交通全攻略版",
+  "badge": "Bangkok Family Trip",
+  "badgeIcon": "fa-plane",
+  "description": "5人（3大2小）曼谷自由行，包含換匯、GrabXL、昭披耶河水上交通、住宿與美食打卡攻略。",
+  "stats": [
+    "5天4夜",
+    "5人同行",
+    "廊曼進出"
+  ],
+  "image": "bangkok",
+  "prefectures": [],
+  "airports": [
+    "DMK",
+    "KHH"
+  ],
+  "countries": [
+    "TH",
+    "TW"
+  ],
+  "dateStart": "2026-08-19",
+  "dateEnd": "2026-08-23",
+  "countdownDate": "2026/08/19 18:05:00",
+  "currency": "THB",
+  "currencyName": "泰銖",
+  "currencyToTwdRate": null,
+  "actionText": "換匯 / 交通指南",
+  "travellers": {
+    "count": 5,
+    "adults": 3,
+    "children": 2,
+    "label": "5人同樂 (3大2小)"
+  },
+  "flights": {
+    "outbound": "去程：泰亞航 FD235 | 2026/08/19 高雄小港機場 (KHH) 18:05 ➔ 曼谷廊曼機場 (DMK T1) 20:30",
+    "inbound": "回程：泰亞航 FD234（跨夜航班）| 2026/08/23 曼谷廊曼機場 (DMK T1) 02:35 ➔ 高雄小港機場 (KHH) 07:05"
+  },
+  "vjw": {
+    "zip": "",
+    "address": "",
+    "name": ""
+  },
+  "sightsList": [
+    {
+      "id": "sight1",
+      "name": "🛬 Day 1：廊曼機場、Woodstory Boutique Hotel、匯狂夜市",
+      "day": "day1"
+    },
+    {
+      "id": "sight2",
+      "name": "🏯 Day 2：永隆菜市場、大皇宮與玉佛寺、臥佛寺",
+      "day": "day2"
+    },
+    {
+      "id": "sight3",
+      "name": "🚢 Day 2：鄭王廟、昭披耶河觀光水上巴士、ICONSIAM",
+      "day": "day2"
+    },
+    {
+      "id": "sight4",
+      "name": "🍍 Day 3：Sam Yan 市場、勝利紀念碑船麵、Ama Bakery",
+      "day": "day3"
+    },
+    {
+      "id": "sight5",
+      "name": "🛍️ Day 3：Siam Paragon、Siam Center、唐人街",
+      "day": "day3"
+    },
+    {
+      "id": "sight6",
+      "name": "🛒 Day 4：恰圖恰週末市集、Big C Extra、建興酒家",
+      "day": "day4"
+    }
+  ],
+  "guides": {
+    "currencyDenominations": {
+      "title": "泰銖面額與換匯比例建議",
+      "commonDenominations": "最通用面額：100 銖（紅）與 20 銖（綠）！菜市場、夜市、小吃找零首選。",
+      "largeNotes": "1000 銖與 500 銖在路邊攤常找不開，建議去 7-11 或門票櫃檯破鈔找零。",
+      "recommendedFor10000Thb": [
+        "1000 銖（約 6 張）：門票、建興酒家、Big C 零食大包裝使用。",
+        "500 銖（約 4 張）：連鎖餐廳、小印度餐廳午餐使用。",
+        "100 銖（約 15-20 張）：永隆早市、Sam Yan 市場、泰服租借必備。",
+        "20 銖（約 25-30 張）：渡輪（5B）、水上巴士（30B）、泰奶、小費。"
+      ],
+      "thaiPhrase": "Can I have some 100s and 20s please?"
+    },
+    "exchangeStrategy": [
+      {
+        "title": "為什麼第 1 晚要在機場先換 6,000 - 8,000 泰銖？",
+        "detail": "Day 2 白天行程都需要現金（永隆早市、大皇宮門票、臥佛寺門票、小印度午餐、跨河渡輪、鄭王廟泰服租借）。"
+      },
+      {
+        "title": "機場換匯建議",
+        "detail": "機場銀行櫃檯（24hr）換 6,000 台幣，匯率雖然稍微差一點，但只相差不到 150 台幣；花小錢換取全家 Day 2 白天流暢玩樂、免到處找換匯所的輕鬆。"
+      },
+      {
+        "title": "Day 2 下午 17:00 ICONSIAM 的 Super Rich 用途",
+        "detail": "抵達冷氣超強的 ICONSIAM 後，前往 5 樓 Super Rich，拿護照正本與剩餘台幣，把剩餘天數（Day 3-Day 4 恰圖恰市集、Big C、宵夜）所需的泰銖一次換齊。"
+      }
+    ],
+    "cashExpenseBreakdown": {
+      "title": "Day 2 白天現金預估清單（5人份）",
+      "items": [
+        {
+          "name": "永隆菜市場早餐（5人）",
+          "estimate": "約 400 - 500 泰銖"
+        },
+        {
+          "name": "大皇宮/玉佛寺門票（500/人）",
+          "estimate": "約 1,500 - 2,000 泰銖"
+        },
+        {
+          "name": "臥佛寺門票（200/人）",
+          "estimate": "約 800 - 1,000 泰銖"
+        },
+        {
+          "name": "小印度 Pani Puri + Naan 午餐",
+          "estimate": "約 600 - 800 泰銖"
+        },
+        {
+          "name": "渡輪（5B）+ 水上巴士（30B）",
+          "estimate": "約 175 泰銖"
+        },
+        {
+          "name": "鄭王廟門票（200B）+ 泰服租借",
+          "estimate": "約 1,800 - 2,000 泰銖"
+        }
+      ],
+      "totalEstimate": "約 5,500 - 6,500 泰銖"
+    },
+    "grab": {
+      "tollFee": "不用給司機現金！司機過收費站代墊後，會將金額輸入 App，Grab 系統會自動從信用卡加扣。",
+      "vehicle": "5 人用車（3大2小）請務必點選 GrabXL 或 Grab 6-Seater。",
+      "thaiPhrase": "มีผู้โดยสาร 5 คน (ผู้ใหญ่ 3 คน, เด็ก 2 คน) ครับ"
+    },
+    "esim": {
+      "title": "泰國 AIS 8天/10天 5G eSIM（含門號）",
+      "detail": "訊號最穩最快！建議大人手機購買含泰國在地門號版本，方便用 Grab 叫車通話。"
+    },
+    "hotel": {
+      "name": "Woodstory Boutique Hotel",
+      "detail": "Huai Khwang 匯狂區；保留 8/22 晚住宿，深夜退房。",
+      "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+    }
+  },
+  "foodChecklist": [
+    {
+      "id": 1,
+      "name": "【老城早市】永隆菜市場（Trok Mor Market）",
+      "detail": "豬肉粥、烤豬肉串、現切芒果山竹與冰泰奶。",
+      "day": "day2"
+    },
+    {
+      "id": 2,
+      "name": "【在地菜市場】Sam Yan 菜市場（Sam Yan Market）",
+      "detail": "便宜現切水果、傳統泰式糕點、泰式煎餃。",
+      "day": "day3"
+    },
+    {
+      "id": 3,
+      "name": "小印度 Pani Puri + Naan 烤餅",
+      "detail": "Mama Restaurant / Royal India：炸脆球爆汁與蒜味 Naan。",
+      "day": "day2"
+    },
+    {
+      "id": 4,
+      "name": "【必去名店】Silom「阿嬤麵包店」（Ama Bakery）",
+      "detail": "招牌盒裝鮮奶斑蘭爆漿餐包！",
+      "day": "day3"
+    },
+    {
+      "id": 5,
+      "name": "泰國正宗船麵（Boat Noodles）",
+      "detail": "勝利紀念碑 Doy Kuay Teow Reua：黑湯濃郁小碗麵。",
+      "day": "day3"
+    },
+    {
+      "id": 6,
+      "name": "林老五魚丸麵（Lim Lao Ngow）",
+      "detail": "唐人街總店：米其林推薦手工爆漿魚丸與彈牙蛋麵。",
+      "day": "day3"
+    },
+    {
+      "id": 7,
+      "name": "螃蟹大餐（T&K Seafood / 建興酒家）",
+      "detail": "黃金咖哩炒蟹、黑胡椒蟹、烤大頭蝦。",
+      "day": "day3、day4"
+    },
+    {
+      "id": 8,
+      "name": "【米其林推薦】乃紅雞肉炒河粉（Nai Hong）",
+      "detail": "大火炭香味十足、雞肉滑嫩、半熟蛋滿分！",
+      "day": "day3"
+    }
+  ],
+  "defaultExpenses": [],
+  "days": {
+    "day1": {
+      "date": "8/19 (三)",
+      "label": "抵達曼谷",
+      "title": "抵達曼谷與匯狂夜市宵夜",
+      "timeRange": "18:05 - 24:00",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "18:05 - 20:30",
+          "title": "高雄國際航廈 ➔ 曼谷廊曼機場（DMK T1）",
+          "detail": "搭乘泰亞航 FD235 班機，抵達曼谷廊曼機場第 1 航廈（DMK T1），辦理入境手續與領取行李。請直接在機場入境大廳 24hr 銀行櫃檯先換 6,000 - 8,000 泰銖，並請櫃檯多給 100 銖與 20 銖小鈔。入境與領行李估 60 分鐘。",
+          "mapUrl": "https://maps.google.com/?q=Don+Mueang+International+Airport"
+        },
+        {
+          "type": "transport",
+          "time": "21:30 - 22:30",
+          "title": "叫 GrabXL 車：廊曼機場 ➔ 飯店",
+          "detail": "點選 GrabXL / 6-Seater 車型直達飯店，車程約 35-40 分鐘，過路費自動扣信用卡。"
+        },
+        {
+          "type": "hotel",
+          "time": "22:30 - 23:00",
+          "title": "Woodstory Boutique Hotel Check-in",
+          "detail": "飯店 Check-in 辦理入住，房間放行李與整理休息。位於 Huai Khwang 匯狂區。",
+          "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "23:00",
+          "title": "步行前往匯狂夜市",
+          "detail": "從飯店出發散步步行約 5 分鐘即可抵達匯狂夜市。"
+        },
+        {
+          "type": "food",
+          "time": "23:00 - 24:00（宵夜）",
+          "title": "匯狂夜市宵夜 / 7-11 熱壓吐司",
+          "detail": "品嚐泰式烤肉串、香蕉煎餅、泰奶，或去 7-11 買熱壓吐司。",
+          "mapUrl": "https://maps.google.com/?q=Huai+Khwang+Night+Market"
+        }
+      ],
+      "food": [
+        {
+          "meal": "宵夜",
+          "name": "匯狂夜市宵夜 / 7-11 熱壓吐司",
+          "detail": "泰式烤肉串、香蕉煎餅、泰奶或 7-11 熱壓吐司。",
+          "mapUrl": "https://maps.google.com/?q=Huai+Khwang+Night+Market"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "Woodstory Boutique Hotel",
+        "detail": "Huai Khwang 匯狂區；8/22 晚住宿後深夜退房。",
+        "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+      },
+      "details": "高雄小港國際航廈 ➔ 廊曼機場 T1 ➔ 飯店 Check-in ➔ 夜市宵夜。"
+    },
+    "day2": {
+      "date": "8/20 (四)",
+      "label": "老城與昭披耶河",
+      "title": "永隆菜市場、老城寺廟與昭披耶河水上巴士",
+      "timeRange": "08:30 - 20:30",
+      "timeline": [
+        {
+          "type": "food",
+          "time": "08:30 - 09:30（必吃老城早市，使用現金）",
+          "title": "永隆菜市場（Trok Mor Market）",
+          "detail": "交通：飯店叫 GrabXL 直達，車程約 25 分鐘。品嚐道地泰式豬肉粥（Jok）、現烤香茅豬肉串搭糯米飯、現切鮮甜芒果山竹及現沖泰式冰奶茶。",
+          "mapUrl": "https://maps.google.com/?q=Trok+Mor+Morning+Market"
+        },
+        {
+          "type": "transport",
+          "time": "09:30 - 09:40",
+          "title": "步行：永隆菜市場 ➔ 大皇宮",
+          "detail": "從永隆菜市場出來後，沿著老城街道輕鬆散步約 8 分鐘即可抵達大皇宮景區。"
+        },
+        {
+          "type": "sight",
+          "time": "09:40 - 11:30（使用現金門票）",
+          "title": "大皇宮 & 玉佛寺（Grand Palace）",
+          "detail": "開放時間 08:30 - 15:30。門票每人 500 泰銖，現場付現金；亦可在大鈔找零時換取 100 銖小鈔。注意穿著：需著長褲/過膝長裙，不可穿無袖上衣。",
+          "mapUrl": "https://maps.google.com/?q=The+Grand+Palace+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "11:30 - 11:40",
+          "title": "步行：大皇宮 ➔ 臥佛寺",
+          "detail": "沿著大皇宮白色外牆往南散步約 10 分鐘，直達臥佛寺入口。"
+        },
+        {
+          "type": "sight",
+          "time": "11:40 - 12:40（使用現金門票）",
+          "title": "臥佛寺（Wat Pho）",
+          "detail": "門票每人 200 泰銖，現場付現金。參觀長 46 公尺的巨型金色臥佛，腳底有精美的貝殼鑲嵌畫。",
+          "mapUrl": "https://maps.google.com/?q=Wat+Pho+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "12:40",
+          "title": "叫 GrabXL：臥佛寺 ➔ 小印度區",
+          "detail": "叫 GrabXL，車程約 6 分鐘，直達小印度區享用午餐。"
+        },
+        {
+          "type": "food",
+          "time": "12:50 - 14:15（必吃2，使用現金）",
+          "title": "小印度特賞：Pani Puri + 烤餅 Naan",
+          "detail": "體驗必吃 Pani Puri（印度酸辣脆球），把汁灌入酥脆小球一口咬下；再配上現烤 Garlic Naan 蒜味烤餅與濃郁咖哩。原行程導航為 Mama Restaurant Phahurat。",
+          "mapUrl": "https://maps.google.com/?q=Mama+Restaurant+Phahurat+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "14:15 - 14:30",
+          "title": "GrabXL ➔ 渡輪：小印度跨河至鄭王廟",
+          "detail": "從小印度叫 GrabXL，約 5 分鐘抵達 Tha Tien 碼頭；購買渡輪票約 5 泰銖/人現金，搭乘渡輪約 5 分鐘橫渡昭披耶河抵達鄭王廟碼頭。",
+          "mapUrl": "https://maps.google.com/?q=Tha+Tien+Pier",
+          "mapLinks": [
+            {
+              "name": "Tha Tien 碼頭",
+              "mapUrl": "https://maps.google.com/?q=Tha+Tien+Pier"
+            },
+            {
+              "name": "鄭王廟碼頭",
+              "mapUrl": "https://maps.google.com/?q=Wat+Arun+Pier"
+            }
+          ]
+        },
+        {
+          "type": "sight",
+          "time": "14:30 - 16:30（門票與泰服需現金）",
+          "title": "鄭王廟（Wat Arun）+ 泰服體驗",
+          "detail": "門票 200 泰銖/人，泰服租借約 200 泰銖/人，皆付現金。純白高聳的泰式塔身絕美。",
+          "mapUrl": "https://maps.google.com/?q=Wat+Arun+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "16:30 - 17:00",
+          "title": "昭披耶河觀光水上巴士",
+          "detail": "從 Wat Arun Pier（鄭王廟碼頭）購買水上巴士票約 30 泰銖/人，坐在二層露天甲板吹河風，搭船約 15 分鐘直達 ICONSIAM 專屬碼頭。",
+          "mapUrl": "https://maps.google.com/?q=Wat+Arun+Pier",
+          "mapLinks": [
+            {
+              "name": "上船：鄭王廟碼頭",
+              "mapUrl": "https://maps.google.com/?q=Wat+Arun+Pier"
+            },
+            {
+              "name": "下船：ICONSIAM 碼頭",
+              "mapUrl": "https://maps.google.com/?q=ICONSIAM+Pier"
+            }
+          ]
+        },
+        {
+          "type": "sight",
+          "time": "17:00 - 20:30（大額 Super Rich 補給站）",
+          "title": "暹邏天地 ICONSIAM（室內水上市場 & 5樓 Super Rich）",
+          "detail": "抵達後前往 5樓 Super Rich 櫃檯，攜帶台幣與全家護照正本，將後續 Day 3-4（恰圖恰市集、Big C、宵夜）所需的剩餘泰銖一次換齊。G 樓是冷氣超強的 SOOKSIAM 室內水上市場，18:30 / 20:00 戶外廣場演出河岸音樂水舞秀。逛完後從 ICONSIAM 一樓叫 GrabXL 直達飯店，車程約 30 分鐘。",
+          "mapUrl": "https://maps.google.com/?q=ICONSIAM"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐",
+          "name": "永隆菜市場（Trok Mor Market）",
+          "detail": "豬肉粥、香茅豬肉串搭糯米飯、芒果山竹、泰式冰奶茶。",
+          "mapUrl": "https://maps.google.com/?q=Trok+Mor+Morning+Market"
+        },
+        {
+          "meal": "午餐",
+          "name": "小印度 Pani Puri + Garlic Naan",
+          "detail": "印度酸辣脆球、蒜味烤餅與濃郁咖哩。",
+          "mapUrl": "https://maps.google.com/?q=Mama+Restaurant+Phahurat+Bangkok"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "Woodstory Boutique Hotel",
+        "detail": "Huai Khwang 匯狂區；8/22 晚住宿後深夜退房。",
+        "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+      },
+      "details": "永隆菜市場 ➔ 大皇宮/臥佛寺 ➔ 小印度 ➔ 渡輪渡河 ➔ 鄭王廟 ➔ 水上巴士 ➔ ICONSIAM（換匯）。"
+    },
+    "day3": {
+      "date": "8/21 (五)",
+      "label": "市場、美食與唐人街",
+      "title": "Sam Yan 市場、船麵、Siam 商圈與唐人街美食",
+      "timeRange": "08:30 - 21:00",
+      "timeline": [
+        {
+          "type": "food",
+          "time": "08:30 - 09:40（景點附近傳統菜市場）",
+          "title": "Sam Yan 傳統菜市場（Sam Yan Market）",
+          "detail": "飯店叫 GrabXL 直達，車程約 20 分鐘。市場乾淨明亮，1樓販售超便宜的現切新鮮泰國水果（芒果、山竹、紅毛丹）與傳統泰式糕點。",
+          "mapUrl": "https://maps.google.com/?q=Sam+Yan+Market+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "09:40",
+          "title": "叫 GrabXL：Sam Yan 市場 ➔ 勝利紀念碑船麵",
+          "detail": "車程約 12 分鐘，直達勝利紀念碑船麵街。"
+        },
+        {
+          "type": "food",
+          "time": "10:00 - 11:20（必吃3）",
+          "title": "正宗泰國船麵（勝利紀念碑船麵街）",
+          "detail": "前往勝利紀念碑河畔 Doy Kuay Teow Reua 疊碗挑戰！濃郁黑湯船麵一碗只要 15-20 泰銖。",
+          "mapUrl": "https://maps.google.com/?q=Boat+Noodle+Alley+Victory+Monument"
+        },
+        {
+          "type": "transport",
+          "time": "11:20",
+          "title": "叫 GrabXL：船麵 ➔ 阿嬤麵包店（Silom）",
+          "detail": "車程約 15 分鐘直達 Silom 阿嬤麵包店。"
+        },
+        {
+          "type": "food",
+          "time": "11:35 - 12:20（必去傳奇名店）",
+          "title": "阿嬤麵包店（Ama Bakery / อาม่า เบเกอรี่）",
+          "detail": "Silom 傳統名店，必買剛剛出爐軟綿無比的盒裝鮮奶斑蘭爆漿餐包。",
+          "mapUrl": "https://maps.google.com/?q=Ama+Bakery+Silom+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "12:20",
+          "title": "叫 GrabXL：阿嬤麵包店 ➔ Siam 百貨",
+          "detail": "車程約 8-10 分鐘；亦可選擇於 Chong Nonsi 站搭乘 BTS 捷運 2 站至 Siam 站。"
+        },
+        {
+          "type": "sight",
+          "time": "12:30 - 16:00",
+          "title": "Siam Paragon & Siam Center 潮牌商區",
+          "detail": "午後炎熱時段至 Siam 暹羅商圈避暑，可去網美咖啡廳吃冰品品嚐甜點，或帶小孩逛 Siam Paragon 樓下的 SEA LIFE 曼谷海洋世界。",
+          "mapUrl": "https://maps.google.com/?q=Siam+Paragon"
+        },
+        {
+          "type": "transport",
+          "time": "16:00",
+          "title": "叫 GrabXL：Siam 商圈 ➔ 唐人街林老五",
+          "detail": "車程約 20 分鐘直達林老五魚丸麵唐人街總店。"
+        },
+        {
+          "type": "food",
+          "time": "16:30 - 17:45（必吃4）",
+          "title": "林老五魚丸麵（Lim Lao Ngow 唐人街總店）",
+          "detail": "16:30 開店；米其林必比登推薦，80 年老字號，招牌手工爆漿魚丸與彈牙蛋麵，開店第一批入座免排隊。",
+          "mapUrl": "https://maps.google.com/?q=Lim+Lao+Ngow+Yaowarat+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "17:45",
+          "title": "步行：林老五 ➔ T&K Seafood 海鮮宴",
+          "detail": "沿著唐人街耀華力路散步約 3 分鐘即可抵達 T&K Seafood。"
+        },
+        {
+          "type": "food",
+          "time": "18:00 - 19:30（必吃5）",
+          "title": "唐人街海鮮螃蟹宴（T&K Seafood）",
+          "detail": "不用預約，直接前往唐人街最熱鬧的名店 T&K Seafood，享用黃金咖哩炒蟹、黑胡椒螃蟹與大頭蝦。",
+          "mapUrl": "https://maps.google.com/?q=TK+Seafood+Yaowarat"
+        },
+        {
+          "type": "food",
+          "time": "19:30 - 21:00（唐人街散步打卡）",
+          "title": "炭火雞肉炒河粉 / 經典路邊燕窩",
+          "detail": "乃紅雞肉炒河粉（Guay Tiew Kua Gai Nai Hong）：米其林必比登推薦，傳統大炭火爆炒，河粉焦香Q彈、雞肉嫩滑打入半熟蛋。唐人街路邊甜燕窩：坐在熱鬧的耀華力路街頭，來一碗溫熱滑嫩的甜燕窩或銀耳湯。逛完後於耀華力路旁叫 GrabXL 直達飯店，車程約 25 分鐘。",
+          "mapUrl": "https://maps.google.com/?q=Guay+Tiew+Kua+Gai+Nai+Hong"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐",
+          "name": "Sam Yan 傳統菜市場",
+          "detail": "現切水果、傳統泰式糕點、泰式煎餃。",
+          "mapUrl": "https://maps.google.com/?q=Sam+Yan+Market+Bangkok"
+        },
+        {
+          "meal": "早午餐",
+          "name": "正宗泰國船麵",
+          "detail": "勝利紀念碑 Doy Kuay Teow Reua 黑湯小碗麵。",
+          "mapUrl": "https://maps.google.com/?q=Boat+Noodle+Alley+Victory+Monument"
+        },
+        {
+          "meal": "午餐",
+          "name": "阿嬤麵包店（Ama Bakery）",
+          "detail": "盒裝鮮奶斑蘭爆漿餐包。",
+          "mapUrl": "https://maps.google.com/?q=Ama+Bakery+Silom+Bangkok"
+        },
+        {
+          "meal": "下午茶 / 晚餐前",
+          "name": "林老五魚丸麵",
+          "detail": "手工爆漿魚丸與彈牙蛋麵。",
+          "mapUrl": "https://maps.google.com/?q=Lim+Lao+Ngow+Yaowarat+Bangkok"
+        },
+        {
+          "meal": "晚餐",
+          "name": "T&K Seafood",
+          "detail": "黃金咖哩炒蟹、黑胡椒蟹、烤大頭蝦。",
+          "mapUrl": "https://maps.google.com/?q=TK+Seafood+Yaowarat"
+        },
+        {
+          "meal": "宵夜 / 散步",
+          "name": "乃紅雞肉炒河粉與路邊甜燕窩",
+          "detail": "炭火雞肉炒河粉、甜燕窩或銀耳湯。",
+          "mapUrl": "https://maps.google.com/?q=Guay+Tiew+Kua+Gai+Nai+Hong"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "Woodstory Boutique Hotel",
+        "detail": "Huai Khwang 匯狂區；8/22 晚住宿後深夜退房。",
+        "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+      },
+      "details": "Sam Yan 菜市場 ➔ 船麵 ➔ 阿嬤麵包店 ➔ Siam 商圈 ➔ 林老五 ➔ 海鮮宴 ➔ 炭火雞肉炒河粉。"
+    },
+    "day4": {
+      "date": "8/22 (六)",
+      "label": "購物與深夜退房",
+      "title": "恰圖恰市集、Big C 採購與建興酒家",
+      "timeRange": "09:30 - 23:30",
+      "timeline": [
+        {
+          "type": "sight",
+          "time": "09:30 - 13:30（免趕退房）",
+          "title": "恰圖恰週末市集（Chatuchak Market）",
+          "detail": "飯店叫 GrabXL 直達，車程約 15 分鐘。週六全面營業，採買手工藝品、泰式服飾、香氛、椰子冰淇淋與手作小物。",
+          "mapUrl": "https://maps.google.com/?q=Chatuchak+Weekend+Market"
+        },
+        {
+          "type": "transport",
+          "time": "13:30",
+          "title": "叫 GrabXL：恰圖恰 ➔ Big C Extra（Ratchada）",
+          "detail": "車程約 18 分鐘，直達 Ratchada 旗艦店。"
+        },
+        {
+          "type": "sight",
+          "time": "14:00 - 16:30（伴手禮大採購）",
+          "title": "Big C Extra（Ratchada 旗艦店）零食大包裝掃貨",
+          "detail": "離飯店僅 5 分鐘車程。必買：手標泰奶粉、小老闆海苔、Pocky/Pretz 各式泰國限定口味。買完搭 Grab 整箱載回飯店放行李。",
+          "mapUrl": "https://maps.google.com/?q=Big+C+Extra+Ratchadapisek"
+        },
+        {
+          "type": "transport",
+          "time": "16:30",
+          "title": "叫 GrabXL：Big C ➔ 建興酒家（匯狂店）",
+          "detail": "車程約 5 分鐘直達建興酒家。"
+        },
+        {
+          "type": "food",
+          "time": "17:00 - 19:00",
+          "title": "建興酒家（Somboon Seafood 匯狂分店）",
+          "detail": "17:00 抵達為離峰時段，現場位子充足。品嚐招牌黃金咖哩炒蟹、冬蔭功海鮮湯，享用美好的曼谷最後晚餐。",
+          "mapUrl": "https://maps.google.com/?q=Somboon+Seafood+Ratchada"
+        },
+        {
+          "type": "hotel",
+          "time": "19:00 - 22:30",
+          "title": "建興酒家 ➔ 回 Woodstory 房間洗澡歇息",
+          "detail": "距離僅約 1.5~2 公里，直接叫 GrabXL，車資約 80-130 泰銖，5-8 分鐘直達飯店門口。回房間洗熱水澡、換乾淨衣服、躺床補眠 1-2 小時，並悠閒將戰利品打包封箱。22:30 辦理 Check-out 退房。",
+          "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+        },
+        {
+          "type": "transport",
+          "time": "22:30 - 23:30（機場接駁）",
+          "title": "Check-out ➔ 廊曼機場第 1 航廈（DMK T1）",
+          "detail": "22:30 退房後開啟 Grab，點選 GrabXL / 6-Seater 直達廊曼國際機場第 1 航廈（Terminal 1，國際線出境大廳），車程約 30 分鐘。於 23:30 前抵達辦理行李託運與通關，班機為 08/23 凌晨 02:35。",
+          "mapUrl": "https://maps.google.com/?q=Don+Mueang+International+Airport"
+        }
+      ],
+      "food": [
+        {
+          "meal": "市集小吃",
+          "name": "恰圖恰週末市集",
+          "detail": "椰子冰淇淋與市集小吃。",
+          "mapUrl": "https://maps.google.com/?q=Chatuchak+Weekend+Market"
+        },
+        {
+          "meal": "最後晚餐",
+          "name": "建興酒家（Somboon Seafood 匯狂分店）",
+          "detail": "黃金咖哩炒蟹、冬蔭功海鮮湯。",
+          "mapUrl": "https://maps.google.com/?q=Somboon+Seafood+Ratchada"
+        }
+      ],
+      "parking": [],
+      "hotel": {
+        "name": "Woodstory Boutique Hotel",
+        "detail": "保留 8/22 晚住宿；22:30 Check-out 後前往廊曼 T1。",
+        "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+      },
+      "details": "恰圖恰週末市集 ➔ Big C 伴手禮大採購 ➔ 建興酒家 ➔ 回飯店洗澡休息 ➔ 廊曼 T1。"
+    },
+    "day5": {
+      "date": "8/23 (日)",
+      "label": "返回台灣",
+      "title": "廊曼機場跨夜航班返回高雄",
+      "timeRange": "02:35 - 07:05",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "02:35 - 07:05",
+          "title": "曼谷廊曼機場（DMK T1）➔ 高雄小港機場（KHH）",
+          "detail": "搭乘泰亞航 FD234 跨夜航班，於 02:35 從廊曼國際機場第 1 航廈起飛，07:05 抵達高雄國際航廈。",
+          "mapUrl": "https://maps.google.com/?q=Don+Mueang+International+Airport"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "Woodstory Boutique Hotel",
+        "detail": "已於 8/22 22:30 辦理 Check-out，8/23 無住宿。",
+        "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok"
+      },
+      "details": "回程：FD234（跨夜航班），曼谷廊曼機場 DMK T1 02:35 ➔ 高雄小港機場 KHH 07:05。"
+    }
+  },
+  "sourceContent": {
+  "sections": {
+    "header": [
+      "曼谷 5 天 4 夜精華自由行行程表",
+      "🇹🇭",
+      "曼谷 5 天 4 夜客製行程",
+      "5人同樂 (3大2小) • 換匯與交通全攻略版",
+      "2026.08.19 - 08.23",
+      "總覽與實用指南",
+      "Day 1",
+      "(08/19 三)",
+      "Day 2",
+      "(08/20 四)",
+      "Day 3",
+      "(08/21 五)",
+      "Day 4-5",
+      "(08/22 晚退房)",
+      "必吃打卡"
+    ],
+    "tab-overview": [
+      "泰銖面額與換匯比例建議",
+      "💵 1. 常見面額與通用王牌",
+      "• **最通用面額**：**100 銖 (紅)** & **20 銖 (綠)**！菜市場、夜市、小吃找零首選。",
+      "• **大鈔注意**：1000 銖與 500 銖在路邊攤常找不開，建議去 **7-11 或門票櫃檯** 破鈔找零。",
+      "📊 2. 建議換匯面額比例（換 10,000 泰銖為例）",
+      "• **1000 銖** (約 6 張)：門票、建興酒家、Big C 零食大包裝使用。",
+      "• **500 銖** (約 4 張)：連鎖餐廳、小印度餐廳午餐使用。",
+      "• **100 銖** (約 15-20 張)：**永隆早市、Sam Yan 市場、泰服租借必備**。",
+      "• **20 銖** (約 25-30 張)：**渡輪(5B)、水上巴士(30B)、泰奶、小費**。",
+      "💡 換匯口訣：\"Can I have some 100s and 20s please?\"",
+      "全家 5 人換匯最佳策略",
+      "💡 為什麼第 1 晚要在機場先換 6,000 - 8,000 泰銖？",
+      "**Day 2 白天行程都需要現金**（永隆早市、大皇宮門票、臥佛寺門票、小印度午餐、跨河渡輪、鄭王廟泰服租借）。",
+      "機場銀行櫃檯（24hr）換 $6,000 台幣雖然匯率稍微差一點，但**只相差不到 $150 台幣**！花小錢換取全家 Day 2 白天流暢玩樂、免到處找換匯所的輕鬆，絕對最物超所值！",
+      "💵 Day 2 下午 17:00 ICONSIAM 的 Super Rich 用途",
+      "抵達冷氣超強的 ICONSIAM 後，前往 5 樓 Super Rich，拿「護照正本+剩餘台幣」把剩餘天數（Day 3-Day 4 恰圖恰市集、Big C、宵夜）所需的泰銖一次換齊！",
+      "Day 2 白天現金預估清單 (5人份)",
+      "1. 永隆菜市場早餐 (5人)",
+      "約 400 - 500 泰銖",
+      "2. 大皇宮/玉佛寺門票 (500/人)",
+      "約 1,500 - 2,000 泰銖",
+      "3. 臥佛寺門票 (200/人)",
+      "約 800 - 1,000 泰銖",
+      "4. 小印度 Pani Puri + Naan 午餐",
+      "約 600 - 800 泰銖",
+      "5. 渡輪 (5B) + 水上巴士 (30B)",
+      "約 175 泰銖",
+      "6. 鄭王廟門票 (200B) + 泰服租借",
+      "約 1,800 - 2,000 泰銖",
+      "Day 2 白天現金總需求：",
+      "約 5,500 - 6,500 泰銖",
+      "航班資訊 (泰亞航 AirAsia)",
+      "5人同行",
+      "✈️ 去程：FD235",
+      "08/19 (三)",
+      "起飛：18:05",
+      "高雄小港機場 (KHH)",
+      "抵達：20:30",
+      "曼谷廊曼機場 (DMK T1)",
+      "✈️ 回程：FD234 (⚠️跨夜航班)",
+      "08/23 (日) 凌晨",
+      "起飛：02:35",
+      "抵達：07:05",
+      "Grab 綁信用卡：過路費說明",
+      "高速公路過路費 (Toll Fee)",
+      "不用給司機現金！司機過收費站代墊後，會將金額輸入 App，**Grab 系統會自動從您的信用卡加扣**。",
+      "5 人用車提醒 (3大2小)",
+      "請務必點選 **`GrabXL`** 或 **`Grab 6-Seater`**！",
+      "泰文：มีผู้โดยสาร 5 คน (ผู้ใหญ่ 3 คน, เด็ก 2 คน) ครับ",
+      "泰國 eSIM 上網卡推薦",
+      "👑 首選：泰國 AIS 8天/10天 5G eSIM (含門號)",
+      "訊號最穩最快！建議大人手機購買「含泰國在地門號」版本，方便用 Grab 叫車通話。",
+      "Woodstory Boutique Hotel",
+      "✨ 保留 8/22 晚住宿，深夜退房！",
+      "地圖"
+    ],
+    "tab-day1": [
+      "08/19 星期三 • 抵達曼谷",
+      "高雄小港國際航廈 ➔ 廊曼機場 T1 ➔ 飯店 Check-in ➔ 夜市宵夜",
+      "🛬",
+      "18:05 - 20:30",
+      "高雄國際航廈 ➔ 曼谷廊曼機場 (DMK T1)",
+      "搭乘泰亞航 FD235 班機，抵達**曼谷廊曼機場第 1 航廈 (DMK T1)**。辦理入境手續與領取行李。",
+      "💡 換匯關鍵：請直接在機場入境大廳 24hr 銀行櫃檯先換 6,000 - 8,000 泰銖，並請櫃檯多給 100 銖與 20 銖小鈔！",
+      "入境+領行李估 60 分鐘",
+      "廊曼 T1 機場導航",
+      "🚗 【叫 GrabXL 車】21:30 - 22:30 機場接駁",
+      "點選 **GrabXL / 6-Seater** 車型直達飯店（車程約 35-40 分鐘）。過路費自動扣信用卡。",
+      "22:30 - 23:00",
+      "Woodstory Boutique Hotel",
+      "飯店 Check-in 辦理入住，房間放行李與整理休息。",
+      "Huai Khwang 匯狂區",
+      "飯店導航",
+      "🚶 【步行】23:00 前往夜市",
+      "從飯店出發散步步行約 5 分鐘即可抵達匯狂夜市。",
+      "23:00 - 24:00 (宵夜)",
+      "匯狂夜市宵夜 / 7-11 熱壓吐司",
+      "品嚐泰式烤肉串、香蕉煎餅、泰奶，或去 7-11 買熱壓吐司！",
+      "夜市導航"
+    ],
+    "tab-day2": [
+      "08/20 星期四 • 永隆菜市場與昭披耶河水上巴士體驗",
+      "永隆菜市場 ➔ 大皇宮/臥佛寺 ➔ 小印度 ➔ 渡輪渡河 ➔ 鄭王廟 ➔ 水上巴士 ➔ ICONSIAM (換匯)",
+      "🚢",
+      "08:30 - 09:30 【必吃老城早市 (使用現金)】",
+      "永隆菜市場 (Trok Mor Market)",
+      "🚗 **交通（飯店➔永隆菜市場）**：開啟 Grab 叫 **`GrabXL`** 直達，車程約 25 分鐘。",
+      "品嚐道地泰式豬肉粥 (Jok)、現烤香茅豬肉串搭糯米飯、現切鮮甜芒果山竹及現沖泰式冰奶茶。",
+      "永隆菜市場導航",
+      "🚶 【步行】09:30 - 09:40 移動前往大皇宮",
+      "從永隆菜市場出來後，沿著老城街道輕鬆散步約 8 分鐘即可抵達大皇宮景區。",
+      "09:40 - 11:30 (使用現金門票)",
+      "大皇宮 & 玉佛寺 (Grand Palace)",
+      "開放時間：08:30 - 15:30。門票每人 500 泰銖（現場付現金，亦可在大鈔找零時換取 100 銖小鈔）。注意穿著：需著長褲/過膝長裙，不可穿無袖上衣。",
+      "大皇宮導航",
+      "🚶 【步行】11:30 - 11:40 大皇宮 ➔ 臥佛寺",
+      "沿著大皇宮白色外牆往南散步約 10 分鐘，直達臥佛寺入口。",
+      "11:40 - 12:40 (使用現金門票)",
+      "臥佛寺 (Wat Pho)",
+      "門票每人 200 泰銖（現場付現金）。參觀長 46 公尺的巨型金色臥佛，腳底有精美的貝殼鑲嵌畫。",
+      "臥佛寺導航",
+      "🚗 【叫 GrabXL 車】12:40 臥佛寺 ➔ 小印度區",
+      "叫 **GrabXL** 車程約 6 分鐘，直達小印度區享用午餐。",
+      "12:50 - 14:15 【必吃2 (使用現金)】",
+      "小印度特賞：Pani Puri + 烤餅 Naan",
+      "體驗**必吃 Pani Puri (印度酸辣脆球)**，把汁灌入酥脆小球一口咬下！再配上現烤 **Garlic Naan 蒜味烤餅** 與濃郁咖哩！",
+      "小印度餐廳導航",
+      "🚗+🚢 【GrabXL ➔ 渡輪】14:15 - 14:30 跨河至鄭王廟",
+      "1. 從小印度叫 **GrabXL** 5 分鐘抵達 Tha Tien 碼頭。",
+      "2. 購買渡輪票（約 5 泰銖/人現金），搭乘 **渡輪 5 分鐘** 輕鬆橫渡昭披耶河抵達鄭王廟碼頭。",
+      "Tha Tien 碼頭導航",
+      "鄭王廟碼頭導航",
+      "14:30 - 16:30 (門票與泰服需現金)",
+      "鄭王廟 (Wat Arun) + 泰服體驗",
+      "門票 200 泰銖/人，泰服租借約 200 泰銖/人（皆付現金）。純白高聳的泰式塔身絕美！",
+      "鄭王廟導航",
+      "🚢 【觀光水上巴士】16:30 - 17:00",
+      "昭披耶河觀光水上巴士 (Chao Phraya Tourist Boat)",
+      "從 **Wat Arun Pier (鄭王廟碼頭)** 購買水上巴士票（約 30 泰銖/人），坐在二層露天甲板吹河風，**搭船約 15 分鐘** 直達 **ICONSIAM 專屬碼頭**！",
+      "上船：鄭王廟碼頭",
+      "下船：ICONSIAM 碼頭",
+      "17:00 - 20:30 【大額 Super Rich 補給站】",
+      "暹邏天地 ICONSIAM (室內水上市場 & 5樓 Super Rich)",
+      "💵 **【補給大額泰銖】**：抵達 ICONSIAM 後前往 **5樓的 Super Rich 櫃檯**，攜帶台幣與全家護照正本，將後續 Day 3-4 (恰圖恰市集、Big C、宵夜) 所需之剩餘泰銖一次換齊！",
+      "G 樓是冷氣超強的 SOOKSIAM 室內水上市場，18:30 / 20:00 戶外廣場演出河岸音樂水舞秀。",
+      "🚗 **歸程交通（ICONSIAM ➔ 飯店）**：逛完後從 ICONSIAM 一樓叫 **`GrabXL`** 直達飯店（車程約 30 分鐘）。",
+      "ICONSIAM 導航"
+    ],
+    "tab-day3": [
+      "08/21 星期五 • SamYan菜市場 + 船麵 + AmaBakery + 唐人街",
+      "SamYan菜市場 ➔ 船麵 ➔ 阿嬤麵包店 ➔ Siam商圈 ➔ 林老五 ➔ 海鮮宴 ➔ 炭火雞肉炒河粉",
+      "🍍",
+      "08:30 - 09:40 【景點附近傳統菜市場】",
+      "Sam Yan 傳統菜市場 (Sam Yan Market)",
+      "🚗 **交通（飯店➔Sam Yan市場）**：開啟 Grab 叫 **`GrabXL`** 直達，車程約 20 分鐘。",
+      "乾淨明亮，1樓販售超便宜的現切新鮮泰國水果（芒果、山竹、紅毛丹）、傳統泰式糕點。",
+      "Sam Yan 市場導航",
+      "🚗 【叫 GrabXL 車】09:40 Sam Yan 市場 ➔ 勝利紀念碑船麵",
+      "叫 **GrabXL** 車程約 12 分鐘，直達勝利紀念碑船麵街。",
+      "10:00 - 11:20 【必吃3】",
+      "正宗泰國船麵 (勝利紀念碑船麵街)",
+      "前往勝利紀念碑河畔 **Doy Kuay Teow Reua** 疊碗挑戰！濃郁黑湯船麵一碗只要 15-20 泰銖！",
+      "船麵街導航",
+      "🚗 【叫 GrabXL 車】11:20 船麵 ➔ 阿嬤麵包店 (Silom)",
+      "叫 **GrabXL** 車程約 15 分鐘直達 Silom 阿嬤麵包店。",
+      "11:35 - 12:20 【必去傳奇名店】",
+      "「阿嬤麵包店」(Ama Bakery / อาม่า เบเกอรี่)",
+      "🍞 **Silom 傳統名店！** 必買剛剛出爐軟綿無比的**盒裝鮮奶斑蘭爆漿餐包**！",
+      "Ama Bakery 導航",
+      "🚗 【叫 GrabXL 車】12:20 阿嬤麵包店 ➔ Siam 百貨",
+      "叫 **GrabXL** 車程約 8-10 分鐘（亦可選擇於 Chong Nonsi 站搭乘 BTS 捷運 2 站至 Siam 站）。",
+      "12:30 - 16:00",
+      "Siam Paragon & Siam Center 潮牌商區",
+      "午後炎熱時段至 Siam 暹羅商圈避暑，全家可以去網美咖啡廳吃冰品品嚐甜點，或是帶小孩逛 Siam Paragon 樓下的 SEA LIFE 曼谷海洋世界！",
+      "Siam Paragon 導航",
+      "🚗 【叫 GrabXL 車】16:00 Siam 商圈 ➔ 唐人街林老五",
+      "叫 **GrabXL** 車程約 20 分鐘直達林老五魚丸麵唐人街總店。",
+      "16:30 - 17:45 【必吃4】",
+      "林老五魚丸麵 (Lim Lao Ngow 唐人街總店)",
+      "營業時間：16:30 開店。米其林必比登推薦！80 年老字號，招牌手工爆漿魚丸與彈牙蛋麵，開店第一批入座免排隊。",
+      "林老五總店導航",
+      "🚶 【步行】17:45 林老五 ➔ T&K Seafood 海鮮宴",
+      "沿著唐人街耀華力路散步步行約 3 分鐘即可抵達 T&K Seafood。",
+      "18:00 - 19:30 【必吃5】",
+      "唐人街海鮮螃蟹宴 (T&K Seafood)",
+      "不用預約！直接前往唐人街最熱鬧的名店 **T&K Seafood**，享用必點的**黃金咖哩炒蟹**、**黑胡椒螃蟹**與**大頭蝦**！",
+      "T&K Seafood 導航",
+      "🚶 【唐人街散步打卡】19:30 - 21:00",
+      "唐人街巡禮：炭火雞肉炒河粉 / 經典路邊燕窩",
+      "🍳 **1. 乃紅雞肉炒河粉 (Guay Tiew Kua Gai Nai Hong)**：米其林必比登推薦！傳統大炭火爆炒，河粉焦香Q彈、雞肉嫩滑打入半熟蛋，極具鑊氣！",
+      "🥣 **2. 唐人街路邊甜燕窩**：坐在熱鬧的耀華力路街頭，來一碗溫熱滑嫩的甜燕窩或銀耳湯，清涼滋補！",
+      "🚗 **歸程交通（唐人街 ➔ 飯店）**：逛完後於耀華力路旁開啟 Grab 叫 **`GrabXL`** 直達飯店（車程約 25 分鐘）。",
+      "炒河粉導航"
+    ],
+    "tab-day4": [
+      "08/22 (六) 購物掃貨 ➔ 飯店休息 ➔ 22:30 退房前往廊曼 T1",
+      "恰圖恰週末市集 ➔ Big C 伴手禮大採購 ➔ 建興酒家 ➔ 回飯店洗澡休息 ➔ 廊曼 T1",
+      "🛍️",
+      "09:30 - 13:30 (免趕退房！)",
+      "恰圖恰週末市集 (Chatuchak Market)",
+      "🚗 **交通（飯店➔恰圖恰）**：開啟 Grab 叫 **`GrabXL`** 直達，車程約 15 分鐘。",
+      "**週六全面營業！** 採買手工藝品、泰式服飾、香氛、椰子冰淇淋與手作小物。",
+      "恰圖恰導航",
+      "🚗 【叫 GrabXL 車】13:30 恰圖恰 ➔ Big C Extra (Ratchada)",
+      "叫 **GrabXL** 車程約 18 分鐘，直達 Ratchada 旗艦店。",
+      "14:00 - 16:30 【伴手禮大採購】",
+      "Big C Extra (Ratchada 旗艦店) 零食大包裝掃貨",
+      "🛒 **離飯店僅 5 分鐘車程！** 必買：手標泰奶粉、小老闆海苔、Pocky/Pretz 各式泰國限定口味。買完搭 Grab 整箱載回飯店放行李非常方便！",
+      "Big C 導航",
+      "🚗 【叫 GrabXL 車】16:30 Big C ➔ 建興酒家 (匯狂店)",
+      "叫 **GrabXL** 車程約 5 分鐘直達建興酒家。",
+      "17:00 - 19:00",
+      "建興酒家 (Somboon Seafood 匯狂分店)",
+      "17:00 抵達為離峰時段，現場位子充足。品嚐招牌**黃金咖哩炒蟹**、冬蔭功海鮮湯，享用美好的曼谷最後晚餐。",
+      "建興酒家導航",
+      "🚗 【叫 GrabXL 車】19:00 - 22:30",
+      "建興酒家 ➔ 回 Woodstory 房間洗澡歇息",
+      "🚗 **交通（建興酒家➔飯店）**：距離僅約 1.5~2 公里。直接叫 **`GrabXL`** （車資約 80-130 泰銖，5-8 分鐘直達飯店門口）。",
+      "✨ 回到房間後洗熱水澡沖涼、換乾淨衣服、躺床補眠 1-2 小時，並悠閒將戰利品打包封箱。",
+      "22:30 辦理 Check-out 退房",
+      "飯店導航",
+      "🚗 【叫 GrabXL 車】22:30 - 23:30 (機場接駁)",
+      "Check-out ➔ 直達廊曼機場第 1 航廈 (DMK T1)",
+      "22:30 退房後開啟 Grab 點選 **GrabXL / 6-Seater** 直達**廊曼國際機場第 1 航廈 (Terminal 1 - 國際線出境大廳)**（車程約 30 分鐘）。於 **23:30 前抵達**辦理行李託運與通關（班機為 08/23 凌晨 02:35）。",
+      "班機起飛：08/23 (日) 02:35",
+      "抵達高雄國際航廈 07:05"
+    ],
+    "tab-food": [
+      "🍽️ 您的完整美食必吃打卡清單",
+      "包含所有指定景點美食與經典美味：",
+      "1. 【老城早市】永隆菜市場 (Trok Mor Market)",
+      "豬肉粥、烤豬肉串、現切芒果山竹與冰泰奶。(Day 2 早上)",
+      "2. 【在地菜市場】Sam Yan 菜市場 (Sam Yan Market)",
+      "便宜現切水果、傳統泰式糕點、泰式煎餃。(Day 3 早上)",
+      "3. 小印度 Pani Puri + Naan 烤餅",
+      "Mama Restaurant / Royal India：炸脆球爆汁與蒜味 Naan。(Day 2)",
+      "4. 【必去名店】Silom「阿嬤麵包店」(Ama Bakery)",
+      "招牌盒裝鮮奶斑蘭爆漿餐包！(Day 3 中午)",
+      "5. 泰國正宗船麵 (Boat Noodles)",
+      "勝利紀念碑 Doy Kuay Teow Reua：黑湯濃郁小碗麵。(Day 3)",
+      "6. 林老五魚丸麵 (Lim Lao Ngow)",
+      "唐人街總店：米其林推薦手工爆漿魚丸與彈牙蛋麵。(Day 3)",
+      "7. 螃蟹大餐 (T&K Seafood / 建興酒家)",
+      "黃金咖哩炒蟹、黑胡椒蟹、烤大頭蝦。(Day 3 & Day 4)",
+      "8. 【米其林推薦】乃紅雞肉炒河粉 (Nai Hong)",
+      "大火炭香味十足、雞肉滑嫩、半熟蛋滿分！(Day 3 晚上)"
+    ]
+  },
+  "mapLinks": [
+    "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok",
+    "https://maps.google.com/?q=Don+Mueang+International+Airport",
+    "https://maps.google.com/?q=Huai+Khwang+Night+Market",
+    "https://maps.google.com/?q=Trok+Mor+Morning+Market",
+    "https://maps.google.com/?q=The+Grand+Palace+Bangkok",
+    "https://maps.google.com/?q=Wat+Pho+Bangkok",
+    "https://maps.google.com/?q=Mama+Restaurant+Phahurat+Bangkok",
+    "https://maps.google.com/?q=Tha+Tien+Pier",
+    "https://maps.google.com/?q=Wat+Arun+Pier",
+    "https://maps.google.com/?q=Wat+Arun+Bangkok",
+    "https://maps.google.com/?q=ICONSIAM+Pier",
+    "https://maps.google.com/?q=ICONSIAM",
+    "https://maps.google.com/?q=Sam+Yan+Market+Bangkok",
+    "https://maps.google.com/?q=Boat+Noodle+Alley+Victory+Monument",
+    "https://maps.google.com/?q=Ama+Bakery+Silom+Bangkok",
+    "https://maps.google.com/?q=Siam+Paragon",
+    "https://maps.google.com/?q=Lim+Lao+Ngow+Yaowarat+Bangkok",
+    "https://maps.google.com/?q=TK+Seafood+Yaowarat",
+    "https://maps.google.com/?q=Guay+Tiew+Kua+Gai+Nai+Hong",
+    "https://maps.google.com/?q=Chatuchak+Weekend+Market",
+    "https://maps.google.com/?q=Big+C+Extra+Ratchadapisek",
+    "https://maps.google.com/?q=Somboon+Seafood+Ratchada"
+  ]
+},
+  "sourceNotes": {
+    "sourceFile": "曼谷.html",
+    "originalTitle": "曼谷 5 天 4 夜精華自由行行程表",
+    "originalTabs": [
+      "總覽與實用指南",
+      "Day 1（08/19 三）",
+      "Day 2（08/20 四）",
+      "Day 3（08/21 五）",
+      "Day 4-5（08/22 晚退房）",
+      "必吃打卡"
+    ],
+    "conversionNote": "原 HTML 將 8/22 晚間退房與 8/23 凌晨回程放在 Day 4-5 分頁；JSON 拆成 day4 與 day5，以符合 5 天行程並保留原內容。"
+  }
+}
