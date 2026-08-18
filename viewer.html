@@ -507,7 +507,10 @@
         function getPlannedMapStops(data, day) {
             const stops = [];
             const seen = new Set();
-            (day?.timeline || []).forEach(item => {
+            const routeItems = Array.isArray(day?.plannedRouteStops) && day.plannedRouteStops.length
+                ? day.plannedRouteStops
+                : (day?.timeline || []);
+            routeItems.forEach(item => {
                 const coordinates = getItemCoordinates(data, item);
                 if (!coordinates) return;
                 const key = `${coordinates.lat},${coordinates.lng}`;

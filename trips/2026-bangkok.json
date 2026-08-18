@@ -32,6 +32,7 @@
   },
   "mapCoordinates": {
     "https://maps.google.com/?q=Ama+Bakery+Silom+Bangkok": { "lat": 13.7244367, "lng": 100.5206819 },
+    "https://maps.google.com/?q=Ban+Tadtong+Road+Bangkok": { "lat": 13.7452778, "lng": 100.5238889 },
     "https://maps.google.com/?q=Big+C+Extra+Ratchadapisek": { "lat": 13.7691616, "lng": 100.5687061 },
     "https://maps.google.com/?q=Boat+Noodle+Alley+Victory+Monument": { "lat": 13.7659183, "lng": 100.5365979 },
     "https://maps.google.com/?q=Chatuchak+Weekend+Market": { "lat": 13.8006755, "lng": 100.5481173 },
@@ -237,6 +238,11 @@
       "label": "抵達曼谷",
       "title": "抵達曼谷與匯狂夜市宵夜",
       "timeRange": "18:05 - 24:00",
+      "plannedRouteStops": [
+        { "name": "曼谷廊曼機場（DMK T1）", "mapUrl": "https://maps.google.com/?q=Don+Mueang+International+Airport" },
+        { "name": "Woodstory Boutique Hotel", "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok" },
+        { "name": "匯狂夜市", "mapUrl": "https://maps.google.com/?q=Huai+Khwang+Night+Market" }
+      ],
       "timeline": [
         {
           "type": "transport",
@@ -293,6 +299,17 @@
       "label": "老城與昭披耶河",
       "title": "永隆菜市場、老城寺廟與昭披耶河水上巴士",
       "timeRange": "08:30 - 20:30",
+      "plannedRouteStops": [
+        { "name": "永隆菜市場（Trok Mor Market）", "mapUrl": "https://maps.google.com/?q=Trok+Mor+Morning+Market" },
+        { "name": "大皇宮 & 玉佛寺", "mapUrl": "https://maps.google.com/?q=The+Grand+Palace+Bangkok" },
+        { "name": "臥佛寺（Wat Pho）", "mapUrl": "https://maps.google.com/?q=Wat+Pho+Bangkok" },
+        { "name": "小印度 Mama Restaurant", "mapUrl": "https://maps.google.com/?q=Mama+Restaurant+Phahurat+Bangkok" },
+        { "name": "Tha Tien 碼頭", "mapUrl": "https://maps.google.com/?q=Tha+Tien+Pier" },
+        { "name": "鄭王廟碼頭", "mapUrl": "https://maps.google.com/?q=Wat+Arun+Pier" },
+        { "name": "鄭王廟（Wat Arun）", "mapUrl": "https://maps.google.com/?q=Wat+Arun+Bangkok" },
+        { "name": "ICONSIAM 碼頭", "mapUrl": "https://maps.google.com/?q=ICONSIAM+Pier" },
+        { "name": "ICONSIAM", "mapUrl": "https://maps.google.com/?q=ICONSIAM" }
+      ],
       "timeline": [
         {
           "type": "food",
@@ -416,6 +433,16 @@
       "label": "市場、美食與唐人街",
       "title": "Sam Yan 市場、船麵、Siam 商圈與唐人街美食",
       "timeRange": "08:30 - 21:00",
+      "plannedRouteStops": [
+        { "name": "Sam Yan 市場", "mapUrl": "https://maps.google.com/?q=Sam+Yan+Market+Bangkok" },
+        { "name": "朱拉美食街（Ban Tadtong Road）", "mapUrl": "https://maps.google.com/?q=Ban+Tadtong+Road+Bangkok" },
+        { "name": "勝利紀念碑船麵街", "mapUrl": "https://maps.google.com/?q=Boat+Noodle+Alley+Victory+Monument" },
+        { "name": "Ama Bakery", "mapUrl": "https://maps.google.com/?q=Ama+Bakery+Silom+Bangkok" },
+        { "name": "Siam Paragon", "mapUrl": "https://maps.google.com/?q=Siam+Paragon" },
+        { "name": "林老五魚丸麵", "mapUrl": "https://maps.google.com/?q=Lim+Lao+Ngow+Yaowarat+Bangkok" },
+        { "name": "T&K Seafood", "mapUrl": "https://maps.google.com/?q=TK+Seafood+Yaowarat" },
+        { "name": "乃紅雞肉炒河粉", "mapUrl": "https://maps.google.com/?q=Guay+Tiew+Kua+Gai+Nai+Hong" }
+      ],
       "timeline": [
         {
           "type": "food",
@@ -548,6 +575,13 @@
       "label": "購物與深夜退房",
       "title": "恰圖恰市集、Big C 採購與建興酒家",
       "timeRange": "09:30 - 23:30",
+      "plannedRouteStops": [
+        { "name": "恰圖恰週末市集", "mapUrl": "https://maps.google.com/?q=Chatuchak+Weekend+Market" },
+        { "name": "Big C Extra Ratchadapisek", "mapUrl": "https://maps.google.com/?q=Big+C+Extra+Ratchadapisek" },
+        { "name": "建興酒家（Somboon Seafood）", "mapUrl": "https://maps.google.com/?q=Somboon+Seafood+Ratchada" },
+        { "name": "Woodstory Boutique Hotel", "mapUrl": "https://maps.google.com/?q=Woodstory+Boutique+Hotel+Bangkok" },
+        { "name": "曼谷廊曼機場（DMK T1）", "mapUrl": "https://maps.google.com/?q=Don+Mueang+International+Airport" }
+      ],
       "timeline": [
         {
           "type": "sight",
@@ -624,6 +658,9 @@
       "label": "返回台灣",
       "title": "廊曼機場跨夜航班返回高雄",
       "timeRange": "02:35 - 07:05",
+      "plannedRouteStops": [
+        { "name": "曼谷廊曼機場（DMK T1）", "mapUrl": "https://maps.google.com/?q=Don+Mueang+International+Airport" }
+      ],
       "timeline": [
         {
           "type": "transport",
@@ -792,14 +829,17 @@
       "ICONSIAM 導航"
     ],
     "tab-day3": [
-      "08/21 星期五 • SamYan菜市場 + 船麵 + AmaBakery + 唐人街",
-      "SamYan菜市場 ➔ 船麵 ➔ 阿嬤麵包店 ➔ Siam商圈 ➔ 林老五 ➔ 海鮮宴 ➔ 炭火雞肉炒河粉",
+      "08/21 星期五 • SamYan菜市場 + 朱拉美食街 + 船麵 + AmaBakery + 唐人街",
+      "SamYan菜市場 ➔ 朱拉美食街 ➔ 船麵 ➔ 阿嬤麵包店 ➔ Siam商圈 ➔ 林老五 ➔ 海鮮宴 ➔ 炭火雞肉炒河粉",
       "🍍",
       "08:30 - 09:40 【景點附近傳統菜市場】",
       "Sam Yan 傳統菜市場 (Sam Yan Market)",
       "🚗 **交通（飯店➔Sam Yan市場）**：開啟 Grab 叫 **`GrabXL`** 直達，車程約 20 分鐘。",
       "乾淨明亮，1樓販售超便宜的現切新鮮泰國水果（芒果、山竹、紅毛丹）、傳統泰式糕點。",
       "Sam Yan 市場導航",
+      "朱拉隆宮美食街（Ban Tadtong Road）",
+      "Sam Yan 市場旁的朱拉美食街，可依原始 HTML 安排美食探索。",
+      "朱拉美食街導航",
       "🚗 【叫 GrabXL 車】09:40 Sam Yan 市場 ➔ 勝利紀念碑船麵",
       "叫 **GrabXL** 車程約 12 分鐘，直達勝利紀念碑船麵街。",
       "10:00 - 11:20 【必吃3】",
