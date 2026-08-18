@@ -130,6 +130,30 @@
         .viewer-original .details-panel { background: #fffbeb !important; border-color: #fde68a !important; }
         .viewer-original #tools-panel > div,
         .viewer-original #quick-note { border-color: #e2e8f0 !important; }
+        .viewer-original .source-tab-panel,
+        .viewer-original .food-tab-panel {
+            border-color: #e2e8f0 !important;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06) !important;
+        }
+        .viewer-original .source-tab-line {
+            color: #475569;
+            font-size: 0.72rem;
+            line-height: 1.65;
+        }
+        .viewer-original .source-tab-line.source-tab-heading {
+            color: #92400e;
+            font-weight: 800;
+            font-size: 0.78rem;
+            padding-top: 0.35rem;
+        }
+        .viewer-original .food-tab-item {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+        }
+        .viewer-original .food-tab-item:nth-child(2n) {
+            background: #fff1f2;
+            border-color: #fecdd3;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased pb-24 min-h-screen">
@@ -358,7 +382,7 @@
 
             // Setup tabs
             renderTabs(data, activeTab);
-            renderDayContent(data, activeTab);
+            renderDayContent(data, activeTab, state);
             window.switchTab = (tabId) => {
                 activeTab = tabId;
                 state.activeTab = tabId;
@@ -393,6 +417,12 @@
                     renderChecklist(data, state);
                 };
             }
+
+            window.toggleFood = (id) => {
+                if (!state.completedFoods) state.completedFoods = {};
+                state.completedFoods[id] = !state.completedFoods[id];
+                saveState();
+            };
 
             // Ledger
             if (!isDrive) {
@@ -730,13 +760,14 @@
             clearCarAnimation();
             window._plannedCarRoute = null;
 
+            // Overview, food, and tools are content tabs; keep the last selected day route visible.
+            if (tabId === 'tools' || !data.days[tabId]) return;
+
             // Remove previous route layers (keep tile + prefecture + city)
             window._routeLayer.clearLayers();
 
             // Force map to recalculate container size (critical on mobile Safari after tab switch)
             vMap.invalidateSize();
-
-            if (tabId === 'tools' || !data.days[tabId]) return;
             const dayIndex = Object.keys(data.days).indexOf(tabId);
 
             // Draw actual route + stops for this day only
@@ -869,49 +900,74 @@
         }
 
         function loadState(appId, data) {
+            const extraTabs = getSourceTabKeys(data);
+            const firstTab = extraTabs.includes('tab-overview') ? 'tab-overview' : Object.keys(data.days)[0];
             try {
                 const saved = localStorage.getItem(appId);
                 if (saved) {
                     const parsed = JSON.parse(saved);
-                    const validTabs = [...Object.keys(data.days), 'tools'];
-                    if (!validTabs.includes(parsed.activeTab)) parsed.activeTab = Object.keys(data.days)[0];
+                    const validTabs = [...extraTabs, ...Object.keys(data.days), 'tools'];
+                    if (!validTabs.includes(parsed.activeTab)) parsed.activeTab = firstTab;
+                    if (!parsed.completedFoods) parsed.completedFoods = {};
                     return parsed;
                 }
             } catch(e) {}
             const defaultNotes = {};
             Object.keys(data.days).forEach(k => defaultNotes[k] = '');
+            extraTabs.forEach(k => defaultNotes[k] = '');
             defaultNotes['tools'] = '';
             return {
-                activeTab: Object.keys(data.days)[0],
+                activeTab: firstTab,
                 expenses: data.defaultExpenses ? JSON.parse(JSON.stringify(data.defaultExpenses)) : [],
                 completedSights: {},
+                completedFoods: {},
                 quickNotes: defaultNotes,
                 preTripChecked: {}
             };
         }
 
+        function getSourceTabKeys(data) {
+            const sections = data.sourceContent?.sections || {};
+            return ['tab-overview', 'tab-food'].filter(key => Array.isArray(sections[key]) && sections[key].length);
+        }
+
         function renderTabs(data, activeTab) {
             const bar = document.getElementById('tab-bar');
             bar.innerHTML = '';
-            Object.entries(data.days).forEach(([key, day]) => {
+
+            const addTab = (id, content) => {
                 const btn = document.createElement('button');
-                btn.id = `btn-${key}`;
+                btn.id = `btn-${id}`;
                 btn.className = 'tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100';
-                btn.innerHTML = `<div class="text-[9px] opacity-75">${day.date}</div>${day.label || key.toUpperCase()}`;
-                btn.onclick = () => window.switchTab(key);
+                btn.innerHTML = content;
+                btn.onclick = () => window.switchTab(id);
                 bar.appendChild(btn);
+            };
+
+            const sourceTabs = getSourceTabKeys(data);
+            if (sourceTabs.includes('tab-overview')) {
+                addTab('tab-overview', '<i class="fa-solid fa-compass mr-1"></i>總覽與實用指南');
+            }
+            Object.entries(data.days).forEach(([key, day]) => {
+                addTab(key, `<div class="text-[9px] opacity-75">${day.date}</div>${day.label || key.toUpperCase()}`);
             });
-            const toolsBtn = document.createElement('button');
-            toolsBtn.id = 'btn-tools';
-            toolsBtn.className = 'tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100';
-            toolsBtn.innerHTML = `<div class="text-[9px] text-emerald-600"><i class="fa-solid fa-copy"></i></div>工具`;
-            toolsBtn.onclick = () => window.switchTab('tools');
-            bar.appendChild(toolsBtn);
+            if (sourceTabs.includes('tab-food')) {
+                addTab('tab-food', '<i class="fa-solid fa-utensils mr-1"></i>必吃打卡');
+            }
+            addTab('tools', '<div class="text-[9px] text-emerald-600"><i class="fa-solid fa-copy"></i></div>工具');
         }
 
-        function renderDayContent(data, activeTab) {
+        function renderDayContent(data, activeTab, state) {
             const container = document.getElementById('tab-contents');
             container.innerHTML = '';
+            const sourceTabs = getSourceTabKeys(data);
+            if (sourceTabs.includes('tab-overview')) {
+                const overview = document.createElement('div');
+                overview.id = 'tab-overview';
+                overview.className = 'tab-content hidden space-y-4';
+                overview.innerHTML = buildSourceTabHTML(data, 'tab-overview');
+                container.appendChild(overview);
+            }
             Object.entries(data.days).forEach(([key, day]) => {
                 const div = document.createElement('div');
                 div.id = `tab-${key}`;
@@ -919,6 +975,13 @@
                 div.innerHTML = buildDayHTML(day, key, data.type === 'drive', data.actualDays?.[key]);
                 container.appendChild(div);
             });
+            if (sourceTabs.includes('tab-food')) {
+                const food = document.createElement('div');
+                food.id = 'tab-food';
+                food.className = 'tab-content hidden space-y-4';
+                food.innerHTML = buildFoodTabHTML(data, state);
+                container.appendChild(food);
+            }
         }
 
         function escapeHTML(value) {
@@ -1154,6 +1217,63 @@
             }
 
             return html;
+        }
+
+        function formatSourceLine(value) {
+            return escapeHTML(value)
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/`([^`]+)`/g, '<code class="font-mono bg-slate-100 px-1 rounded">$1</code>');
+        }
+
+        function isSourceHeading(value) {
+            const text = String(value || '').trim();
+            return /^(🚗|🍽️|💵|📊|💡|全家|泰銖|航班|Grab|泰國|Woodstory|親友推薦|📍|【)/.test(text);
+        }
+
+        function buildSourceTabHTML(data, key) {
+            const lines = data.sourceContent?.sections?.[key] || [];
+            const title = key === 'tab-overview' ? '總覽與實用指南' : '必吃打卡';
+            const icon = key === 'tab-overview' ? 'fa-compass' : 'fa-utensils';
+            return `
+                <section class="source-tab-panel bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fa-solid ${icon} text-amber-500 text-lg"></i>
+                        <h2 class="font-bold text-slate-800 text-sm">${title}</h2>
+                    </div>
+                    <div class="space-y-1.5">
+                        ${lines.map(line => `<p class="source-tab-line ${isSourceHeading(line) ? 'source-tab-heading' : ''}">${formatSourceLine(line)}</p>`).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        function buildFoodTabHTML(data, state) {
+            const items = data.foodTabItems || data.foodChecklist || [];
+            if (!items.length) return buildSourceTabHTML(data, 'tab-food');
+            return `
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-3 text-xs text-amber-900">
+                    <h2 class="font-bold text-sm text-amber-800">🍽️ 您的完整美食必吃打卡清單</h2>
+                    <p class="text-amber-700 mt-1">包含所有指定景點美食與親友特別推薦：</p>
+                </div>
+                <section class="food-tab-panel bg-white rounded-2xl p-4 shadow-sm border border-slate-200 space-y-3">
+                    ${items.map(item => {
+                        const itemId = String(item.id ?? item.name);
+                        const checked = state?.completedFoods?.[itemId] ? 'checked' : '';
+                        const map = mapNavButton(item, true);
+                        return `
+                            <label class="food-tab-item flex items-start gap-3 p-2.5 rounded-xl cursor-pointer">
+                                <input type="checkbox" data-food-id="${escapeHTML(itemId)}" onchange="toggleFood('${escapeHTML(itemId)}')" ${checked} class="w-4 h-4 mt-0.5 text-rose-600 rounded border-slate-300 shrink-0">
+                                <div class="flex-1 min-w-0">
+                                    <span class="font-bold text-rose-900 text-xs">${escapeHTML(item.name)}</span>
+                                    <p class="text-slate-600 text-[11px] mt-0.5">${escapeHTML(item.detail || '')}</p>
+                                    ${item.day ? `<p class="text-[10px] text-amber-700 mt-1 font-bold">${escapeHTML(item.day)}</p>` : ''}
+                                    ${map}
+                                </div>
+                            </label>
+                        `;
+                    }).join('')}
+                </section>
+            `;
         }
 
         function renderChecklist(data, state) {

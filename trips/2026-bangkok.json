@@ -2,7 +2,7 @@
   "id": "2026-bangkok",
   "type": "city",
   "title": "曼谷 5 天 4 夜客製行程",
-  "subtitle": "8/19 - 8/23 5人同行・換匯與交通全攻略版",
+  "subtitle": "8/19 - 8/23 5人同行・機場Grab上車點版",
   "badge": "Bangkok Family Trip",
   "badgeIcon": "fa-plane",
   "description": "5人（3大2小）曼谷自由行，包含換匯、GrabXL、昭披耶河水上交通、住宿與美食打卡攻略。",
@@ -231,6 +231,71 @@
       "day": "day3"
     }
   ],
+  "foodTabItems": [
+    {
+      "id": 1,
+      "name": "【親友推薦】朱拉隆宮烤肉串（Moo Ping）",
+      "detail": "熱騰騰香茅醬烤肉串搭糯米飯。（Day 3 早上）",
+      "day": "day3",
+      "mapUrl": "https://maps.google.com/?q=Ban+Tadtong+Road+Bangkok"
+    },
+    {
+      "id": 2,
+      "name": "【親友推薦】朱拉隆宮爆量蟹肉料理",
+      "detail": "朱拉美食街超澎湃鮮甜炒蟹肉／蟹肉蛋。（Day 3 早上）",
+      "day": "day3",
+      "mapUrl": "https://maps.google.com/?q=Ban+Tadtong+Road+Bangkok"
+    },
+    {
+      "id": 3,
+      "name": "【老城早市】永隆菜市場（Trok Mor Market）",
+      "detail": "豬肉粥、烤豬肉串、現切芒果山竹與冰泰奶。（Day 2 早上）",
+      "day": "day2",
+      "mapUrl": "https://maps.google.com/?q=Trok+Mor+Morning+Market"
+    },
+    {
+      "id": 4,
+      "name": "小印度 Pani Puri + Naan 烤餅",
+      "detail": "Mama Restaurant／Royal India：炸脆球爆汁與蒜味 Naan。（Day 2）",
+      "day": "day2",
+      "mapUrl": "https://maps.google.com/?q=Mama+Restaurant+Phahurat+Bangkok"
+    },
+    {
+      "id": 5,
+      "name": "【必去名店】Silom「阿嬤麵包店」（Ama Bakery）",
+      "detail": "招牌盒裝鮮奶斑蘭爆漿餐包！（Day 3 中午）",
+      "day": "day3",
+      "mapUrl": "https://maps.google.com/?q=Ama+Bakery+Silom+Bangkok"
+    },
+    {
+      "id": 6,
+      "name": "泰國正宗船麵（Boat Noodles）",
+      "detail": "勝利紀念碑 Doy Kuay Teow Reua：黑湯濃郁小碗麵。（Day 3）",
+      "day": "day3",
+      "mapUrl": "https://maps.google.com/?q=Boat+Noodle+Alley+Victory+Monument"
+    },
+    {
+      "id": 7,
+      "name": "林老五魚丸麵（Lim Lao Ngow）",
+      "detail": "唐人街總店：米其林推薦手工爆漿魚丸與彈牙蛋麵。（Day 3）",
+      "day": "day3",
+      "mapUrl": "https://maps.google.com/?q=Lim+Lao+Ngow+Yaowarat+Bangkok"
+    },
+    {
+      "id": 8,
+      "name": "螃蟹大餐（T&K Seafood／建興酒家）",
+      "detail": "黃金咖哩炒蟹、黑胡椒蟹、烤大頭蝦。（Day 3 & Day 4）",
+      "day": "day3、day4",
+      "mapUrl": "https://maps.google.com/?q=TK+Seafood+Yaowarat"
+    },
+    {
+      "id": 9,
+      "name": "【米其林推薦】乃紅雞肉炒河粉（Nai Hong）",
+      "detail": "大火炭香味十足、雞肉滑嫩、半熟蛋滿分！（Day 3 晚上）",
+      "day": "day3",
+      "mapUrl": "https://maps.google.com/?q=Guay+Tiew+Kua+Gai+Nai+Hong"
+    }
+  ],
   "defaultExpenses": [],
   "days": {
     "day1": {
@@ -254,8 +319,8 @@
         {
           "type": "transport",
           "time": "21:30 - 22:30",
-          "title": "叫 GrabXL 車：廊曼機場 ➔ 飯店",
-          "detail": "點選 GrabXL / 6-Seater 車型直達飯店，車程約 35-40 分鐘，過路費自動扣信用卡。"
+          "title": "廊曼機場 T1 Gate 1 上車直達飯店",
+          "detail": "出關後走向 1 樓 1號門（Gate 1）出口，打開 Grab 選擇 GrabXL（5人車），設定上車點為 Terminal 1 - Gate 1。司機車程約 35-40 分鐘直達飯店。過路費自動扣信用卡。"
         },
         {
           "type": "hotel",
@@ -686,7 +751,7 @@
       "曼谷 5 天 4 夜精華自由行行程表",
       "🇹🇭",
       "曼谷 5 天 4 夜客製行程",
-      "5人同樂 (3大2小) • 換匯與交通全攻略版",
+      "5人同樂 (3大2小) • 機場Grab上車點版",
       "2026.08.19 - 08.23",
       "總覽與實用指南",
       "Day 1",
@@ -700,6 +765,37 @@
       "必吃打卡"
     ],
     "tab-overview": [
+      "🛬 廊曼機場（DMK T1）Grab 官方上車地點",
+      "📍 上車門口：Terminal 1 一樓 Gate 1 或 Gate 2",
+      "領取行李出關後，請前往 1 樓入境大廳 1號門（Gate 1）或 2號門（Gate 2）出口處。現場有綠色 Grab 官方指示牌。",
+      "💡 叫車設定：選擇 Terminal 1 - Gate 1",
+      "叫車時請選擇 GrabXL（5人大車），起點位置選擇 Terminal 1 - Gate 1，在門口內吹冷氣等車，司機抵達後再走出門上車即可！",
+      "🚗 Grab 輸入英文速查清單（可直接複製）",
+      "【機場與飯店】",
+      "• Don Mueang International Airport（廊曼）",
+      "• Woodstory Boutique Hotel（飯店）",
+      "【Day 2 老城區景點】",
+      "• Trok Mor Morning Market（永隆早市）",
+      "• The Grand Palace（大皇宮）",
+      "• Wat Pho（臥佛寺）",
+      "• Mama Restaurant Phahurat（小印度）",
+      "• ICONSIAM（暹羅天地）",
+      "【Day 3 美食與市集】",
+      "• Sam Yan Market（Sam Yan 市場）",
+      "• Ban Tadtong Road（朱拉美食街）",
+      "• Boat Noodle Alley Victory Monument（船麵）",
+      "• Ama Bakery Silom（阿嬤麵包店）",
+      "• Siam Paragon（暹羅百貨）",
+      "• TK Seafood Yaowarat（唐人街海鮮）",
+      "【Day 4 購物採買】",
+      "• Chatuchak Weekend Market（恰圖恰）",
+      "• Big C Extra Ratchadapisek（Big C）",
+      "• Somboon Seafood Ratchada（建興酒家）",
+      "親友推薦：朱拉隆宮美食圈解鎖！",
+      "📍 安排時間：Day 3 早上 08:30 - 10:00",
+      "Sam Yan 菜市場位於朱拉隆宮大學商圈內，旁邊就是朱拉美食街（Ban Tadtong Road）。",
+      "• 必買烤肉串：現場攤位買熱騰騰的香茅泰式烤豬肉串搭糯米飯。",
+      "• 必吃蟹肉料理：周邊知名名店的爆量蟹肉蛋包飯、鮮甜炒蟹肉。",
       "泰銖面額與換匯比例建議",
       "💵 1. 常見面額與通用王牌",
       "• **最通用面額**：**100 銖 (紅)** & **20 銖 (綠)**！菜市場、夜市、小吃找零首選。",
@@ -912,22 +1008,24 @@
     ],
     "tab-food": [
       "🍽️ 您的完整美食必吃打卡清單",
-      "包含所有指定景點美食與經典美味：",
-      "1. 【老城早市】永隆菜市場 (Trok Mor Market)",
+      "包含所有指定景點美食與親友特別推薦：",
+      "1. 【親友推薦】朱拉隆宮烤肉串 (Moo Ping)",
+      "熱騰騰香茅醬烤肉串搭糯米飯。(Day 3 早上)",
+      "2. 【親友推薦】朱拉隆宮爆量蟹肉料理",
+      "朱拉美食街超澎湃鮮甜炒蟹肉／蟹肉蛋。(Day 3 早上)",
+      "3. 【老城早市】永隆菜市場 (Trok Mor Market)",
       "豬肉粥、烤豬肉串、現切芒果山竹與冰泰奶。(Day 2 早上)",
-      "2. 【在地菜市場】Sam Yan 菜市場 (Sam Yan Market)",
-      "便宜現切水果、傳統泰式糕點、泰式煎餃。(Day 3 早上)",
-      "3. 小印度 Pani Puri + Naan 烤餅",
+      "4. 小印度 Pani Puri + Naan 烤餅",
       "Mama Restaurant / Royal India：炸脆球爆汁與蒜味 Naan。(Day 2)",
-      "4. 【必去名店】Silom「阿嬤麵包店」(Ama Bakery)",
+      "5. 【必去名店】Silom「阿嬤麵包店」(Ama Bakery)",
       "招牌盒裝鮮奶斑蘭爆漿餐包！(Day 3 中午)",
-      "5. 泰國正宗船麵 (Boat Noodles)",
+      "6. 泰國正宗船麵 (Boat Noodles)",
       "勝利紀念碑 Doy Kuay Teow Reua：黑湯濃郁小碗麵。(Day 3)",
-      "6. 林老五魚丸麵 (Lim Lao Ngow)",
+      "7. 林老五魚丸麵 (Lim Lao Ngow)",
       "唐人街總店：米其林推薦手工爆漿魚丸與彈牙蛋麵。(Day 3)",
-      "7. 螃蟹大餐 (T&K Seafood / 建興酒家)",
+      "8. 螃蟹大餐 (T&K Seafood / 建興酒家)",
       "黃金咖哩炒蟹、黑胡椒蟹、烤大頭蝦。(Day 3 & Day 4)",
-      "8. 【米其林推薦】乃紅雞肉炒河粉 (Nai Hong)",
+      "9. 【米其林推薦】乃紅雞肉炒河粉 (Nai Hong)",
       "大火炭香味十足、雞肉滑嫩、半熟蛋滿分！(Day 3 晚上)"
     ]
   },
@@ -957,7 +1055,7 @@
   ]
 },
   "sourceNotes": {
-    "sourceFile": "曼谷.html",
+    "sourceFile": "2026 bangkok.html.txt",
     "originalTitle": "曼谷 5 天 4 夜精華自由行行程表",
     "originalTabs": [
       "總覽與實用指南",

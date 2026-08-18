@@ -71,6 +71,7 @@
 | `vjw` | `{ zip, address, name }` Visit Japan Web 填寫資料 |
 | `sightsList` | `[{ id, name, day }]` 景點解鎖清單（僅 city 模式） |
 | `defaultExpenses` | `[{ id, name, amount }]` 預設記帳項目（僅 city 模式） |
+| `foodTabItems` | 可選的完整美食分頁清單；viewer 會顯示打卡、日期與導航（可回退使用 `foodChecklist`） |
 | `countdownDate` | 倒數計時目標時間 |
 | `jpyToTwdRate` | 日幣匯率（city 模式記帳用） |
 | `actionText` | 頂部按鈕文字 |
