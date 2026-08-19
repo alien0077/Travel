@@ -909,6 +909,7 @@
         // ==========================================
         // 1. Load trips from JSON and render
         // ==========================================
+        const VIEWER_BUILD = '2eb3bd6';
         let allTrips = [];
 
         async function loadTrips() {
@@ -956,7 +957,7 @@
             activeTrips.forEach(t => {
                 const card = document.createElement('a');
                 card.className = `trip-card ${t.image}`;
-                card.href = `viewer.html?trip=${t.id}`;
+                card.href = `viewer.html?trip=${encodeURIComponent(t.id)}&v=${VIEWER_BUILD}`;
                 card.innerHTML = `
                     <span class="trip-media" aria-hidden="true"></span>
                     <div class="trip-content">
@@ -1000,7 +1001,7 @@
             archiveTrips.forEach(t => {
                 const card = document.createElement('div');
                 card.className = 'archive-card';
-                card.onclick = () => location.href = `viewer.html?trip=${t.id}`;
+                card.onclick = () => location.href = `viewer.html?trip=${encodeURIComponent(t.id)}&v=${VIEWER_BUILD}`;
                 const year = t.dateStart.slice(0,4);
                 card.innerHTML = `
                     <div class="archive-meta">

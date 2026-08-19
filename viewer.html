@@ -162,6 +162,7 @@
     <div id="toast-container" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col gap-2 w-max max-w-[280px]"></div>
 
     <script>
+        const VIEWER_BUILD = '2eb3bd6';
         const params = new URLSearchParams(location.search);
         const tripId = params.get('trip');
 
@@ -183,7 +184,7 @@
         async function loadTrip(id) {
             const root = document.getElementById('app-root');
             try {
-                const res = await fetch(`trips/${id}.json`);
+                const res = await fetch(`trips/${id}.json?v=${VIEWER_BUILD}`, { cache: 'no-store' });
                 if (!res.ok) throw new Error('Not found');
                 const data = await res.json();
                 renderTrip(root, data);
