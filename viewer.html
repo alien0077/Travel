@@ -162,7 +162,7 @@
     <div id="toast-container" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col gap-2 w-max max-w-[280px]"></div>
 
     <script>
-        const VIEWER_BUILD = 'ed428c4';
+        const VIEWER_BUILD = '5de8bc3';
         const params = new URLSearchParams(location.search);
         const tripId = params.get('trip');
 
@@ -392,7 +392,8 @@
                 if (tabId === 'tools') {
                     document.getElementById('tools-panel')?.classList.remove('hidden');
                 } else {
-                    document.getElementById(`tab-${tabId}`)?.classList.remove('hidden');
+                    const targetId = tabId.startsWith('tab-') ? tabId : `tab-${tabId}`;
+                    document.getElementById(targetId)?.classList.remove('hidden');
                 }
                 document.querySelectorAll('.tab-btn').forEach(b => {
                     b.className = 'tab-btn px-3.5 py-3 rounded-xl font-bold text-xs flex-1 text-center whitespace-nowrap tab-transition bg-white text-slate-600 shadow-sm border border-slate-100';
