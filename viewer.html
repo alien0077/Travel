@@ -162,7 +162,7 @@
     <div id="toast-container" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex flex-col gap-2 w-max max-w-[280px]"></div>
 
     <script>
-        const VIEWER_BUILD = '2eb3bd6';
+        const VIEWER_BUILD = 'ed428c4';
         const params = new URLSearchParams(location.search);
         const tripId = params.get('trip');
 
@@ -965,21 +965,21 @@
             if (sourceTabs.includes('tab-overview')) {
                 const overview = document.createElement('div');
                 overview.id = 'tab-overview';
-                overview.className = 'tab-content hidden space-y-4';
+                overview.className = `tab-content ${activeTab === 'tab-overview' ? '' : 'hidden '}space-y-4`;
                 overview.innerHTML = buildSourceTabHTML(data, 'tab-overview');
                 container.appendChild(overview);
             }
             Object.entries(data.days).forEach(([key, day]) => {
                 const div = document.createElement('div');
                 div.id = `tab-${key}`;
-                div.className = 'tab-content hidden space-y-4';
+                div.className = `tab-content ${activeTab === key ? '' : 'hidden '}space-y-4`;
                 div.innerHTML = buildDayHTML(day, key, data.type === 'drive', data.actualDays?.[key]);
                 container.appendChild(div);
             });
             if (sourceTabs.includes('tab-food')) {
                 const food = document.createElement('div');
                 food.id = 'tab-food';
-                food.className = 'tab-content hidden space-y-4';
+                food.className = `tab-content ${activeTab === 'tab-food' ? '' : 'hidden '}space-y-4`;
                 food.innerHTML = buildFoodTabHTML(data, state);
                 container.appendChild(food);
             }
