@@ -1230,10 +1230,120 @@
             return /^(🚗|🍽️|💵|📊|💡|全家|泰銖|航班|Grab|泰國|Woodstory|親友推薦|📍|【)/.test(text);
         }
 
+        function sourceBulletText(value) {
+            return String(value || '').replace(/^\s*[•·]\s*/, '').trim();
+        }
+
+        function buildSourceCard(title, icon, content, tone = 'emerald') {
+            const palette = tone === 'rose'
+                ? {
+                    outer: 'bg-gradient-to-br from-rose-700 to-pink-900',
+                    icon: 'text-rose-200',
+                    inner: 'bg-white/10 border-white/15',
+                    item: 'bg-black/20'
+                }
+                : {
+                    outer: 'bg-gradient-to-br from-emerald-800 to-teal-900',
+                    icon: 'text-emerald-200',
+                    inner: 'bg-white/10 border-white/15',
+                    item: 'bg-black/20'
+                };
+            return `
+                <section class="source-original-card ${palette.outer} text-white rounded-2xl p-4 shadow-md">
+                    <h2 class="font-black text-sm flex items-start gap-2 leading-snug">
+                        <i class="fa-solid ${icon} ${palette.icon} mt-0.5 shrink-0"></i>
+                        <span>${formatSourceLine(title)}</span>
+                    </h2>
+                    <div class="mt-3 space-y-2.5">${content}</div>
+                </section>
+            `;
+        }
+
+        function buildSourceGroup(group, tone = 'emerald') {
+            const itemClass = tone === 'rose' ? 'bg-black/15' : 'bg-black/20';
+            return `
+                <div class="bg-white/10 p-2.5 rounded-xl border border-white/15">
+                    ${group.title ? `<h3 class="font-bold text-[11px] mb-1.5">${formatSourceLine(group.title)}</h3>` : ''}
+                    <div class="space-y-1">
+                        ${(group.items || []).map(item => `<p class="font-mono text-[10px] leading-relaxed ${itemClass} p-1 rounded">${formatSourceLine(sourceBulletText(item))}</p>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function buildOriginalOverviewHTML(data, lines) {
+            const searchStart = lines.findIndex(line => String(line).startsWith('🚗 Grab 輸入英文速查清單'));
+            const recommendationStart = lines.findIndex((line, index) => index > searchStart && String(line).startsWith('親友推薦：'));
+            const remainderStart = lines.findIndex((line, index) => index > recommendationStart && /^(泰銖面額與換匯比例建議|全家 5 人換匯最佳策略)/.test(String(line)));
+            const used = new Set();
+            const mark = index => { if (index >= 0 && index < lines.length) used.add(index); };
+            const cards = [];
+
+            // Keep the latest airport pickup guide as its own original-style card.
+            if (searchStart > 0) {
+                const airportTitle = lines[0];
+                const airportGroups = [];
+                let group = null;
+                for (let index = 1; index < searchStart; index += 1) {
+                    mark(index);
+                    const line = String(lines[index]);
+                    if (/^(📍|💡)/.test(line)) {
+                        group = { title: line, items: [] };
+                        airportGroups.push(group);
+                    } else if (group) {
+                        group.items.push(line);
+                    }
+                }
+                mark(0);
+                cards.push(buildSourceCard(airportTitle, 'fa-taxi', airportGroups.map(item => buildSourceGroup(item)).join('')));
+            }
+
+            // Recreate the grouped Grab copy list from the authoritative source lines.
+            if (searchStart >= 0) {
+                const groups = [];
+                let index = searchStart + 1;
+                mark(searchStart);
+                let group = null;
+                while (index < lines.length && (recommendationStart < 0 || index < recommendationStart)) {
+                    const line = String(lines[index]);
+                    mark(index);
+                    if (/^【/.test(line)) {
+                        group = { title: line, items: [] };
+                        groups.push(group);
+                    } else if (group) {
+                        group.items.push(line);
+                    }
+                    index += 1;
+                }
+                cards.push(buildSourceCard(lines[searchStart], 'fa-car', groups.map(item => buildSourceGroup(item)).join('')));
+            }
+
+            if (recommendationStart >= 0) {
+                const end = remainderStart >= 0 ? remainderStart : lines.length;
+                const recommendationLines = lines.slice(recommendationStart + 1, end);
+                mark(recommendationStart);
+                for (let index = recommendationStart + 1; index < end; index += 1) mark(index);
+                cards.push(buildSourceCard(lines[recommendationStart], 'fa-fire', recommendationLines.map(line => `<p class="text-[11px] leading-relaxed">${formatSourceLine(line)}</p>`).join(''), 'rose'));
+            }
+
+            const remaining = lines.filter((line, index) => !used.has(index));
+            if (remaining.length) {
+                cards.push(`
+                    <section class="source-tab-panel bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
+                        <div class="space-y-1.5">
+                            ${remaining.map(line => `<p class="source-tab-line ${isSourceHeading(line) ? 'source-tab-heading' : ''}">${formatSourceLine(line)}</p>`).join('')}
+                        </div>
+                    </section>
+                `);
+            }
+            return cards.join('');
+        }
+
         function buildSourceTabHTML(data, key) {
             const lines = data.sourceContent?.sections?.[key] || [];
             const title = key === 'tab-overview' ? '總覽與實用指南' : '必吃打卡';
             const icon = key === 'tab-overview' ? 'fa-compass' : 'fa-utensils';
+            if (key === 'tab-overview' && lines.length) return buildOriginalOverviewHTML(data, lines);
             return `
                 <section class="source-tab-panel bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
                     <div class="flex items-center gap-2 mb-3">
