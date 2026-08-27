@@ -1026,6 +1026,26 @@
             }[status] || ['景點', 'bg-slate-100 text-slate-600'];
         }
 
+        function normalizePlannedPlaceName(value) {
+            return String(value || '')
+                .replace(/[（）()]/g, '')
+                .replace(/^(完攻|前往|造訪|參觀|抵達)/, '')
+                .replace(/[\s・：:，,、\-－]/g, '')
+                .toLowerCase();
+        }
+
+        function findPlannedNotVisited(item, actualDay) {
+            const itemName = normalizePlannedPlaceName(item.title || item.name);
+            if (!itemName) return null;
+            return (actualDay?.attractions || []).find(attraction => {
+                if (attraction.status !== 'planned_not_visited') return false;
+                return [attraction.name, attraction.plannedName].some(name => {
+                    const candidate = normalizePlannedPlaceName(name);
+                    return candidate && (itemName.includes(candidate) || candidate.includes(itemName));
+                });
+            }) || null;
+        }
+
         function buildDayHTML(day, key, isDrive, actualDay = {}) {
             let html = `
                 <div class="day-hero day-${key} bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-4 text-white shadow-md">
@@ -1049,25 +1069,31 @@
             `;
             (day.timeline || []).forEach((item, index) => {
                 const isTransit = item.type === 'transport' || item.type === 'drive';
+                const missedPlan = isTransit ? null : findPlannedNotVisited(item, actualDay);
                 const icon = isTransit ? (item.type === 'drive' ? 'fa-car-side text-blue-500' : 'fa-train-subway text-blue-500') : 'fa-location-dot text-indigo-500';
                 const badge = isTransit ? (item.type === 'drive' ? '交通自駕' : '大眾交通') : '景點活動';
                 const badgeClass = isTransit ? 'bg-blue-50 text-blue-600' : 'bg-indigo-50 text-indigo-600';
-                const cardBorder = isTransit ? 'border-blue-100' : 'border-indigo-100';
+                const cardBorder = missedPlan ? 'border-amber-300 bg-amber-50/70' : (isTransit ? 'border-blue-100' : 'border-indigo-100');
                 const timelineType = item.type || (isTransit ? 'transport' : 'sight');
+                const missedNote = missedPlan
+                    ? `<p class="text-[10px] font-bold text-amber-700 mt-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>${missedPlan.visitConfirmation === 'user' ? '使用者確認：本趟未到訪' : 'GPS 未發現此規劃點的到訪證據'}</p>`
+                    : '';
                 let extra = '';
                 extra += mapNavButton(item);
                 if (item.mapcode) extra += `<button onclick="copyToClipboard('${item.mapcode}', 'Mapcode')" class="mt-2 inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 hover:bg-emerald-100 px-2.5 py-1.5 rounded-lg ml-1.5"><i class="fa-solid fa-keyboard"></i> ${item.mapcode}</button>`;
                 html += `
                     <div class="relative timeline-card timeline-${timelineType} bg-white rounded-xl p-3 shadow-sm border ${cardBorder}">
-                        <div class="timeline-marker timeline-marker-${timelineType} absolute -left-[27px] top-3 bg-indigo-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[9px] border-2 border-white font-bold shadow-sm">
+                        <div class="timeline-marker timeline-marker-${timelineType} absolute -left-[27px] top-3 ${missedPlan ? 'bg-amber-500' : 'bg-indigo-600'} text-white rounded-full w-5 h-5 flex items-center justify-center text-[9px] border-2 border-white font-bold shadow-sm">
                             ${index + 1}
                         </div>
                         <div class="flex items-center gap-1.5 flex-wrap">
                             <span class="text-[10px] font-bold ${isTransit ? 'text-blue-600' : 'text-indigo-600'}"><i class="fa-solid ${icon} mr-1"></i>${item.time || ''}</span>
                             <span class="text-[9px] font-bold px-1.5 py-0.5 rounded-md border ${badgeClass}">${badge}</span>
+                            ${missedPlan ? '<span class="text-[9px] font-bold px-1.5 py-0.5 rounded-md border border-amber-200 bg-amber-100 text-amber-700">未到訪</span>' : ''}
                         </div>
-                        <h4 class="text-sm font-bold text-slate-800 mt-1">${item.title || ''}</h4>
+                        <h4 class="text-sm font-bold ${missedPlan ? 'text-slate-500 line-through decoration-amber-500 decoration-2' : 'text-slate-800'} mt-1">${item.title || ''}</h4>
                         <p class="text-[11px] text-slate-500 mt-1 leading-relaxed">${item.detail || ''}</p>
+                        ${missedNote}
                         <div class="flex flex-wrap">${extra}</div>
                     </div>
                 `;

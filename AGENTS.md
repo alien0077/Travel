@@ -246,6 +246,16 @@ python3 ~/.config/opencode/skills/trip-gps-enrich/scripts/enrich_gps.py --all
 ### 未來新增行程處理
 完成新旅行後，用 `enrich_gps.py --trip <新行程ID>` 即可重建實際路線，無需修改 `index.html`。
 
+### 行程結束後的真實足跡更新（必須遵循）
+
+完成行程後，更新網站前必須先以 NAS 照片 GPS 重建 `actualDays`，不可把原規劃直接當成實際造訪紀錄：
+
+1. 先從 `/Volumes/photo`（或使用者指定的已掛載 NAS 路徑）依航班抵達／離境時間窗擷取 HEIC/JPG 的 EXIF GPS，排除台灣與飛行中的照片，再以日期分群回寫真實停留點與路線。
+2. 非日本行程必須讓首頁世界地圖依 `actualDays.route` 顯示插旗；日本行程必須確認完成行程的 `prefectures` 會反映在日本制霸地圖。
+3. 對照既有規劃與實際 GPS：有可靠 GPS 證據者標為 `visited`；沒有到訪證據且與任何實際路線距離超過 1 公里者標為 `planned_not_visited`，保留座標、最近證據距離與來源。使用者明確確認者優先，寫入 `visitConfirmation: "user"`。
+4. `viewer.html` 的原規劃時間軸必須同步顯示 `planned_not_visited`：使用「未到訪」標籤、琥珀色提示與刪除線，不能只在實際 GPS／景點清單區塊顯示。
+5. 未獲明確同意，不得將私人照片 GPS 傳送至外部地圖或地理編碼服務；可用本機既有行程座標、GPS 快取與使用者確認補註名稱。原始逐張照片 GPS 快取不可直接提交到公開 Git 遠端。
+
 ### 🏞️ 實際景點與規劃落差 enrichment
 
 已有 GPS 快取的行程可使用本地腳本補上 OpenStreetMap 景點：
