@@ -1041,7 +1041,14 @@
                 if (attraction.status !== 'planned_not_visited') return false;
                 return [attraction.name, attraction.plannedName].some(name => {
                     const candidate = normalizePlannedPlaceName(name);
-                    return candidate && (itemName.includes(candidate) || candidate.includes(itemName));
+                    if (!candidate) return false;
+                    if (itemName.includes(candidate) || candidate.includes(itemName)) return true;
+
+                    // 部分規劃卡會以活動名稱呈現（例如「AEON 大採購」），
+                    // 景點資料則保留完整店名；共用具辨識度的英文／數字名稱即可對應。
+                    const itemTokens = itemName.match(/[a-z0-9]{4,}/g) || [];
+                    const candidateTokens = candidate.match(/[a-z0-9]{4,}/g) || [];
+                    return itemTokens.some(token => candidateTokens.includes(token));
                 });
             }) || null;
         }
@@ -1067,9 +1074,12 @@
                     </h3>
                     <div class="relative border-l-2 border-indigo-200 ml-3 pl-4 py-2 space-y-4">
             `;
+            const plannedMissed = (actualDay?.attractions || []).filter(attraction => attraction.status === 'planned_not_visited');
+            const renderedMissedIds = new Set();
             (day.timeline || []).forEach((item, index) => {
                 const isTransit = item.type === 'transport' || item.type === 'drive';
-                const missedPlan = isTransit ? null : findPlannedNotVisited(item, actualDay);
+                const missedPlan = findPlannedNotVisited(item, actualDay);
+                if (missedPlan) renderedMissedIds.add(missedPlan.id || missedPlan.name);
                 const icon = isTransit ? (item.type === 'drive' ? 'fa-car-side text-blue-500' : 'fa-train-subway text-blue-500') : 'fa-location-dot text-indigo-500';
                 const badge = isTransit ? (item.type === 'drive' ? '交通自駕' : '大眾交通') : '景點活動';
                 const badgeClass = isTransit ? 'bg-blue-50 text-blue-600' : 'bg-indigo-50 text-indigo-600';
@@ -1098,6 +1108,29 @@
                     </div>
                 `;
             });
+            // 有些規劃點不在原始時間軸中，仍要直接呈現，不能只藏在 GPS 景點紀錄。
+            plannedMissed
+                .filter(attraction => !renderedMissedIds.has(attraction.id || attraction.name))
+                .forEach((attraction, index) => {
+                    const nav = mapNavButton(attraction);
+                    const evidence = attraction.visitConfirmation === 'user'
+                        ? '使用者確認：本趟未到訪'
+                        : 'GPS 未發現此規劃點的到訪證據';
+                    html += `
+                    <div class="relative timeline-card timeline-sight bg-amber-50/70 rounded-xl p-3 shadow-sm border border-amber-300">
+                        <div class="timeline-marker timeline-marker-sight absolute -left-[27px] top-3 bg-amber-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-[9px] border-2 border-white font-bold shadow-sm">
+                            ${(day.timeline || []).length + index + 1}
+                        </div>
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="text-[10px] font-bold text-amber-700"><i class="fa-solid fa-location-dot mr-1"></i>規劃景點</span>
+                            <span class="text-[9px] font-bold px-1.5 py-0.5 rounded-md border border-amber-200 bg-amber-100 text-amber-700">未到訪</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-slate-500 line-through decoration-amber-500 decoration-2 mt-1">${escapeHTML(attraction.name)}</h4>
+                        <p class="text-[10px] font-bold text-amber-700 mt-1"><i class="fa-solid fa-triangle-exclamation mr-1"></i>${evidence}</p>
+                        <div class="flex flex-wrap">${nav}</div>
+                    </div>
+                    `;
+                });
             html += '</div></div>';
 
             const actualStops = actualDay?.timeline || [];
