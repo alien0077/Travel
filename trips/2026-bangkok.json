@@ -2066,6 +2066,21 @@
         425,
         870
       ]
+    ],
+    "attractions": [
+      {
+        "id": "planned-missed-1",
+        "name": "鄭王廟（Wat Arun）",
+        "plannedName": "鄭王廟（Wat Arun）",
+        "lat": 13.7421076,
+        "lng": 100.4757347,
+        "category": "planned",
+        "source": "planned",
+        "status": "planned_not_visited",
+        "distanceMeters": 1331,
+        "evidenceDay": "day2",
+        "evidence": "GPS route has no point within 1 km"
+      }
     ]
   },
   "day3": {
@@ -2471,6 +2486,47 @@
         425,
         870
       ]
+    ],
+    "attractions": [
+      {
+        "id": "planned-missed-2",
+        "name": "Sam Yan 傳統菜市場",
+        "plannedName": "Sam Yan 傳統菜市場",
+        "lat": 13.7369796,
+        "lng": 100.5218058,
+        "category": "planned",
+        "source": "planned",
+        "status": "planned_not_visited",
+        "distanceMeters": 1183,
+        "evidenceDay": "day3",
+        "evidence": "GPS route has no point within 1 km"
+      },
+      {
+        "id": "planned-missed-3",
+        "name": "勝利紀念碑船麵街",
+        "plannedName": "勝利紀念碑船麵街",
+        "lat": 13.7659183,
+        "lng": 100.5365979,
+        "category": "planned",
+        "source": "planned",
+        "status": "planned_not_visited",
+        "distanceMeters": 2362,
+        "evidenceDay": "day2",
+        "evidence": "GPS route has no point within 1 km"
+      },
+      {
+        "id": "planned-missed-4",
+        "name": "Siam Paragon",
+        "plannedName": "Siam Paragon",
+        "lat": 13.7467785,
+        "lng": 100.534954,
+        "category": "planned",
+        "source": "planned",
+        "status": "planned_not_visited",
+        "distanceMeters": 2233,
+        "evidenceDay": "day2",
+        "evidence": "GPS route has no point within 1 km"
+      }
     ]
   },
   "day4": {
