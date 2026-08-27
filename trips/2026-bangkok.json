@@ -2076,10 +2076,11 @@
         "lng": 100.4757347,
         "category": "planned",
         "source": "planned",
-        "status": "planned_not_visited",
+        "status": "visited",
         "distanceMeters": 1331,
         "evidenceDay": "day2",
-        "evidence": "GPS route has no point within 1 km"
+        "evidence": "User confirmed visited",
+        "visitConfirmation": "user"
       }
     ]
   },
