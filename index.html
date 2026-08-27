@@ -1167,7 +1167,7 @@
         // 5. Leaflet map initialization
         // ==========================================
         let map, prefectureLayer, cityLayer, regionLabelLayer, airportLayer, routeLayer;
-        let worldMap, worldAdmin1Layer, worldVisitedLayer;
+        let worldMap, worldAdmin1Layer, worldVisitedLayer, worldVisitedLeaderLayer;
         let geoJsonPrefData = null;
         let geoJsonCityData = null;
         let geoJsonWorldAdmin1 = null;
@@ -1244,8 +1244,9 @@
         function initWorldMap() {
             if (worldMap) return;
             worldMap = L.map('world-map', {
-                center: [20, 10],
-                zoom: 2,
+                // 世界足跡預設從台灣出發，方便立即確認台灣與亞洲的國界／旗幟。
+                center: [23.7, 121.0],
+                zoom: 3,
                 minZoom: 2,
                 maxZoom: 8,
                 zoomControl: true,
@@ -1260,6 +1261,7 @@
 
             worldAdmin1Layer = L.layerGroup().addTo(worldMap);
             worldVisitedLayer = L.layerGroup().addTo(worldMap);
+            worldVisitedLeaderLayer = L.layerGroup().addTo(worldMap);
             worldMap.on('zoomend moveend', () => {
                 renderWorldAdmin1();
             });
@@ -1497,12 +1499,23 @@
                     name: getWorldCountryDisplayName(code, props.admin || props.name_en || code),
                     latTotal: 0,
                     lngTotal: 0,
-                    centroidCount: 0
+                    centroidCount: 0,
+                    minLat: 90,
+                    maxLat: -90,
+                    minLng: 180,
+                    maxLng: -180
                 };
                 if (Number.isFinite(latitude) && Number.isFinite(longitude)) {
                     current.latTotal += latitude;
                     current.lngTotal += longitude;
                     current.centroidCount += 1;
+                }
+                const bbox = geoJsonBbox(feature);
+                if (bbox) {
+                    current.minLat = Math.min(current.minLat, bbox.minLat);
+                    current.maxLat = Math.max(current.maxLat, bbox.maxLat);
+                    current.minLng = Math.min(current.minLng, bbox.minLon);
+                    current.maxLng = Math.max(current.maxLng, bbox.maxLon);
                 }
                 worldCountryMeta.set(code, current);
             });
@@ -1548,7 +1561,7 @@
         function renderWorldAdmin1() {
             if (!worldAdmin1Layer || !worldMap) return;
             worldAdmin1Layer.clearLayers();
-            if (!geoJsonWorldAdmin1 || worldMap.getZoom() < 3) return;
+            if (!geoJsonWorldAdmin1 || worldMap.getZoom() < 2) return;
 
             const bounds = worldMap.getBounds();
             const pad = 0.5;
@@ -1566,10 +1579,12 @@
                     const visited = visitedWorldCountries.has(code);
                     L.geoJSON(f, {
                         style: {
-                            weight: visited ? 0.8 : 0.5,
-                            opacity: visited ? 0.7 : 0.4,
-                            color: visited ? '#d97706' : '#94a3b8',
-                            dashArray: '3,3',
+                            // world-admin1 的每一個行政區外框共同構成國界；
+                            // 初始視角也保留細線，避免全球視野只剩底圖。
+                            weight: visited ? 1.2 : 0.8,
+                            opacity: visited ? 0.85 : 0.65,
+                            color: visited ? '#c2410c' : '#64748b',
+                            dashArray: null,
                             fillColor: visited ? '#fef3c7' : '#f8fafc',
                             fillOpacity: visited ? 0.28 : 0.06,
                             interactive: false
@@ -1616,6 +1631,27 @@
             return String.fromCodePoint(...code.split('').map(letter => 127397 + letter.charCodeAt(0)));
         }
 
+        function isCompactWorldCountry(code) {
+            const meta = worldCountryMeta.get(code);
+            if (!meta || meta.minLat > meta.maxLat) return false;
+            return (meta.maxLat - meta.minLat) * (meta.maxLng - meta.minLng) < 18;
+        }
+
+        function findWorldFlagLabelPoint(country) {
+            if (!isCompactWorldCountry(country.code)) return [country.lat, country.lng];
+            const candidates = [
+                [country.lat + 3, country.lng + 4], [country.lat + 3, country.lng - 4],
+                [country.lat - 3, country.lng + 4], [country.lat - 3, country.lng - 4],
+                [country.lat + 4, country.lng], [country.lat - 4, country.lng],
+                [country.lat, country.lng + 5], [country.lat, country.lng - 5]
+            ];
+            // 標籤可以落在海上，但不能落在另一個國家的多邊形內。
+            return candidates.find(point => {
+                const owner = findWorldCountryAt(point[0], point[1]);
+                return !owner || owner === country.code;
+            }) || [country.lat, country.lng];
+        }
+
         function addVisitedWorldCountry(code, trip, fallbackPoint) {
             if (!isWorldCountryCode(code)) return;
             const meta = worldCountryMeta.get(code) || {
@@ -1623,18 +1659,31 @@
                 name: getWorldCountryDisplayName(code, code),
                 latTotal: 0,
                 lngTotal: 0,
-                centroidCount: 0
+                centroidCount: 0,
+                minLat: 90,
+                maxLat: -90,
+                minLng: 180,
+                maxLng: -180
             };
             const current = visitedWorldCountries.get(code) || {
                 code,
                 name: meta.name,
                 lat: meta.centroidCount ? meta.latTotal / meta.centroidCount : null,
                 lng: meta.centroidCount ? meta.lngTotal / meta.centroidCount : null,
-                trips: new Set()
+                trips: new Set(),
+                points: []
             };
-            if (!Number.isFinite(current.lat) && fallbackPoint) {
-                current.lat = fallbackPoint[0];
-                current.lng = fallbackPoint[1];
+            if (fallbackPoint && Number.isFinite(Number(fallbackPoint[0])) && Number.isFinite(Number(fallbackPoint[1]))) {
+                const point = [Number(fallbackPoint[0]), Number(fallbackPoint[1])];
+                if (findWorldCountryAt(point[0], point[1]) === code) current.points.push(point);
+            }
+            // 平均中心若落在海上或別國，改用同國 GPS／機場定位點。
+            if (!Number.isFinite(current.lat) || findWorldCountryAt(current.lat, current.lng) !== code) {
+                const validPoint = current.points.find(point => findWorldCountryAt(point[0], point[1]) === code);
+                if (validPoint) {
+                    current.lat = validPoint[0];
+                    current.lng = validPoint[1];
+                }
             }
             current.trips.add(trip.id);
             visitedWorldCountries.set(code, current);
@@ -1675,15 +1724,22 @@
             });
 
             worldVisitedLayer.clearLayers();
+            worldVisitedLeaderLayer.clearLayers();
             visitedWorldCountries.forEach(country => {
                 if (!Number.isFinite(country.lat) || !Number.isFinite(country.lng)) return;
+                const labelPoint = findWorldFlagLabelPoint(country);
+                if (labelPoint[0] !== country.lat || labelPoint[1] !== country.lng) {
+                    L.polyline([[country.lat, country.lng], labelPoint], {
+                        color: '#be123c', weight: 1.2, opacity: 0.8, dashArray: '2,2', interactive: false
+                    }).addTo(worldVisitedLeaderLayer);
+                }
                 const icon = L.divIcon({
                     className: 'world-country-flag',
                     html: `<span class="flag-emoji">${flagEmoji(country.code)}</span><span class="country-label">${escapeMapHTML(country.name)}</span>`,
                     iconSize: [80, 54],
                     iconAnchor: [40, 48]
                 });
-                const marker = L.marker([country.lat, country.lng], { icon, zIndexOffset: 1000 });
+                const marker = L.marker(labelPoint, { icon, zIndexOffset: 1000 });
                 marker.bindTooltip(`${flagEmoji(country.code)} ${escapeMapHTML(country.name)}<br><small>${country.trips.size} 趟旅程</small>`, {
                     direction: 'top',
                     offset: [0, -42]
