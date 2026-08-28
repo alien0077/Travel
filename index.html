@@ -1581,9 +1581,10 @@
                         style: {
                             // world-admin1 的每一個行政區外框共同構成國界；
                             // 初始視角也保留細線，避免全球視野只剩底圖。
-                            weight: visited ? 1.2 : 0.8,
-                            opacity: visited ? 0.85 : 0.65,
-                            color: visited ? '#16a34a' : '#64748b',
+                            weight: visited ? 1.35 : 0.8,
+                            opacity: visited ? 0.95 : 0.65,
+                            // 邊界維持深藍灰，不與淡綠填色混在一起。
+                            color: visited ? '#334155' : '#64748b',
                             dashArray: null,
                             // 已造訪國家以淡綠色整片填滿，與未造訪灰白底清楚區隔。
                             fillColor: visited ? '#bbf7d0' : '#f8fafc',
