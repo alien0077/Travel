@@ -1,0 +1,266 @@
+{
+  "id": "2011-osaka-kyoto",
+  "type": "city",
+  "title": "第一次關西親子之旅",
+  "subtitle": "2011/9/4 - 9/10 大阪京都七日遊",
+  "badge": "2011 Kansai Family Trip",
+  "badgeIcon": "fa-torii-gate",
+  "description": "第一次從關西機場進出，七天全程住大阪新梅田飯店，以大阪週遊券走訪大阪與京都。",
+  "stats": [
+    "7天6夜",
+    "關西機場進出",
+    "大阪週遊券"
+  ],
+  "image": "osaka",
+  "prefectures": [
+    "25",
+    "26",
+    "27"
+  ],
+  "airports": [
+    "KIX"
+  ],
+  "dateStart": "2011-09-04",
+  "dateEnd": "2011-09-10",
+  "actionText": "行程手冊",
+  "flights": {
+    "outbound": "台灣 ➔ 關西機場 KIX（航班資料待補）",
+    "inbound": "關西機場 KIX ➔ 台灣（航班資料待補）"
+  },
+  "notes": "本行程為第一版歷史行程重建。日期依 NAS 資料夾 20110904_day1 至 20110910_day7；景點依使用者口述、照片內容與資料夾順序整理。沒有 GPS，未確認的順序與景點以『照片推定』或『待確認』標示。",
+  "days": {
+    "day1": {
+      "date": "9/4 (日)",
+      "title": "抵達關西・黑門市場與大阪夜景",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "",
+          "title": "台灣 ➔ 關西機場 KIX",
+          "detail": "去程航班與抵達時間待補。"
+        },
+        {
+          "type": "transport",
+          "time": "",
+          "title": "關西機場 ➔ 大阪新梅田飯店",
+          "detail": "抵達後前往大阪住宿，交通方式待口述確認。"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "黑門市場周邊",
+          "detail": "照片可見黑門市場招牌與商店街街景；照片證據。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=黑門市場"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "道頓堀",
+          "detail": "大阪市區初遊；照片／口述可確認曾到訪。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=道頓堀"
+        },
+        {
+          "type": "activity",
+          "time": "",
+          "title": "道頓堀水上觀光船",
+          "detail": "使用者口述確定曾搭乘；推定為大阪週遊券涵蓋的道頓堀水上觀光船，實際日期與船班待確認。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=道頓堀水上觀光船"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "梅田高樓展望台（照片推定）",
+          "detail": "夜間照片可見大阪高樓與城市夜景，可能是梅田藍天大廈空中庭園展望台；待口述確認。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=梅田藍天大廈"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "大阪新梅田飯店",
+        "detail": "全程住宿；正式日文名稱與地址待補。"
+      },
+      "details": "NAS 資料夾 20110904_day1，共 46 個 CR2 檔案。照片順序清楚呈現關西機場、電車、黑門市場與夜間大阪景觀。"
+    },
+    "day2": {
+      "date": "9/5 (一)",
+      "title": "大阪城與大阪港灣一日",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "sight",
+          "time": "",
+          "title": "大阪城",
+          "detail": "使用者口述確定曾到訪；大阪週遊券景點之一。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=大阪城"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "大阪港・港灣遊船",
+          "detail": "使用者口述確定曾坐船遊港；船名與日期待確認。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=大阪港"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "摩天輪",
+          "detail": "使用者口述確定曾搭乘；具體摩天輪待由照片與口述確認，可能為大阪港天保山大摩天輪。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=天保山大摩天輪"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "大阪新梅田飯店"
+      },
+      "details": "NAS 資料夾 20110905_day2，共 168 個 CR2 檔案及 1 段 MOV。照片可確認大阪城、大阪港灣與港區移動；摩天輪與遊船依使用者口述納入。"
+    },
+    "day3": {
+      "date": "9/6 (二)",
+      "title": "大阪環球影城",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "sight",
+          "time": "",
+          "title": "Universal Studios Japan",
+          "detail": "代表照片可辨識 Universal Studios 的 Boardwalk Snacks 店面；照片證據，實際是否整日遊玩待口述確認。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "大阪新梅田飯店"
+      },
+      "details": "NAS 資料夾 20110906_day3，共 211 個 CR2 檔案。大量照片呈現園區街景、遊樂設施、角色與 Boardwalk Snacks，環球影城判讀可信度高。"
+    },
+    "day4": {
+      "date": "9/7 (三)",
+      "title": "京都寺社與東山街區",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "sight",
+          "time": "",
+          "title": "銀閣寺",
+          "detail": "使用者口述確定曾到訪；照片可見京都寺社與傳統街區，日期分配為照片分組結果。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=銀閣寺"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "清水寺",
+          "detail": "使用者口述確定曾到訪；照片可見寺院、坡道與東山街景。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=清水寺"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "八坂神社",
+          "detail": "使用者口述確定曾到訪；照片可見紅色社寺建築與京都街景。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=八坂神社"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "鴨川",
+          "detail": "使用者口述確定曾到訪；日期與照片分組相符性待進一步確認。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=鴨川京都"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "大阪新梅田飯店"
+      },
+      "details": "NAS 資料夾 20110907_day4，共 217 個 CR2 檔案。完整照片確認銀閣寺（IMG_0991 一景）、清水寺（入口與洗手場）、清水坂商店街，以及八坂神社；鴨川列為當日京都市區行程。"
+    },
+    "day5": {
+      "date": "9/8 (四)",
+      "title": "通天閣・大阪生活今昔館與夜街",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "sight",
+          "time": "",
+          "title": "大阪生活今昔館（照片推定）",
+          "detail": "代表照片出現室內縮小版日本街景與老屋模型，外觀與大阪生活今昔館展示內容相符；尚待使用者確認。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=大阪生活今昔館"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "大阪市區自由活動",
+          "detail": "可能搭配大阪週遊券使用；詳細景點與順序待照片及口述確認。"
+        },
+        {
+          "type": "sight",
+          "time": "",
+          "title": "通天閣",
+          "detail": "完整照片可見通天閣本體與展望景觀；使用者口述亦確認曾到訪。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=通天閣"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "大阪新梅田飯店"
+      },
+      "details": "NAS 資料夾 20110908_day5，共 112 個檔案。完整照片確認通天閣與展望景觀、通天閣周邊街區、大阪生活今昔館模型街景，以及大阪夜間餐飲街。"
+    },
+    "day6": {
+      "date": "9/9 (五)",
+      "title": "京都嵐山與山林寺院",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "sight",
+          "time": "",
+          "title": "嵐山",
+          "detail": "使用者口述確定曾到訪；照片可見山景、寺院、紅色鳥居／門與竹林類景觀，與嵐山行程相符。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=嵐山京都"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "大阪新梅田飯店"
+      },
+      "details": "NAS 資料夾 20110909_day6，共 165 個 CR2 檔案。縮圖接觸表呈現京都山林、寺院、鳥居與傳統住宅景觀；細分景點待口述補充。"
+    },
+    "day7": {
+      "date": "9/10 (六)",
+      "title": "大阪整理行李・返回台灣",
+      "timeRange": "",
+      "timeline": [
+        {
+          "type": "act",
+          "time": "",
+          "title": "大阪新梅田飯店退房",
+          "detail": "全程住宿最後一天；退房時間待補。"
+        },
+        {
+          "type": "transport",
+          "time": "",
+          "title": "大阪 ➔ 關西機場 KIX",
+          "detail": "前往機場搭乘回程航班，航班資料待補。"
+        },
+        {
+          "type": "transport",
+          "time": "",
+          "title": "關西機場 KIX ➔ 台灣",
+          "detail": "回程航班與抵達時間待補。"
+        }
+      ],
+      "food": [],
+      "parking": [],
+      "hotel": {
+        "name": "返回台灣"
+      },
+      "details": "NAS 資料夾 20110910_day7，共 66 個 CR2 檔案。照片清楚呈現機場航廈、登機、機坪與返台後伴手禮整理，確定為返程日。"
+    }
+  }
+}
