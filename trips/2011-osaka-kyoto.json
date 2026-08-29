@@ -23,6 +23,25 @@
   "dateStart": "2011-09-04",
   "dateEnd": "2011-09-10",
   "actionText": "行程手冊",
+  "mapCoordinates": {
+    "https://www.google.com/maps/search/?api=1&query=關西機場KIX": { "lat": 34.4347, "lng": 135.2440 },
+    "https://www.google.com/maps/search/?api=1&query=黑門市場": { "lat": 34.6654, "lng": 135.5063 },
+    "https://www.google.com/maps/search/?api=1&query=道頓堀": { "lat": 34.6687, "lng": 135.5013 },
+    "https://www.google.com/maps/search/?api=1&query=道頓堀水上觀光船": { "lat": 34.6687, "lng": 135.5013 },
+    "https://www.google.com/maps/search/?api=1&query=梅田藍天大廈": { "lat": 34.7053, "lng": 135.4903 },
+    "https://www.google.com/maps/search/?api=1&query=梅田": { "lat": 34.7025, "lng": 135.4959 },
+    "https://www.google.com/maps/search/?api=1&query=大阪城": { "lat": 34.6873, "lng": 135.5262 },
+    "https://www.google.com/maps/search/?api=1&query=大阪港": { "lat": 34.6555, "lng": 135.4308 },
+    "https://www.google.com/maps/search/?api=1&query=天保山大摩天輪": { "lat": 34.6555, "lng": 135.4308 },
+    "https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan": { "lat": 34.6654, "lng": 135.4323 },
+    "https://www.google.com/maps/search/?api=1&query=銀閣寺": { "lat": 35.0270, "lng": 135.7982 },
+    "https://www.google.com/maps/search/?api=1&query=清水寺": { "lat": 34.9949, "lng": 135.7850 },
+    "https://www.google.com/maps/search/?api=1&query=八坂神社": { "lat": 35.0037, "lng": 135.7788 },
+    "https://www.google.com/maps/search/?api=1&query=鴨川京都": { "lat": 35.0116, "lng": 135.7681 },
+    "https://www.google.com/maps/search/?api=1&query=大阪生活今昔館": { "lat": 34.7104, "lng": 135.5111 },
+    "https://www.google.com/maps/search/?api=1&query=通天閣": { "lat": 34.6525, "lng": 135.5063 },
+    "https://www.google.com/maps/search/?api=1&query=嵐山京都": { "lat": 35.0094, "lng": 135.6668 }
+  },
   "flights": {
     "outbound": "台灣 ➔ 關西機場 KIX（航班資料待補）",
     "inbound": "關西機場 KIX ➔ 台灣（航班資料待補）"
@@ -33,6 +52,12 @@
       "date": "9/4 (日)",
       "title": "抵達關西・黑門市場與大阪夜景",
       "timeRange": "",
+      "plannedRouteStops": [
+        { "title": "關西機場 KIX", "mapUrl": "https://www.google.com/maps/search/?api=1&query=關西機場KIX" },
+        { "title": "黑門市場", "mapUrl": "https://www.google.com/maps/search/?api=1&query=黑門市場" },
+        { "title": "道頓堀", "mapUrl": "https://www.google.com/maps/search/?api=1&query=道頓堀" },
+        { "title": "梅田高樓展望台", "mapUrl": "https://www.google.com/maps/search/?api=1&query=梅田藍天大廈" }
+      ],
       "timeline": [
         {
           "type": "transport",
@@ -87,6 +112,11 @@
       "date": "9/5 (一)",
       "title": "大阪城與大阪港灣一日",
       "timeRange": "",
+      "plannedRouteStops": [
+        { "title": "大阪城", "mapUrl": "https://www.google.com/maps/search/?api=1&query=大阪城" },
+        { "title": "大阪港・港灣遊船", "mapUrl": "https://www.google.com/maps/search/?api=1&query=大阪港" },
+        { "title": "天保山大摩天輪", "mapUrl": "https://www.google.com/maps/search/?api=1&query=天保山大摩天輪" }
+      ],
       "timeline": [
         {
           "type": "sight",
@@ -121,6 +151,10 @@
       "date": "9/6 (二)",
       "title": "大阪環球影城",
       "timeRange": "",
+      "plannedRouteStops": [
+        { "title": "大阪市區起點（概略）", "mapUrl": "https://www.google.com/maps/search/?api=1&query=梅田" },
+        { "title": "Universal Studios Japan", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" }
+      ],
       "timeline": [
         {
           "type": "sight",
@@ -141,6 +175,12 @@
       "date": "9/7 (三)",
       "title": "京都寺社與東山街區",
       "timeRange": "",
+      "plannedRouteStops": [
+        { "title": "銀閣寺", "mapUrl": "https://www.google.com/maps/search/?api=1&query=銀閣寺" },
+        { "title": "清水寺", "mapUrl": "https://www.google.com/maps/search/?api=1&query=清水寺" },
+        { "title": "八坂神社", "mapUrl": "https://www.google.com/maps/search/?api=1&query=八坂神社" },
+        { "title": "鴨川", "mapUrl": "https://www.google.com/maps/search/?api=1&query=鴨川京都" }
+      ],
       "timeline": [
         {
           "type": "sight",
@@ -182,6 +222,12 @@
       "date": "9/8 (四)",
       "title": "通天閣・大阪生活今昔館與夜街",
       "timeRange": "",
+      "plannedRouteStops": [
+        { "title": "梅田市區起點（概略）", "mapUrl": "https://www.google.com/maps/search/?api=1&query=梅田" },
+        { "title": "大阪生活今昔館", "mapUrl": "https://www.google.com/maps/search/?api=1&query=大阪生活今昔館" },
+        { "title": "通天閣", "mapUrl": "https://www.google.com/maps/search/?api=1&query=通天閣" },
+        { "title": "道頓堀夜街", "mapUrl": "https://www.google.com/maps/search/?api=1&query=道頓堀" }
+      ],
       "timeline": [
         {
           "type": "sight",
@@ -215,6 +261,10 @@
       "date": "9/9 (五)",
       "title": "京都嵐山與山林寺院",
       "timeRange": "",
+      "plannedRouteStops": [
+        { "title": "大阪市區起點（概略）", "mapUrl": "https://www.google.com/maps/search/?api=1&query=梅田" },
+        { "title": "嵐山", "mapUrl": "https://www.google.com/maps/search/?api=1&query=嵐山京都" }
+      ],
       "timeline": [
         {
           "type": "sight",
@@ -235,6 +285,10 @@
       "date": "9/10 (六)",
       "title": "大阪整理行李・返回台灣",
       "timeRange": "",
+      "plannedRouteStops": [
+        { "title": "大阪市區起點（概略）", "mapUrl": "https://www.google.com/maps/search/?api=1&query=梅田" },
+        { "title": "關西機場 KIX", "mapUrl": "https://www.google.com/maps/search/?api=1&query=關西機場KIX" }
+      ],
       "timeline": [
         {
           "type": "act",
