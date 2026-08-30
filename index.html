@@ -935,8 +935,10 @@
 
         function renderTrips() {
             const now = new Date();
-            const activeTrips = allTrips.filter(t => new Date(t.dateEnd) >= now);
-            const archiveTrips = allTrips.filter(t => new Date(t.dateEnd) < now);
+            // Keep the newest itinerary at the top of each section, independent of manifest order.
+            const byNewestStart = (a, b) => new Date(b.dateStart || b.dateEnd) - new Date(a.dateStart || a.dateEnd);
+            const activeTrips = allTrips.filter(t => new Date(t.dateEnd) >= now).sort(byNewestStart);
+            const archiveTrips = allTrips.filter(t => new Date(t.dateEnd) < now).sort(byNewestStart);
 
             const grid = document.getElementById('trip-grid');
             const archiveGrid = document.getElementById('archive-grid');
