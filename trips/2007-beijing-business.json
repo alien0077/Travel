@@ -1,0 +1,33 @@
+{
+  "id": "2007-beijing-business",
+  "type": "city",
+  "title": "2007 北京出差",
+  "subtitle": "11/03 - 11/13 桃園・香港轉機・北京",
+  "badge": "Beijing Business Trip",
+  "badgeIcon": "fa-briefcase",
+  "description": "威盛電子出差，清華大學、中關村、天壇、天安門、故宮、長城與胡同影像紀錄。",
+  "stats": ["11天", "北京首都機場", "GPS照片地圖"],
+  "image": "beijing",
+  "prefectures": [],
+  "airports": ["TPE", "HKG", "PEK"],
+  "dateStart": "2007-11-03",
+  "dateEnd": "2007-11-13",
+  "actionText": "查看行程",
+  "flights": {
+    "outbound": "桃園機場 ➔ 香港轉機 ➔ 北京首都機場",
+    "inbound": "北京首都機場 ➔ 香港轉機 ➔ 桃園機場"
+  },
+  "days": {
+    "day1": {"date":"11/03","title":"出發與轉機","timeRange":"","timeline":[{"type":"transport","time":"","title":"桃園機場 → 香港 → 北京首都機場","detail":"依照片與行程敘述重建。","mapUrl":"https://maps.google.com/?q=40.0799,116.6031"}],"food":[],"details":""},
+    "day2": {"date":"11/04","title":"天壇、前門與天安門","timeRange":"","timeline":[{"type":"act","time":"","title":"天壇","detail":"含祈年殿、回音壁。","mapUrl":"https://maps.google.com/?q=39.8822,116.4066"},{"type":"act","time":"","title":"正陽門／前門","detail":"照片可見正陽門標示。","mapUrl":"https://maps.google.com/?q=39.8997,116.3975"},{"type":"act","time":"","title":"天安門廣場","detail":"","mapUrl":"https://maps.google.com/?q=39.9055,116.3976"}],"food":[],"details":""},
+    "day3": {"date":"11/05","title":"北京城市移動","timeRange":"","timeline":[],"food":[],"details":"照片日期證據不足，保留為行程日。"},
+    "day4": {"date":"11/06","title":"故宮與北京站影像","timeRange":"","timeline":[{"type":"act","time":"","title":"故宮／紫禁城","detail":"底片與數位照片均有故宮序列。","mapUrl":"https://maps.google.com/?q=39.9163,116.3972"},{"type":"transport","time":"","title":"北京站","detail":"照片建築文字辨識為北京站。","mapUrl":"https://maps.google.com/?q=39.9029,116.4270"}],"food":[],"details":""},
+    "day5": {"date":"11/07","title":"威盛電子、中關村與清華大學","timeRange":"","timeline":[{"type":"act","time":"","title":"威盛電子／中關村","detail":"照片可見中關村大街與威盛電子出差背景。","mapUrl":"https://maps.google.com/?q=39.983,116.316"},{"type":"act","time":"","title":"清華大學","detail":"使用者確認銀杏樹照片就在清華大學。","mapUrl":"https://maps.google.com/?q=40.000,116.3265"}],"food":[],"details":""},
+    "day6": {"date":"11/08","title":"清華與北京街區","timeRange":"","timeline":[{"type":"act","time":"","title":"清華大學／中關村街區","detail":"","mapUrl":"https://maps.google.com/?q=40.000,116.3265"}],"food":[],"details":""},
+    "day7": {"date":"11/09","title":"胡同與全聚德烤鴨","timeRange":"","timeline":[{"type":"act","time":"","title":"北京胡同","detail":"使用者確認照片附近就是胡同。","mapUrl":"https://maps.google.com/?q=39.93,116.4"},{"type":"food","time":"","title":"全聚德烤鴨（王府井）","detail":"使用者確認烤鴨照片為北京全聚德。","mapUrl":"https://maps.google.com/?q=39.909,116.4115"}],"food":[],"details":""},
+    "day8": {"date":"11/10","title":"北京街區","timeRange":"","timeline":[{"type":"act","time":"","title":"北京胡同與市區","detail":"","mapUrl":"https://maps.google.com/?q=39.93,116.4"}],"food":[],"details":""},
+    "day9": {"date":"11/11","title":"頤和園與北京景點","timeRange":"","timeline":[{"type":"act","time":"","title":"頤和園","detail":"昆明湖、十七孔橋、石舫影像序列。","mapUrl":"https://maps.google.com/?q=39.9999,116.2755"}],"food":[],"details":""},
+    "day10": {"date":"11/12","title":"明定陵、八達嶺長城與天壇","timeRange":"","timeline":[{"type":"act","time":"","title":"明定陵","detail":"","mapUrl":"https://maps.google.com/?q=40.2958,116.2252"},{"type":"act","time":"","title":"八達嶺長城","detail":"照片可見八達嶺長城文字。","mapUrl":"https://maps.google.com/?q=40.3596,116.0203"}],"food":[],"details":""},
+    "day11": {"date":"11/13","title":"離開北京","timeRange":"","timeline":[{"type":"transport","time":"","title":"北京首都機場 → 香港 → 桃園機場","detail":"","mapUrl":"https://maps.google.com/?q=40.0799,116.6031"}],"food":[],"details":""}
+  }
+}
