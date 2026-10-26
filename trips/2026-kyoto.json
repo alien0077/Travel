@@ -1,0 +1,636 @@
+{
+  "id": "2026-kyoto",
+  "type": "city",
+  "title": "京都五社・四神巡禮",
+  "subtitle": "10/30 - 11/2 五社滿願 × 晴明神社 × 伏見稻荷",
+  "badge": "Kyoto Five Shrines",
+  "badgeIcon": "fa-torii-gate",
+  "description": "計程車完成京都五社御朱印滿願，另訪晴明神社與伏見稻荷；每社附代表授與品、現場日語與用餐安排。",
+  "stats": [
+    "4天3夜",
+    "五社御朱印",
+    "Taxi巡禮"
+  ],
+  "image": "kyoto",
+  "prefectures": [
+    "26"
+  ],
+  "airports": [
+    "KIX"
+  ],
+  "dateStart": "2026-10-30",
+  "dateEnd": "2026-11-02",
+  "countdownDate": "2026/10/30 09:00:00",
+  "jpyToTwdRate": 0.22,
+  "actionText": "行程 / 工具",
+  "routeColor": "#B45309",
+  "ui": {
+    "theme": "original"
+  },
+  "mapCenter": [
+    35.011,
+    135.755
+  ],
+  "mapZoom": 11,
+  "flights": {
+    "outbound": "去程：AirAsia AK170 | 高雄 KHH 09:00 ➔ 13:10 關西 KIX T1",
+    "inbound": "回程：AirAsia AK171 | 關西 KIX T1 14:10 ➔ 16:30 高雄 KHH"
+  },
+  "vjw": {
+    "zip": "600-8266",
+    "address": "京都府京都市下京区上之町416-2",
+    "name": "RESI STAY HOTEL SUN CHLORELLA"
+  },
+  "sightsList": [
+    {
+      "id": "jonangu",
+      "name": "🔥 Day 2：城南宮・朱雀",
+      "day": "day2"
+    },
+    {
+      "id": "matsunoo",
+      "name": "🐯 Day 2：松尾大社・白虎",
+      "day": "day2"
+    },
+    {
+      "id": "kamigamo",
+      "name": "🐢 Day 2：上賀茂神社・玄武",
+      "day": "day2"
+    },
+    {
+      "id": "seimei",
+      "name": "⭐ Day 2：晴明神社・五芒星",
+      "day": "day2"
+    },
+    {
+      "id": "heian",
+      "name": "🏛️ Day 2：平安神宮・中央",
+      "day": "day2"
+    },
+    {
+      "id": "yasaka",
+      "name": "🐉 Day 2：八坂神社・青龍／五社滿願",
+      "day": "day2"
+    },
+    {
+      "id": "fushimi",
+      "name": "⛩️ Day 3：伏見稻荷大社・千本鳥居",
+      "day": "day3"
+    },
+    {
+      "id": "nishiki",
+      "name": "🍢 Day 3：錦市場",
+      "day": "day3"
+    }
+  ],
+  "foodTabItems": [
+    {
+      "id": "d1-dinner",
+      "name": "とんかつ一番",
+      "detail": "抵達日晚餐。京都梅小路附近老派洋食／豬排；建議ロースとんかつ定食。",
+      "day": "10/30 晚餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E4%B8%80%E7%95%AA+%E4%BA%AC%E9%83%BD"
+    },
+    {
+      "id": "d2-breakfast",
+      "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
+      "detail": "07:00 開門。五社主戰日採快速咖啡＋三明治／麵包，不繞遠。",
+      "day": "10/31 早餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+    },
+    {
+      "id": "d2-lunch",
+      "name": "YOSHIMURA 上賀茂",
+      "detail": "手打蕎麥、天婦羅。御朱印主戰日等位超過 10 分鐘就改吃附近快餐。",
+      "day": "10/31 午餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=YOSHIMURA+Kamigamo+Kyoto"
+    },
+    {
+      "id": "d2-dinner",
+      "name": "炭火焼肉おやけ 撰 -SEN-",
+      "detail": "備長炭炭火、A4〜A5 黒毛和牛、熟成牛舌。17:00 第一輪直接候位；未預約不保證有位。",
+      "day": "10/31 晚餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E7%84%BC%E8%82%89%E3%81%8A%E3%82%84%E3%81%91+%E6%92%B0+SEN+%E4%BA%AC%E9%83%BD"
+    },
+    {
+      "id": "d2-dinner-backup",
+      "name": "焼肉 弘商店 烏丸錦",
+      "detail": "炭火焼肉おやけ客滿時的近距離備案；黑毛和牛燒肉。",
+      "day": "10/31 晚餐備案",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%84%BC%E8%82%89+%E5%BC%98%E5%95%86%E5%BA%97+%E7%83%8F%E4%B8%B8%E9%8C%A6"
+    },
+    {
+      "id": "d3-breakfast",
+      "name": "OGAWA COFFEE 京都駅店",
+      "detail": "京都咖啡品牌；Morning 咖啡、吐司、蛋類。吃完直接搭 Taxi 南下伏見稻荷。",
+      "day": "11/1 早餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
+    },
+    {
+      "id": "d3-lunch",
+      "name": "錦 平野",
+      "detail": "錦市場京都家常味：だし巻き、京おばんざい、西京焼等。",
+      "day": "11/1 午餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6+%E5%B9%B3%E9%87%8E+%E4%BA%AC%E9%83%BD"
+    },
+    {
+      "id": "d3-dinner",
+      "name": "寿しのむさし 京都駅八条口店",
+      "detail": "迴轉壽司，方便一家四人各自選擇；17:15 提早吃以避開晚餐尖峰。",
+      "day": "11/1 晚餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
+    },
+    {
+      "id": "d4-breakfast",
+      "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
+      "detail": "回程日不繞路，咖啡＋輕食後回房整理行李。",
+      "day": "11/2 早餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+    },
+    {
+      "id": "d4-lunch",
+      "name": "KIX 日式快速午餐",
+      "detail": "完成航空公司報到與安檢動線優先；視現場排隊選烏龍麵、拉麵或壽司，不為午餐壓縮登機時間。",
+      "day": "11/2 午餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport+Terminal+1+restaurants"
+    }
+  ],
+  "days": {
+    "day1": {
+      "date": "10/30 (五)",
+      "title": "高雄 → 關西 → 京都入住",
+      "timeRange": "06:30 - 20:00",
+      "timeline": [
+        {
+          "type": "transport",
+          "time": "06:30 - 08:00",
+          "title": "高雄機場報到＋早餐",
+          "detail": "AK170 09:00 起飛。建議 07:00 前完成主要報到手續；早餐在高雄機場處理。"
+        },
+        {
+          "type": "transport",
+          "time": "09:00 - 13:10",
+          "title": "AK170 高雄 KHH ➔ 關西 KIX",
+          "detail": "抵達 KIX 第一航廈。"
+        },
+        {
+          "type": "act",
+          "time": "13:10 - 14:10",
+          "title": "入境・領行李・海關",
+          "detail": "以 14:44 HARUKA 為目標，不追趕過早班次。若肚子餓，買駅弁／飯糰帶上車。"
+        },
+        {
+          "type": "transport",
+          "time": "14:44 - 16:04",
+          "title": "HARUKA：KIX ➔ 京都駅",
+          "detail": "規劃班次；出發前再看 JR West 當日時刻與運行狀態。10/30 WEST QR HARUKA 票價仍屬 10 月區間。"
+        },
+        {
+          "type": "act",
+          "time": "16:10 - 16:35",
+          "title": "RESI STAY Reception 辦理入住手續",
+          "detail": "首次入住不是直接到飯店。到京都站旁 ON Building 5F Reception（08:00–20:00）辦理；公開網頁不保存 Booking PIN／訂單號／旅客姓名。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+Reception+Counter+Kyoto"
+        },
+        {
+          "type": "drive",
+          "time": "16:35 - 17:10",
+          "title": "Reception ➔ SUN CHLORELLA",
+          "detail": "優先搭 RESI STAY 免費單程接駁；若等待超過約 20 分鐘就改 Taxi。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
+        },
+        {
+          "type": "act",
+          "time": "17:10 - 17:45",
+          "title": "入住・休息",
+          "detail": "RESI STAY HOTEL SUN CHLORELLA。"
+        },
+        {
+          "type": "food",
+          "time": "18:00 - 19:15",
+          "title": "晚餐：とんかつ一番",
+          "detail": "住宿附近老派京都洋食／豬排。建議ロースとんかつ定食。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E4%B8%80%E7%95%AA+%E4%BA%AC%E9%83%BD"
+        }
+      ],
+      "food": [
+        {
+          "meal": "晚餐 18:00",
+          "name": "とんかつ一番",
+          "detail": "推薦：ロースとんかつ定食。抵達日不再排景點，早點休息準備隔日五社。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E4%B8%80%E7%95%AA+%E4%BA%AC%E9%83%BD"
+        }
+      ],
+      "hotel": {
+        "name": "RESI STAY HOTEL SUN CHLORELLA",
+        "detail": "416-2 Kaminocho, Shimogyo Ward, Kyoto 600-8266",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
+      },
+      "details": "抵達日只做交通與入住。首次入住先到京都站旁 Reception；不要把 Booking PIN、確認號或旅客姓名寫入公開 GitHub Pages。"
+    },
+    "day2": {
+      "date": "10/31 (六)",
+      "title": "京都五社滿願＋晴明神社",
+      "timeRange": "07:00 - 19:00",
+      "plannedRouteStops": [
+        {
+          "title": "住宿出發",
+          "lat": 34.9886333,
+          "lng": 135.7494667
+        },
+        {
+          "title": "城南宮・朱雀",
+          "lat": 34.950802,
+          "lng": 135.746841
+        },
+        {
+          "title": "松尾大社・白虎",
+          "lat": 35.000014,
+          "lng": 135.685233
+        },
+        {
+          "title": "上賀茂神社・玄武",
+          "lat": 35.060097,
+          "lng": 135.751495
+        },
+        {
+          "title": "晴明神社",
+          "lat": 35.027412,
+          "lng": 135.751175
+        },
+        {
+          "title": "平安神宮・中央",
+          "lat": 35.0165,
+          "lng": 135.782
+        },
+        {
+          "title": "八坂神社・青龍",
+          "lat": 35.003967,
+          "lng": 135.778748
+        }
+      ],
+      "timeline": [
+        {
+          "type": "food",
+          "time": "07:00 - 07:40",
+          "title": "早餐咖啡：Starbucks 梅小路公園",
+          "detail": "07:00 開門。咖啡＋三明治／麵包快速吃，不為早餐壓縮五社時間。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+        },
+        {
+          "type": "drive",
+          "time": "08:10 - 08:35",
+          "title": "Taxi：住宿 ➔ 城南宮",
+          "detail": "規劃 25 分；週六路況預留額外 5–15 分鐘。"
+        },
+        {
+          "type": "act",
+          "time": "08:35 - 09:25",
+          "title": "① 城南宮｜南・朱雀",
+          "detail": "停留 50 分。08:35 先參拜，09:00 授与所開後開始五社巡禮。先說「京都五社めぐりの色紙をお願いします。」再收朱雀印。收藏：朱雀御守（真正御守；城南宮官方四神御守之一）。購買說法：「朱雀のお守りを一体お願いします。」不進完整神苑，以免拖延。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%9F%8E%E5%8D%97%E5%AE%AE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "09:25 - 10:05",
+          "title": "Taxi：城南宮 ➔ 松尾大社",
+          "detail": "規劃 30–40 分；遇塞車直接用 buffer，不縮短後段御朱印時間。"
+        },
+        {
+          "type": "act",
+          "time": "10:05 - 10:40",
+          "title": "② 松尾大社｜西・白虎",
+          "detail": "停留 35 分。本殿＋五社白虎印，不進庭園。收藏：白虎みくじ（官方 2025/12 已恢復授与，數量有限；這是代表授与品／御神籤，不是袋狀御守）。說：「白虎みくじを一つお願いします。まだありますか？」若售罄：「白虎をモチーフにした授与品はありますか？」",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "10:40 - 11:25",
+          "title": "Taxi：松尾大社 ➔ 上賀茂神社",
+          "detail": "規劃 35–45 分，是今天較長的移動之一。"
+        },
+        {
+          "type": "act",
+          "time": "11:25 - 12:10",
+          "title": "③ 上賀茂神社｜北・玄武",
+          "detail": "停留 45 分。立砂、樓門、本殿＋五社玄武印。收藏：八方除守 800円（真正御守；官方沒有查到玄武單體御守，用『守護所有方位』的八方除守作玄武代表，不冒充玄武專用）。說：「八方除守を一体お願いします。五社めぐりで玄武の記念にしたいです。」",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E8%B3%80%E8%8C%82%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "food",
+          "time": "12:20 - 13:10",
+          "title": "午餐：YOSHIMURA 上賀茂",
+          "detail": "蕎麥麵＋天婦羅。硬規則：候位超過 10 分鐘就換附近快餐，五社滿願優先。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=YOSHIMURA+Kamigamo+Kyoto"
+        },
+        {
+          "type": "drive",
+          "time": "13:10 - 13:35",
+          "title": "Taxi：上賀茂 ➔ 晴明神社",
+          "detail": "規劃 20–25 分。"
+        },
+        {
+          "type": "act",
+          "time": "13:35 - 14:05",
+          "title": "晴明神社｜五芒星・額外御朱印",
+          "detail": "停留 30 分。晴明桔梗五芒星、晴明井、厄除桃、本殿；另外收一般御朱印。這一站不屬於京都五社色紙，不混入四神五社收藏。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%99%B4%E6%98%8E%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "14:05 - 14:25",
+          "title": "Taxi：晴明神社 ➔ 平安神宮",
+          "detail": "規劃 15–20 分。"
+        },
+        {
+          "type": "act",
+          "time": "14:25 - 15:05",
+          "title": "④ 平安神宮｜中央",
+          "detail": "停留 40 分。應天門、大極殿＋五社中央印，不進神苑。收藏：平安守（真正御守；官方功效：無病息災・開運招福；官方沒有『中央／黃龍專用御守』，因此以平安神宮代表守作中央收藏）。說：「平安守を一体お願いします。五社めぐりの中央の記念にします。」",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B9%B3%E5%AE%89%E7%A5%9E%E5%AE%AE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "15:05 - 15:20",
+          "title": "Taxi：平安神宮 ➔ 八坂神社",
+          "detail": "規劃 10–15 分；東山週六壅塞時可能增加。"
+        },
+        {
+          "type": "act",
+          "time": "15:20 - 16:05",
+          "title": "⑤ 八坂神社｜東・青龍＋五社滿願",
+          "detail": "停留 45 分。本殿＋最後青龍印，確認五社色紙完整。收藏：青龍石 1,000円（官方頒布授与品；非一般袋狀御守）。說：「青龍石を一つお願いします。」若想要袋子可問：「青龍石のお守り袋もありますか？」完成後問：「五社めぐり、満願になりました。満願記念品はありますか？」滿願紀念品屬限量／庫存制，不保證當天仍有。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%9D%82%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "16:05 - 16:30",
+          "title": "Taxi：八坂神社 ➔ 四条／錦市場",
+          "detail": "保守抓 20–25 分；提早到晚餐區等待第一輪。"
+        },
+        {
+          "type": "food",
+          "time": "17:00 - 18:30",
+          "title": "晚餐：炭火焼肉おやけ 撰 -SEN-",
+          "detail": "備長炭炭火、A4〜A5 黑毛和牛、480 小時熟成牛舌。17:00 第一輪直接候位；未預約仍可能客滿。滿位就改「焼肉 弘商店 烏丸錦」。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E7%84%BC%E8%82%89%E3%81%8A%E3%82%84%E3%81%91+%E6%92%B0+SEN+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "18:30 - 19:00",
+          "title": "Taxi：四条 ➔ 飯店",
+          "detail": "回住宿休息。"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐 07:00",
+          "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
+          "detail": "五社日以快速咖啡早餐為主。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+        },
+        {
+          "meal": "午餐 12:20",
+          "name": "YOSHIMURA 上賀茂",
+          "detail": "蕎麥麵／天婦羅；候位 >10 分鐘就換店。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=YOSHIMURA+Kamigamo+Kyoto"
+        },
+        {
+          "meal": "晚餐 17:00",
+          "name": "炭火焼肉おやけ 撰 -SEN-",
+          "detail": "炭火和牛燒肉。無預約策略：17:00 第一輪；客滿即改弘商店烏丸錦。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E7%84%BC%E8%82%89%E3%81%8A%E3%82%84%E3%81%91+%E6%92%B0+SEN+%E4%BA%AC%E9%83%BD"
+        }
+      ],
+      "hotel": {
+        "name": "RESI STAY HOTEL SUN CHLORELLA",
+        "detail": "五社日全程 Taxi；晚餐後直接回飯店。",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
+      },
+      "details": "五社收藏的真實分類：城南宮『朱雀御守』＝真正御守；松尾大社『白虎みくじ』＝代表授与品／御神籤；上賀茂『八方除守』＝真正御守、作玄武代表；平安神宮『平安守』＝真正御守、作中央代表；八坂『青龍石』＝代表頒布授与品。不要把不存在或未證實的『玄武御守／白虎御守／青龍御守／黃龍御守』當成官方商品。Taxi 時間為規劃值，週六每段保留 5–15 分鐘路況 buffer；五社完成優先於午餐與逛街。"
+    },
+    "day3": {
+      "date": "11/1 (日)",
+      "title": "伏見稻荷＋錦市場＋京都美食",
+      "timeRange": "06:40 - 19:00",
+      "plannedRouteStops": [
+        {
+          "title": "住宿",
+          "lat": 34.9886333,
+          "lng": 135.7494667
+        },
+        {
+          "title": "京都駅・早餐",
+          "lat": 34.985849,
+          "lng": 135.758766
+        },
+        {
+          "title": "伏見稻荷大社",
+          "lat": 34.967125,
+          "lng": 135.773108
+        },
+        {
+          "title": "錦市場",
+          "lat": 35.005,
+          "lng": 135.765
+        },
+        {
+          "title": "京都駅・晚餐",
+          "lat": 34.985849,
+          "lng": 135.758766
+        },
+        {
+          "title": "住宿",
+          "lat": 34.9886333,
+          "lng": 135.7494667
+        }
+      ],
+      "timeline": [
+        {
+          "type": "drive",
+          "time": "06:40 - 06:55",
+          "title": "Taxi：飯店 ➔ 京都駅",
+          "detail": "早餐採京都在地咖啡品牌。"
+        },
+        {
+          "type": "food",
+          "time": "07:00 - 07:45",
+          "title": "早餐咖啡：OGAWA COFFEE 京都駅店",
+          "detail": "京都咖啡品牌；咖啡＋Morning toast／蛋類。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
+        },
+        {
+          "type": "drive",
+          "time": "07:45 - 08:05",
+          "title": "Taxi：京都駅 ➔ 伏見稻荷大社",
+          "detail": "早上先到，避開中午人潮與周邊道路壅塞。"
+        },
+        {
+          "type": "act",
+          "time": "08:05 - 10:15",
+          "title": "伏見稻荷大社｜千本鳥居",
+          "detail": "停留約 2 小時 10 分。樓門 → 本殿 → 御朱印 → 千本鳥居 → 奥社奉拝所 → おもかる石 → 返回。不走完整稻荷山お山めぐり，避免占掉半天。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "10:15 - 10:45",
+          "title": "Taxi：伏見稻荷 ➔ 錦市場",
+          "detail": "規劃 25–30 分。"
+        },
+        {
+          "type": "food",
+          "time": "11:00 - 11:50",
+          "title": "午餐：錦 平野",
+          "detail": "京都家常味：だし巻き、京おばんざい、西京焼等；先吃再逛，避開正午高峰。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6+%E5%B9%B3%E9%87%8E+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "act",
+          "time": "11:50 - 13:30",
+          "title": "錦市場散策",
+          "detail": "玉子燒、漬物、豆乳／抹茶甜點等；邊走邊吃依店家規則，在指定區域吃完。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6%E5%B8%82%E5%A0%B4+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "act",
+          "time": "13:30 - 15:30",
+          "title": "寺町・新京極自由逛",
+          "detail": "不再塞大型景點，保留購物與休息彈性。"
+        },
+        {
+          "type": "food",
+          "time": "15:30 - 16:00",
+          "title": "下午咖啡／抹茶甜點",
+          "detail": "寺町・河原町附近現場選擇。"
+        },
+        {
+          "type": "drive",
+          "time": "16:00 - 16:25",
+          "title": "Taxi：市中心 ➔ 飯店",
+          "detail": "回房休息與整理。"
+        },
+        {
+          "type": "drive",
+          "time": "16:45 - 17:05",
+          "title": "Taxi：飯店 ➔ 京都駅",
+          "detail": "晚餐提早進場。"
+        },
+        {
+          "type": "food",
+          "time": "17:15 - 18:30",
+          "title": "晚餐：寿しのむさし 京都駅八条口店",
+          "detail": "迴轉壽司；17:15 提早吃，降低排隊時間。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐 07:00",
+          "name": "OGAWA COFFEE 京都駅店",
+          "detail": "京都咖啡品牌 Morning。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
+        },
+        {
+          "meal": "午餐 11:00",
+          "name": "錦 平野",
+          "detail": "だし巻き、京おばんざい、西京焼。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6+%E5%B9%B3%E9%87%8E+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "meal": "晚餐 17:15",
+          "name": "寿しのむさし 京都駅八条口店",
+          "detail": "迴轉壽司；提早用餐。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
+        }
+      ],
+      "hotel": {
+        "name": "RESI STAY HOTEL SUN CHLORELLA",
+        "detail": "晚餐後回房整理回程行李。",
+        "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
+      },
+      "details": "這天已沒有五社御朱印壓力，以伏見稻荷早去、錦市場和市區自由時間為主。"
+    },
+    "day4": {
+      "date": "11/2 (一)",
+      "title": "京都 → KIX → 高雄",
+      "timeRange": "07:00 - 16:30",
+      "timeline": [
+        {
+          "type": "food",
+          "time": "07:00 - 07:40",
+          "title": "早餐咖啡：Starbucks 梅小路公園",
+          "detail": "回程日不繞路；咖啡＋輕食。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+        },
+        {
+          "type": "act",
+          "time": "07:40 - 08:40",
+          "title": "回房整理＋Self Check-out",
+          "detail": "08:40 左右完成。依 RESI STAY 規定在住宿處歸還房卡／鑰匙即可，不需要再回京都站 Reception。"
+        },
+        {
+          "type": "drive",
+          "time": "08:45 - 09:05",
+          "title": "Taxi：飯店 ➔ 京都駅",
+          "detail": "預留找月台與買飲料時間。"
+        },
+        {
+          "type": "transport",
+          "time": "09:30 - 10:50",
+          "title": "HARUKA：京都駅 ➔ KIX",
+          "detail": "目標 10:50 抵達 KIX，距 14:10 起飛約 3 小時 20 分，遠高於你要求的提前 2 小時。11/1 起 JR West 部分 HARUKA 商品價格調整，回程購票請以當日官方售價為準。"
+        },
+        {
+          "type": "act",
+          "time": "10:50 - 12:10",
+          "title": "AirAsia 報到・托運・安檢／出境",
+          "detail": "12:10 是『起飛前 2 小時』硬線；實際計畫在 10:50 就到機場，先完成航空流程再吃午餐。"
+        },
+        {
+          "type": "food",
+          "time": "11:30 - 12:30",
+          "title": "午餐：KIX 日式快速餐",
+          "detail": "若報到／安檢順利，再選烏龍麵、拉麵或壽司；若人多則先過安檢，改吃出境後餐飲。"
+        },
+        {
+          "type": "act",
+          "time": "13:20",
+          "title": "到登機門附近",
+          "detail": "不要把免稅購物拖到最後。"
+        },
+        {
+          "type": "transport",
+          "time": "14:10 - 16:30",
+          "title": "AK171 KIX ➔ KHH",
+          "detail": "關西第一航廈出發，16:30 抵達高雄。"
+        }
+      ],
+      "food": [
+        {
+          "meal": "早餐 07:00",
+          "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
+          "detail": "回程日就近快速早餐。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+        },
+        {
+          "meal": "午餐 11:30 起",
+          "name": "KIX 日式快速午餐",
+          "detail": "航空流程優先，完成報到／安檢後再吃。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport+Terminal+1+restaurants"
+        }
+      ],
+      "details": "回程安全條件：AK171 14:10 起飛，最晚 12:10 必須已到 KIX；本計畫 10:50 抵達，提供 1 小時 20 分額外緩衝。"
+    }
+  },
+  "officialSources": [
+    "https://www.jonangu.com/pray3.html",
+    "https://www.kamigamojinja.jp/sanpai/juyohin/",
+    "https://www.matsunoo.or.jp/",
+    "https://www.yasaka-jinja.or.jp/prize_all/",
+    "https://www.heianjingu.or.jp/visit/amulet/",
+    "https://www.seimeijinja.jp/access/",
+    "https://resistay.jp/en/reception/",
+    "https://oh-yake.com/"
+  ]
+}
