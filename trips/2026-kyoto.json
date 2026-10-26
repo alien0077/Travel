@@ -142,10 +142,10 @@
     },
     {
       "id": "d4-breakfast",
-      "name": "喫茶 はっぴーはうす",
-      "detail": "梅小路附近家庭式京都喫茶店；週一 07:30 開。吃傳統喫茶店 Morning，再回飯店完成退房。",
+      "name": "OGAWA COFFEE 京都駅中央口店",
+      "detail": "京都本地咖啡品牌。先完成 Self Check-out，帶行李直接到京都站中央口店吃 Morning，之後不再回飯店，直接搭 HARUKA。",
       "day": "11/2 早餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%96%AB%E8%8C%B6+%E3%81%AF%E3%81%A3%E3%81%B4%E3%83%BC%E3%81%AF%E3%81%86%E3%81%99+%E4%BA%AC%E9%83%BD"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station+Central+Gate"
     },
     {
       "id": "d4-lunch",
@@ -239,6 +239,11 @@
           "lng": 135.7494667
         },
         {
+          "title": "SIZUYA 志津屋 七条店",
+          "lat": 34.9893522,
+          "lng": 135.7433965
+        },
+        {
           "title": "城南宮・朱雀",
           "lat": 34.950802,
           "lng": 135.746841
@@ -266,23 +271,30 @@
       ],
       "timeline": [
         {
+          "type": "drive",
+          "time": "06:50 - 07:00",
+          "title": "離開住宿 ➔ SIZUYA 志津屋 七条店",
+          "detail": "今天出門後不再回飯店。可步行或短程 Taxi 到早餐店。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
+        },
+        {
           "type": "food",
           "time": "07:00 - 07:40",
           "title": "早餐咖啡：SIZUYA 志津屋 七条店",
-          "detail": "京都本地老字號麵包咖啡館，07:00 開。推薦カルネ＋熱咖啡；快速吃完後回住宿準備，08:10 Taxi 出發城南宮。",
+          "detail": "京都本地老字號麵包咖啡館，07:00 開。推薦カルネ＋熱咖啡。吃完直接前往城南宮，不折返住宿。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
         },
         {
           "type": "drive",
-          "time": "08:10 - 08:35",
-          "title": "Taxi：住宿 ➔ 城南宮",
-          "detail": "規劃 25 分；週六路況預留額外 5–15 分鐘。"
+          "time": "07:40 - 08:10",
+          "title": "Taxi：SIZUYA 七条店 ➔ 城南宮",
+          "detail": "早餐店直接叫 Taxi 前往城南宮，規劃約 25–30 分；不回飯店。"
         },
         {
           "type": "act",
-          "time": "08:35 - 09:25",
+          "time": "08:10 - 09:25",
           "title": "① 城南宮｜南・朱雀",
-          "detail": "停留 50 分。08:35 先參拜，09:00 授与所開後開始五社巡禮。先說「京都五社めぐりの色紙をお願いします。」再收朱雀印。收藏：朱雀御守（真正御守；城南宮官方四神御守之一）。購買說法：「朱雀のお守りを一体お願いします。」不進完整神苑，以免拖延。",
+          "detail": "停留 75 分。08:10 先參拜、拍照與逛境內，09:00 授与所開後開始五社巡禮。先說「京都五社めぐりの色紙をお願いします。」再收朱雀印。收藏：朱雀御守。購買說法：「朱雀のお守りを一体お願いします。」不進完整神苑，以免拖延。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%9F%8E%E5%8D%97%E5%AE%AE+%E4%BA%AC%E9%83%BD"
         },
         {
@@ -563,35 +575,41 @@
       "timeRange": "07:00 - 16:30",
       "timeline": [
         {
-          "type": "food",
-          "time": "07:30 - 08:15",
-          "title": "早餐咖啡：喫茶 はっぴーはうす",
-          "detail": "梅小路附近家庭式京都喫茶店；週一 07:30 開。吃 Morning Set 後回飯店做最後整理。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%96%AB%E8%8C%B6+%E3%81%AF%E3%81%A3%E3%81%B4%E3%83%BC%E3%81%AF%E3%81%86%E3%81%99+%E4%BA%AC%E9%83%BD"
-        },
-        {
           "type": "act",
-          "time": "08:15 - 08:40",
-          "title": "回房整理＋Self Check-out",
-          "detail": "早餐後回房做最後整理，08:40 左右完成 Self Check-out。依 RESI STAY 規定在住宿處歸還房卡／鑰匙即可，不需要再回京都站 Reception。"
+          "time": "06:45 - 07:00",
+          "title": "Self Check-out・帶行李離開",
+          "detail": "先完成退房並帶全部行李離開；房卡／鑰匙依 RESI STAY 指示在住宿處歸還。今天離開後不再回飯店。"
         },
         {
           "type": "drive",
-          "time": "08:45 - 09:05",
-          "title": "Taxi：飯店 ➔ 京都駅",
-          "detail": "預留找月台與買飲料時間。"
+          "time": "07:00 - 07:20",
+          "title": "Taxi：飯店 ➔ 京都駅中央口",
+          "detail": "帶行李直接前往京都站；早餐後就留在京都站準備 HARUKA。"
+        },
+        {
+          "type": "food",
+          "time": "07:20 - 08:15",
+          "title": "早餐咖啡：OGAWA COFFEE 京都駅中央口店",
+          "detail": "京都本地小川珈琲，07:00 開。帶行李吃 Morning；吃完不用再回飯店。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station+Central+Gate"
+        },
+        {
+          "type": "act",
+          "time": "08:15 - 09:20",
+          "title": "京都駅休息・採買・前往 HARUKA 月台",
+          "detail": "行李已在身邊，可買水、便當或伴手禮，09:20 前到 HARUKA 月台。"
         },
         {
           "type": "transport",
           "time": "09:30 - 10:50",
           "title": "HARUKA：京都駅 ➔ KIX",
-          "detail": "目標 10:50 抵達 KIX，距 14:10 起飛約 3 小時 20 分，遠高於你要求的提前 2 小時。11/1 起 JR West 部分 HARUKA 商品價格調整，回程購票請以當日官方售價為準。"
+          "detail": "目標 10:50 抵達 KIX，距 14:10 起飛約 3 小時 20 分，遠高於提前 2 小時要求。出發前再確認 JR West 當日時刻與運行狀態。"
         },
         {
           "type": "act",
           "time": "10:50 - 12:10",
           "title": "AirAsia 報到・托運・安檢／出境",
-          "detail": "12:10 是『起飛前 2 小時』硬線；實際計畫在 10:50 就到機場，先完成航空流程再吃午餐。"
+          "detail": "12:10 是起飛前 2 小時硬線；實際計畫 10:50 已到機場，先完成航空流程再吃午餐。"
         },
         {
           "type": "food",
@@ -614,10 +632,10 @@
       ],
       "food": [
         {
-          "meal": "早餐 07:30",
-          "name": "喫茶 はっぴーはうす",
-          "detail": "京都家庭式喫茶店 Morning；吃完回飯店整理並退房。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%96%AB%E8%8C%B6+%E3%81%AF%E3%81%A3%E3%81%B4%E3%83%BC%E3%81%AF%E3%81%86%E3%81%99+%E4%BA%AC%E9%83%BD"
+          "meal": "早餐 07:20",
+          "name": "OGAWA COFFEE 京都駅中央口店",
+          "detail": "京都本地咖啡品牌 Morning。先退房、帶行李吃早餐，之後直接搭 HARUKA。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station+Central+Gate"
         },
         {
           "meal": "午餐 11:30 起",
@@ -626,7 +644,7 @@
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport+Terminal+1+restaurants"
         }
       ],
-      "details": "回程安全條件：07:30 先吃京都在地喫茶早餐，08:40 前完成退房；AK171 14:10 起飛，最晚 12:10 必須已到 KIX。本計畫 10:50 抵達，提供 1 小時 20 分額外緩衝。"
+      "details": "回程日不折返住宿：06:45 起完成 Self Check-out，07:00 帶行李離開 → 京都站小川珈琲早餐 → 留在京都站 → 09:30 HARUKA → 10:50 KIX。AK171 14:10 起飛，仍保有約 3 小時 20 分緩衝。"
     }
   },
   "officialSources": [
