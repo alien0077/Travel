@@ -93,10 +93,10 @@
     },
     {
       "id": "d2-breakfast",
-      "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
-      "detail": "07:00 開門。五社主戰日採快速咖啡＋三明治／麵包，不繞遠。",
+      "name": "SIZUYA 志津屋 七条店",
+      "detail": "京都本地老字號麵包咖啡館；07:00 開。推薦京都人常吃的カルネ（火腿洋蔥麵包）＋熱咖啡，離梅小路住宿近，不繞路。",
       "day": "10/31 早餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
     },
     {
       "id": "d2-lunch",
@@ -142,10 +142,10 @@
     },
     {
       "id": "d4-breakfast",
-      "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
-      "detail": "回程日不繞路，咖啡＋輕食後回房整理行李。",
+      "name": "喫茶 はっぴーはうす",
+      "detail": "梅小路附近家庭式京都喫茶店；週一 07:30 開。吃傳統喫茶店 Morning，再回飯店完成退房。",
       "day": "11/2 早餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%96%AB%E8%8C%B6+%E3%81%AF%E3%81%A3%E3%81%B4%E3%83%BC%E3%81%AF%E3%81%86%E3%81%99+%E4%BA%AC%E9%83%BD"
     },
     {
       "id": "d4-lunch",
@@ -268,9 +268,9 @@
         {
           "type": "food",
           "time": "07:00 - 07:40",
-          "title": "早餐咖啡：Starbucks 梅小路公園",
-          "detail": "07:00 開門。咖啡＋三明治／麵包快速吃，不為早餐壓縮五社時間。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+          "title": "早餐咖啡：SIZUYA 志津屋 七条店",
+          "detail": "京都本地老字號麵包咖啡館，07:00 開。推薦カルネ＋熱咖啡；快速吃完後回住宿準備，08:10 Taxi 出發城南宮。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
         },
         {
           "type": "drive",
@@ -373,9 +373,9 @@
       "food": [
         {
           "meal": "早餐 07:00",
-          "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
-          "detail": "五社日以快速咖啡早餐為主。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+          "name": "SIZUYA 志津屋 七条店",
+          "detail": "京都在地麵包咖啡館。推薦カルネ＋熱咖啡；07:00 開門，五社日不繞遠。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
         },
         {
           "meal": "午餐 12:20",
@@ -564,16 +564,16 @@
       "timeline": [
         {
           "type": "food",
-          "time": "07:00 - 07:40",
-          "title": "早餐咖啡：Starbucks 梅小路公園",
-          "detail": "回程日不繞路；咖啡＋輕食。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+          "time": "07:30 - 08:15",
+          "title": "早餐咖啡：喫茶 はっぴーはうす",
+          "detail": "梅小路附近家庭式京都喫茶店；週一 07:30 開。吃 Morning Set 後回飯店做最後整理。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%96%AB%E8%8C%B6+%E3%81%AF%E3%81%A3%E3%81%B4%E3%83%BC%E3%81%AF%E3%81%86%E3%81%99+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "act",
-          "time": "07:40 - 08:40",
+          "time": "08:15 - 08:40",
           "title": "回房整理＋Self Check-out",
-          "detail": "08:40 左右完成。依 RESI STAY 規定在住宿處歸還房卡／鑰匙即可，不需要再回京都站 Reception。"
+          "detail": "早餐後回房做最後整理，08:40 左右完成 Self Check-out。依 RESI STAY 規定在住宿處歸還房卡／鑰匙即可，不需要再回京都站 Reception。"
         },
         {
           "type": "drive",
@@ -614,10 +614,10 @@
       ],
       "food": [
         {
-          "meal": "早餐 07:00",
-          "name": "Starbucks Coffee - VIVA SQUARE 京都・梅小路公園",
-          "detail": "回程日就近快速早餐。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Starbucks+VIVA+SQUARE+Kyoto+Umekoji"
+          "meal": "早餐 07:30",
+          "name": "喫茶 はっぴーはうす",
+          "detail": "京都家庭式喫茶店 Morning；吃完回飯店整理並退房。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%96%AB%E8%8C%B6+%E3%81%AF%E3%81%A3%E3%81%B4%E3%83%BC%E3%81%AF%E3%81%86%E3%81%99+%E4%BA%AC%E9%83%BD"
         },
         {
           "meal": "午餐 11:30 起",
@@ -626,7 +626,7 @@
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Kansai+International+Airport+Terminal+1+restaurants"
         }
       ],
-      "details": "回程安全條件：AK171 14:10 起飛，最晚 12:10 必須已到 KIX；本計畫 10:50 抵達，提供 1 小時 20 分額外緩衝。"
+      "details": "回程安全條件：07:30 先吃京都在地喫茶早餐，08:40 前完成退房；AK171 14:10 起飛，最晚 12:10 必須已到 KIX。本計畫 10:50 抵達，提供 1 小時 20 分額外緩衝。"
     }
   },
   "officialSources": [
