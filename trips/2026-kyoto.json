@@ -5,11 +5,11 @@
   "subtitle": "10/30 - 11/2 五社滿願 × 晴明神社 × 伏見稻荷",
   "badge": "Kyoto Five Shrines",
   "badgeIcon": "fa-torii-gate",
-  "description": "10/31 以計程車完成京都五社御朱印滿願；11/1 前往伏見稻荷、晴明神社與錦市場。每社附代表授与品、現場日語與完整移動時間。",
+  "description": "10/31 以計程車完成京都五社御朱印滿願；11/1 前往伏見稻荷、晴明神社與京都動漫商店巡禮。每社附代表授与品、現場日語與完整移動時間。",
   "stats": [
     "4天3夜",
     "五社御朱印",
-    "晴明＋伏見稻荷"
+    "晴明＋動漫巡禮"
   ],
   "image": "kyoto",
   "prefectures": [
@@ -78,8 +78,18 @@
       "day": "day3"
     },
     {
-      "id": "nishiki",
-      "name": "🍢 Day 3：錦市場",
+      "id": "animate-kyoto",
+      "name": "🎬 Day 3：Animate 京都",
+      "day": "day3"
+    },
+    {
+      "id": "nintendo-kyoto",
+      "name": "🎮 Day 3：Nintendo KYOTO",
+      "day": "day3"
+    },
+    {
+      "id": "surugaya-kyoto",
+      "name": "🧸 Day 3：駿河屋 京都寺町店",
       "day": "day3"
     }
   ],
@@ -128,10 +138,10 @@
     },
     {
       "id": "d3-lunch",
-      "name": "錦 平野",
-      "detail": "錦市場京都家常味：だし巻き、京おばんざい、西京焼等。",
+      "name": "名代とんかつ かつくら 四条寺町店",
+      "detail": "京都發祥豬排專門店；就在四条寺町動漫購物區，11:00 開。適合小孩，吃完直接繼續逛 Nintendo KYOTO／駿河屋。",
       "day": "11/1 午餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6+%E5%B9%B3%E9%87%8E+%E4%BA%AC%E9%83%BD"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
     },
     {
       "id": "d3-dinner",
@@ -411,7 +421,7 @@
     },
     "day3": {
       "date": "11/1 (日)",
-      "title": "伏見稻荷＋晴明神社＋錦市場",
+      "title": "伏見稻荷＋晴明神社＋京都動漫巡禮",
       "timeRange": "06:40 - 19:00",
       "plannedRouteStops": [
         {
@@ -435,9 +445,24 @@
           "lng": 135.751175
         },
         {
-          "title": "錦市場",
-          "lat": 35.005,
-          "lng": 135.765
+          "title": "Animate 京都",
+          "lat": 35.0069,
+          "lng": 135.7672
+        },
+        {
+          "title": "かつくら 四条寺町店",
+          "lat": 35.0035,
+          "lng": 135.7672
+        },
+        {
+          "title": "Nintendo KYOTO",
+          "lat": 35.0032,
+          "lng": 135.7685
+        },
+        {
+          "title": "駿河屋 京都寺町店",
+          "lat": 35.0001,
+          "lng": 135.7682
         },
         {
           "title": "京都駅・晚餐",
@@ -487,59 +512,67 @@
           "type": "act",
           "time": "10:45 - 11:25",
           "title": "晴明神社｜五芒星・御朱印",
-          "detail": "停留 40 分。晴明桔梗五芒星、晴明井、厄除桃、本殿；另收晴明神社一般御朱印。參拜時可說：「御朱印を一体お願いします。」這一站不屬於京都五社色紙。",
+          "detail": "停留 40 分。晴明桔梗五芒星、晴明井、厄除桃、本殿；另收晴明神社一般御朱印。這一站不屬於京都五社色紙。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%99%B4%E6%98%8E%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "11:25 - 11:45",
-          "title": "Taxi：晴明神社 ➔ 錦市場",
-          "detail": "規劃約 15–20 分；到錦市場後直接午餐。"
-        },
-        {
-          "type": "food",
-          "time": "11:45 - 12:35",
-          "title": "午餐：錦 平野",
-          "detail": "京都家常味：だし巻き、京おばんざい、西京焼等。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6+%E5%B9%B3%E9%87%8E+%E4%BA%AC%E9%83%BD"
+          "time": "11:25 - 11:50",
+          "title": "Taxi：晴明神社 ➔ 新京極／河原町動漫區",
+          "detail": "直接前往新京極，不去錦市場。下午行程集中在步行可串聯的動漫／遊戲商店。"
         },
         {
           "type": "act",
-          "time": "12:35 - 14:15",
-          "title": "錦市場散策",
-          "detail": "玉子燒、漬物、豆乳／抹茶甜點等；依店家規則在指定區域吃完。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6%E5%B8%82%E5%A0%B4+%E4%BA%AC%E9%83%BD"
-        },
-        {
-          "type": "act",
-          "time": "14:15 - 15:30",
-          "title": "寺町・新京極自由逛",
-          "detail": "保留購物與休息彈性。"
+          "time": "11:50 - 12:40",
+          "title": "Animate 京都",
+          "detail": "漫畫、輕小說、角色周邊、模型、遊戲、CD／Blu-ray 等。官方營業 11:00–21:00；先逛新品與熱門作品周邊。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Animate+Kyoto"
         },
         {
           "type": "food",
-          "time": "15:30 - 16:00",
-          "title": "下午咖啡／抹茶甜點",
-          "detail": "寺町・河原町附近現場選擇。"
+          "time": "12:45 - 13:35",
+          "title": "午餐：名代とんかつ かつくら 四条寺町店",
+          "detail": "京都發祥豬排專門店，11:00–21:00。就在四条寺町，適合小孩；用餐後繼續步行動漫巡禮。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
-          "type": "drive",
+          "type": "act",
+          "time": "13:40 - 14:30",
+          "title": "Nintendo KYOTO",
+          "detail": "京都高島屋S.C. T8 7F 的任天堂直營店；官方營業 10:30–20:00。適合買 Mario、Zelda、Splatoon、Pikmin 等官方周邊與京都限定商品。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nintendo+KYOTO"
+        },
+        {
+          "type": "act",
+          "time": "14:40 - 16:00",
+          "title": "駿河屋 京都寺町店｜主力動漫採買",
+          "detail": "這天動漫購物主站。週日官方 10:00–22:00；1F 遊戲、2F 模型／Figure、3F 模型・動漫雜貨・玩偶。二手商品適合慢慢挖寶。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E4%BA%AC%E9%83%BD%E5%AF%BA%E7%94%BA%E5%BA%97"
+        },
+        {
+          "type": "act",
           "time": "16:00 - 16:25",
-          "title": "Taxi：市中心 ➔ 飯店",
-          "detail": "回房休息與整理。"
+          "title": "動漫區自由加碼／休息",
+          "detail": "若小孩還想逛，可加 らしんばん京都店2号館；不想再逛就找咖啡／甜點休息。這段完全可取消。"
         },
         {
           "type": "drive",
-          "time": "16:45 - 17:05",
-          "title": "Taxi：飯店 ➔ 京都駅",
-          "detail": "晚餐提早進場。"
+          "time": "16:25 - 16:50",
+          "title": "Taxi：四条河原町 ➔ 京都駅",
+          "detail": "不回飯店，直接去京都站晚餐。"
         },
         {
           "type": "food",
-          "time": "17:15 - 18:30",
+          "time": "17:00 - 18:15",
           "title": "晚餐：寿しのむさし 京都駅八条口店",
-          "detail": "迴轉壽司；17:15 提早吃，降低排隊時間。",
+          "detail": "迴轉壽司；提早吃，降低排隊時間。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
+        },
+        {
+          "type": "drive",
+          "time": "18:15 - 18:35",
+          "title": "Taxi：京都駅 ➔ 飯店",
+          "detail": "回住宿整理隔天回程行李。"
         }
       ],
       "food": [
@@ -550,15 +583,15 @@
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
         },
         {
-          "meal": "午餐 11:00",
-          "name": "錦 平野",
-          "detail": "だし巻き、京おばんざい、西京焼。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8C%A6+%E5%B9%B3%E9%87%8E+%E4%BA%AC%E9%83%BD"
+          "meal": "午餐 12:45",
+          "name": "名代とんかつ かつくら 四条寺町店",
+          "detail": "京都發祥豬排；就在動漫商店區，吃完繼續步行。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
-          "meal": "晚餐 17:15",
+          "meal": "晚餐 17:00",
           "name": "寿しのむさし 京都駅八条口店",
-          "detail": "迴轉壽司；提早用餐。",
+          "detail": "迴轉壽司；動漫採買後直接前往京都站，不回飯店。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
         }
       ],
@@ -567,7 +600,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天正式加入晴明神社：早餐 → 伏見稻荷 → 晴明神社 → 錦市場 → 寺町／新京極 → 回飯店休息 → 京都站壽司。晴明神社御朱印獨立收集，不屬於五社巡禮色紙。"
+      "details": "第三天不去錦市場：早餐 → 伏見稻荷 → 晴明神社 → Animate 京都 → 京都豬排午餐 → Nintendo KYOTO → 駿河屋京都寺町店 → 視體力加碼らしんばん → 京都站壽司。動漫商店集中在四条河原町／寺町／新京極，午後以步行為主；晚餐前直接前往京都站，不回飯店。"
     },
     "day4": {
       "date": "11/2 (一)",
