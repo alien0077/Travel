@@ -145,10 +145,10 @@
     },
     {
       "id": "d3-dinner",
-      "name": "寿しのむさし 京都駅八条口店",
-      "detail": "迴轉壽司，方便一家四人各自選擇；17:15 提早吃以避開晚餐尖峰。",
+      "name": "新福菜館 本店",
+      "detail": "1938 年創業的京都老字號拉麵。招牌是濃色醬油湯『中華そば』＋黑色焼き飯；京都站步行約 5–7 分鐘，適合當動漫採買日的京都特色晚餐。",
       "day": "11/1 晚餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A6%8F%E8%8F%9C%E9%A4%A8+%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
     },
     {
       "id": "d4-breakfast",
@@ -465,9 +465,9 @@
           "lng": 135.7682
         },
         {
-          "title": "京都駅・晚餐",
-          "lat": 34.985849,
-          "lng": 135.758766
+          "title": "新福菜館 本店",
+          "lat": 34.9856,
+          "lng": 135.7647
         },
         {
           "title": "住宿",
@@ -558,21 +558,21 @@
         {
           "type": "drive",
           "time": "16:25 - 16:50",
-          "title": "Taxi：四条河原町 ➔ 京都駅",
-          "detail": "不回飯店，直接去京都站晚餐。"
+          "title": "Taxi：四条河原町 ➔ 新福菜館 本店",
+          "detail": "動漫採買結束後直接前往京都站東側老字號拉麵店，不回飯店。"
         },
         {
           "type": "food",
-          "time": "17:00 - 18:15",
-          "title": "晚餐：寿しのむさし 京都駅八条口店",
-          "detail": "迴轉壽司；提早吃，降低排隊時間。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
+          "time": "17:00 - 18:00",
+          "title": "晚餐：新福菜館 本店｜京都黑醬油拉麵",
+          "detail": "1938 年創業。推薦『中華そば（並）＋焼き飯』；黑色醬油湯外觀濃但屬京都代表性老派拉麵。週日目前營業至 20:00、L.O. 約 19:30；有 4 人桌，帶小孩比純吧台店方便。現金為主，建議準備日幣現金。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A6%8F%E8%8F%9C%E9%A4%A8+%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "18:15 - 18:35",
-          "title": "Taxi：京都駅 ➔ 飯店",
-          "detail": "回住宿整理隔天回程行李。"
+          "time": "18:00 - 18:20",
+          "title": "步行／Taxi：新福菜館 ➔ 飯店",
+          "detail": "晚餐後直接回住宿整理隔天回程行李。"
         }
       ],
       "food": [
@@ -590,9 +590,9 @@
         },
         {
           "meal": "晚餐 17:00",
-          "name": "寿しのむさし 京都駅八条口店",
-          "detail": "迴轉壽司；動漫採買後直接前往京都站，不回飯店。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%AF%BF%E3%81%97%E3%81%AE%E3%82%80%E3%81%95%E3%81%97+%E4%BA%AC%E9%83%BD%E9%A7%85%E5%85%AB%E6%9D%A1%E5%8F%A3"
+          "name": "新福菜館 本店",
+          "detail": "京都老字號黑醬油中華そば＋焼き飯。京都站旁，動漫採買後直接前往。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A6%8F%E8%8F%9C%E9%A4%A8+%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
         }
       ],
       "hotel": {
@@ -600,7 +600,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天不去錦市場：早餐 → 伏見稻荷 → 晴明神社 → Animate 京都 → 京都豬排午餐 → Nintendo KYOTO → 駿河屋京都寺町店 → 視體力加碼らしんばん → 京都站壽司。動漫商店集中在四条河原町／寺町／新京極，午後以步行為主；晚餐前直接前往京都站，不回飯店。"
+      "details": "第三天不去錦市場：早餐 → 伏見稻荷 → 晴明神社 → Animate 京都 → 京都豬排午餐 → Nintendo KYOTO → 駿河屋京都寺町店 → 視體力加碼らしんばん → 新福菜館本店京都黑醬油拉麵 → 回飯店。下午集中在四条河原町／寺町／新京極，動漫商店間以步行為主；晚餐選京都老字號特色料理，不再吃壽司。"
     },
     "day4": {
       "date": "11/2 (一)",
