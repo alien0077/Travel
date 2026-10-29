@@ -145,10 +145,10 @@
     },
     {
       "id": "d3-dinner",
-      "name": "新福菜館 本店",
-      "detail": "1938 年創業的京都老字號拉麵。招牌是濃色醬油湯『中華そば』＋黑色焼き飯；京都站步行約 5–7 分鐘，適合當動漫採買日的京都特色晚餐。",
+      "name": "MORI MORI SUSHI 京都河原町ガーデン店",
+      "detail": "河原町就地晚餐，不繞回京都站。金澤／北陸系迴轉壽司，週末 11:00–21:00，108 席、兒童椅、適合一家四人。",
       "day": "11/1 晚餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A6%8F%E8%8F%9C%E9%A4%A8+%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=MORI+MORI+SUSHI+Kyoto+Kawaramachi+Garden"
     },
     {
       "id": "d4-breakfast",
@@ -465,9 +465,9 @@
           "lng": 135.7682
         },
         {
-          "title": "新福菜館 本店",
-          "lat": 34.9856,
-          "lng": 135.7647
+          "title": "MORI MORI SUSHI 京都河原町ガーデン",
+          "lat": 35.0036,
+          "lng": 135.7689
         },
         {
           "title": "住宿",
@@ -551,9 +551,22 @@
         },
         {
           "type": "act",
-          "time": "16:00 - 16:25",
+          "time": "16:00 - 16:50",
           "title": "動漫區自由加碼／休息",
-          "detail": "若小孩還想逛，可加 らしんばん京都店2号館；不想再逛就找咖啡／甜點休息。這段完全可取消。"
+          "detail": "若小孩還想逛，可加 らしんばん京都店2号館、扭蛋／卡牌店；不想再逛就找咖啡或甜點休息。"
+        },
+        {
+          "type": "food",
+          "time": "17:00 - 18:15",
+          "title": "晚餐：MORI MORI SUSHI 京都河原町ガーデン店",
+          "detail": "不回京都站，直接在河原町吃晚餐。金澤／北陸系迴轉壽司；週末 11:00–21:00，108 席、兒童椅，適合一家四人。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=MORI+MORI+SUSHI+Kyoto+Kawaramachi+Garden"
+        },
+        {
+          "type": "drive",
+          "time": "18:15 - 18:40",
+          "title": "Taxi：河原町 ➔ 飯店",
+          "detail": "晚餐後直接回 SUN CHLORELLA；不繞京都站。"
         },
         {
           "type": "drive",
@@ -590,9 +603,9 @@
         },
         {
           "meal": "晚餐 17:00",
-          "name": "新福菜館 本店",
-          "detail": "京都老字號黑醬油中華そば＋焼き飯。京都站旁，動漫採買後直接前往。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A6%8F%E8%8F%9C%E9%A4%A8+%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
+          "name": "MORI MORI SUSHI 京都河原町ガーデン店",
+          "detail": "金澤／北陸系迴轉壽司；動漫採買後直接在河原町吃，不回京都站。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=MORI+MORI+SUSHI+Kyoto+Kawaramachi+Garden"
         }
       ],
       "hotel": {
@@ -600,7 +613,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天不去錦市場：早餐 → 伏見稻荷 → 晴明神社 → Animate 京都 → 京都豬排午餐 → Nintendo KYOTO → 駿河屋京都寺町店 → 視體力加碼らしんばん → 新福菜館本店京都黑醬油拉麵 → 回飯店。下午集中在四条河原町／寺町／新京極，動漫商店間以步行為主；晚餐選京都老字號特色料理，不再吃壽司。"
+      "details": "第三天不去錦市場，也不需回京都站：早餐 → 伏見稻荷 → 晴明神社 → Animate 京都 → 京都豬排午餐 → Nintendo KYOTO → 駿河屋京都寺町店 → 視體力加碼らしんばん → 河原町晚餐 → Taxi 直接回飯店。下午所有動漫／遊戲行程集中在四条河原町／寺町／新京極，避免無謂折返。"
     },
     "day4": {
       "date": "11/2 (一)",
