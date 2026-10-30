@@ -103,10 +103,10 @@
     },
     {
       "id": "d2-breakfast",
-      "name": "SIZUYA 志津屋 七条店",
-      "detail": "京都本地老字號麵包咖啡館；07:00 開。推薦京都人常吃的カルネ（火腿洋蔥麵包）＋熱咖啡，離梅小路住宿近，不繞路。",
+      "name": "からふね屋珈琲 竹田店",
+      "detail": "京都老字號咖啡店；07:30 開。位於往城南宮方向，早餐後直接 Taxi 前往第一站，不繞京都站。",
       "day": "10/31 早餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%82%89%E3%81%B5%E3%81%AD%E5%B1%8B%E7%8F%88%E7%90%B2+%E7%AB%B9%E7%94%B0%E5%BA%97+%E4%BA%AC%E9%83%BD"
     },
     {
       "id": "d2-lunch",
@@ -131,10 +131,10 @@
     },
     {
       "id": "d3-breakfast",
-      "name": "OGAWA COFFEE 京都駅店",
-      "detail": "京都咖啡品牌；Morning 咖啡、吐司、蛋類。吃完直接搭 Taxi 南下伏見稻荷。",
+      "name": "GEBACKEN 深草本店",
+      "detail": "伏見深草的京都在地麵包咖啡店；07:00 開、週日營業。早餐後直接短程 Taxi 前往伏見稻荷。",
       "day": "11/1 早餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
     },
     {
       "id": "d3-lunch",
@@ -249,9 +249,9 @@
           "lng": 135.7494667
         },
         {
-          "title": "SIZUYA 志津屋 七条店",
-          "lat": 34.9893522,
-          "lng": 135.7433965
+          "title": "からふね屋珈琲 竹田店",
+          "lat": 34.9589,
+          "lng": 135.7588
         },
         {
           "title": "城南宮・朱雀",
@@ -287,23 +287,23 @@
       "timeline": [
         {
           "type": "drive",
-          "time": "06:50 - 07:00",
-          "title": "離開住宿 ➔ SIZUYA 志津屋 七条店",
-          "detail": "今天出門後不再回飯店。可步行或短程 Taxi 到早餐店。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
+          "time": "07:10 - 07:25",
+          "title": "Taxi：飯店 ➔ からふね屋珈琲 竹田店",
+          "detail": "直接往城南宮方向南下；今天出門後不再回飯店。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%82%89%E3%81%B5%E3%81%AD%E5%B1%8B%E7%8F%88%E7%90%B2+%E7%AB%B9%E7%94%B0%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "food",
-          "time": "07:00 - 07:40",
-          "title": "早餐咖啡：SIZUYA 志津屋 七条店",
-          "detail": "京都本地老字號麵包咖啡館，07:00 開。推薦カルネ＋熱咖啡。吃完直接前往城南宮，不折返住宿。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
+          "time": "07:30 - 08:10",
+          "title": "早餐：からふね屋珈琲 竹田店",
+          "detail": "京都老字號咖啡店。吃 Morning set／吐司＋咖啡；07:30 開。吃完直接去城南宮。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%82%89%E3%81%B5%E3%81%AD%E5%B1%8B%E7%8F%88%E7%90%B2+%E7%AB%B9%E7%94%B0%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "07:40 - 08:10",
-          "title": "Taxi：SIZUYA 七条店 ➔ 城南宮",
-          "detail": "早餐店直接叫 Taxi 前往城南宮，規劃約 25–30 分。"
+          "time": "08:10 - 08:25",
+          "title": "Taxi：からふね屋珈琲 竹田店 ➔ 城南宮",
+          "detail": "短程移動。08:25 左右抵達，先參拜與拍照，09:00 授与所開後開始五社巡禮。"
         },
         {
           "type": "act",
@@ -412,10 +412,10 @@
       ],
       "food": [
         {
-          "meal": "早餐 07:00",
-          "name": "SIZUYA 志津屋 七条店",
-          "detail": "京都在地麵包咖啡館。推薦カルネ＋熱咖啡；07:00 開門，五社日不繞遠。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
+          "meal": "早餐 07:30",
+          "name": "からふね屋珈琲 竹田店",
+          "detail": "京都老字號咖啡店；07:30 開。往城南宮同方向，早餐後直接前往第一站。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%82%89%E3%81%B5%E3%81%AD%E5%B1%8B%E7%8F%88%E7%90%B2+%E7%AB%B9%E7%94%B0%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "meal": "午餐 12:20",
@@ -435,7 +435,7 @@
         "detail": "五社日全程 Taxi；晚餐後直接回飯店。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "Case A：城南宮（朱雀）→ 松尾大社（白虎）→ 上賀茂神社（玄武）→ 晴明神社 → 平安神宮（中央）→ 八坂神社（青龍／五社滿願）。晴明神社安排在上賀茂與平安神宮之間，屬順路南下；五社完成仍是最高優先。若塞車，先取消 16:15 後自由散步，不縮短五社御朱印。"
+      "details": "Case A：第二天完成京都五社滿願，並在上賀茂神社與平安神宮之間順路加入晴明神社。早餐改為往城南宮方向的からふね屋珈琲竹田店，不再繞京都站／七条。順序：早餐 → 城南宮 → 松尾大社 → 上賀茂神社 → 晴明神社 → 平安神宮 → 八坂神社。"
     },
     "day3": {
       "date": "11/1 (日)",
@@ -448,9 +448,9 @@
           "lng": 135.7494667
         },
         {
-          "title": "京都駅・早餐",
-          "lat": 34.985849,
-          "lng": 135.758766
+          "title": "GEBACKEN 深草本店",
+          "lat": 34.9595,
+          "lng": 135.7688
         },
         {
           "title": "伏見稻荷大社",
@@ -492,32 +492,33 @@
         {
           "type": "drive",
           "time": "06:40 - 06:55",
-          "title": "Taxi：飯店 ➔ 京都駅",
-          "detail": "早餐採京都在地咖啡品牌。"
+          "title": "Taxi：飯店 ➔ GEBACKEN 深草本店",
+          "detail": "不繞京都站，直接往伏見稻荷方向南下。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "food",
-          "time": "07:00 - 07:45",
-          "title": "早餐咖啡：OGAWA COFFEE 京都駅店",
-          "detail": "京都咖啡品牌；咖啡＋Morning toast／蛋類。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
+          "time": "07:00 - 07:35",
+          "title": "早餐：GEBACKEN 深草本店",
+          "detail": "京都伏見在地麵包咖啡店。07:00 開、週日營業；可吃名物だし巻きパン或 Morning set。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "07:45 - 08:05",
-          "title": "Taxi：京都駅 ➔ 伏見稻荷大社",
-          "detail": "早上先到，避開中午人潮與周邊道路壅塞。"
+          "time": "07:35 - 07:50",
+          "title": "Taxi：GEBACKEN 深草本店 ➔ 伏見稻荷大社",
+          "detail": "短程移動，07:50 左右開始參拜，可比原本更早避開人潮。"
         },
         {
           "type": "act",
-          "time": "08:05 - 10:10",
+          "time": "07:50 - 09:55",
           "title": "伏見稻荷大社｜千本鳥居",
           "detail": "停留約 2 小時。樓門 → 本殿 → 御朱印 → 千本鳥居 → 奥社奉拝所 → おもかる石 → 返回。不走完整稻荷山お山めぐり。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "10:10 - 10:40",
+          "time": "09:55 - 10:25",
           "title": "Taxi：伏見稻荷 ➔ 四条河原町／寺町動漫區",
           "detail": "晴明神社已移到 10/31；今天伏見稻荷結束後直接進動漫購物區。"
         },
@@ -572,9 +573,9 @@
       "food": [
         {
           "meal": "早餐 07:00",
-          "name": "OGAWA COFFEE 京都駅店",
-          "detail": "京都咖啡品牌 Morning。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
+          "name": "GEBACKEN 深草本店",
+          "detail": "京都伏見在地麵包咖啡店；07:00 開、週日營業。吃完直接去伏見稻荷。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "meal": "午餐 12:25",
@@ -594,7 +595,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天不去錦市場，也不再排晴明神社：早餐 → 伏見稻荷 → Nintendo KYOTO → Animate 京都 → 京都豬排午餐 → 駿河屋京都寺町店 → 視體力加碼らしんばん／扭蛋／卡牌店 → 河原町晚餐 → Taxi 直接回飯店。下午完整留給小孩逛動漫與遊戲商店。"
+      "details": "第三天改為伏見稻荷＋動漫主日。早餐改到伏見深草的 GEBACKEN 深草本店，07:00 開且週日營業，吃完直接前往伏見稻荷，不再繞京都站。之後前往河原町／寺町動漫區。"
     },
     "day4": {
       "date": "11/2 (一)",
