@@ -60,7 +60,7 @@
     {
       "id": "seimei",
       "name": "⭐ Day 3：晴明神社・五芒星",
-      "day": "day3"
+      "day": "day2"
     },
     {
       "id": "heian",
@@ -240,156 +240,177 @@
     },
     "day2": {
       "date": "10/31 (六)",
-      "title": "京都五社滿願｜四神＋中央",
-      "timeRange": "07:00 - 19:00",
+      "title": "京都五社滿願＋晴明神社",
+      "timeRange": "06:50 - 19:00",
       "plannedRouteStops": [
         {
-          "title": "住宿出發",
+          "title": "住宿",
           "lat": 34.9886333,
           "lng": 135.7494667
         },
         {
-          "title": "SIZUYA 志津屋 七条店",
-          "lat": 34.9893522,
-          "lng": 135.7433965
+          "title": "SIZUYA 七条店",
+          "lat": 34.9896,
+          "lng": 135.7517
         },
         {
-          "title": "城南宮・朱雀",
-          "lat": 34.950802,
-          "lng": 135.746841
+          "title": "城南宮",
+          "lat": 34.9537,
+          "lng": 135.7478
         },
         {
-          "title": "松尾大社・白虎",
-          "lat": 35.000014,
-          "lng": 135.685233
+          "title": "松尾大社",
+          "lat": 35.0006,
+          "lng": 135.685
         },
         {
-          "title": "上賀茂神社・玄武",
-          "lat": 35.060097,
-          "lng": 135.751495
+          "title": "上賀茂神社",
+          "lat": 35.0593,
+          "lng": 135.7525
         },
         {
-          "title": "平安神宮・中央",
-          "lat": 35.0165,
-          "lng": 135.782
+          "title": "晴明神社",
+          "lat": 35.027412,
+          "lng": 135.751175
         },
         {
-          "title": "八坂神社・青龍",
-          "lat": 35.003967,
-          "lng": 135.778748
+          "title": "平安神宮",
+          "lat": 35.0159,
+          "lng": 135.7824
+        },
+        {
+          "title": "八坂神社",
+          "lat": 35.0037,
+          "lng": 135.7785
+        },
+        {
+          "title": "四条河原町／晚餐",
+          "lat": 35.0036,
+          "lng": 135.7689
+        },
+        {
+          "title": "住宿",
+          "lat": 34.9886333,
+          "lng": 135.7494667
         }
       ],
       "timeline": [
         {
           "type": "drive",
           "time": "06:50 - 07:00",
-          "title": "離開住宿 ➔ SIZUYA 志津屋 七条店",
-          "detail": "今天出門後不再回飯店。可步行或短程 Taxi 到早餐店。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
+          "title": "離開飯店｜今天不回頭",
+          "detail": "帶齊御朱印帳、五社色紙資料、行動電源與雨具；早餐後直接進入行程，不再回飯店。"
         },
         {
           "type": "food",
           "time": "07:00 - 07:40",
-          "title": "早餐咖啡：SIZUYA 志津屋 七条店",
-          "detail": "京都本地老字號麵包咖啡館，07:00 開。推薦カルネ＋熱咖啡。吃完直接前往城南宮，不折返住宿。",
+          "title": "早餐：SIZUYA 志津屋 七条店",
+          "detail": "京都在地老字號麵包咖啡店。推薦カルネ＋熱咖啡。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=SIZUYA+Shichijo+Kyoto"
         },
         {
           "type": "drive",
           "time": "07:40 - 08:10",
-          "title": "Taxi：SIZUYA 七条店 ➔ 城南宮",
-          "detail": "早餐店直接叫 Taxi 前往城南宮，規劃約 25–30 分；不回飯店。"
+          "title": "Taxi：SIZUYA ➔ 城南宮",
+          "detail": "提早抵達，先參拜與拍照，等 09:00 授与所開。"
         },
         {
           "type": "act",
           "time": "08:10 - 09:25",
-          "title": "① 城南宮｜南・朱雀",
-          "detail": "停留 75 分。08:10 先參拜、拍照與逛境內，09:00 授与所開後開始五社巡禮。先說「京都五社めぐりの色紙をお願いします。」再收朱雀印。收藏：朱雀御守。購買說法：「朱雀のお守りを一体お願いします。」不進完整神苑，以免拖延。",
+          "title": "城南宮｜朱雀",
+          "detail": "09:00 授与所開後開始京都五社めぐり色紙。代表授与品：朱雀御守。現場可說：「京都五社めぐりの色紙をお願いします。」",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%9F%8E%E5%8D%97%E5%AE%AE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
           "time": "09:25 - 10:05",
           "title": "Taxi：城南宮 ➔ 松尾大社",
-          "detail": "規劃 30–40 分；遇塞車直接用 buffer，不縮短後段御朱印時間。"
+          "detail": "西向移動，週六市區車流保守抓 40 分。"
         },
         {
           "type": "act",
           "time": "10:05 - 10:40",
-          "title": "② 松尾大社｜西・白虎",
-          "detail": "停留 35 分。本殿＋五社白虎印，不進庭園。收藏：白虎みくじ（官方 2025/12 已恢復授与，數量有限；這是代表授与品／御神籤，不是袋狀御守）。說：「白虎みくじを一つお願いします。まだありますか？」若售罄：「白虎をモチーフにした授与品はありますか？」",
+          "title": "松尾大社｜白虎",
+          "detail": "五社白虎御朱印。代表授与品：白虎みくじ。若售罄可問：「白虎をモチーフにした授与品はありますか？」",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%9D%BE%E5%B0%BE%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
           "time": "10:40 - 11:25",
           "title": "Taxi：松尾大社 ➔ 上賀茂神社",
-          "detail": "規劃 35–45 分，是今天較長的移動之一。"
+          "detail": "由京都西側往北移動。"
         },
         {
           "type": "act",
-          "time": "11:25 - 12:10",
-          "title": "③ 上賀茂神社｜北・玄武",
-          "detail": "停留 45 分。立砂、樓門、本殿＋五社玄武印。收藏：八方除守 800円（真正御守；官方沒有查到玄武單體御守，用『守護所有方位』的八方除守作玄武代表，不冒充玄武專用）。說：「八方除守を一体お願いします。五社めぐりで玄武の記念にしたいです。」",
+          "time": "11:25 - 12:05",
+          "title": "上賀茂神社｜玄武",
+          "detail": "五社玄武御朱印。代表授与品：八方除守。可說：「八方除守を一体お願いします。五社めぐりで玄武の記念にしたいです。」",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E8%B3%80%E8%8C%82%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "food",
-          "time": "12:20 - 13:10",
+          "time": "12:10 - 12:55",
           "title": "午餐：YOSHIMURA 上賀茂",
-          "detail": "蕎麥麵＋天婦羅。硬規則：候位超過 10 分鐘就換附近快餐，五社滿願優先。",
+          "detail": "蕎麥麵為主。若現場等候超過 10 分鐘，直接改附近快速用餐，避免壓縮下午神社時間。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=YOSHIMURA+Kamigamo+Kyoto"
         },
         {
           "type": "drive",
-          "time": "13:10 - 13:35",
-          "title": "Taxi：上賀茂神社 ➔ 平安神宮",
-          "detail": "規劃 20–25 分。移除晴明神社後，五社日路線更直接，並增加八坂神社前的時間緩衝。"
+          "time": "12:55 - 13:15",
+          "title": "Taxi：上賀茂神社 ➔ 晴明神社",
+          "detail": "順路南下插入晴明神社，不破壞五社主線。"
         },
         {
           "type": "act",
-          "time": "13:35 - 14:15",
-          "title": "④ 平安神宮｜中央",
-          "detail": "停留 40 分。應天門、大極殿＋五社中央印，不進神苑。收藏：平安守（真正御守；官方功效：無病息災・開運招福；官方沒有『中央／黃龍專用御守』，因此以平安神宮代表守作中央收藏）。說：「平安守を一体お願いします。五社めぐりの中央の記念にします。」",
+          "time": "13:15 - 13:55",
+          "title": "晴明神社｜安倍晴明",
+          "detail": "五芒星、晴明井、厄除桃、本殿；另收晴明神社一般御朱印。這一站不屬於京都五社色紙。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%99%B4%E6%98%8E%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "13:55 - 14:15",
+          "title": "Taxi：晴明神社 ➔ 平安神宮",
+          "detail": "往岡崎方向移動；下午仍保留五社滿願安全餘裕。"
+        },
+        {
+          "type": "act",
+          "time": "14:15 - 14:55",
+          "title": "平安神宮｜中央",
+          "detail": "五社中央御朱印。代表御守：平安守。不進完整神苑，避免壓縮八坂時間。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%B9%B3%E5%AE%89%E7%A5%9E%E5%AE%AE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "14:15 - 14:30",
+          "time": "14:55 - 15:10",
           "title": "Taxi：平安神宮 ➔ 八坂神社",
-          "detail": "規劃 10–15 分；東山週六壅塞時可能增加。"
+          "detail": "最後一社，優先完成五社色紙。"
         },
         {
           "type": "act",
-          "time": "14:30 - 15:20",
-          "title": "⑤ 八坂神社｜東・青龍＋五社滿願",
-          "detail": "停留 45 分。本殿＋最後青龍印，確認五社色紙完整。收藏：青龍石 1,000円（官方頒布授与品；非一般袋狀御守）。說：「青龍石を一つお願いします。」若想要袋子可問：「青龍石のお守り袋もありますか？」完成後問：「五社めぐり、満願になりました。満願記念品はありますか？」滿願紀念品屬限量／庫存制，不保證當天仍有。",
+          "time": "15:10 - 15:55",
+          "title": "八坂神社｜青龍・五社滿願",
+          "detail": "完成青龍御朱印與五社色紙。代表授与品：青龍石。完成後可問：「五社めぐり、満願になりました。満願記念品はありますか？」",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%85%AB%E5%9D%82%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
-          "type": "drive",
-          "time": "15:20 - 15:45",
-          "title": "Taxi：八坂神社 ➔ 四条／錦市場",
-          "detail": "保守抓 20–25 分；提早到晚餐區等待第一輪。"
-        },
-        {
           "type": "act",
-          "time": "15:45 - 16:45",
-          "title": "祇園／四条自由散步＋晚餐候位",
-          "detail": "五社已完成後才安排自由時間；若前段塞車，直接取消這段，不影響御朱印與晚餐。"
+          "time": "15:55 - 16:45",
+          "title": "祇園／四条自由時間",
+          "detail": "若前面延遲，這段先取消；五社與晴明神社優先。"
         },
         {
           "type": "food",
           "time": "17:00 - 18:30",
           "title": "晚餐：炭火焼肉おやけ 撰 -SEN-",
-          "detail": "備長炭炭火、A4〜A5 黑毛和牛、480 小時熟成牛舌。17:00 第一輪直接候位；未預約仍可能客滿。滿位就改「焼肉 弘商店 烏丸錦」。",
+          "detail": "以 17:00 開店時段直接進場為主；若滿席，改焼肉 弘商店 烏丸錦。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E7%84%BC%E8%82%89%E3%81%8A%E3%82%84%E3%81%91+%E6%92%B0+SEN+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
           "time": "18:30 - 19:00",
           "title": "Taxi：四条 ➔ 飯店",
-          "detail": "回住宿休息。"
+          "detail": "五社＋晴明神社完成後回住宿。"
         }
       ],
       "food": [
@@ -417,12 +438,12 @@
         "detail": "五社日全程 Taxi；晚餐後直接回飯店。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "本日只做京都五社：城南宮（朱雀）→ 松尾大社（白虎）→ 上賀茂神社（玄武）→ 平安神宮（中央）→ 八坂神社（青龍）。晴明神社移到 11/1 第三天。五社色紙最後在八坂神社完成滿願；Taxi 每段保留 5–15 分鐘路況 buffer，午餐與自由散步可讓位給御朱印進度。"
+      "details": "Case A：第二天完成京都五社滿願，並在上賀茂神社與平安神宮之間順路加入晴明神社。順序：城南宮 → 松尾大社 → 上賀茂神社 → 晴明神社 → 平安神宮 → 八坂神社。晴明神社不屬於五社色紙，另收一般御朱印。"
     },
     "day3": {
       "date": "11/1 (日)",
-      "title": "伏見稻荷＋晴明神社＋京都動漫巡禮",
-      "timeRange": "06:40 - 19:00",
+      "title": "伏見稻荷＋京都動漫巡禮",
+      "timeRange": "06:40 - 18:40",
       "plannedRouteStops": [
         {
           "title": "住宿",
@@ -438,11 +459,6 @@
           "title": "伏見稻荷大社",
           "lat": 34.967125,
           "lng": 135.773108
-        },
-        {
-          "title": "晴明神社",
-          "lat": 35.027412,
-          "lng": 135.751175
         },
         {
           "title": "Animate 京都",
@@ -480,12 +496,12 @@
           "type": "drive",
           "time": "06:40 - 06:55",
           "title": "Taxi：飯店 ➔ 京都駅",
-          "detail": "早餐採京都在地咖啡品牌。"
+          "detail": "早餐採京都在地咖啡品牌；早餐後直接去伏見稻荷。"
         },
         {
           "type": "food",
           "time": "07:00 - 07:45",
-          "title": "早餐咖啡：OGAWA COFFEE 京都駅店",
+          "title": "早餐：OGAWA COFFEE 京都駅店",
           "detail": "京都咖啡品牌；咖啡＋Morning toast／蛋類。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
         },
@@ -493,99 +509,67 @@
           "type": "drive",
           "time": "07:45 - 08:05",
           "title": "Taxi：京都駅 ➔ 伏見稻荷大社",
-          "detail": "早上先到，避開中午人潮與周邊道路壅塞。"
+          "detail": "早上先到，避開中午更大人潮。"
         },
         {
           "type": "act",
           "time": "08:05 - 10:10",
           "title": "伏見稻荷大社｜千本鳥居",
-          "detail": "停留約 2 小時。樓門 → 本殿 → 御朱印 → 千本鳥居 → 奥社奉拝所 → おもかる石 → 返回。不走完整稻荷山お山めぐり。",
+          "detail": "約 2 小時。樓門 → 本殿 → 御朱印 → 千本鳥居 → 奥社奉拝所 → おもかる石 → 返回；不走完整稻荷山。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "10:10 - 10:45",
-          "title": "Taxi：伏見稻荷 ➔ 晴明神社",
-          "detail": "跨京都市區北上，保守抓 30–35 分；週日塞車時可再增加。"
+          "time": "10:10 - 10:40",
+          "title": "Taxi：伏見稻荷 ➔ 新京極／河原町動漫區",
+          "detail": "晴明神社已移至第二天；第三天直接進動漫區。"
         },
         {
           "type": "act",
-          "time": "10:45 - 11:25",
-          "title": "晴明神社｜五芒星・御朱印",
-          "detail": "停留 40 分。晴明桔梗五芒星、晴明井、厄除桃、本殿；另收晴明神社一般御朱印。這一站不屬於京都五社色紙。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%99%B4%E6%98%8E%E7%A5%9E%E7%A4%BE+%E4%BA%AC%E9%83%BD"
-        },
-        {
-          "type": "drive",
-          "time": "11:25 - 11:50",
-          "title": "Taxi：晴明神社 ➔ 新京極／河原町動漫區",
-          "detail": "直接前往新京極，不去錦市場。下午行程集中在步行可串聯的動漫／遊戲商店。"
-        },
-        {
-          "type": "act",
-          "time": "11:50 - 12:40",
+          "time": "10:40 - 11:40",
           "title": "Animate 京都",
-          "detail": "漫畫、輕小說、角色周邊、模型、遊戲、CD／Blu-ray 等。官方營業 11:00–21:00；先逛新品與熱門作品周邊。",
+          "detail": "漫畫、輕小說、角色周邊、模型、遊戲、CD／Blu-ray 等；先逛新品與熱門作品周邊。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Animate+Kyoto"
         },
         {
           "type": "food",
-          "time": "12:45 - 13:35",
+          "time": "11:45 - 12:35",
           "title": "午餐：名代とんかつ かつくら 四条寺町店",
-          "detail": "京都發祥豬排專門店，11:00–21:00。就在四条寺町，適合小孩；用餐後繼續步行動漫巡禮。",
+          "detail": "京都發祥豬排專門店；就在動漫商店區，吃完繼續步行。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "act",
-          "time": "13:40 - 14:30",
+          "time": "12:40 - 13:30",
           "title": "Nintendo KYOTO",
-          "detail": "京都高島屋S.C. T8 7F 的任天堂直營店；官方營業 10:30–20:00。適合買 Mario、Zelda、Splatoon、Pikmin 等官方周邊與京都限定商品。",
+          "detail": "任天堂直營店；Mario、Zelda、Splatoon、Pikmin 等官方周邊與京都限定商品。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nintendo+KYOTO"
         },
         {
           "type": "act",
-          "time": "14:40 - 16:00",
+          "time": "13:40 - 15:20",
           "title": "駿河屋 京都寺町店｜主力動漫採買",
-          "detail": "這天動漫購物主站。週日官方 10:00–22:00；1F 遊戲、2F 模型／Figure、3F 模型・動漫雜貨・玩偶。二手商品適合慢慢挖寶。",
+          "detail": "第三天動漫購物主站。二手遊戲、Figure、模型、動漫雜貨、玩偶等，預留較長挖寶時間。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E4%BA%AC%E9%83%BD%E5%AF%BA%E7%94%BA%E5%BA%97"
         },
         {
           "type": "act",
-          "time": "16:00 - 16:50",
+          "time": "15:20 - 16:50",
           "title": "動漫區自由加碼／休息",
-          "detail": "若小孩還想逛，可加 らしんばん京都店2号館、扭蛋／卡牌店；不想再逛就找咖啡或甜點休息。"
+          "detail": "可加 らしんばん、扭蛋、卡牌店，或找咖啡甜點休息；這段依小孩體力自由調整。"
         },
         {
           "type": "food",
           "time": "17:00 - 18:15",
           "title": "晚餐：MORI MORI SUSHI 京都河原町ガーデン店",
-          "detail": "不回京都站，直接在河原町吃晚餐。金澤／北陸系迴轉壽司；週末 11:00–21:00，108 席、兒童椅，適合一家四人。",
+          "detail": "直接在河原町吃晚餐，不繞京都站；適合一家四人。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=MORI+MORI+SUSHI+Kyoto+Kawaramachi+Garden"
         },
         {
           "type": "drive",
           "time": "18:15 - 18:40",
           "title": "Taxi：河原町 ➔ 飯店",
-          "detail": "晚餐後直接回 SUN CHLORELLA；不繞京都站。"
-        },
-        {
-          "type": "drive",
-          "time": "16:25 - 16:50",
-          "title": "Taxi：四条河原町 ➔ 新福菜館 本店",
-          "detail": "動漫採買結束後直接前往京都站東側老字號拉麵店，不回飯店。"
-        },
-        {
-          "type": "food",
-          "time": "17:00 - 18:00",
-          "title": "晚餐：新福菜館 本店｜京都黑醬油拉麵",
-          "detail": "1938 年創業。推薦『中華そば（並）＋焼き飯』；黑色醬油湯外觀濃但屬京都代表性老派拉麵。週日目前營業至 20:00、L.O. 約 19:30；有 4 人桌，帶小孩比純吧台店方便。現金為主，建議準備日幣現金。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A6%8F%E8%8F%9C%E9%A4%A8+%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
-        },
-        {
-          "type": "drive",
-          "time": "18:00 - 18:20",
-          "title": "步行／Taxi：新福菜館 ➔ 飯店",
-          "detail": "晚餐後直接回住宿整理隔天回程行李。"
+          "detail": "晚餐後直接回 SUN CHLORELLA。"
         }
       ],
       "food": [
@@ -596,15 +580,15 @@
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=OGAWA+COFFEE+Kyoto+Station"
         },
         {
-          "meal": "午餐 12:45",
+          "meal": "午餐 11:45",
           "name": "名代とんかつ かつくら 四条寺町店",
-          "detail": "京都發祥豬排；就在動漫商店區，吃完繼續步行。",
+          "detail": "京都發祥豬排；就在動漫商店區。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "meal": "晚餐 17:00",
           "name": "MORI MORI SUSHI 京都河原町ガーデン店",
-          "detail": "金澤／北陸系迴轉壽司；動漫採買後直接在河原町吃，不回京都站。",
+          "detail": "動漫採買後直接在河原町吃，不回京都站。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=MORI+MORI+SUSHI+Kyoto+Kawaramachi+Garden"
         }
       ],
@@ -613,7 +597,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天不去錦市場，也不需回京都站：早餐 → 伏見稻荷 → 晴明神社 → Animate 京都 → 京都豬排午餐 → Nintendo KYOTO → 駿河屋京都寺町店 → 視體力加碼らしんばん → 河原町晚餐 → Taxi 直接回飯店。下午所有動漫／遊戲行程集中在四条河原町／寺町／新京極，避免無謂折返。"
+      "details": "第三天改為伏見稻荷＋動漫主日：早餐 → 伏見稻荷 → 河原町／寺町動漫區 → Animate 京都 → 京都豬排午餐 → Nintendo KYOTO → 駿河屋京都寺町店 → 視體力加碼其他動漫店 → 河原町晚餐 → Taxi 回飯店。晴明神社已移至第二天，因此不再繞行。"
     },
     "day4": {
       "date": "11/2 (一)",
