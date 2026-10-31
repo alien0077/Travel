@@ -136,10 +136,10 @@
     },
     {
       "id": "d3-breakfast",
-      "name": "GEBACKEN 深草本店",
-      "detail": "07:00 開、週日營業。Bakery café，可喝拿鐵並從多種麵包中挑選；吃完直接短程 Taxi 去伏見稻荷。",
+      "name": "Cafe January",
+      "detail": "09:00 開。東福寺站旁京町家咖啡館；有 Cafe Latte，Morning 有多種組合。先早逛伏見稻荷千本鳥居，再回東福寺方向吃早餐。",
       "day": "11/1 早餐",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
     },
     {
       "id": "d3-lunch",
@@ -472,19 +472,14 @@
           "lng": 135.7494667
         },
         {
-          "title": "GEBACKEN 深草本店",
-          "lat": 34.9595,
-          "lng": 135.7688
-        },
-        {
           "title": "伏見稻荷大社",
           "lat": 34.967125,
           "lng": 135.773108
         },
         {
-          "title": "Nintendo KYOTO",
-          "lat": 35.0032,
-          "lng": 135.7685
+          "title": "Cafe January",
+          "lat": 34.9797,
+          "lng": 135.7703
         },
         {
           "title": "Animate 京都",
@@ -495,6 +490,11 @@
           "title": "かつくら 四条寺町店",
           "lat": 35.0035,
           "lng": 135.7672
+        },
+        {
+          "title": "Nintendo KYOTO",
+          "lat": 35.0032,
+          "lng": 135.7685
         },
         {
           "title": "駿河屋 京都寺町店",
@@ -515,76 +515,77 @@
       "timeline": [
         {
           "type": "drive",
-          "time": "06:40 - 06:55",
-          "title": "Taxi：飯店 ➔ GEBACKEN 深草本店",
-          "detail": "不繞京都站，直接往伏見稻荷方向南下。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
-        },
-        {
-          "type": "food",
-          "time": "07:00 - 07:40",
-          "title": "早餐：GEBACKEN 深草本店",
-          "detail": "Bakery café；可喝 Cafe Latte，並從多種麵包中自由挑選。07:00 開、週日營業。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
-        },
-        {
-          "type": "drive",
-          "time": "07:40 - 07:50",
-          "title": "Taxi：GEBACKEN 深草本店 ➔ 伏見稻荷大社",
-          "detail": "短程移動，早到伏見稻荷避開後續人潮。"
+          "time": "06:35 - 06:55",
+          "title": "Taxi：飯店 ➔ 伏見稻荷大社",
+          "detail": "先早逛伏見稻荷，利用清晨較少人時段；早餐改到 09:00 開的 Cafe January。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "act",
-          "time": "07:50 - 09:55",
-          "title": "伏見稻荷大社｜千本鳥居",
-          "detail": "停留約 2 小時。樓門 → 本殿 → 御朱印 → 千本鳥居 → 奥社奉拝所 → おもかる石 → 返回。不走完整稻荷山お山めぐり。",
+          "time": "06:55 - 08:15",
+          "title": "伏見稻荷大社｜本殿＋千本鳥居",
+          "detail": "照最新決定：本殿參拜後走千本鳥居，走到覺得足夠就回頭；不去奧社奉拜所、不爬稻荷山。抓約 80 分鐘，悠閒拍照即可。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "09:55 - 10:25",
-          "title": "Taxi：伏見稻荷 ➔ 四条河原町／寺町動漫區",
-          "detail": "晴明神社已移到 10/31；今天伏見稻荷結束後直接進動漫購物區。"
+          "time": "08:15 - 08:35",
+          "title": "Taxi：伏見稻荷 ➔ Cafe January",
+          "detail": "前往東福寺站旁的 Cafe January；距離不遠。早到可在東福寺站周邊稍候，店 09:00 開。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
+        },
+        {
+          "type": "food",
+          "time": "09:00 - 10:00",
+          "title": "早餐：Cafe January",
+          "detail": "京町家咖啡館。近期可確認有 Hot／Iced Cafe Latte；Morning 有多種組合，包含蛋、培根／香腸、吐司／可頌等。地址：〒605-0985 京都府京都市東山区福稲柿本町10-6。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
+        },
+        {
+          "type": "drive",
+          "time": "10:00 - 10:30",
+          "title": "Taxi：Cafe January ➔ 新京極／河原町動漫區",
+          "detail": "早餐後直接前往動漫區；不回飯店、不繞京都站。"
         },
         {
           "type": "act",
-          "time": "10:40 - 11:25",
-          "title": "Nintendo KYOTO",
-          "detail": "京都高島屋S.C. T8 7F 的任天堂直營店。先逛較早開門的 Nintendo KYOTO，再步行串 Animate／寺町。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nintendo+KYOTO"
-        },
-        {
-          "type": "act",
-          "time": "11:35 - 12:20",
+          "time": "10:30 - 11:30",
           "title": "Animate 京都",
-          "detail": "漫畫、輕小說、角色周邊、模型、遊戲、CD／Blu-ray 等；先看新品與熱門作品周邊。",
+          "detail": "漫畫、輕小說、角色周邊、模型、遊戲、CD／Blu-ray 等；先逛新品與熱門作品周邊。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Animate+Kyoto"
         },
         {
           "type": "food",
-          "time": "12:25 - 13:15",
+          "time": "11:35 - 12:25",
           "title": "午餐：名代とんかつ かつくら 四条寺町店",
-          "detail": "京都發祥豬排專門店，就在四条寺町動漫購物區；用餐後繼續步行動漫巡禮。",
+          "detail": "京都發祥豬排專門店；就在動漫商店區，吃完繼續步行。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "act",
-          "time": "13:25 - 15:00",
+          "time": "12:30 - 13:20",
+          "title": "Nintendo KYOTO",
+          "detail": "任天堂直營店；Mario、Zelda、Splatoon、Pikmin 等官方周邊與京都限定商品。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nintendo+KYOTO"
+        },
+        {
+          "type": "act",
+          "time": "13:30 - 15:10",
           "title": "駿河屋 京都寺町店｜主力動漫採買",
-          "detail": "這天動漫購物主站。遊戲、模型／Figure、動漫雜貨、玩偶與二手商品，留足時間慢慢挖寶。",
+          "detail": "二手遊戲、Figure、模型、動漫雜貨、玩偶等，預留較長挖寶時間。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E4%BA%AC%E9%83%BD%E5%AF%BA%E7%94%BA%E5%BA%97"
         },
         {
           "type": "act",
-          "time": "15:00 - 16:45",
+          "time": "15:10 - 16:50",
           "title": "動漫區自由加碼／休息",
-          "detail": "可加 らしんばん京都店2号館、扭蛋／卡牌店；小孩想繼續逛就保留完整時間，不想逛則找咖啡或甜點休息。"
+          "detail": "可加 らしんばん、扭蛋、卡牌店，或找咖啡甜點休息；依小孩體力自由調整。"
         },
         {
           "type": "food",
           "time": "17:00 - 18:15",
           "title": "晚餐：MORI MORI SUSHI 京都河原町ガーデン店",
-          "detail": "直接在河原町吃晚餐，不繞京都站。金澤／北陸系迴轉壽司，適合一家四人。",
+          "detail": "直接在河原町吃晚餐，不繞京都站。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=MORI+MORI+SUSHI+Kyoto+Kawaramachi+Garden"
         },
         {
@@ -596,15 +597,15 @@
       ],
       "food": [
         {
-          "meal": "早餐 07:00",
-          "name": "GEBACKEN 深草本店",
-          "detail": "Bakery café；Cafe Latte＋多種麵包可選。吃完直接去伏見稻荷。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=GEBACKEN+%E6%B7%B1%E8%8D%89%E6%9C%AC%E5%BA%97+%E4%BA%AC%E9%83%BD"
+          "meal": "早餐 09:00",
+          "name": "Cafe January",
+          "detail": "東福寺站旁京町家咖啡館；Cafe Latte＋多種 Morning 組合。先逛伏見稻荷再吃。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
         },
         {
-          "meal": "午餐 12:25",
+          "meal": "午餐 11:35",
           "name": "名代とんかつ かつくら 四条寺町店",
-          "detail": "京都發祥豬排；就在動漫商店區，吃完繼續步行。",
+          "detail": "京都發祥豬排；就在動漫商店區。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
@@ -619,7 +620,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天為伏見稻荷＋動漫主日。早餐固定 GEBACKEN 深草本店，07:00 喝 Cafe Latte 並從多種麵包中挑選，之後直接去伏見稻荷，再前往河原町／寺町動漫區。"
+      "details": "第三天改為：清晨先去伏見稻荷，只走本殿＋千本鳥居後回頭；09:00 到東福寺站旁 Cafe January 吃早餐，喝 Cafe Latte＋Morning，再直接前往河原町／寺町動漫區。這樣既保留伏見稻荷清晨較少人的優勢，也符合早餐需求。"
     },
     "day4": {
       "date": "11/2 (一)",
