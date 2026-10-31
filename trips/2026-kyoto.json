@@ -137,7 +137,7 @@
     {
       "id": "d3-breakfast",
       "name": "Cafe January",
-      "detail": "09:00 開。東福寺站旁京町家咖啡館；有 Cafe Latte，Morning 有多種組合。先早逛伏見稻荷千本鳥居，再回東福寺方向吃早餐。",
+      "detail": "09:00 開。先吃早餐再去伏見稻荷；有 Cafe Latte 與多種 Morning 組合。",
       "day": "11/1 早餐",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
     },
@@ -472,14 +472,14 @@
           "lng": 135.7494667
         },
         {
-          "title": "伏見稻荷大社",
-          "lat": 34.967125,
-          "lng": 135.773108
-        },
-        {
           "title": "Cafe January",
           "lat": 34.9797,
           "lng": 135.7703
+        },
+        {
+          "title": "伏見稻荷大社",
+          "lat": 34.967125,
+          "lng": 135.773108
         },
         {
           "title": "Animate 京都",
@@ -515,71 +515,71 @@
       "timeline": [
         {
           "type": "drive",
-          "time": "06:35 - 06:55",
-          "title": "Taxi：飯店 ➔ 伏見稻荷大社",
-          "detail": "先早逛伏見稻荷，利用清晨較少人時段；早餐改到 09:00 開的 Cafe January。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
-        },
-        {
-          "type": "act",
-          "time": "06:55 - 08:15",
-          "title": "伏見稻荷大社｜本殿＋千本鳥居",
-          "detail": "照最新決定：本殿參拜後走千本鳥居，走到覺得足夠就回頭；不去奧社奉拜所、不爬稻荷山。抓約 80 分鐘，悠閒拍照即可。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
-        },
-        {
-          "type": "drive",
-          "time": "08:15 - 08:35",
-          "title": "Taxi：伏見稻荷 ➔ Cafe January",
-          "detail": "前往東福寺站旁的 Cafe January；距離不遠。早到可在東福寺站周邊稍候，店 09:00 開。",
+          "time": "08:35 - 08:55",
+          "title": "Taxi：飯店 ➔ Cafe January",
+          "detail": "早餐優先。Cafe January 週日 09:00 開，直接先去吃早餐。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
         },
         {
           "type": "food",
           "time": "09:00 - 10:00",
           "title": "早餐：Cafe January",
-          "detail": "京町家咖啡館。近期可確認有 Hot／Iced Cafe Latte；Morning 有多種組合，包含蛋、培根／香腸、吐司／可頌等。地址：〒605-0985 京都府京都市東山区福稲柿本町10-6。",
+          "detail": "東福寺站旁京町家咖啡館；可喝 Cafe Latte，Morning 有多種組合。地址：〒605-0985 京都府京都市東山区福稲柿本町10-6。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
         },
         {
           "type": "drive",
-          "time": "10:00 - 10:30",
-          "title": "Taxi：Cafe January ➔ 新京極／河原町動漫區",
-          "detail": "早餐後直接前往動漫區；不回飯店、不繞京都站。"
+          "time": "10:00 - 10:15",
+          "title": "Taxi：Cafe January ➔ 伏見稻荷大社",
+          "detail": "早餐後直接前往伏見稻荷，不回飯店。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "act",
-          "time": "10:30 - 11:30",
+          "time": "10:15 - 11:25",
+          "title": "伏見稻荷大社｜本殿＋千本鳥居",
+          "detail": "照最新決定：本殿參拜後走千本鳥居，走一段就回頭；不去奧社奉拜所、不爬稻荷山。抓約 70 分鐘。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BC%8F%E8%A6%8B%E7%A8%B2%E8%8D%B7%E5%A4%A7%E7%A4%BE+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "11:25 - 11:55",
+          "title": "Taxi：伏見稻荷 ➔ 新京極／河原町動漫區",
+          "detail": "直接前往動漫區；不繞京都站。"
+        },
+        {
+          "type": "act",
+          "time": "11:55 - 12:50",
           "title": "Animate 京都",
           "detail": "漫畫、輕小說、角色周邊、模型、遊戲、CD／Blu-ray 等；先逛新品與熱門作品周邊。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Animate+Kyoto"
         },
         {
           "type": "food",
-          "time": "11:35 - 12:25",
+          "time": "12:55 - 13:45",
           "title": "午餐：名代とんかつ かつくら 四条寺町店",
           "detail": "京都發祥豬排專門店；就在動漫商店區，吃完繼續步行。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "act",
-          "time": "12:30 - 13:20",
+          "time": "13:50 - 14:40",
           "title": "Nintendo KYOTO",
           "detail": "任天堂直營店；Mario、Zelda、Splatoon、Pikmin 等官方周邊與京都限定商品。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Nintendo+KYOTO"
         },
         {
           "type": "act",
-          "time": "13:30 - 15:10",
+          "time": "14:50 - 16:20",
           "title": "駿河屋 京都寺町店｜主力動漫採買",
           "detail": "二手遊戲、Figure、模型、動漫雜貨、玩偶等，預留較長挖寶時間。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E4%BA%AC%E9%83%BD%E5%AF%BA%E7%94%BA%E5%BA%97"
         },
         {
           "type": "act",
-          "time": "15:10 - 16:50",
+          "time": "16:20 - 16:50",
           "title": "動漫區自由加碼／休息",
-          "detail": "可加 らしんばん、扭蛋、卡牌店，或找咖啡甜點休息；依小孩體力自由調整。"
+          "detail": "可加 らしんばん、扭蛋、卡牌店，或找咖啡甜點休息。"
         },
         {
           "type": "food",
@@ -599,11 +599,11 @@
         {
           "meal": "早餐 09:00",
           "name": "Cafe January",
-          "detail": "東福寺站旁京町家咖啡館；Cafe Latte＋多種 Morning 組合。先逛伏見稻荷再吃。",
+          "detail": "先吃早餐再去伏見稻荷。Cafe Latte＋多種 Morning 組合。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
         },
         {
-          "meal": "午餐 11:35",
+          "meal": "午餐 12:55",
           "name": "名代とんかつ かつくら 四条寺町店",
           "detail": "京都發祥豬排；就在動漫商店區。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
@@ -620,7 +620,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天改為：清晨先去伏見稻荷，只走本殿＋千本鳥居後回頭；09:00 到東福寺站旁 Cafe January 吃早餐，喝 Cafe Latte＋Morning，再直接前往河原町／寺町動漫區。這樣既保留伏見稻荷清晨較少人的優勢，也符合早餐需求。"
+      "details": "第三天改為早餐優先：09:00 Cafe January → 伏見稻荷（本殿＋千本鳥居，走一段即回頭）→ 河原町／寺町動漫區。Cafe January 週日 09:00 開，因此不再安排清晨先逛伏見稻荷。"
     },
     "day4": {
       "date": "11/2 (一)",
