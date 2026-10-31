@@ -73,6 +73,11 @@
       "day": "day2"
     },
     {
+      "id": "kodaiji",
+      "name": "🌙 Day 2：高台寺・秋季夜間點燈",
+      "day": "day2"
+    },
+    {
       "id": "fushimi",
       "name": "⛩️ Day 3：伏見稻荷大社・千本鳥居",
       "day": "day3"
@@ -118,7 +123,7 @@
     {
       "id": "d2-dinner",
       "name": "炭火焼肉おやけ 撰 -SEN-",
-      "detail": "備長炭炭火、A4〜A5 黒毛和牛、熟成牛舌。17:00 第一輪直接候位；未預約不保證有位。",
+      "detail": "原定炭火和牛燒肉，因高台寺點燈順延至約 18:35；未預約不保證有位，請先確認。",
       "day": "10/31 晚餐",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E7%84%BC%E8%82%89%E3%81%8A%E3%82%84%E3%81%91+%E6%92%B0+SEN+%E4%BA%AC%E9%83%BD"
     },
@@ -241,7 +246,7 @@
     "day2": {
       "date": "10/31 (六)",
       "title": "京都五社滿願＋晴明神社｜四神＋中央",
-      "timeRange": "06:50 - 19:00",
+      "timeRange": "06:50 - 20:30",
       "plannedRouteStops": [
         {
           "title": "住宿出發",
@@ -282,6 +287,11 @@
           "title": "八坂神社・青龍",
           "lat": 35.003967,
           "lng": 135.778748
+        },
+        {
+          "title": "高台寺・秋季夜間點燈",
+          "lat": 35.0007,
+          "lng": 135.7811
         }
       ],
       "timeline": [
@@ -387,27 +397,41 @@
         {
           "type": "drive",
           "time": "16:00 - 16:15",
-          "title": "Taxi：八坂神社 ➔ 四条／河原町",
-          "detail": "五社滿願完成後才移動到晚餐區。"
+          "title": "Taxi：八坂神社 ➔ 高台寺",
+          "detail": "五社滿願後直接搭計程車前往高台寺，預留約 5–15 分（週末東山路況可能壅塞）；向司機說「高台寺までお願いします。」",
+          "mapUrl": "https://www.google.com/maps/dir/?api=1&origin=%E5%85%AB%E5%9D%82%E7%A5%9E%E7%A4%BE&destination=%E9%AB%98%E5%8F%B0%E5%AF%BA&travelmode=driving"
         },
         {
           "type": "act",
-          "time": "16:15 - 16:45",
-          "title": "祇園／四条自由散步＋晚餐候位",
-          "detail": "若前段有延遲，直接取消這段，不影響御朱印與晚餐。"
+          "time": "16:15 - 17:00",
+          "title": "高台寺附近休息／候入場",
+          "detail": "保留六社原定時間；高台寺 17:00 開始夜間點燈，可先於附近休息或參觀日間庭園。"
+        },
+        {
+          "type": "act",
+          "time": "17:00 - 18:15",
+          "title": "高台寺｜秋季夜間特別參拜・點燈",
+          "detail": "2026/10/23–12/13；17:00 點燈，21:30 最後受付、22:00 閉門。庭園夜景與方丈前庭光雕投影；成人 800円、中高生 400円。預留約 75 分鐘。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E5%8F%B0%E5%AF%BA+%E4%BA%AC%E9%83%BD"
+        },
+        {
+          "type": "drive",
+          "time": "18:15 - 18:35",
+          "title": "Taxi：高台寺 ➔ 四条晚餐區",
+          "detail": "點燈結束後搭計程車前往原定燒肉餐廳；東山週六塞車請彈性調整。"
         },
         {
           "type": "food",
-          "time": "17:00 - 18:30",
+          "time": "18:35 - 20:00",
           "title": "晚餐：炭火焼肉おやけ 撰 -SEN-",
-          "detail": "備長炭炭火、A4〜A5 黑毛和牛、熟成牛舌。17:00 第一輪直接候位；未預約仍可能客滿。滿位就改「焼肉 弘商店 烏丸錦」。",
+          "detail": "原定餐廳保留，因新增高台寺而延後用餐。未預約可能客滿，請先確認當晚座位；客滿改「焼肉 弘商店 烏丸錦」。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E7%84%BC%E8%82%89%E3%81%8A%E3%82%84%E3%81%91+%E6%92%B0+SEN+%E4%BA%AC%E9%83%BD"
         },
         {
           "type": "drive",
-          "time": "18:30 - 19:00",
+          "time": "20:00 - 20:30",
           "title": "Taxi：四条 ➔ 飯店",
-          "detail": "回住宿休息。"
+          "detail": "晚餐後回原住宿休息。"
         }
       ],
       "food": [
@@ -424,18 +448,18 @@
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=YOSHIMURA+Kamigamo+Kyoto"
         },
         {
-          "meal": "晚餐 17:00",
+          "meal": "晚餐 18:35",
           "name": "炭火焼肉おやけ 撰 -SEN-",
-          "detail": "炭火和牛燒肉。無預約策略：17:00 第一輪；客滿即改弘商店烏丸錦。",
+          "detail": "原定燒肉餐廳保留；高台寺點燈後約 18:35 抵達，未預約請先確認座位，客滿改弘商店烏丸錦。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%82%AD%E7%81%AB%E7%84%BC%E8%82%89%E3%81%8A%E3%82%84%E3%81%91+%E6%92%B0+SEN+%E4%BA%AC%E9%83%BD"
         }
       ],
       "hotel": {
         "name": "RESI STAY HOTEL SUN CHLORELLA",
-        "detail": "五社日全程 Taxi；晚餐後直接回飯店。",
+        "detail": "六社巡禮後 Taxi 至高台寺夜間點燈，晚餐後再搭 Taxi 返回飯店。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "Case A：第二天完成京都五社滿願，並在上賀茂神社與平安神宮之間順路加入晴明神社。早餐改為九条的 THE Lower East Nine cafe -LE9-，08:00 喝 Cafe Latte 並吃多種麵包類早餐，之後直接 Taxi 南下城南宮。"
+      "details": "Case A：第二天完成京都五社滿願，並在上賀茂神社與平安神宮之間順路加入晴明神社。早餐改為九条的 THE Lower East Nine cafe -LE9-，08:00 喝 Cafe Latte 並吃多種麵包類早餐，之後直接 Taxi 南下城南宮。 八坂神社 16:00 結束後搭 Taxi 前往高台寺，17:00–18:15 參觀秋季夜間點燈，原定燒肉晚餐順延至約 18:35；前段六社行程不變。"
     },
     "day3": {
       "date": "11/1 (日)",
@@ -683,6 +707,7 @@
     "https://www.heianjingu.or.jp/visit/amulet/",
     "https://www.seimeijinja.jp/access/",
     "https://resistay.jp/en/reception/",
-    "https://oh-yake.com/"
+    "https://oh-yake.com/",
+    "https://www.kodaiji.com/saiji.html"
   ]
 }
