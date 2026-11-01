@@ -153,10 +153,10 @@
     },
     {
       "id": "d3-lunch",
-      "name": "名代とんかつ かつくら 四条寺町店",
-      "detail": "京都發祥豬排專門店；就在四条寺町動漫購物區，11:00 開。適合小孩，吃完直接繼續逛 Nintendo KYOTO／駿河屋。",
-      "day": "11/1 午餐 12:25",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
+      "name": "京都焼肉 南大門 四条寺町店",
+      "detail": "實際午餐。京都老字號燒肉品牌，四条寺町店；A5 和牛、秘傳洗いダレ。就在寺町商圈，吃完接駿河屋很順。",
+      "day": "11/1 午餐",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E7%84%BC%E8%82%89+%E5%8D%97%E5%A4%A7%E9%96%80+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97"
     },
     {
       "id": "d3-dinner",
@@ -565,9 +565,9 @@
         {
           "type": "food",
           "time": "12:00 - 12:50",
-          "title": "午餐：名代とんかつ かつくら 四条寺町店",
-          "detail": "京都發祥豬排專門店；就在寺町商圈，吃完直接開始下午逛街。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
+          "title": "午餐（實際）：京都焼肉 南大門 四条寺町店",
+          "detail": "已實際用餐。京都焼肉南大門四条寺町店，老字號和牛燒肉；位置就在寺町商圈，吃完直接前往駿河屋。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E7%84%BC%E8%82%89+%E5%8D%97%E5%A4%A7%E9%96%80+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97"
         },
         {
           "type": "act",
@@ -630,10 +630,10 @@
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+January+Kyoto"
         },
         {
-          "meal": "午餐 12:00",
-          "name": "名代とんかつ かつくら 四条寺町店",
-          "detail": "京都發祥豬排；就在寺町商圈。",
-          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97+%E4%BA%AC%E9%83%BD"
+          "meal": "午餐（實際）",
+          "name": "京都焼肉 南大門 四条寺町店",
+          "detail": "今天實際用餐；京都老字號燒肉品牌，位置就在寺町商圈，吃完直接接駿河屋。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E9%83%BD%E7%84%BC%E8%82%89+%E5%8D%97%E5%A4%A7%E9%96%80+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97"
         },
         {
           "meal": "晚餐 17:00",
@@ -647,7 +647,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天：09:00 Cafe January 早餐 → 伏見稻荷（本殿＋千本鳥居，走一段即回頭）→ 四条寺町午餐 → 孩子逛駿河屋京都寺町店、你到附近 KAMEE COFFEE KYOTO TAKATSUJI 休息，約 15:00 在 KAMEE 會合 → 寺町京極商店街 → 新京極商店街 → 京都高島屋S.C.／四条河原町 → 晚餐 → Taxi 回飯店。"
+      "details": "第三天：09:00 Cafe January 早餐 → 伏見稻荷（本殿＋千本鳥居，走一段即回頭）→ 午餐實際改為京都焼肉 南大門 四条寺町店 → 孩子逛駿河屋京都寺町店、你到附近 KAMEE COFFEE KYOTO TAKATSUJI 休息，約 15:00 在 KAMEE 會合 → 寺町京極商店街 → 新京極商店街 → 京都高島屋S.C.／四条河原町 → 晚餐 → Taxi 回飯店。"
     },
     "day4": {
       "date": "11/2 (一)",
