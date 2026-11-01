@@ -101,6 +101,11 @@
       "id": "takashimaya",
       "name": "🏬 Day 3：京都高島屋S.C.",
       "day": "day3"
+    },
+    {
+      "id": "kamee-coffee",
+      "name": "☕ Day 3：KAMEE COFFEE KYOTO TAKATSUJI",
+      "day": "day3"
     }
   ],
   "foodTabItems": [
@@ -492,6 +497,11 @@
           "lng": 135.7682
         },
         {
+          "title": "KAMEE COFFEE KYOTO TAKATSUJI",
+          "lat": 34.9993,
+          "lng": 135.7676
+        },
+        {
           "title": "寺町京極商店街",
           "lat": 35.0046,
           "lng": 135.7672
@@ -561,10 +571,23 @@
         },
         {
           "type": "act",
-          "time": "13:00 - 15:00",
-          "title": "駿河屋 京都寺町店｜下午主站",
-          "detail": "今天唯一固定動漫店。二手遊戲、Figure、模型、動漫雜貨、玩偶等，預留約 2 小時慢慢逛。",
+          "time": "13:00 - 13:10",
+          "title": "駿河屋 京都寺町店｜親子分流",
+          "detail": "孩子進駿河屋逛動漫、遊戲、Figure、模型與周邊；先約好 15:00 左右集合。",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%A7%BF%E6%B2%B3%E5%B1%8B+%E4%BA%AC%E9%83%BD%E5%AF%BA%E7%94%BA%E5%BA%97"
+        },
+        {
+          "type": "food",
+          "time": "13:10 - 14:50",
+          "title": "休息：KAMEE COFFEE KYOTO TAKATSUJI",
+          "detail": "你到駿河屋附近的 KAMEE COFFEE 休息；兩店都在寺町通一帶，步行幾分鐘。可喝 Cafe Latte，店內適合坐著休息。孩子逛完後直接來這裡會合。",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=KAMEE+COFFEE+KYOTO+TAKATSUJI"
+        },
+        {
+          "type": "act",
+          "time": "14:50 - 15:00",
+          "title": "KAMEE 集合 ➔ 寺町京極",
+          "detail": "孩子從駿河屋步行到 KAMEE 會合，再一起繼續逛寺町京極。"
         },
         {
           "type": "act",
@@ -624,7 +647,7 @@
         "detail": "晚餐後回房整理回程行李。",
         "mapUrl": "https://www.google.com/maps/search/?api=1&query=RESI+STAY+HOTEL+SUN+CHLORELLA"
       },
-      "details": "第三天：09:00 Cafe January 早餐 → 伏見稻荷（本殿＋千本鳥居，走一段即回頭）→ 四条寺町午餐 → 駿河屋京都寺町店（唯一固定動漫店）→ 寺町京極商店街 → 新京極商店街 → 京都高島屋S.C.／四条河原町 → 晚餐 → Taxi 回飯店。Animate、Nintendo KYOTO 已移除。"
+      "details": "第三天：09:00 Cafe January 早餐 → 伏見稻荷（本殿＋千本鳥居，走一段即回頭）→ 四条寺町午餐 → 孩子逛駿河屋京都寺町店、你到附近 KAMEE COFFEE KYOTO TAKATSUJI 休息，約 15:00 在 KAMEE 會合 → 寺町京極商店街 → 新京極商店街 → 京都高島屋S.C.／四条河原町 → 晚餐 → Taxi 回飯店。"
     },
     "day4": {
       "date": "11/2 (一)",
